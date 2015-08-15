@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<authors>
+    <author>
+        <email>asad@live.com</email>
+        <name>asad</name>
+        <password>fahad</password>
+        <dOB>10/04/1994</dOB>
+        <biography>askdkasdkajsdk</biography>
+    </author>
+    <author>
+        <email>fahad@live.com</email>
+        <name>fahad</name>
+        <password>asad</password>
+        <dOB>10/04/1995</dOB>
+        <biography>askasdkajsdk</biography>
+    </author>
+    <author>
+        <email>ryan@ryanheise.com</email>
+        <name>Ryan Heise</name>
+        <password>blahblah</password>
+        <dOB>12/06/2015</dOB>
+        <biography>gresaden</biography>
+    </author>
+    <author>
+        <email>joe@bloggs.com</email>
+        <name>Joe Bloggs</name>
+        <password>foobar</password>
+        <dOB>12/26/201</dOB>
+        <biography>yellosdw</biography>
+    </author>
+</authors>

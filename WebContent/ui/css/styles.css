@@ -1,0 +1,8 @@
+@CHARSET "ISO-8859-1";
+
+#login-alert {
+	margin: 0;
+	margin-right: 10px;
+	padding: 6px 30px 6px 10px;
+	float: left;
+}
