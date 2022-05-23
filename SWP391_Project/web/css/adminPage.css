@@ -1,0 +1,90 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 23, 2022, 5:12:57 PM
+    Author     : user
+*/
+body
+{
+    background-color: black;
+}
+h1
+{
+    background-color: rgba(242,111,33,255);
+    text-align: center;
+    color:white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+
+div a
+{
+    text-decoration: none;
+    border: solid black;
+    display: block;
+    color: white;
+
+}
+
+details summary
+{
+    color: white;   
+}
+
+details
+{
+    border: solid black;
+}
+
+details:hover
+{
+    color:black;
+    background-color: rgba(242,111,33,255);
+}
+
+div a:hover
+{
+    color:black;
+    background-color: rgba(242,111,33,255);
+}
+
+.left
+{
+    width: 20%;
+    float: left;
+    background-color: gray;
+}
+
+.right
+{
+    margin-top: 0.3%;
+    float:right;
+    width: 78%;
+    background-color: rgba(242,111,33,255);
+}
+
+.right p
+{
+    color: white;
+
+    
+}
+
+footer
+{
+    color: white;
+    clear: both;
+    background-color: rgba(242,111,33,255);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
