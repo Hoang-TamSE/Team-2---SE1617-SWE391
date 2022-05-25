@@ -17,12 +17,12 @@
 </head>
 <body>
     <header>
-        <h1>ADMIN HOME PAGE</h1>
+        <h1>ADMIN HOME PAGE</h1> <!-- tiêu đề -->
     </header>
     <div id="wrapper">
         <div class="overlay"></div>
          
-             <!-- Sidebar -->
+             <!-- Menu bên trái -->
          <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
           <ul class="nav sidebar-nav">
             <div class="sidebar-header">
@@ -37,7 +37,7 @@
            <li><a href="#followme">Logout</a></li>
            </ul>
        </nav>
-             <!-- /#sidebar-wrapper -->
+            
      
              <!-- Page Content -->
              <div id="page-content-wrapper">
@@ -48,7 +48,7 @@
                  </button>
                  <div id="right" class="container">
                      <div class="row">
-                         <div class="col-lg-8 col-lg-offset-2">
+                         <div class="col-lg-8 col-lg-offset-2"> <!-- Nội dung chọn từ menu sẽ hiển thị ở đây -->
                              <h1>Display information here!</h1>
                              <p>Bacon ipsum dolor sit amet tri-tip shoulder 
                                  tenderloin shankle. Bresaola tail pancetta ball tip 
