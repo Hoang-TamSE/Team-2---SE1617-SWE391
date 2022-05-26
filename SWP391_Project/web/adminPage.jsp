@@ -48,7 +48,7 @@
                  </button>
                  <div id="right" class="container">
                      <div class="row">
-                         <div class="col-lg-8 col-lg-offset-2"> <!-- Nội dung chọn từ menu sẽ hiển thị ở đây -->
+                         <div class="col-lg-10 col-lg-offset-2"> <!-- Nội dung chọn từ menu sẽ hiển thị ở đây -->
                              <h1>Display information here!</h1>
                              <p>Bacon ipsum dolor sit amet tri-tip shoulder 
                                  tenderloin shankle. Bresaola tail pancetta ball tip 
