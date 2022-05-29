@@ -28,7 +28,7 @@
             <div class="sidebar-header">
             <div class="sidebar-brand">
               <p style="color: white;">Menu</p>
-            <li><a href="#home">Student</a></li>
+            <li><a href="Student.jsp">Student</a></li>
             <li><a href="#about">Supporter</a></li>
             <li><a href="#events">Specialization</a></li>
             <li><a href="#team">Term</a></li>            
