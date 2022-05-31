@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Student
-    Created on : May 28, 2022, 9:21:21 PM
+    Document   : Supporter
+    Created on : May 29, 2022, 4:55:41 PM
     Author     : user
 --%>
 
@@ -23,8 +23,8 @@
             <button><span>MENU</span></button>
             <ul class="main-menu" style="display:none">
                 <li><a href="Student.jsp">Student</a></li>
-                <li><a href="Supporter.jsp">Supporter</a></li>
-                <li><a href="Specialization.jsp">Specialization</a></li>
+                <li><a href="#Supporter.jsp">Supporter</a></li>
+                <li><a href="#Specialization.jsp">Specialization</a></li>
                 <li><a href="#team">Term</a></li>            
                 <li><a href="#services">Register form</a></li>
                 <li><a href="#contact">Notification</a></li>
@@ -33,7 +33,7 @@
         </div>
 
         <div>
-            <h1>Student Management</h1>
+            <h1>Supporter Management</h1>
             <form action="mainController" method="post">
                 <input type="text" name="txtSearch">
                 <input type="submit" value="Search" name="action">
@@ -45,22 +45,18 @@
                     <th scope="col">Email</th>
                     <th scope="col">Full name</th>
                     <th scope="col">Phone</th>
-                    <th scope="col">Semester</th>
-                    <th scope="col">Major</th>
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                 </tr>
                 <c:forEach var="acc" items="${requestScope.accountList}">
                     <tr>
-                        <td><c:out value="${s.getAccID()}"></c:out></td>
-                    <td><c:out value="${s.getAccID()}"></c:out></td>
-                    <td><c:out value="${s.getAccID()}"></c:out></td>
-                    <td><c:out value="${s.getAccID()}"></c:out></td>
-                    <td><c:out value="${s.getAccID()}"></c:out></td>
-                    <td><c:out value="${s.getAccID()}"></c:out></td>
+                        <td><c:out value="${sp.getAccID()}"></c:out></td>
+                    <td><c:out value="${sp.getAccID()}"></c:out></td>
+                    <td><c:out value="${sp.getAccID()}"></c:out></td>
+                    <td><c:out value="${sp.getAccID()}"></c:out></td>
                     <td>              
                     <c:url  var="update" value="mainController">
-                        <c:param name="sid" value="${s.getId()}"></c:param>
+                        <c:param name="sid" value="${sp.getId()}"></c:param>
 
                         <c:param name="action" value="updateStudent"></c:param>
                     </c:url>
@@ -68,7 +64,7 @@
                     </td>
                     <td>              
                     <c:url  var="delete" value="mainController">
-                        <c:param name="sid" value="${s.getId()}"></c:param>
+                        <c:param name="sid" value="${sp.getId()}"></c:param>
 
                         <c:param name="action" value="deleteStudent"></c:param>
                     </c:url>

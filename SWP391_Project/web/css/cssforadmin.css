@@ -56,6 +56,11 @@ li a
     text-decoration: none;
 }
 
+div form
+{
+    padding-left: 85%;
+}
+
 #dp_menu ul, #dp_menu li 
 {
     margin:0;
