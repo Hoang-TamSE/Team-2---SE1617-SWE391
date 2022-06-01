@@ -4,6 +4,7 @@
     Author     : user
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -34,8 +35,8 @@
 
         <div>
             <h1>Student Management</h1>
-            <form action="mainController" method="post">
-                <input type="text" name="txtSearch">
+            <form action="MainController" method="post">
+                <input type="text" name="search">
                 <input type="submit" value="Search" name="action">
             </form>
             <h1></h1>
@@ -50,26 +51,26 @@
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                 </tr>
-                <c:forEach var="acc" items="${requestScope.accountList}">
+                <c:forEach var="s" items="${requestScope.LIST_Product}">
                     <tr>
-                        <td><c:out value="${s.getAccID()}"></c:out></td>
-                    <td><c:out value="${s.getAccID()}"></c:out></td>
-                    <td><c:out value="${s.getAccID()}"></c:out></td>
-                    <td><c:out value="${s.getAccID()}"></c:out></td>
-                    <td><c:out value="${s.getAccID()}"></c:out></td>
-                    <td><c:out value="${s.getAccID()}"></c:out></td>
+                        <td><c:out value="${s.userID}"></c:out></td>
+                        <td><c:out value="${s.name}"></c:out></td>
+                        <td><c:out value="${s.email}"></c:out></td>
+                        <td><c:out value="${s.phoneNumber}"></c:out></td>
+                        <td><c:out value="${s.address}"></c:out></td>
+                        <td><c:out value="${s.roleID}"></c:out></td>
+                        <td><c:out value="${s.semesterID}"></c:out></td>
+                        <td><c:out value="${s.majorID}"></c:out></td>
+                        <td><c:out value="${s.narrowID}"></c:out></td>
+                   
                     <td>              
                     <c:url  var="update" value="mainController">
-                        <c:param name="sid" value="${s.getId()}"></c:param>
-
                         <c:param name="action" value="updateStudent"></c:param>
                     </c:url>
                     <a href="${update}">Update</a>
                     </td>
                     <td>              
                     <c:url  var="delete" value="mainController">
-                        <c:param name="sid" value="${s.getId()}"></c:param>
-
                         <c:param name="action" value="deleteStudent"></c:param>
                     </c:url>
                     <a href="${delete}">Delete</a>
