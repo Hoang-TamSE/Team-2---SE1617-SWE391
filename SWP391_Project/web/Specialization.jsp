@@ -39,7 +39,7 @@
                         <td>ID</td>
                         <td>Name</td>
                     </tr>
-                    <c:forEach var="s" items="specializationList">
+                    <c:forEach var="s" items="${specializationList}">
                         <tr>
                             <td>${s.id}</td>
                             <td>${s.name}</td>
