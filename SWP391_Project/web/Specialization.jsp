@@ -22,7 +22,7 @@
         </header>
         <%@include file="MenuAdmin.jsp" %>
 
-        <div>
+        
             <h1>Specialization Management</h1>
             <form action="search" method="post">
                 Major:
@@ -47,7 +47,7 @@
                     </c:forEach>
                 </tbody>
             </table>
-        </div>
+        
         <footer>
             <p>Team</p>
             <p>FPT University</p>
