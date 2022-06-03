@@ -20,18 +20,7 @@
         <header>
             <h1>ADMIN HOME PAGE</h1> <!-- tiêu đề -->
         </header>
-        <div id="dp_menu" class="dp_menu">
-            <button><span>MENU</span></button>
-            <ul class="main-menu" style="display:none">
-                <li><a href="Student.jsp">Student</a></li>
-                <li><a href="Specialization.jsp">Supporter</a></li>
-                <li><a href="#events">Specialization</a></li>
-                <li><a href="#team">Term</a></li>            
-                <li><a href="#services">Register form</a></li>
-                <li><a href="#contact">Notification</a></li>
-                <li><a href="#followme">Logout</a></li>
-            </ul>
-        </div>
+        <%@include file="MenuAdmin.jsp" %>
 
         <div>
             <h1>Specialization Management</h1>
@@ -63,13 +52,6 @@
             <p>Team</p>
             <p>FPT University</p>
         </footer>
-        <script>
-            $(document).ready(function () {
-                $("button").click(function () {
-                    $("#dp_menu > ul").toggle(500);
-                    $("#dp_menu").toggleClass("show");
-                });
-            });
-        </script>
+        
     </body>
 </html>

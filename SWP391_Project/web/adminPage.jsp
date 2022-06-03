@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Admin Page</title>
         <link rel="stylesheet" type="text/css" href="css/cssforadmin.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
@@ -18,18 +18,7 @@
         <header>
             <h1>ADMIN HOME PAGE</h1> <!-- tiêu đề -->
         </header>
-        <div id="dp_menu" class="dp_menu">
-            <button><span>MENU</span></button>
-            <ul class="main-menu" style="display:none">
-                <li><a href="Student.jsp">Student</a></li>
-                <li><a href="Supporter.jsp">Supporter</a></li>
-                <li><a href="Specialization.jsp">Specialization</a></li>
-                <li><a href="#team">Term</a></li>            
-                <li><a href="#services">Register form</a></li>
-                <li><a href="#contact">Notification</a></li>
-                <li><a href="#followme">Logout</a></li>
-            </ul>
-        </div>
+        <%@include file="MenuAdmin.jsp" %>
 
         <div>
             <h1>Welcome Admin</h1>
@@ -38,14 +27,6 @@
         <footer>
             <p>Team</p>
             <p>FPT University</p>
-        </footer>
-                    <script>
-            $(document).ready(function () {
-                $("button").click(function () {
-                    $("#dp_menu > ul").toggle(500);
-                    $("#dp_menu").toggleClass("show");
-                });
-            });
-        </script>
+        
     </body>
 </html>
