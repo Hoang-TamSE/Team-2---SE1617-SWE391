@@ -23,7 +23,7 @@
         <div id="dp_menu" class="dp_menu">
             <button><span>MENU</span></button>
             <ul class="main-menu" style="display:none">
-                <li><a href="Student.jsp">Student</a></li>
+                <li><a href="MainController?action=Search">Student</a></li>
                 <li><a href="Supporter.jsp">Supporter</a></li>
                 <li><a href="Specialization.jsp">Specialization</a></li>
                 <li><a href="#team">Term</a></li>            
@@ -36,7 +36,7 @@
         <div>
             <h1>Student Management</h1>
             <form action="MainController" method="post">
-                <input type="text" name="search">
+                <input type="text" name="search" value="${requestScope.search}">
                 <input type="submit" value="Search" name="action">
             </form>
             <h1></h1>
@@ -51,7 +51,7 @@
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                 </tr>
-                <c:forEach var="s" items="${requestScope.LIST_Product}">
+                <c:forEach var="s" items="${requestScope.LIST_Students}">
                     <tr>
                         <td><c:out value="${s.userID}"></c:out></td>
                         <td><c:out value="${s.name}"></c:out></td>
@@ -64,14 +64,15 @@
                         <td><c:out value="${s.narrowID}"></c:out></td>
                    
                     <td>              
-                    <c:url  var="update" value="mainController">
+                    <c:url  var="update" value="MainController">
                         <c:param name="action" value="updateStudent"></c:param>
                     </c:url>
                     <a href="${update}">Update</a>
                     </td>
                     <td>              
-                    <c:url  var="delete" value="mainController">
+                    <c:url  var="delete" value="MainController">
                         <c:param name="action" value="deleteStudent"></c:param>
+                        <c:param name="userID" value="${s.userID}"></c:param>
                     </c:url>
                     <a href="${delete}">Delete</a>
                     </td>

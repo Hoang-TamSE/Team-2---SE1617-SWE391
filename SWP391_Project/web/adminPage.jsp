@@ -21,7 +21,7 @@
         <div id="dp_menu" class="dp_menu">
             <button><span>MENU</span></button>
             <ul class="main-menu" style="display:none">
-                <li><a href="Student.jsp">Student</a></li>
+                <li><a href="MainController?action=Search">Student</a></li>
                 <li><a href="Supporter.jsp">Supporter</a></li>
                 <li><a href="Specialization.jsp">Specialization</a></li>
                 <li><a href="#team">Term</a></li>            
@@ -33,13 +33,13 @@
 
         <div>
             <h1>Welcome Admin</h1>
-            
+
         </div>
         <footer>
             <p>Team</p>
             <p>FPT University</p>
         </footer>
-                    <script>
+        <script>
             $(document).ready(function () {
                 $("button").click(function () {
                     $("#dp_menu > ul").toggle(500);

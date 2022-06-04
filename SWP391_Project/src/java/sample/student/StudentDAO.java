@@ -24,13 +24,15 @@ public class StudentDAO {
             + " FROM tblUser us INNER JOIN tblStudent st ON us.userID = st.userID "
             + "WHERE us.status = 'true' AND us.name like ? ";
             
-            
+    private static final String DELETE = "UPDATE tblUser "
+            + "SET status= 'false' "
+            + "WHERE userID=? ";      
 //   "SELECT productID, productName, image, price, quantity, catagoryID, importDate, usingDate, status "
 //            + " FROM tblProduct  "
 //            + " WHERE productName like ? AND status = 'true'";
     
 
-    public List<StudentDTO> getListProduct(String search) throws SQLException {
+    public List<StudentDTO> getListStudents(String search) throws SQLException {
         List<StudentDTO> list = new ArrayList<>();
         Connection conn = null;
         PreparedStatement ptm = null;
@@ -69,6 +71,28 @@ public class StudentDAO {
         }
         return list;
     }
-
+    public boolean delete(String userID) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(DELETE);
+                ptm.setString(1, userID);
+                check = ptm.executeUpdate() > 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return check;
+    }
    
 }

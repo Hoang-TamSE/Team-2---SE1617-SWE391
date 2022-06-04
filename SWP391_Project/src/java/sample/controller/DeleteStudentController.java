@@ -6,7 +6,7 @@
 package sample.controller;
 
 import java.io.IOException;
-import java.util.List;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,35 +15,31 @@ import javax.servlet.http.HttpServletResponse;
 import sample.student.StudentDAO;
 import sample.student.StudentDTO;
 
-
 /**
  *
  * @author Hoang Tam
  */
-@WebServlet(name = "SearchStudentController", urlPatterns = {"/SearchStudentController"})
-public class SearchStudentController extends HttpServlet {
-    private static final String ERROR="Student.jsp";
-    private static final String SUCCESS="Student.jsp";
-    
+@WebServlet(name = "DeleteStudentController", urlPatterns = {"/DeleteStudentController"})
+public class DeleteStudentController extends HttpServlet {
+
+    private static final String ERROR = "SearchStudentController";
+    private static final String SUCCESS = "SearchStudentController";
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
         try {
-            String search = request.getParameter("search");
-            if(search == null){
-                search = "";
-            }
+            String userID = request.getParameter("userID");
             StudentDAO dao = new StudentDAO();
-            List<StudentDTO> listStudents = dao.getListStudents(search);
-            if(listStudents.size()>0){
-                request.setAttribute("LIST_Students", listStudents);
-                request.setAttribute("search", search);
-                url=SUCCESS;
+            boolean check = dao.delete(userID);
+            if (check) {
+                url = SUCCESS;
             }
         } catch (Exception e) {
-            log("Error at SearchController: "+ e.toString());
-        }finally{
+            log("error at DeleteController: " + e.toString());
+        } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }
     }
