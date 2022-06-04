@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Student Manager Page</title>
+        <title>Student Management</title>
         <link rel="stylesheet" type="text/css" href="css/cssforadmin.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -38,6 +38,9 @@
             <form action="MainController" method="post">
                 <input type="text" name="search" value="${requestScope.search}">
                 <input type="submit" value="Search" name="action">
+            </form>
+            <form action="MainController" method="post">
+                <input type="submit" value="AddStudent" name="action">
             </form>
             <h1></h1>
             <table class="table table-responsive table-bordered table-hover">
@@ -67,16 +70,16 @@
                         <td><c:out value="${s.narrowID}"></c:out></td>
 
                             <td>              
-                            <c:url  var="update" value="MainController">
-                                <c:param name="action" value="pageUpdateStudent"></c:param>
-                                <c:param name="userID" value="${s.userID}"></c:param>
+                            <c:url  var="update" value="mainController">
+                                <c:param name="id" value="${s.getId()}"></c:param>
+                                <c:param name="action" value="updateStudent"></c:param>
                             </c:url>
                             <a href="${update}">Update</a>
                         </td>
                         <td>              
-                            <c:url  var="delete" value="MainController">
+                            <c:url  var="delete" value="mainController">
+                                <c:param name="id" value="${s.getId()}"></c:param>
                                 <c:param name="action" value="deleteStudent"></c:param>
-                                <c:param name="userID" value="${s.userID}"></c:param>
                             </c:url>
                             <a href="${delete}">Delete</a>
                         </td>
@@ -89,13 +92,6 @@
             <p>Team</p>
             <p>FPT University</p>
         </footer>
-        <script>
-            $(document).ready(function () {
-                $("button").click(function () {
-                    $("#dp_menu > ul").toggle(500);
-                    $("#dp_menu").toggleClass("show");
-                });
-            });
-        </script>
+        
     </body>
 </html>
