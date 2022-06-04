@@ -43,11 +43,13 @@
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Email</th>
                     <th scope="col">Full name</th>
+                    <th scope="col">Email</th>
                     <th scope="col">Phone</th>
+                    <th scope="col">Address</th>
                     <th scope="col">Semester</th>
                     <th scope="col">Major</th>
+                    <th scope="col">Narrow</th>
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                 </tr>
