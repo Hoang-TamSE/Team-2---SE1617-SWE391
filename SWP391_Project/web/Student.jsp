@@ -60,15 +60,15 @@
                         <td><c:out value="${s.narrowID}"></c:out></td>
 
                             <td>              
-                            <c:url  var="update" value="mainController">
-                                <c:param name="id" value="${s.userID}"></c:param>
+                            <c:url  var="update" value="MainController">
+                                <c:param name="userID" value="${s.userID}"></c:param>
                                 <c:param name="action" value="pageUpdateStudent"></c:param>
                             </c:url>
                             <a href="${update}">Update</a>
                         </td>
                         <td>              
                             <c:url  var="delete" value="MainController">
-                                <c:param name="id" value="${s.userID}"></c:param>
+                                <c:param name="userID" value="${s.userID}"></c:param>
                                 <c:param name="action" value="deleteStudent"></c:param>
                             </c:url>
                             <a href="${delete}">Delete</a>
