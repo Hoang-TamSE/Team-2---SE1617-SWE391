@@ -19,20 +19,20 @@ import sample.student.StudentDTO;
  *
  * @author Hoang Tam
  */
-@WebServlet(name = "DeleteStudentController", urlPatterns = {"/DeleteStudentController"})
-public class DeleteStudentController extends HttpServlet {
+@WebServlet(name = "PageUpdateStudentController", urlPatterns = {"/PageUpdateStudentController"})
+public class PageUpdateStudentController extends HttpServlet {
 
-    private static final String ERROR = "SearchStudentController";
-    private static final String SUCCESS = "SearchStudentController";
-
+    private static final String ERROR = "UpdateStudent.jsp";
+    private static final String SUCCESS = "UpdateStudent.jsp";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String url = ERROR;
         try {
             String userID = request.getParameter("userID");
             StudentDAO dao = new StudentDAO();
-            boolean check = dao.delete(userID);
-            if (check) {
+            StudentDTO student = dao.getStudent(userID);
+            if (student != null) {
+                request.setAttribute("STUDENT", student);
                 url = SUCCESS;
             }
         } catch (Exception e) {

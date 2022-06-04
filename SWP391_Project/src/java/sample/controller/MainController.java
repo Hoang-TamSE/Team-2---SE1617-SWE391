@@ -26,6 +26,8 @@ public class MainController extends HttpServlet {
     private static final String DELETE_CONTROLLER="DeleteStudentController";
     private static final String UPDATE="Update";
     private static final String UPDATE_CONTROLLER="UpdateController";
+    private static final String PAGEUPDATESTUDENT="pageUpdateStudent";
+    private static final String PAGEUPDATESTUDENT_CONTROLLER="PageUpdateStudentController";
     private static final String LOGOUT="Logout";
     private static final String LOGOUT_CONTROLLER="LogoutController";
     private static final String CREATE="Create";
@@ -64,6 +66,9 @@ public class MainController extends HttpServlet {
             
             }else if(UPDATE.equals(action)){
                     url= UPDATE_CONTROLLER;
+            }
+            else if(PAGEUPDATESTUDENT.equals(action)){
+                    url= PAGEUPDATESTUDENT_CONTROLLER;
             }
             else if(LOGOUT.equals(action)){
                     url= LOGOUT_CONTROLLER;

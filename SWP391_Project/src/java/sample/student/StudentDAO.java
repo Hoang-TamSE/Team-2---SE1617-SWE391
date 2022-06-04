@@ -23,6 +23,10 @@ public class StudentDAO {
             + " us.roleID, st.semesterID, st.majorID, st.narrowID"
             + " FROM tblUser us INNER JOIN tblStudent st ON us.userID = st.userID "
             + "WHERE us.status = 'true' AND us.name like ? ";
+    private static final String GETSTUDENT = "SELECT us.userID, us.name, us.email, us.phoneNumber, us.address,"
+            + " us.roleID, st.semesterID, st.majorID, st.narrowID"
+            + " FROM tblUser us INNER JOIN tblStudent st ON us.userID = st.userID "
+            + "WHERE us.status = 'true' AND us.userID like ? ";
             
     private static final String DELETE = "UPDATE tblUser "
             + "SET status= 'false' "
@@ -70,6 +74,45 @@ public class StudentDAO {
             }
         }
         return list;
+    }
+    public StudentDTO getStudent(String search) throws SQLException {
+        StudentDTO student = null;
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(GETSTUDENT);
+                ptm.setString(1, "%" + search + "%");
+                rs = ptm.executeQuery();
+                if (rs.next()) {
+                    String userID = rs.getString("userID");
+                    String name = rs.getString("name");
+                    String email = rs.getString("email");
+                    String phoneNumber = rs.getString("phoneNumber");
+                    String address = rs.getString("address");
+                    String roleID = rs.getString("roleID");
+                    String semesterID = rs.getString("semesterID");
+                    String majorID = rs.getString("majorID");
+                    String narrowID = rs.getString("narrowID");
+                    student = new StudentDTO(userID, name, email, phoneNumber, address, roleID, semesterID, majorID, narrowID);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return student;
     }
     public boolean delete(String userID) throws SQLException {
         boolean check = false;

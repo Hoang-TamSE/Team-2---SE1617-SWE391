@@ -47,6 +47,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Address</th>
+                    <th scope="col">Role</th>
                     <th scope="col">Semester</th>
                     <th scope="col">Major</th>
                     <th scope="col">Narrow</th>
@@ -64,20 +65,21 @@
                         <td><c:out value="${s.semesterID}"></c:out></td>
                         <td><c:out value="${s.majorID}"></c:out></td>
                         <td><c:out value="${s.narrowID}"></c:out></td>
-                   
-                    <td>              
-                    <c:url  var="update" value="MainController">
-                        <c:param name="action" value="updateStudent"></c:param>
-                    </c:url>
-                    <a href="${update}">Update</a>
-                    </td>
-                    <td>              
-                    <c:url  var="delete" value="MainController">
-                        <c:param name="action" value="deleteStudent"></c:param>
-                        <c:param name="userID" value="${s.userID}"></c:param>
-                    </c:url>
-                    <a href="${delete}">Delete</a>
-                    </td>
+
+                            <td>              
+                            <c:url  var="update" value="MainController">
+                                <c:param name="action" value="pageUpdateStudent"></c:param>
+                                <c:param name="userID" value="${s.userID}"></c:param>
+                            </c:url>
+                            <a href="${update}">Update</a>
+                        </td>
+                        <td>              
+                            <c:url  var="delete" value="MainController">
+                                <c:param name="action" value="deleteStudent"></c:param>
+                                <c:param name="userID" value="${s.userID}"></c:param>
+                            </c:url>
+                            <a href="${delete}">Delete</a>
+                        </td>
 
                     </tr>
                 </c:forEach>
@@ -87,7 +89,7 @@
             <p>Team</p>
             <p>FPT University</p>
         </footer>
-                    <script>
+        <script>
             $(document).ready(function () {
                 $("button").click(function () {
                     $("#dp_menu > ul").toggle(500);

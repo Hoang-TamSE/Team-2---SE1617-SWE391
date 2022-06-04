@@ -27,25 +27,49 @@
                 <tr>
                     <td>ID</td>
                     <td>
-                        <input value="" name="id" readonly>
+                        <input value="${requestScope.STUDENT.userID}" name="id" readonly>
                     </td>
                 </tr>
                 <tr>
                     <td>Email</td>
                     <td>
-                        <input value="" name="email" readonly>
+                        <input value="${requestScope.STUDENT.email}" name="email" readonly>
                     </td>
                 </tr>
                 <tr>
                     <td>Full name</td>
                     <td>
-                        <input value="" type="text" name="fullname">
+                        <input value="${requestScope.STUDENT.name}" type="text" name="fullname">
                     </td>
                 </tr>
                 <tr>
                     <td>Phone</td>
                     <td>
-                        <input value="" type="text" name="phone">
+                        <input value="${requestScope.STUDENT.phoneNumber}" type="text" name="phoneNumber">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <input value="${requestScope.STUDENT.address}" type="text" name="address">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Semester</td>
+                    <td>
+                        <input value="${requestScope.STUDENT.semesterID}" type="text" name="semesterID">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Major</td>
+                    <td>
+                        <input value="${requestScope.STUDENT.majorID}" type="text" name="majorID">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Narrow</td>
+                    <td>
+                        <input value="${requestScope.STUDENT.narrowID}" type="text" name="narrowID">
                     </td>
                 </tr>
                 <tr>
