@@ -19,7 +19,7 @@
         <div id="dp_menu" class="dp_menu">
             <button><span>MENU</span></button>
             <ul class="main-menu" style="display:none">
-                <li><a href="Student.jsp">Student</a></li>
+                <li><a href="MainController?action=Search">Student</a></li>
                 <li><a href="Supporter.jsp">Supporter</a></li>
                 <li><a href="Specialization.jsp">Specialization</a></li>
                 <li><a href="#team">Term</a></li>            

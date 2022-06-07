@@ -27,14 +27,25 @@ public class StudentDAO {
             + " us.roleID, st.semesterID, st.majorID, st.narrowID"
             + " FROM tblUser us INNER JOIN tblStudent st ON us.userID = st.userID "
             + "WHERE us.status = 'true' AND us.userID like ? ";
-            
+
     private static final String DELETE = "UPDATE tblUser "
             + "SET status= 'false' "
-            + "WHERE userID=? ";      
+            + "WHERE userID=? ";
 //   "SELECT productID, productName, image, price, quantity, catagoryID, importDate, usingDate, status "
 //            + " FROM tblProduct  "
 //            + " WHERE productName like ? AND status = 'true'";
-    
+    private static final String UPDATE = "BEGIN TRANSACTION;\n"
+            + "UPDATE tblUser\n"
+            + "SET tblUser.name = ?, tbluser.phoneNumber = ?, tbluser.address = ?\n"
+            + "FROM tblUser , tblStudent student\n"
+            + "WHERE tblUser.userID = student.userID\n"
+            + "AND tblUser.userID = ? ;\n"
+            + "UPDATE tblStudent\n"
+            + "SET tblStudent.semesterID = ? , tblStudent.majorID = ?, tblStudent.narrowID = ?\n"
+            + "FROM tblUser , tblStudent student\n"
+            + "WHERE tblUser.userID = student.userID\n"
+            + "AND student.userID = ?;\n"
+            + "COMMIT;";
 
     public List<StudentDTO> getListStudents(String search) throws SQLException {
         List<StudentDTO> list = new ArrayList<>();
@@ -75,6 +86,7 @@ public class StudentDAO {
         }
         return list;
     }
+
     public StudentDTO getStudent(String search) throws SQLException {
         StudentDTO student = null;
         Connection conn = null;
@@ -114,6 +126,7 @@ public class StudentDAO {
         }
         return student;
     }
+
     public boolean delete(String userID) throws SQLException {
         boolean check = false;
         Connection conn = null;
@@ -137,5 +150,35 @@ public class StudentDAO {
         }
         return check;
     }
-   
+
+    public boolean updateStudent(StudentDTO student) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(UPDATE);
+                ptm.setNString(1, student.getName());
+                ptm.setString(2, student.getPhoneNumber());
+                ptm.setNString(3, student.getAddress());
+                ptm.setString(4, student.getUserID());
+                ptm.setString(5, student.getSemesterID());
+                ptm.setString(6, student.getMajorID());
+                ptm.setString(7, student.getNarrowID());
+                ptm.setString(8, student.getUserID());
+                check = ptm.executeUpdate() > 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return check;
+    }
 }

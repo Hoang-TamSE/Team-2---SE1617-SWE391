@@ -29,9 +29,7 @@
                 <input type="text" name="search" value="${requestScope.search}">
                 <input type="submit" value="Search" name="action">
             </form>
-            <form action="MainController" method="post">
-                <input type="submit" value="AddStudent" name="action">
-            </form>
+            <a href="AddStudent.jsp">AddStudent</a>
             <h1></h1>
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
@@ -77,6 +75,9 @@
                     </tr>
                 </c:forEach>
             </table>
+            <c:if test="${not empty requestScope.SUCCESS}">
+                <p style="color: lightgreen">${requestScope.SUCCESS}</p>
+            </c:if>
         </div>
         <footer>
             <p>Team</p>

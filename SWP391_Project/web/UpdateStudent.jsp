@@ -22,24 +22,27 @@
         
         <%@include file="MenuAdmin.jsp" %>
         
-        <form action="mainController" method="post">
+        <form action="MainController" method="GET">
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
                     <td>ID</td>
                     <td>
-                        <input value="${requestScope.STUDENT.userID}" name="id" readonly>
+                        ${requestScope.STUDENT.userID}
                     </td>
                 </tr>
                 <tr>
                     <td>Email</td>
                     <td>
-                        <input value="${requestScope.STUDENT.email}" name="email" readonly>
+                        ${requestScope.STUDENT.email}
                     </td>
                 </tr>
                 <tr>
                     <td>Full name</td>
                     <td>
-                        <input value="${requestScope.STUDENT.name}" type="text" name="fullname">
+                        <input value="${requestScope.STUDENT.name}" type="text" name="name">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.name}</p>
                     </td>
                 </tr>
                 <tr>
@@ -47,17 +50,24 @@
                     <td>
                         <input value="${requestScope.STUDENT.phoneNumber}" type="text" name="phoneNumber">
                     </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.phoneNumber}</p>
+                    </td>
                 </tr>
                 <tr>
                     <td>Address</td>
                     <td>
                         <input value="${requestScope.STUDENT.address}" type="text" name="address">
                     </td>
+                   
                 </tr>
                 <tr>
                     <td>Semester</td>
                     <td>
                         <input value="${requestScope.STUDENT.semesterID}" type="text" name="semesterID">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.semesterID}</p>
                     </td>
                 </tr>
                 <tr>
@@ -65,16 +75,24 @@
                     <td>
                         <input value="${requestScope.STUDENT.majorID}" type="text" name="majorID">
                     </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.majorID}</p>
+                    </td>
                 </tr>
                 <tr>
                     <td>Narrow</td>
                     <td>
                         <input value="${requestScope.STUDENT.narrowID}" type="text" name="narrowID">
                     </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.narrowID}</p>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input class="button" type="submit" name="action" value="saveUpdateAccount">
+                        <input class="button" type="submit" name="action" value="UpdateStudent">
+                        <input type="hidden" name="userID" value="${requestScope.STUDENT.userID}">
+                        <input type="hidden" name="email" value="${requestScope.STUDENT.email}">
                     </td>
                 </tr>
             </table>
