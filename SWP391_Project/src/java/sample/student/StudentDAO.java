@@ -34,6 +34,12 @@ public class StudentDAO {
 //   "SELECT productID, productName, image, price, quantity, catagoryID, importDate, usingDate, status "
 //            + " FROM tblProduct  "
 //            + " WHERE productName like ? AND status = 'true'";
+    private static final String ADDUSER = "INSERT INTO tblUser"
+            + "(userID, name, email, phoneNumber, address, roleID, status)"
+            + " VALUES(?,?,?,?,?,'ST', 'true')";
+    private static final String ADDSTUDENT = "INSERT INTO tblStudent"
+            + "(userID, semesterID, majorID, narrowID )"
+            + " VALUES(?,?,?,?)";
     private static final String UPDATE = "BEGIN TRANSACTION;\n"
             + "UPDATE tblUser\n"
             + "SET tblUser.name = ?, tbluser.phoneNumber = ?, tbluser.address = ?\n"
@@ -167,6 +173,59 @@ public class StudentDAO {
                 ptm.setString(6, student.getMajorID());
                 ptm.setString(7, student.getNarrowID());
                 ptm.setString(8, student.getUserID());
+                check = ptm.executeUpdate() > 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return check;
+    }
+    public boolean createUser(StudentDTO student) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(ADDUSER);
+                ptm.setString(1, student.getUserID());
+                ptm.setString(2, student.getName());
+                ptm.setString(3, student.getEmail());
+                ptm.setString(4, student.getPhoneNumber());
+                ptm.setString(5, student.getAddress());
+                check = ptm.executeUpdate() > 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return check;
+    }
+    public boolean createStudent(StudentDTO student) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(ADDSTUDENT);
+                ptm.setString(1, student.getUserID());
+                ptm.setString(2, student.getSemesterID());
+                ptm.setString(3, student.getMajorID());
+                ptm.setString(4, student.getNarrowID());
                 check = ptm.executeUpdate() > 0;
             }
         } catch (Exception e) {

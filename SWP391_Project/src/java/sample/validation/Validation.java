@@ -146,6 +146,27 @@ public class Validation {
         } 
         return check;
     }
+    public static boolean checkDuplicateUserID(String userID) {
+        ValidationDAO dao = new ValidationDAO();
+        boolean check = false;
+        try {
+            check = dao.checkDuplicateUserID(userID);
+
+        } catch (Exception e) {
+           e.printStackTrace();
+        } 
+        return check;
+    }
+    public static boolean checkVaildEmail(String email) {
+        boolean check = false;
+        try {
+            check = email.matches("^\\w+[a-z0-9]*@fpt.edu.vn");
+
+        } catch (Exception e) {
+           e.printStackTrace();
+        } 
+        return check;
+    }
     public static boolean checkMajorID(String majorID) {
         ValidationDAO dao = new ValidationDAO();
         boolean check = false;

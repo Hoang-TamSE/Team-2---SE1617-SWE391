@@ -30,8 +30,8 @@ public class MainController extends HttpServlet {
     private static final String PAGEUPDATESTUDENT_CONTROLLER="PageUpdateStudentController";
     private static final String LOGOUT="Logout";
     private static final String LOGOUT_CONTROLLER="LogoutController";
-    private static final String CREATE="Create";
-    private static final String CREATE_CONTROLLER="CreateController";
+    private static final String ADDSTUDENT="AddStudent";
+    private static final String ADDSTUDENT_CONTROLLER="AddStudentController";
     private static final String VIEW="View";
     private static final String VIEW_CONTROLLER="viewCart.jsp";
     private static final String REMOVE="Remove";
@@ -73,8 +73,8 @@ public class MainController extends HttpServlet {
             else if(LOGOUT.equals(action)){
                     url= LOGOUT_CONTROLLER;
             }
-            else if(CREATE.equals(action)){
-                    url= CREATE_CONTROLLER;
+            else if(ADDSTUDENT.equals(action)){
+                    url= ADDSTUDENT_CONTROLLER;
             }
             
             else if(VIEW.equals(action)){
