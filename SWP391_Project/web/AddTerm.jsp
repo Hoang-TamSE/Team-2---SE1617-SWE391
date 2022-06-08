@@ -1,6 +1,6 @@
 <%-- 
-    Document   : AddSupporter
-    Created on : Jun 3, 2022, 11:44:45 AM
+    Document   : AddTerm
+    Created on : Jun 8, 2022, 11:17:47 PM
     Author     : user
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add Supporter</title>
+        <title>Add Student</title>
         <link rel="stylesheet" type="text/css" href="css/cssforadmin.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -30,24 +30,13 @@
                         <input value="" type="text" name="id">
                     </td>
                 </tr>
+               
                 <tr>
-                    <td>Email</td>
-                    <td>
-                        <input value="" type="text" name="email">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Full name</td>
+                    <td>Name</td>
                     <td>
                         <input value="" type="text" name="fullname">
                     </td>
-                </tr>
-                <tr>
-                    <td>Phone</td>
-                    <td>
-                        <input value="" type="text" name="phone">
-                    </td>
-                </tr>
+               
                 <tr>
                     <td colspan="2">
                         <input class="button" type="submit" name="action" value="Add">

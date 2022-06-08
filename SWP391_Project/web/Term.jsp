@@ -1,16 +1,18 @@
 <%-- 
-    Document   : Supporter
-    Created on : May 29, 2022, 4:55:41 PM
+    Document   : Term
+    Created on : Jun 8, 2022, 7:47:02 PM
     Author     : user
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Supporter Management</title>
+        <title>Term Management</title>
         <link rel="stylesheet" type="text/css" href="css/cssforadmin.css">
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
@@ -20,10 +22,11 @@
         <header>
             <h1>ADMIN HOME PAGE</h1> <!-- tiêu đề -->
         </header>
+
         <%@include file="MenuAdmin.jsp" %>
 
         <div>
-            <h1>Supporter Management</h1>
+            <h1>Term Management</h1>
             <form action="mainController" method="post">
                 <input type="text" name="search" value="<%= (request.getParameter("txtsearch") == null) ? "" : request.getParameter("txtsearch")%>">
                 <select name="searchby">
@@ -32,43 +35,41 @@
                 </select>
                 <input type="submit" value="search" name="action" >
             </form>
-            <p>Add Supporter: <a href="AddStudent.jsp"><i class="fa-solid fa-circle-plus"></i></a></p>
+            <p>Add Term: <a href="AddTerm.jsp"><i class="fa-solid fa-circle-plus"></i></a></p>
             <h1></h1>
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Full name</th>
-                    <th scope="col">Phone</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                 </tr>
-                <c:forEach var="acc" items="${requestScope.accountList}">
+                <c:forEach var="s" items="${requestScope.LIST_Terms}">
                     <tr>
-                        <td><c:out value="${sp.getAccID()}"></c:out></td>
-                    <td><c:out value="${sp.getAccID()}"></c:out></td>
-                    <td><c:out value="${sp.getAccID()}"></c:out></td>
-                    <td><c:out value="${sp.getAccID()}"></c:out></td>
-                    <td>              
-                    <c:url  var="update" value="mainController">
-                        <c:param name="sid" value="${sp.getId()}"></c:param>
+                        <td><c:out value="${s.id}"></c:out></td>
+                        <td><c:out value="${s.name}"></c:out></td>
 
-                        <c:param name="action" value="updateStudent"></c:param>
-                    </c:url>
-                    <a href="${update}"><i class="fas fa-edit"></i></a>
-                    </td>
-                    <td>              
-                    <c:url  var="delete" value="mainController">
-                        <c:param name="sid" value="${sp.getId()}"></c:param>
-
-                        <c:param name="action" value="deleteStudent"></c:param>
-                    </c:url>
-                    <a href="${delete}"><i class="fas fa-trash"></i></a>
-                    </td>
+                            <td>              
+                            <c:url  var="update" value="MainController">
+                                <c:param name="userID" value="${s.id}"></c:param>
+                                <c:param name="action" value="pageUpdateStudent"></c:param>
+                            </c:url>
+                            <a href="${update}"><i class="fas fa-edit"></i></a>
+                        </td>
+                        <td>              
+                            <c:url  var="delete" value="MainController">
+                                <c:param name="userID" value="${s.id}"></c:param>
+                                <c:param name="action" value="deleteStudent"></c:param>
+                            </c:url>
+                            <a href="${delete}"><i class="fas fa-trash"></i></a>
+                        </td>
 
                     </tr>
                 </c:forEach>
             </table>
+            <c:if test="${not empty requestScope.SUCCESS}">
+                <p style="color: lightgreen">${requestScope.SUCCESS}</p>
+            </c:if>
         </div>
         <footer>
             <p>Team</p>
