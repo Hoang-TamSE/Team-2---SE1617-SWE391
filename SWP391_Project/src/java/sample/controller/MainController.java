@@ -7,6 +7,7 @@ package sample.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Hoang Tam
  */
+@MultipartConfig
 public class MainController extends HttpServlet {
 
     private static final String ERROR="error.jsp";
@@ -50,6 +52,8 @@ public class MainController extends HttpServlet {
     private static final String CHECKOUT_CONTROLLER="CheckOutController";
     private static final String SENDMAIL="SendMail";
     private static final String SENDMAIL_CONTROLLER="SendMailController";
+    private static final String UPLOADFILEEXCEL="Upload";
+    private static final String UPLOADFILEEXCEL_CONTROLLER="UploadFileExcelController";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -69,6 +73,9 @@ public class MainController extends HttpServlet {
             }
             else if(PAGEUPDATESTUDENT.equals(action)){
                     url= PAGEUPDATESTUDENT_CONTROLLER;
+            }
+            else if(UPLOADFILEEXCEL.equals(action)){
+                    url= UPLOADFILEEXCEL_CONTROLLER;
             }
             else if(LOGOUT.equals(action)){
                     url= LOGOUT_CONTROLLER;
