@@ -27,15 +27,15 @@
         <div>
             <h1>Student Management</h1>
             <form action="mainController" method="post">
-                <input style="border: none;border-bottom: 2px solid black; "type="text" name="search" value="<%= (request.getParameter("txtsearch") == null) ? "" : request.getParameter("txtsearch")%>">
-                <select name="searchby">
-                    <option value="byname">By id</option>
-                    <option value="bycate">By name</option>
+                <input style="border: none;border-bottom: 3px solid black; "type="text" name="search" value="<%= (request.getParameter("txtsearch") == null) ? "" : request.getParameter("txtsearch")%>">
+                <select style="border: 3px solid black" name="searchby">
+                    <option value="byname">By Id</option>
+                    <option value="bycate">By Name</option>
                 </select>
-                <input type="submit" value="search" name="action" >
+                <input style="margin-top: 3px;border:3px solid black" type="submit" value="search" name="action" >
             </form> 
             <a href="AddStudent.jsp">
-                <button style="border-radius: 5px">Add Student: <i class="fa-solid fa-circle-plus"></i></button>
+                <button style="border:3px solid black">Add Student: <i class="fa-solid fa-circle-plus"></i></button>
             </a> 
             <h1></h1>
             <table class="table table-responsive table-bordered table-hover">
