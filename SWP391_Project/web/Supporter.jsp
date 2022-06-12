@@ -32,7 +32,9 @@
                 </select>
                 <input type="submit" value="search" name="action" >
             </form>
-            <p>Add Supporter: <a href="AddStudent.jsp"><i class="fa-solid fa-circle-plus"></i></a></p>
+            <a href="AddSupporter.jsp">
+                <button style="border-radius: 5px">Add Supporter: <i class="fa-solid fa-circle-plus"></i></button>
+            </a> 
             <h1></h1>
             <table class="table table-responsive table-bordered table-hover">
                 <tr>

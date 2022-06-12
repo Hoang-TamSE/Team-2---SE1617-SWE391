@@ -1,6 +1,6 @@
 <%-- 
-    Document   : AddSpecialization
-    Created on : Jun 8, 2022, 11:28:19 PM
+    Document   : UpdateMajor
+    Created on : Jun 12, 2022, 7:25:37 PM
     Author     : user
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add Specializationt</title>
+        <title>Update Student</title>
         <link rel="stylesheet" type="text/css" href="css/cssforadmin.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,25 +22,27 @@
         
         <%@include file="MenuAdmin.jsp" %>
         
-        <form action="mainController" method="post">
+        <form action="MainController" method="GET">
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
                     <td>ID</td>
                     <td>
-                        <input value="" type="text" name="id">
+                        ${requestScope.STUDENT.userID}
                     </td>
                 </tr>
-                
                 <tr>
                     <td>Name</td>
                     <td>
-                        <input value="" type="text" name="fullname">
+                        ${requestScope.STUDENT.email}
                     </td>
                 </tr>
                 
                 <tr>
                     <td colspan="2">
-                        <input class="button" type="submit" name="action" value="Add">
+                        <!--Mấy ông sửa cái này lại nha tui demo thôi_-->
+                        <input class="button" type="submit" name="action" value="UpdateStudent">
+                        <input type="hidden" name="userID" value="${requestScope.STUDENT.userID}">
+                        <input type="hidden" name="email" value="${requestScope.STUDENT.email}">
                     </td>
                 </tr>
             </table>

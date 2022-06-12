@@ -12,7 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Student Management</title>
         <link rel="stylesheet" type="text/css" href="css/cssforadmin.css">
-        
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
@@ -27,15 +27,17 @@
 
         <div>
             <h1>Student Management</h1>
-            <form action="MainController" method="post">
-                <input type="text" name="search" value="${requestScope.search}">
-                <input type="submit" value="Search" name="action">
-            </form>
-            <p>Add Student: <a href="AddStudent.jsp"><i class="fa-solid fa-circle-plus"></i></a></p>
-            <form method="POST" action="MainController" enctype="multipart/form-data" >
-                <input type="file" name="file" accept=".xlsx">
-                <input type="submit" value="Upload" name="action">
-            </form>
+            <form action="mainController" method="post">
+                <input type="text" name="search" value="<%= (request.getParameter("txtsearch") == null) ? "" : request.getParameter("txtsearch")%>">
+                <select name="searchby">
+                    <option value="byname">By id</option>
+                    <option value="bycate">By name</option>
+                </select>
+                <input type="submit" value="search" name="action" >
+            </form>     
+            <a href="AddStudent.jsp">
+                <button style="border-radius: 5px">Add Student: <i class="fa-solid fa-circle-plus"></i></button>
+            </a> 
             <h1></h1>
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
@@ -89,6 +91,7 @@
             <p>Team</p>
             <p>FPT University</p>
         </footer>
-        
+
     </body>
+
 </html>

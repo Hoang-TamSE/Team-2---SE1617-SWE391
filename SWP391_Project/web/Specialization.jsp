@@ -24,7 +24,7 @@
         <%@include file="MenuAdmin.jsp" %>
 
 
-        <h1>Specialization Management</h1>
+        <h1>Narrow Management</h1>
         <form action="search" method="post">
             Major:
             <select name="major">
@@ -34,7 +34,9 @@
             </select>
             <input type="submit" value="search">
         </form>
-        <p>Add Specialzaion: <a href="AddSpecialization.jsp"><i class="fa-solid fa-circle-plus"></i></a></p>
+        <a href="AddSpecialization.jsp">
+            <button style="border-radius: 5px">Add Narrow: <i class="fa-solid fa-circle-plus"></i></button>
+        </a> 
         <table class="table table-responsive table-bordered table-hover">
             <tbody>
                 <tr>

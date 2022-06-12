@@ -1,6 +1,6 @@
 <%-- 
-    Document   : MenuAdmin
-    Created on : Jun 3, 2022, 11:37:10 AM
+    Document   : MenuStudent
+    Created on : Jun 12, 2022, 7:21:19 PM
     Author     : user
 --%>
 
@@ -19,14 +19,9 @@
         <div id="dp_menu" class="dp_menu">
             <button><span>MENU</span></button>
             <ul class="main-menu" style="display:none">
-                <li><a href="MainController?action=Search">Student</a></li>
-                <li><a href="Supporter.jsp">Supporter</a></li>
-                <li><a href="Major.jsp">Major</a></li>
-                <li><a href="Specialization.jsp">Specialization</a></li>
-                <li><a href="Term.jsp">Term</a></li>            
-                <li><a href="#services">Register form</a></li>
-                <li><a href="#contact">Notification</a></li>
-                <li><a href="#followme">Logout</a></li>
+                <li><a href="UpdateInformation.jsp">Update Information</a></li>
+                <li><a href="">Chat With Supporter</a></li>
+                <li><a href="NarrowRegister.jsp">Narrow Register</a></li>
             </ul>
         </div>
     </body>
@@ -39,3 +34,4 @@
         });
     </script>
 </html>
+
