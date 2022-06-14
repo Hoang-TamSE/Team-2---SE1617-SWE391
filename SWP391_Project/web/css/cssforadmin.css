@@ -51,15 +51,34 @@ body:after
     width:0; height:0
 }
 
+.left
+{
+    display: block;
+    width: 48%;
+    float: left;
+
+}
+
+.right
+{
+    display: block;
+    width: 48%;
+    float: right;
+}
+
+.right form
+{
+    position: absolute;
+    right :0%;
+}
+
 li a
 {
     text-decoration: none;
+    color: black;
 }
 
-div form
-{
-    padding-left: 80%;
-}
+
 
 #dp_menu ul, #dp_menu li 
 {
