@@ -39,7 +39,7 @@
             </a> 
             <form method="POST" action="MainController" enctype="multipart/form-data" >
                 <input type="file" name="file" accept=".xlsx">
-                <input type="submit" value="Upload" name="action">
+                <input type="submit" value="Upload File" name="action">
             </form>
             <h1></h1>
             <table class="table table-responsive table-bordered table-hover">
