@@ -35,8 +35,12 @@
                 <input style="margin-top: 3px;border:3px solid black" type="submit" value="search" name="action" >
             </form> 
             <a href="AddStudent.jsp">
-                <button style="border:3px solid black">Add Student: <i class="fa-solid fa-circle-plus"></i></button>
+                <button style="border:3px solid black">Add Student</button>
             </a> 
+            <form method="POST" action="MainController" enctype="multipart/form-data" >
+                <input type="file" name="file" accept=".xlsx">
+                <input type="submit" value="Upload" name="action">
+            </form>
             <h1></h1>
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
