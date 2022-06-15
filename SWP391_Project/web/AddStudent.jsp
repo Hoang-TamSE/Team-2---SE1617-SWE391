@@ -14,6 +14,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -27,8 +28,10 @@
             <table class="">
                 <tr>
                     <td></td>
-                    <td style="font-weight: bold;font-size: large">Add Student</td>
+                    <td style="font-weight: bold;font-size: large">ADD STUDENT</td>
                 </tr>
+               
+
                 <tr>
                     <td>ID</td>
                     <td>
@@ -101,7 +104,16 @@
                 <tr style="text-align: center;">
                     <td colspan="2">
                         <input class="button" type="submit" name="action" value="AddStudent">
+                        
                     </td>
+                    
+                </tr>
+                <tr style="text-align: center;">
+                    <td colspan="2">
+                        <input class="button" type="submit" name="action" value="Reset">
+                        
+                    </td>
+                    
                 </tr>
             </table>
         </form>
@@ -117,13 +129,17 @@
     <style>
         tr td
         {
-            padding: 10px;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            
         }
 
         tr td input
         {
             border:none;
             border-bottom: 2px solid black;
+            width: 220px;
         }
         table
         {
@@ -139,6 +155,9 @@
         {
             border:2px solid black;
             background-color: white;
+            width: 31%;
+            text-align: center;
         }
+        
     </style>
 </html>

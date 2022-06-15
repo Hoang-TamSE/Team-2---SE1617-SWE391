@@ -25,7 +25,7 @@
         </div>
         <h3>You information</h3>
         <form action="MainController" method="GET">
-            <table class="table table-responsive table-bordered table-hover">
+            <table class="">
                 <tr>
                     <td>ID</td>
                     <td>
@@ -90,4 +90,33 @@
         </footer>
 
     </body>
+    
+    <style>
+        h3
+        {
+            clear: both;
+        }
+        tr td
+        {
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        tr td input
+        {
+            border:none;
+            border-bottom: 2px solid black;
+            width: 220px;
+        }
+        .button
+        {
+            border: 2px solid black;
+            width: 40%;
+            text-align: center;
+        }
+
+
+    </style>
 </html>

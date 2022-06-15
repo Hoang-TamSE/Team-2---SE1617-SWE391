@@ -20,7 +20,8 @@
             <button><span>MENU</span></button>
             <ul class="main-menu" style="display:none">
                 <li><a href="UpdateInformation.jsp">Update Information</a></li>
-                <li><a href="">Chat With Supporter</a></li>
+                <li><a href="SendApplication.jsp">Send Application</a></li>
+                <li><a href="ViewApplication.jsp">View Application</a></li>
                 <li><a href="NarrowRegister.jsp">Narrow Register</a></li>
             </ul>
         </div>

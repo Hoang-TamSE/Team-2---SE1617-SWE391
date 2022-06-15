@@ -13,19 +13,22 @@
         <link rel="stylesheet" type="text/css" href="css/cssforadmin.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     </head>
     <body>
+        <%
+            String name = (String) session.getAttribute("name");
+        %>
         <header>
             <h1>STUDENT HOME PAGE</h1> <!-- tiêu đề -->
         </header>
         <%@include file="MenuStudent.jsp" %>
-
         <div>
-            <h1>Welcome </h1>
+            <h1>Welcome <%=name%></h1>
         </div>
         <h3>You information</h3>
         <form action="MainController" method="GET">
-            <table class="table table-responsive table-bordered table-hover">
+            <table class="">
                 <tr>
                     <td>ID</td>
                     <td>
@@ -67,7 +70,7 @@
                     <td>
                         <input value="" name="id" readonly>
                     </td>
-                    
+
                 </tr>
                 <tr>
                     <td>Narrow</td>
@@ -83,4 +86,31 @@
         </footer>
 
     </body>
+
+    <style>
+        h3
+        {
+            clear: both;
+        }
+        tr td
+        {
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        tr td input
+        {
+            border:none;
+            border-bottom: 2px solid black;
+            width: 220px;
+        }
+        table
+        {
+
+        }
+
+
+    </style>
 </html>
