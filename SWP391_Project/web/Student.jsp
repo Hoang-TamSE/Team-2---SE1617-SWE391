@@ -31,7 +31,7 @@
                 <a href="AddStudent.jsp">
                     <button style="border:3px solid black">Add Student: <i class="fa-solid fa-circle-plus"></i></button>
                 </a> 
-                </form> 
+                
                 <form style="margin-top:3%;" method="POST" action="MainController" enctype="multipart/form-data" >
                     <input  type="file" name="file" accept=".xlsx">
                     <input style="border:3px solid black" type="submit" value="Upload" name="action">
@@ -46,7 +46,7 @@
                         <option value="byname">By Name</option>
                     </select>
                     <input style="border:3px solid black" type="submit" value="Search" name="action" >
-
+                </form>
                     </div>
 
                     <h1></h1>
@@ -76,7 +76,7 @@
                                 <td><c:out value="${s.majorID}"></c:out></td>
                                 <td><c:out value="${s.narrowID}"></c:out></td>
 
-                                    <td>              
+                                <td>              
                                     <c:url  var="update" value="MainController">
                                         <c:param name="userID" value="${s.userID}"></c:param>
                                         <c:param name="action" value="pageUpdateStudent"></c:param>

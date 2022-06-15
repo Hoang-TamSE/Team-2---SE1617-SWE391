@@ -22,35 +22,62 @@
         
         <%@include file="MenuAdmin.jsp" %>
         
-        <form action="mainController" method="post">
+        <form action="MainController" method="post">
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
                     <td>ID</td>
                     <td>
-                        <input value="" type="text" name="id">
+                        <input value="${requestScope.SUPPORTER.userID}" type="text" name="id">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.userID}</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Email</td>
                     <td>
-                        <input value="" type="text" name="email">
+                        <input value="${requestScope.SUPPORTER.email}" type="text" name="email">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.email}</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Full name</td>
                     <td>
-                        <input value="" type="text" name="fullname">
+                        <input value="${requestScope.SUPPORTER.name}" type="text" name="fullname">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.name}</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Phone</td>
                     <td>
-                        <input value="" type="text" name="phone">
+                        <input value="${requestScope.SUPPORTER.phoneNumber}" type="text" name="phone">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.phoneNumber}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <input value="${requestScope.SUPPORTER.address}" type="text" name="address">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Major</td>
+                    <td>
+                        <input value="${requestScope.SUPPORTER.majorID}" type="text" name="majorID">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.majorID}</p>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input class="button" type="submit" name="action" value="Add">
+                        <input class="button" type="submit" name="action" value="AddSupporter">
                     </td>
                 </tr>
             </table>

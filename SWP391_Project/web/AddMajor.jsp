@@ -22,23 +22,47 @@
         
         <%@include file="MenuAdmin.jsp" %>
         
-        <form action="mainController" method="post">
+        <form action="MainController" method="post">
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
                     <td>ID</td>
                     <td>
-                        <input value="" type="text" name="id">
+                        <input value="${requestScope.MAJOR.majorID}" type="text" name="id">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.majorID}</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Name</td>
                     <td>
-                        <input value="" type="text" name="id">
+                        <input value="${requestScope.MAJOR.majorName}" type="text" name="name">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.majorName}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Link</td>
+                    <td>
+                        <input value="${requestScope.MAJOR.linkFLM}" type="text" name="link">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.linkFLM}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>
+                        <input value="${requestScope.MAJOR.description}" type="text" name="description">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.description}</p>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input class="button" type="submit" name="action" value="Add">
+                        <input class="button" type="submit" name="action" value="AddMajor">
                     </td>
                 </tr>
             </table>

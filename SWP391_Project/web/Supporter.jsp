@@ -3,7 +3,7 @@
     Created on : May 29, 2022, 4:55:41 PM
     Author     : user
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -24,53 +24,60 @@
 
         <div>
             <h1>Supporter Management</h1>
+            
             <form action="mainController" method="post">
                 <input type="text" name="search" value="<%= (request.getParameter("txtsearch") == null) ? "" : request.getParameter("txtsearch")%>">
                 <select name="searchby">
                     <option value="byname">By id</option>
                     <option value="bycate">By name</option>
                 </select>
-                <input type="submit" value="search" name="action" >
+                <input type="submit" value="Search" name="action" >
             </form>
             <a href="AddSupporter.jsp">
                 <button style="border-radius: 5px">Add Supporter: <i class="fa-solid fa-circle-plus"></i></button>
             </a> 
-            <h1></h1>
+            
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
                     <th scope="col">ID</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Full name</th>
                     <th scope="col">Phone</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Major</th>
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                 </tr>
-                <c:forEach var="acc" items="${requestScope.accountList}">
+                <c:forEach var="sp" items="${requestScope.LIST_Supporters}">
                     <tr>
-                        <td><c:out value="${sp.getAccID()}"></c:out></td>
-                    <td><c:out value="${sp.getAccID()}"></c:out></td>
-                    <td><c:out value="${sp.getAccID()}"></c:out></td>
-                    <td><c:out value="${sp.getAccID()}"></c:out></td>
-                    <td>              
-                    <c:url  var="update" value="mainController">
-                        <c:param name="sid" value="${sp.getId()}"></c:param>
-
-                        <c:param name="action" value="updateStudent"></c:param>
-                    </c:url>
-                    <a href="${update}"><i class="fas fa-edit"></i></a>
-                    </td>
-                    <td>              
-                    <c:url  var="delete" value="mainController">
-                        <c:param name="sid" value="${sp.getId()}"></c:param>
-
-                        <c:param name="action" value="deleteStudent"></c:param>
-                    </c:url>
-                    <a href="${delete}"><i class="fas fa-trash"></i></a>
-                    </td>
-
+                        <td><c:out value="${sp.userID}"></c:out></td>
+                        <td><c:out value="${sp.name}"></c:out></td>
+                        <td><c:out value="${sp.email}"></c:out></td>
+                        <td><c:out value="${sp.phoneNumber}"></c:out></td>
+                        <td><c:out value="${sp.address}"></c:out></td>
+                        <td><c:out value="${sp.roleID}"></c:out></td>
+                        <td><c:out value="${sp.majorID}"></c:out></td>  
+                        <td>
+                            <c:url  var="update" value="MainController">
+                                <c:param name="userID" value="${sp.userID}"></c:param>
+                                <c:param name="action" value="UpdateSupporter"></c:param>
+                            </c:url>
+                            <a href="${update}"><i class="fas fa-edit"></i></a>
+                        </td>
+                        <td>              
+                            <c:url  var="delete" value="mainController">
+                                <c:param name="userID" value="${sp.userID}"></c:param>
+                                <c:param name="action" value="DeleteSupporter"></c:param>
+                            </c:url>
+                                <a href="${delete}"><i class="fas fa-trash"></i></a>
+                        </td>
                     </tr>
                 </c:forEach>
             </table>
+            <c:if test="${not empty requestScope.SUCCESS}">
+                <p style="color: lightgreen">${requestScope.SUCCESS}</p>
+            </c:if>
         </div>
         <footer>
             <p>Team</p>

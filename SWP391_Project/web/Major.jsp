@@ -4,7 +4,7 @@
     Author     : user
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -26,7 +26,7 @@
 
         <div>
             <h1>Major Management</h1>
-            <form action="mainController" method="post">
+            <form action="MainController" method="post">
                 <input type="text" name="search" value="<%= (request.getParameter("txtsearch") == null) ? "" : request.getParameter("txtsearch")%>">
                 <select name="searchby">
                     <option value="byname">By id</option>
@@ -42,24 +42,29 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Link</th>
+                    <th scope="col">Description</th>
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                 </tr>
-                <c:forEach var="s" items="${requestScope.LIST_Majors}">
+                <c:forEach var="mj" items="${requestScope.LIST_Majors}">
                     <tr>
-                        <td><c:out value="${m.id}"></c:out></td>
-                        <td><c:out value="${m.name}"></c:out></td>
-                            <td>              
+                        <td><c:out value="${mj.majorID}"></c:out></td>
+                        <td><c:out value="${mj.majorName}"></c:out></td>
+                        <td><c:out value="${mj.linkFLM}"></c:out></td>
+                        <td><c:out value="${mj.description}"></c:out></td>
+                        
+                        <td>              
                             <c:url  var="update" value="MainController">
-                                <c:param name="userID" value="${m.id}"></c:param>
-                                <c:param name="action" value="pageUpdateStudent"></c:param>
+                                <c:param name="userID" value="${mj.majorID}"></c:param>
+                                <c:param name="action" value="UpdateMajor"></c:param>
                             </c:url>
                             <a href="${update}">Update</a>
                         </td>
                         <td>              
                             <c:url  var="delete" value="MainController">
-                                <c:param name="userID" value="${m.id}"></c:param>
-                                <c:param name="action" value="deleteStudent"></c:param>
+                                <c:param name="userID" value="${mj.majorID}"></c:param>
+                                <c:param name="action" value="DeleteMajor"></c:param>
                             </c:url>
                             <a href="${delete}">Delete</a>
                         </td>

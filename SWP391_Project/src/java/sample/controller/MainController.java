@@ -54,6 +54,22 @@ public class MainController extends HttpServlet {
     private static final String SENDMAIL_CONTROLLER="SendMailController";
     private static final String UPLOADFILEEXCEL="Upload";
     private static final String UPLOADFILEEXCEL_CONTROLLER="UploadFileExcelController";
+    private static final String ADDSUPPORTER="AddSupporter";
+    private static final String ADDSUPPORTER_CONTROLLER="AddSupporterController";
+    private static final String SEARCHSUPPORTER="SearchSupporter";
+    private static final String SEARCHSUPPORTER_CONTROLLER="SearchSupporterController";
+    private static final String DELETESUPPORTER="DeleteSupporter";
+    private static final String DELETESUPPORTER_CONTROLLER="DeleteSupporterController";
+    private static final String UPDATESUPPORTER="UpdateSupporter";
+    private static final String UPDATESUPPORTER_CONTROLLER="UpdateSupporterController";
+    private static final String ADDMAJOR="AddMajor";
+    private static final String ADDMAJOR_CONTROLLER="AddMajorController";
+    private static final String SEARCHMAJOR="SearchMajor";
+    private static final String SEARCHMAJOR_CONTROLLER="SearchMajorController";
+    private static final String DELETEMAJOR="DeleteMajor";
+    private static final String DELETEMAJOR_CONTROLLER="DeleteMajorController";
+    private static final String UPDATEMAJOR="UpdateMajor";
+    private static final String UPDATEMAJOR_CONTROLLER="UpdateMajorController";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -110,6 +126,30 @@ public class MainController extends HttpServlet {
             }
             else if(SENDMAIL.equals(action)){
                     url= SENDMAIL_CONTROLLER;
+            }
+            else if(ADDSUPPORTER.equals(action)){
+                    url= ADDSUPPORTER_CONTROLLER;
+            }
+            else if(SEARCHSUPPORTER.equals(action)){
+                    url= SEARCHSUPPORTER_CONTROLLER;
+            }
+            else if(UPDATESUPPORTER.equals(action)){
+                    url= UPDATESUPPORTER_CONTROLLER;
+            }
+            else if(DELETESUPPORTER.equals(action)){
+                    url= DELETESUPPORTER_CONTROLLER;
+            }
+            else if(ADDMAJOR.equals(action)){
+                    url= ADDMAJOR_CONTROLLER;
+            }
+            else if(SEARCHMAJOR.equals(action)){
+                    url= SEARCHMAJOR_CONTROLLER;
+            }
+            else if(DELETEMAJOR.equals(action)){
+                    url= DELETEMAJOR_CONTROLLER;
+            }
+            else if(UPDATEMAJOR.equals(action)){
+                    url= UPDATEMAJOR_CONTROLLER;
             }
         } catch (Exception e) {
             log("Error at MainController: "+ e.toString());
