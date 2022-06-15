@@ -19,11 +19,16 @@
         <header>
             <h1>ADMIN HOME PAGE</h1> <!-- tiêu đề -->
         </header>
-        
+
         <%@include file="MenuAdmin.jsp" %>
-        
+
         <form action="MainController">
-            <table class="table table-responsive table-bordered table-hover">
+            
+            <table class="">
+                <tr>
+                    <td></td>
+                    <td style="font-weight: bold;font-size: large">Add Student</td>
+                </tr>
                 <tr>
                     <td>ID</td>
                     <td>
@@ -93,19 +98,47 @@
                         <p style="color: red; ">${requestScope.ERROR.narrowID}</p>
                     </td>
                 </tr>
-                <tr>
+                <tr style="text-align: center;">
                     <td colspan="2">
                         <input class="button" type="submit" name="action" value="AddStudent">
                     </td>
                 </tr>
             </table>
         </form>
-        
+
         <footer>
             <p>Team</p>
             <p>FPT University</p>
         </footer>
-        
-        
+
+
     </body>
+
+    <style>
+        tr td
+        {
+            padding: 10px;
+        }
+
+        tr td input
+        {
+            border:none;
+            border-bottom: 2px solid black;
+        }
+        table
+        {
+            margin: auto;
+            border: 3px solid black;
+            transition: 0.5s;
+            background-color: #fff;
+            -webkit-border-radius:15px;
+            border-radius: 15px;
+            border-collapse: separate;
+        }
+        .button
+        {
+            border:2px solid black;
+            background-color: white;
+        }
+    </style>
 </html>
