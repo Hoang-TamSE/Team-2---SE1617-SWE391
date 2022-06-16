@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add Student</title>
+        <title>Add Term</title>
         <link rel="stylesheet" type="text/css" href="css/cssforadmin.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,7 +23,11 @@
         <%@include file="MenuAdmin.jsp" %>
         
         <form action="mainController" method="post">
-            <table class="table table-responsive table-bordered table-hover">
+            <table class="">
+                <tr>
+                    <td></td>
+                    <td style="font-weight: bold;font-size: large">ADD TERM</td>
+                </tr>
                 <tr>
                     <td>ID</td>
                     <td>
@@ -37,7 +41,7 @@
                         <input value="" type="text" name="fullname">
                     </td>
                
-                <tr>
+                <tr style="text-align: center;">
                     <td colspan="2">
                         <input class="button" type="submit" name="action" value="Add">
                     </td>
@@ -52,5 +56,40 @@
         
         
     </body>
+    
+    <style>
+        tr td
+        {
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            
+        }
+
+        tr td input
+        {
+            border:none;
+            border-bottom: 2px solid black;
+            width: 220px;
+        }
+        table
+        {
+            margin: auto;
+            border: 3px solid black;
+            transition: 0.5s;
+            background-color: #fff;
+            -webkit-border-radius:15px;
+            border-radius: 15px;
+            border-collapse: separate;
+        }
+        .button
+        {
+            border:2px solid black;
+            background-color: white;
+            width: 31%;
+            text-align: center;
+        }
+        
+    </style>
 </html>
 

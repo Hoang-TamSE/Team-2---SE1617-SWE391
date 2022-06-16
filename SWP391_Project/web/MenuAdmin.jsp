@@ -22,7 +22,7 @@
                 <li><a href="MainController?action=Search">Student</a></li>
                 <li><a href="MainController?action=SearchSupporter">Supporter</a></li>
                 <li><a href="MainController?action=SearchMajor">Major</a></li>
-                <li><a href="Specialization.jsp">Specialization</a></li>
+                <li><a href="Specialization.jsp">Narrow</a></li>
                 <li><a href="Term.jsp">Term</a></li>            
                 <li><a href="#services">Register form</a></li>
                 <li><a href="#contact">Notification</a></li>

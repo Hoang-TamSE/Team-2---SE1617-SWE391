@@ -23,7 +23,11 @@
         <%@include file="MenuAdmin.jsp" %>
         
         <form action="MainController" method="post">
-            <table class="table table-responsive table-bordered table-hover">
+            <table class="">
+                <tr>
+                    <td></td>
+                    <td style="font-weight: bold;font-size: large">ADD SUPPORTER</td>
+                </tr>
                 <tr>
                     <td>ID</td>
                     <td>
@@ -75,7 +79,7 @@
                         <p style="color: red; ">${requestScope.ERROR.majorID}</p>
                     </td>
                 </tr>
-                <tr>
+                <tr style="text-align: center;">
                     <td colspan="2">
                         <input class="button" type="submit" name="action" value="AddSupporter">
                     </td>
@@ -90,4 +94,39 @@
         
         
     </body>
+    
+    <style>
+        tr td
+        {
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            
+        }
+
+        tr td input
+        {
+            border:none;
+            border-bottom: 2px solid black;
+            width: 220px;
+        }
+        table
+        {
+            margin: auto;
+            border: 3px solid black;
+            transition: 0.5s;
+            background-color: #fff;
+            -webkit-border-radius:15px;
+            border-radius: 15px;
+            border-collapse: separate;
+        }
+        .button
+        {
+            border:2px solid black;
+            background-color: white;
+            width: 31%;
+            text-align: center;
+        }
+        
+    </style>
 </html>
