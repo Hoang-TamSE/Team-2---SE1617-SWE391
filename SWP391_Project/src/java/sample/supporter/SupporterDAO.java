@@ -11,7 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import sample.student.StudentDTO;
 import sample.supporter.SupporterDTO;
 import sample.utils.DBUtils;
 
@@ -220,8 +219,8 @@ public class SupporterDAO {
                 ptm.setString(2, supporter.getPhoneNumber());
                 ptm.setNString(3, supporter.getAddress());
                 ptm.setString(4, supporter.getUserID());
-                ptm.setString(6, supporter.getMajorID());
-                ptm.setString(8, supporter.getUserID());
+                ptm.setString(5, supporter.getMajorID());
+                ptm.setString(6, supporter.getUserID());
                 check = ptm.executeUpdate() > 0;
             }
         } catch (Exception e) {

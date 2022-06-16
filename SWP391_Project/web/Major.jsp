@@ -32,7 +32,7 @@
                     <option value="byname">By id</option>
                     <option value="bycate">By name</option>
                 </select>
-                <input type="submit" value="search" name="action" >
+                <input type="submit" value="SearchMajor" name="action" >
             </form>
                 <a href="AddMajor.jsp">
                 <button style="border-radius: 5px">Add Major: <i class="fa-solid fa-circle-plus"></i></button>
@@ -56,14 +56,14 @@
                         
                         <td>              
                             <c:url  var="update" value="MainController">
-                                <c:param name="userID" value="${mj.majorID}"></c:param>
-                                <c:param name="action" value="UpdateMajor"></c:param>
+                                <c:param name="majorID" value="${mj.majorID}"></c:param>
+                                <c:param name="action" value="PageUpdateMajor"></c:param>
                             </c:url>
                             <a href="${update}">Update</a>
                         </td>
                         <td>              
                             <c:url  var="delete" value="MainController">
-                                <c:param name="userID" value="${mj.majorID}"></c:param>
+                                <c:param name="majorID" value="${mj.majorID}"></c:param>
                                 <c:param name="action" value="DeleteMajor"></c:param>
                             </c:url>
                             <a href="${delete}">Delete</a>

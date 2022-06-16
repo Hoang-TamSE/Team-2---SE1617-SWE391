@@ -25,13 +25,13 @@
         <div>
             <h1>Supporter Management</h1>
             
-            <form action="mainController" method="post">
+            <form action="MainController" method="post">
                 <input type="text" name="search" value="<%= (request.getParameter("txtsearch") == null) ? "" : request.getParameter("txtsearch")%>">
                 <select name="searchby">
                     <option value="byname">By id</option>
                     <option value="bycate">By name</option>
                 </select>
-                <input type="submit" value="Search" name="action" >
+                <input type="submit" value="SearchSupporter" name="action" >
             </form>
             <a href="AddSupporter.jsp">
                 <button style="border-radius: 5px">Add Supporter: <i class="fa-solid fa-circle-plus"></i></button>
@@ -61,12 +61,12 @@
                         <td>
                             <c:url  var="update" value="MainController">
                                 <c:param name="userID" value="${sp.userID}"></c:param>
-                                <c:param name="action" value="UpdateSupporter"></c:param>
+                                <c:param name="action" value="PageUpdateSupporter"></c:param>
                             </c:url>
                             <a href="${update}"><i class="fas fa-edit"></i></a>
                         </td>
                         <td>              
-                            <c:url  var="delete" value="mainController">
+                            <c:url  var="delete" value="MainController">
                                 <c:param name="userID" value="${sp.userID}"></c:param>
                                 <c:param name="action" value="DeleteSupporter"></c:param>
                             </c:url>

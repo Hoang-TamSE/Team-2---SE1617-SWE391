@@ -22,8 +22,8 @@ import sample.supporter.SupporterDTO;
  */
 @WebServlet(name = "SearchSupporterController", urlPatterns = {"/SearchSupporterController"})
 public class SearchSupporterController extends HttpServlet {
-    private static final String ERROR="";
-    private static final String SUCCESS="";
+    private static final String ERROR="Supporter.jsp";
+    private static final String SUCCESS="Supporter.jsp";
      
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

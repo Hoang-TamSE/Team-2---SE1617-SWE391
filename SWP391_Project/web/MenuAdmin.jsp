@@ -20,8 +20,8 @@
             <button><span>MENU</span></button>
             <ul class="main-menu" style="display:none">
                 <li><a href="MainController?action=Search">Student</a></li>
-                <li><a href="Supporter.jsp">Supporter</a></li>
-                <li><a href="Major.jsp">Major</a></li>
+                <li><a href="MainController?action=SearchSupporter">Supporter</a></li>
+                <li><a href="MainController?action=SearchMajor">Major</a></li>
                 <li><a href="Specialization.jsp">Specialization</a></li>
                 <li><a href="Term.jsp">Term</a></li>            
                 <li><a href="#services">Register form</a></li>

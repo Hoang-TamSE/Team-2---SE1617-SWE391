@@ -14,71 +14,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import sample.supporter.SupporterDAO;
 import sample.supporter.SupporterDTO;
-import sample.supporter.SupporterERROR;
-import sample.validation.Validation;
 
 /**
  *
  * @author Admin
  */
-@WebServlet(name = "AddSupporterController", urlPatterns = {"/AddSupporterController"})
-public class AddSupporterController extends HttpServlet {
+@WebServlet(name = "PageUpdateSupporterController", urlPatterns = {"/PageUpdateSupporterController"})
+public class PageUpdateSupporterController extends HttpServlet {
 
-    private static final String ERROR = "AddSupporter.jsp";
-    private static final String SUCCESS = "SearchSupporterController";
-    
+    private static final String ERROR = "UpdateSupporter.jsp";
+    private static final String SUCCESS = "UpdateSupporter.jsp";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
         try {
-            boolean checkVaild = true;
-            boolean checkCreateUser = false;
-            boolean checkCreateSupporter = false;
-            SupporterERROR error = new SupporterERROR();
             String userID = request.getParameter("userID");
-            String name = request.getParameter("name");
-            String email = request.getParameter("email");
-            String phone = request.getParameter("phoneNumber");
-            String address = request.getParameter("address");
-            String majorID = request.getParameter("majorID");
             SupporterDAO dao = new SupporterDAO();
-            if (Validation.checkDuplicateUserID(userID)) {
-                error.setUserID("The ID is duplicate!!!");
-                checkVaild = false;
-            }
-            if (!Validation.checkVaildEmail(email)) {
-                error.setEmail("The email is ivalid!");
-                checkVaild = false;
-            }
-            if (name.length() < 8 || name.length() > 50) {
-                error.setName("Length name is form 8 to 50!");
-                checkVaild = false;
-            }
-            if (!Validation.checkPhone(phone)) {
-                error.setPhoneNumber("The phone number is invalid!");
-                checkVaild = false;
-            }
-            if (!Validation.checkMajorID(majorID)) {
-                error.setMajorID("Major ID is invalid!");
-                checkVaild = false;
-            }
-            SupporterDTO supporter = new SupporterDTO(userID, name, email, phone, address, userID, majorID);
-            if (checkVaild) {
-                checkCreateUser = dao.createUser(supporter);
-                if (checkCreateUser) {
-                    checkCreateSupporter = dao.createSupporter(supporter);
-                    if (checkCreateSupporter) {
-                        url = SUCCESS;
-                        request.setAttribute("SUCCESS", "Create " + supporter.getUserID() + " successfully!!");
-                    }
-                }
-            } else {
-                request.setAttribute("ERROR", error);
+            SupporterDTO supporter = dao.getSupporter(userID);
+            if (supporter != null) {
                 request.setAttribute("SUPPORTER", supporter);
+                url = SUCCESS;
             }
         } catch (Exception e) {
-            log("Error at UpdateSupporterController: " + e.toString());
+            log("error at UpdateController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

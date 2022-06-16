@@ -21,8 +21,8 @@ import sample.supporter.SupporterDAO;
 @WebServlet(name = "DeleteSupporterController", urlPatterns = {"/DeleteSupporterController"})
 public class DeleteSupporterController extends HttpServlet {
 
-    private static final String ERROR = "";
-    private static final String SUCCESS = "";
+    private static final String ERROR = "SearchSupporterController";
+    private static final String SUCCESS = "SearchSupporterController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

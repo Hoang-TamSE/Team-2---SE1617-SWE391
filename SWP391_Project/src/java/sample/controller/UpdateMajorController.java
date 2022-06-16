@@ -23,8 +23,8 @@ import sample.major.MajorERROR;
 @WebServlet(name = "UpdateMajorController", urlPatterns = {"/UpdateMajorController"})
 public class UpdateMajorController extends HttpServlet {
 
-    private static final String ERROR = "";
-    private static final String SUCCESS = "";
+    private static final String ERROR = "UpdateMajor.jsp";
+    private static final String SUCCESS = "MainController?action=SearchMajor";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -63,7 +63,7 @@ public class UpdateMajorController extends HttpServlet {
                 request.setAttribute("MAJOR", major);
             }
         } catch (Exception e) {
-            log("Error at UpdateStudentController: " + e.toString());
+            log("Error at UpdateMajorController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

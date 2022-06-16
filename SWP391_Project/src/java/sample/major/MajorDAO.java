@@ -19,16 +19,16 @@ import sample.utils.DBUtils;
  */
 public class MajorDAO {
 
-    private static final String SEARCH = "SELECT majorID, majorName, linkFLM, description,"
+    private static final String SEARCH = "SELECT majorID, majorName, linkFLM, description"
             + " FROM tblMajor "
             + "WHERE status = 'true' AND majorName like ? ";
     
-    private static final String GETMAJOR = "SELECT majorID, majorName, linkFLM, description,"
+    private static final String GETMAJOR = "SELECT majorID, majorName, linkFLM, description"
             + " FROM tblMajor "
             + "WHERE status = 'true' AND majorID like ? ";
     
     private static final String DELETE = "UPDATE tblMajor "
-            + "SET status= 'false' "
+            + "SET status = 'false' "
             + "WHERE majorID=? ";
     
     private static final String ADDMAJOR = "INSERT INTO tblMajor"

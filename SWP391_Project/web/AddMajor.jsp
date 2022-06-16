@@ -27,7 +27,7 @@
                 <tr>
                     <td>ID</td>
                     <td>
-                        <input value="${requestScope.MAJOR.majorID}" type="text" name="id">
+                        <input value="${requestScope.MAJOR.majorID}" type="text" name="majorID">
                     </td>
                     <td>
                         <p style="color: red; ">${requestScope.ERROR.majorID}</p>
@@ -36,7 +36,7 @@
                 <tr>
                     <td>Name</td>
                     <td>
-                        <input value="${requestScope.MAJOR.majorName}" type="text" name="name">
+                        <input value="${requestScope.MAJOR.majorName}" type="text" name="majorName">
                     </td>
                     <td>
                         <p style="color: red; ">${requestScope.ERROR.majorName}</p>
@@ -45,7 +45,7 @@
                 <tr>
                     <td>Link</td>
                     <td>
-                        <input value="${requestScope.MAJOR.linkFLM}" type="text" name="link">
+                        <input value="${requestScope.MAJOR.linkFLM}" type="text" name="linkFLM">
                     </td>
                     <td>
                         <p style="color: red; ">${requestScope.ERROR.linkFLM}</p>

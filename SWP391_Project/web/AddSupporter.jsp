@@ -27,7 +27,7 @@
                 <tr>
                     <td>ID</td>
                     <td>
-                        <input value="${requestScope.SUPPORTER.userID}" type="text" name="id">
+                        <input value="${requestScope.SUPPORTER.userID}" type="text" name="userID">
                     </td>
                     <td>
                         <p style="color: red; ">${requestScope.ERROR.userID}</p>
@@ -45,7 +45,7 @@
                 <tr>
                     <td>Full name</td>
                     <td>
-                        <input value="${requestScope.SUPPORTER.name}" type="text" name="fullname">
+                        <input value="${requestScope.SUPPORTER.name}" type="text" name="name">
                     </td>
                     <td>
                         <p style="color: red; ">${requestScope.ERROR.name}</p>
@@ -54,7 +54,7 @@
                 <tr>
                     <td>Phone</td>
                     <td>
-                        <input value="${requestScope.SUPPORTER.phoneNumber}" type="text" name="phone">
+                        <input value="${requestScope.SUPPORTER.phoneNumber}" type="text" name="phoneNumber">
                     </td>
                     <td>
                         <p style="color: red; ">${requestScope.ERROR.phoneNumber}</p>

@@ -27,22 +27,42 @@
                 <tr>
                     <td>ID</td>
                     <td>
-                        ${requestScope.STUDENT.userID}
+                        ${requestScope.MAJOR.majorID}
                     </td>
                 </tr>
                 <tr>
                     <td>Name</td>
                     <td>
-                        ${requestScope.STUDENT.email}
+                        <input value="${requestScope.MAJOR.majorName}" type="text" name="majorName">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.majorName}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Link</td>
+                    <td>
+                        <input value="${requestScope.MAJOR.linkFLM}" type="text" name="linkFLM">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.linkFLM}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>
+                        <input value="${requestScope.MAJOR.description}" type="text" name="description">
+                    </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.description}</p>
                     </td>
                 </tr>
                 
                 <tr>
                     <td colspan="2">
                         <!--Mấy ông sửa cái này lại nha tui demo thôi_-->
-                        <input class="button" type="submit" name="action" value="UpdateStudent">
-                        <input type="hidden" name="userID" value="${requestScope.STUDENT.userID}">
-                        <input type="hidden" name="email" value="${requestScope.STUDENT.email}">
+                        <input class="button" type="submit" name="action" value="UpdateMajor">
+                        <input type="hidden" name="majorID" value="${requestScope.MAJOR.majorID}">
                     </td>
                 </tr>
             </table>

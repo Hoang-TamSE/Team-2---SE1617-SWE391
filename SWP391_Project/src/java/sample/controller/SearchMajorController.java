@@ -23,8 +23,8 @@ import sample.major.MajorDTO;
 @WebServlet(name = "SearchMajorController", urlPatterns = {"/SearchMajorController"})
 public class SearchMajorController extends HttpServlet {
 
-    private static final String ERROR="";
-    private static final String SUCCESS="";
+    private static final String ERROR="Major.jsp";
+    private static final String SUCCESS="Major.jsp";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

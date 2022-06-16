@@ -62,6 +62,8 @@ public class MainController extends HttpServlet {
     private static final String DELETESUPPORTER_CONTROLLER="DeleteSupporterController";
     private static final String UPDATESUPPORTER="UpdateSupporter";
     private static final String UPDATESUPPORTER_CONTROLLER="UpdateSupporterController";
+    private static final String PAGEUPDATESUPPORTER="PageUpdateSupporter";
+    private static final String PAGEUPDATESUPPORTER_CONTROLLER="PageUpdateSupporterController";
     private static final String ADDMAJOR="AddMajor";
     private static final String ADDMAJOR_CONTROLLER="AddMajorController";
     private static final String SEARCHMAJOR="SearchMajor";
@@ -70,6 +72,8 @@ public class MainController extends HttpServlet {
     private static final String DELETEMAJOR_CONTROLLER="DeleteMajorController";
     private static final String UPDATEMAJOR="UpdateMajor";
     private static final String UPDATEMAJOR_CONTROLLER="UpdateMajorController";
+    private static final String PAGEUPDATEMAJOR="PageUpdateMajor";
+    private static final String PAGEUPDATEMAJOR_CONTROLLER="PageUpdateMajorController";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -135,6 +139,12 @@ public class MainController extends HttpServlet {
             }
             else if(UPDATESUPPORTER.equals(action)){
                     url= UPDATESUPPORTER_CONTROLLER;
+            }
+            else if(PAGEUPDATESUPPORTER.equals(action)){
+                    url= PAGEUPDATESUPPORTER_CONTROLLER;
+            }
+            else if(PAGEUPDATEMAJOR.equals(action)){
+                    url= PAGEUPDATEMAJOR_CONTROLLER;
             }
             else if(DELETESUPPORTER.equals(action)){
                     url= DELETESUPPORTER_CONTROLLER;

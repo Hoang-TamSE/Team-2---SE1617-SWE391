@@ -21,8 +21,8 @@ import sample.major.MajorDAO;
 @WebServlet(name = "DeleteMajorController", urlPatterns = {"/DeleteMajorController"})
 public class DeleteMajorController extends HttpServlet {
 
-    private static final String ERROR = "";
-    private static final String SUCCESS = "";
+    private static final String ERROR = "SearchMajorController";
+    private static final String SUCCESS = "SearchMajorController";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");

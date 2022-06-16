@@ -24,7 +24,7 @@ import sample.validation.Validation;
 @WebServlet(name = "AddMajorController", urlPatterns = {"/AddMajorController"})
 public class AddMajorController extends HttpServlet {
     private static final String ERROR = "AddMajor.jsp";
-    private static final String SUCCESS = "Major.jsp";
+    private static final String SUCCESS = "SearchMajorController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -39,7 +39,7 @@ public class AddMajorController extends HttpServlet {
             String linkFLM = request.getParameter("linkFLM");
             String description = request.getParameter("description");
             MajorDAO dao = new MajorDAO();
-            
+
             if (Validation.checkMajorID(majorID)) {
                 error.setMajorID("Major ID has existed!");
                 checkVaild = false;
