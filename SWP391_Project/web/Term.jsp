@@ -27,13 +27,13 @@
 
         <div>
             <h1>Term Management</h1>
-            <form action="mainController" method="post">
+            <form action="MainController" method="post">
                 <input type="text" name="search" value="<%= (request.getParameter("txtsearch") == null) ? "" : request.getParameter("txtsearch")%>">
                 <select name="searchby">
                     <option value="byname">By id</option>
                     <option value="bycate">By name</option>
                 </select>
-                <input type="submit" value="search" name="action" >
+                <input type="submit" value="SearchTerm" name="action" >
             </form>
             <a href="AddTerm.jsp">
                 <button style="border-radius: 5px">Add Term: <i class="fa-solid fa-circle-plus"></i></button>
@@ -43,25 +43,25 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Update</th>
+                    <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                 </tr>
-                <c:forEach var="s" items="${requestScope.LIST_Terms}">
+                <c:forEach var="t" items="${requestScope.LIST_Semesters}">
                     <tr>
-                        <td><c:out value="${s.id}"></c:out></td>
-                        <td><c:out value="${s.name}"></c:out></td>
+                        <td><c:out value="${t.semesterID}"></c:out></td>
+                        <td><c:out value="${t.semesterName}"></c:out></td>
 
-                            <td>              
+                        <td>              
                             <c:url  var="update" value="MainController">
-                                <c:param name="userID" value="${s.id}"></c:param>
-                                <c:param name="action" value="pageUpdateStudent"></c:param>
+                                <c:param name="semesterID" value="${t.semesterID}"></c:param>
+                                <c:param name="action" value="PageUpdateTerm"></c:param>
                             </c:url>
                             <a href="${update}"><i class="fas fa-edit"></i></a>
                         </td>
                         <td>              
                             <c:url  var="delete" value="MainController">
-                                <c:param name="userID" value="${s.id}"></c:param>
-                                <c:param name="action" value="deleteStudent"></c:param>
+                                <c:param name="semesterID" value="${t.semesterID}"></c:param>
+                                <c:param name="action" value="DeleteTerm"></c:param>
                             </c:url>
                             <a href="${delete}"><i class="fas fa-trash"></i></a>
                         </td>

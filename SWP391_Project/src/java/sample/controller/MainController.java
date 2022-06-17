@@ -54,6 +54,7 @@ public class MainController extends HttpServlet {
     private static final String SENDMAIL_CONTROLLER="SendMailController";
     private static final String UPLOADFILEEXCEL="Upload";
     private static final String UPLOADFILEEXCEL_CONTROLLER="UploadFileExcelController";
+    
     private static final String ADDSUPPORTER="AddSupporter";
     private static final String ADDSUPPORTER_CONTROLLER="AddSupporterController";
     private static final String SEARCHSUPPORTER="SearchSupporter";
@@ -64,6 +65,7 @@ public class MainController extends HttpServlet {
     private static final String UPDATESUPPORTER_CONTROLLER="UpdateSupporterController";
     private static final String PAGEUPDATESUPPORTER="PageUpdateSupporter";
     private static final String PAGEUPDATESUPPORTER_CONTROLLER="PageUpdateSupporterController";
+    
     private static final String ADDMAJOR="AddMajor";
     private static final String ADDMAJOR_CONTROLLER="AddMajorController";
     private static final String SEARCHMAJOR="SearchMajor";
@@ -74,6 +76,18 @@ public class MainController extends HttpServlet {
     private static final String UPDATEMAJOR_CONTROLLER="UpdateMajorController";
     private static final String PAGEUPDATEMAJOR="PageUpdateMajor";
     private static final String PAGEUPDATEMAJOR_CONTROLLER="PageUpdateMajorController";
+    
+    private static final String ADDTERM="AddTerm";
+    private static final String ADDTERM_CONTROLLER="AddTermController";
+    private static final String SEARCHTERM="SearchTerm";
+    private static final String SEARCHTERM_CONTROLLER="SearchTermController";
+    private static final String DELETETERM="DeleteTerm";
+    private static final String DELETETERM_CONTROLLER="DeleteTermController";
+    private static final String UPDATETERM="UpdateTerm";
+    private static final String UPDATETERM_CONTROLLER="UpdateTermController";
+    private static final String PAGEUPDATETERM="PageUpdateTerm";
+    private static final String PAGEUPDATETERM_CONTROLLER="PageUpdateTermController";
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -143,9 +157,6 @@ public class MainController extends HttpServlet {
             else if(PAGEUPDATESUPPORTER.equals(action)){
                     url= PAGEUPDATESUPPORTER_CONTROLLER;
             }
-            else if(PAGEUPDATEMAJOR.equals(action)){
-                    url= PAGEUPDATEMAJOR_CONTROLLER;
-            }
             else if(DELETESUPPORTER.equals(action)){
                     url= DELETESUPPORTER_CONTROLLER;
             }
@@ -160,6 +171,24 @@ public class MainController extends HttpServlet {
             }
             else if(UPDATEMAJOR.equals(action)){
                     url= UPDATEMAJOR_CONTROLLER;
+            }
+            else if(PAGEUPDATEMAJOR.equals(action)){
+                    url= PAGEUPDATEMAJOR_CONTROLLER;
+            }
+            else if(ADDTERM.equals(action)){
+                    url= ADDTERM_CONTROLLER;
+            }
+            else if(SEARCHTERM.equals(action)){
+                    url= SEARCHTERM_CONTROLLER;
+            }
+            else if(DELETETERM.equals(action)){
+                    url= DELETETERM_CONTROLLER;
+            }
+            else if(UPDATETERM.equals(action)){
+                    url= UPDATETERM_CONTROLLER;
+            }
+            else if(PAGEUPDATETERM.equals(action)){
+                    url= PAGEUPDATETERM_CONTROLLER;
             }
         } catch (Exception e) {
             log("Error at MainController: "+ e.toString());
