@@ -42,6 +42,9 @@
                     <td>
                         <input value="${requestScope.SEMESTER.semesterName}" type="text" name="semesterName">
                     </td>
+                    <td>
+                        <p style="color: red; ">${requestScope.ERROR.semesterName}</p>
+                    </td>
                 </tr>
                 <tr style="text-align: center;">
                     <td colspan="2">
