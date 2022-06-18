@@ -39,11 +39,11 @@
             </div>
 
             <div class="right">
-                <form action="mainController" method="post">
-                    <input style="border: none;border-bottom: 3px solid black; "type="text" name="search" value="<%= (request.getParameter("txtsearch") == null) ? "" : request.getParameter("txtsearch")%>">
+                <form action="MainController" method="post">
+                    <input style="border: none;border-bottom: 3px solid black; "type="text" name="search" value="${requestScope.SEARCH}">
                     <select style="border: 3px solid black" name="searchby">
-                        <option value="byid">By Id</option>
-                        <option value="byname">By Name</option>
+                        <option value="id" ${requestScope.ID} >By Id</option>
+                        <option value="name" ${requestScope.NAME} >By Name</option>
                     </select>
                     <input style="border:3px solid black" type="submit" value="Search" name="action" >
                 </form>
