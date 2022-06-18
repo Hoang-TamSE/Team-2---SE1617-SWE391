@@ -16,13 +16,14 @@ import javax.servlet.http.HttpServletResponse;
 import sample.student.StudentDAO;
 import sample.student.StudentDTO;
 
+
 /**
  *
  * @author Hoang Tam
  */
 @WebServlet(name = "SearchStudentController", urlPatterns = {"/SearchStudentController"})
 public class SearchStudentController extends HttpServlet {
-
+    
     private static final String ERROR = "Student.jsp";
     private static final String SUCCESS = "Student.jsp";
     private static final String SEARCHBYNAME = "name";
@@ -55,8 +56,8 @@ public class SearchStudentController extends HttpServlet {
                 url = SUCCESS;
             }
         } catch (Exception e) {
-            log("Error at SearchController: " + e.toString());
-        } finally {
+            log("Error at SearchController: "+ e.toString());
+        }finally{
             request.getRequestDispatcher(url).forward(request, response);
         }
     }
