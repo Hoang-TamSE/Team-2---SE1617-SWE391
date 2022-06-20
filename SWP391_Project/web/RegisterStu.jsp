@@ -30,7 +30,7 @@
         <header>
             <h1>ADMIN HOME PAGE</h1> <!-- tiêu đề -->
         </header>
-        
+
         <%@include file="MenuAdmin.jsp" %>
 
         <div class="container">
@@ -83,7 +83,7 @@
                     <div style="border: 1px solid #ddd; padding: 10px; margin: 20px 0; ">
                         <h4>Narrow Specialization</h4>
                     </div>
-                    
+
                     <div id="mutil-list" style="border: 1px solid #ddd; padding: 10px;">
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade show" id="IT">
@@ -190,7 +190,7 @@
 
         </div> <!-- end-container -->
 
-        <footer>
+        <footer style="background-color: #f86c24;">
             <p>Team</p>
             <p>FPT University</p>
         </footer>

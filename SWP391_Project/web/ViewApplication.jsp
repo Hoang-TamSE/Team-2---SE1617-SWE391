@@ -44,13 +44,13 @@
                                 <td></td>
                             </tr>
                         </table>
-                       
+
                     </div>
 
 
                 </div>
             </main>
-            <footer class="bg-dark">
+            <footer style="background-color: #f86c24;">
                 <p>Team</p>
                 <p>FPT University</p>
             </footer>
@@ -65,8 +65,8 @@
         }
         tr td
         {
-          border: 2px solid black;
-          padding: 15px;
+            border: 2px solid black;
+            padding: 15px;
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>

@@ -19,9 +19,9 @@
         <header>
             <h1>ADMIN HOME PAGE</h1> <!-- tiêu đề -->
         </header>
-        
+
         <%@include file="MenuAdmin.jsp" %>
-        
+
         <form action="MainController" method="GET">
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
@@ -39,7 +39,7 @@
                         <p style="color: red; ">${requestScope.ERROR.semesterName}</p>
                     </td>
                 </tr>
-                
+
                 <tr>
                     <td colspan="2">
                         <!--Mấy ông sửa cái này lại nha tui demo thôi_-->
@@ -49,12 +49,12 @@
                 </tr>
             </table>
         </form>
-        
-        <footer>
+
+        <footer style="background-color: #f86c24;">
             <p>Team</p>
             <p>FPT University</p>
         </footer>
-        
-        
+
+
     </body>
 </html>

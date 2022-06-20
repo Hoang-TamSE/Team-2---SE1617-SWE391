@@ -18,7 +18,7 @@
         <link href="css/stylemenu.css" rel="stylesheet" />
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <nav style="background-color: #f86c24;" class="sb-topnav navbar navbar-expand navbar-dark">
             <!-- Navbar Brand-->
 
             <a class="navbar-brand ps-3" href="adminPage.jsp">Admin Page

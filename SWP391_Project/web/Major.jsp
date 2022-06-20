@@ -23,11 +23,11 @@
 
             <main class="container-fluid">
                 <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Major Management</h1>
-                  
+
                 <a href="AddMajor.jsp">
-                            <button class="btnadd">Add Major: <i class="fa-solid fa-circle-plus"></i></button>
-                        </a>
-                    
+                    <button class="btnadd">Add Major: <i class="fa-solid fa-circle-plus"></i></button>
+                </a>
+
                 <form action="MainController" method="post">
                     <input id="inputsearch" type="text" name="search" placeholder="Search..." value="${requestScope.SEARCH}">
                     <select name="searchby">
@@ -41,58 +41,58 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <table class="table table-responsive table-bordered table-hover">
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Role</th>
-                    <th scope="col">Major</th>
-                    <th scope="col">Update</th>
-                    <th scope="col">Delete</th>
-                </tr>
-                <c:forEach var="sp" items="${requestScope.LIST_Supporters}">
-                    <tr>
-                        <td><c:out value="${sp.userID}"></c:out></td>
-                        <td><c:out value="${sp.name}"></c:out></td>
-                        <td><c:out value="${sp.email}"></c:out></td>
-                        <td><c:out value="${sp.phoneNumber}"></c:out></td>
-                        <td><c:out value="${sp.address}"></c:out></td>
-                        <td><c:out value="${sp.roleID}"></c:out></td>
-                        <td><c:out value="${sp.majorID}"></c:out></td>  
-                        <td>
-                            <c:url  var="update" value="MainController">
-                                <c:param name="userID" value="${sp.userID}"></c:param>
-                                <c:param name="action" value="PageUpdateSupporter"></c:param>
-                            </c:url>
-                            <a href="${update}"><i class="fas fa-edit"></i></a>
-                        </td>
-                        <td>              
-                            <c:url  var="delete" value="MainController">
-                                <c:param name="userID" value="${sp.userID}"></c:param>
-                                <c:param name="action" value="DeleteSupporter"></c:param>
-                            </c:url>
-                                <a href="${delete}"><i class="fas fa-trash"></i></a>
-                        </td>
-                    </tr>
-                </c:forEach>
-            </table>
-            <c:if test="${not empty requestScope.SUCCESS}">
-                <p style="color: lightgreen">${requestScope.SUCCESS}</p>
-            </c:if>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Major</th>
+                                <th scope="col">Update</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                            <c:forEach var="sp" items="${requestScope.LIST_Supporters}">
+                                <tr>
+                                    <td><c:out value="${sp.userID}"></c:out></td>
+                                    <td><c:out value="${sp.name}"></c:out></td>
+                                    <td><c:out value="${sp.email}"></c:out></td>
+                                    <td><c:out value="${sp.phoneNumber}"></c:out></td>
+                                    <td><c:out value="${sp.address}"></c:out></td>
+                                    <td><c:out value="${sp.roleID}"></c:out></td>
+                                    <td><c:out value="${sp.majorID}"></c:out></td>  
+                                        <td>
+                                        <c:url  var="update" value="MainController">
+                                            <c:param name="userID" value="${sp.userID}"></c:param>
+                                            <c:param name="action" value="PageUpdateSupporter"></c:param>
+                                        </c:url>
+                                        <a href="${update}"><i class="fas fa-edit"></i></a>
+                                    </td>
+                                    <td>              
+                                        <c:url  var="delete" value="MainController">
+                                            <c:param name="userID" value="${sp.userID}"></c:param>
+                                            <c:param name="action" value="DeleteSupporter"></c:param>
+                                        </c:url>
+                                        <a href="${delete}"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                        </table>
+                        <c:if test="${not empty requestScope.SUCCESS}">
+                            <p style="color: lightgreen">${requestScope.SUCCESS}</p>
+                        </c:if>
                     </div>
 
 
                 </div>
             </main>
-                    <footer class="bg-dark">
+            <footer style="background-color: #f86c24;">
                 <p>Team</p>
                 <p>FPT University</p>
             </footer>
         </div>
     </div>
- 
+
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>

@@ -50,7 +50,7 @@
                                         <p style="color: red; ">${requestScope.ERROR.majorName}</p>
                                     </td>
                                 </tr>
-                                
+
                                 <tr style="text-align: center;">
                                     <td colspan="2">
                                         <input class="button" type="submit" name="action" value="AddMajor">
@@ -68,7 +68,7 @@
 
                 </div>
             </main>
-            <footer class="bg-dark">
+            <footer style="background-color: #f86c24;">
                 <p>Team</p>
                 <p>FPT University</p>
             </footer>

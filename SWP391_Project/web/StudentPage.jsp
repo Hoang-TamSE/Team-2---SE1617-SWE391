@@ -29,65 +29,65 @@
                         %>
                         <h1>Welcome <%=name%></h1>
                         <h3>You information</h3>
-        <form action="MainController" method="GET">
-            <table class="">
-                <tr>
-                    <td>ID</td>
-                    <td>
-                        <input value="" name="id" readonly>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td>
-                        <input value="" name="id" readonly>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Full name</td>
-                    <td>
-                        <input value="" name="id" readonly>
-                    </td>                  
-                </tr>
-                <tr>
-                    <td>Phone</td>
-                    <td>
-                        <input value="" name="id" readonly>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Address</td>
-                    <td>
-                        <input value="" name="id" readonly>
-                    </td>                
-                </tr>
-                <tr>
-                    <td>Semester</td>
-                    <td>
-                        <input value="" name="id" readonly>
-                    </td> 
-                </tr>
-                <tr>
-                    <td>Major</td>
-                    <td>
-                        <input value="" name="id" readonly>
-                    </td>
+                        <form action="MainController" method="GET">
+                            <table class="">
+                                <tr>
+                                    <td>ID</td>
+                                    <td>
+                                        <input value="" name="id" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>
+                                        <input value="" name="id" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Full name</td>
+                                    <td>
+                                        <input value="" name="id" readonly>
+                                    </td>                  
+                                </tr>
+                                <tr>
+                                    <td>Phone</td>
+                                    <td>
+                                        <input value="" name="id" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Address</td>
+                                    <td>
+                                        <input value="" name="id" readonly>
+                                    </td>                
+                                </tr>
+                                <tr>
+                                    <td>Semester</td>
+                                    <td>
+                                        <input value="" name="id" readonly>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td>Major</td>
+                                    <td>
+                                        <input value="" name="id" readonly>
+                                    </td>
 
-                </tr>
-                <tr>
-                    <td>Narrow</td>
-                    <td>
-                        <input value="" name="id" readonly>
-                    </td>
-                </tr>
-            </table>
-        </form>
+                                </tr>
+                                <tr>
+                                    <td>Narrow</td>
+                                    <td>
+                                        <input value="" name="id" readonly>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
                     </div>
 
 
                 </div>
             </main>
-            <footer class="bg-dark">
+            <footer style="background-color: #f86c24;">
                 <p>Team</p>
                 <p>FPT University</p>
             </footer>
