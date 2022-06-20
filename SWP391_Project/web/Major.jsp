@@ -11,75 +11,91 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Major Management</title>
-        <link rel="stylesheet" type="text/css" href="css/cssforadmin.css">
+        <link rel="stylesheet" href="css/admincss.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>    
+        <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <header>
-            <h1>ADMIN HOME PAGE</h1> <!-- tiêu đề -->
-        </header>
+    <body class="sb-nav-fixed jumbotron">
 
-        <%@include file="MenuAdmin.jsp" %>
+        <%@include file="Header.jsp" %>
 
-        <div>
-            <h1>Major Management</h1>
-            <form action="MainController" method="post">
-                <input type="text" name="search" value="<%= (request.getParameter("txtsearch") == null) ? "" : request.getParameter("txtsearch")%>">
-                <select name="searchby">
-                    <option value="byname">By id</option>
-                    <option value="bycate">By name</option>
-                </select>
-                <input type="submit" value="SearchMajor" name="action" >
-            </form>
+        <div id="layoutSidenav_content">
+
+            <main class="container-fluid">
+                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Major Management</h1>
+                  
                 <a href="AddMajor.jsp">
-                <button style="border-radius: 5px">Add Major: <i class="fa-solid fa-circle-plus"></i></button>
-            </a> 
-            <h1></h1>
-            <table class="table table-responsive table-bordered table-hover">
+                            <button class="btnadd">Add Major: <i class="fa-solid fa-circle-plus"></i></button>
+                        </a>
+                    
+                <form action="MainController" method="post">
+                    <input id="inputsearch" type="text" name="search" placeholder="Search..." value="${requestScope.SEARCH}">
+                    <select name="searchby">
+                        <option value="id" ${requestScope.ID} >By Id</option>
+                        <option value="name" ${requestScope.NAME} >By Name</option>
+                    </select>
+                    <input class="btnsearch" type="submit" value="Search" name="action" >
+                </form>
+
+
+                <div class="room container-fluid px-4">    
+                    <div class="tab-content ">
+                        <table class="table table-responsive table-bordered table-hover">
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Link</th>
-                    <th scope="col">Description</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Major</th>
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                 </tr>
-                <c:forEach var="mj" items="${requestScope.LIST_Majors}">
+                <c:forEach var="sp" items="${requestScope.LIST_Supporters}">
                     <tr>
-                        <td><c:out value="${mj.majorID}"></c:out></td>
-                        <td><c:out value="${mj.majorName}"></c:out></td>
-                        <td><c:out value="${mj.linkFLM}"></c:out></td>
-                        <td><c:out value="${mj.description}"></c:out></td>
-                        
-                        <td>              
+                        <td><c:out value="${sp.userID}"></c:out></td>
+                        <td><c:out value="${sp.name}"></c:out></td>
+                        <td><c:out value="${sp.email}"></c:out></td>
+                        <td><c:out value="${sp.phoneNumber}"></c:out></td>
+                        <td><c:out value="${sp.address}"></c:out></td>
+                        <td><c:out value="${sp.roleID}"></c:out></td>
+                        <td><c:out value="${sp.majorID}"></c:out></td>  
+                        <td>
                             <c:url  var="update" value="MainController">
-                                <c:param name="majorID" value="${mj.majorID}"></c:param>
-                                <c:param name="action" value="PageUpdateMajor"></c:param>
+                                <c:param name="userID" value="${sp.userID}"></c:param>
+                                <c:param name="action" value="PageUpdateSupporter"></c:param>
                             </c:url>
-                            <a href="${update}">Update</a>
+                            <a href="${update}"><i class="fas fa-edit"></i></a>
                         </td>
                         <td>              
                             <c:url  var="delete" value="MainController">
-                                <c:param name="majorID" value="${mj.majorID}"></c:param>
-                                <c:param name="action" value="DeleteMajor"></c:param>
+                                <c:param name="userID" value="${sp.userID}"></c:param>
+                                <c:param name="action" value="DeleteSupporter"></c:param>
                             </c:url>
-                            <a href="${delete}">Delete</a>
+                                <a href="${delete}"><i class="fas fa-trash"></i></a>
                         </td>
-
                     </tr>
                 </c:forEach>
             </table>
             <c:if test="${not empty requestScope.SUCCESS}">
                 <p style="color: lightgreen">${requestScope.SUCCESS}</p>
             </c:if>
+                    </div>
+
+
+                </div>
+            </main>
+                    <footer class="bg-dark">
+                <p>Team</p>
+                <p>FPT University</p>
+            </footer>
         </div>
-        <footer>
-            <p>Team</p>
-            <p>FPT University</p>
-        </footer>
-        
-    </body>
+    </div>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+</body>
 </html>

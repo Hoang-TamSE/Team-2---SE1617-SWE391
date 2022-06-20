@@ -1,6 +1,6 @@
 <%-- 
-    Document   : test
-    Created on : Jun 15, 2022, 6:02:17 PM
+    Document   : HeaderStudent
+    Created on : Jun 20, 2022, 5:22:30 PM
     Author     : user
 --%>
 
@@ -21,7 +21,7 @@
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
 
-            <a class="navbar-brand ps-3" href="adminPage.jsp">Admin Page
+            <a class="navbar-brand ps-3" href="StudentPage.jsp">Student Page
 
             </a>
             <!-- Sidebar Toggle-->
@@ -54,35 +54,22 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
 
-                            <a class="nav-link" href="MainController?action=Search&searchby=name">
+                            <a class="nav-link" href="UpdateInformation.jsp">
                                 <div class="sb-nav-link-icon"></div>
-                                Student
+                                Update Information
                             </a>
-                            <a class="nav-link collapsed" href="MainController?action=SearchSupporter">
+                            <a class="nav-link collapsed" href="SendApplication.jsp">
                                 <div class="sb-nav-link-icon"></div>
-                                Supporter                               
+                                Send Application                               
                             </a>
-                            <a class="nav-link collapsed" href="MainController?action=SearchMajor">
+                            <a class="nav-link collapsed" href="ViewApplication.jsp">
                                 <div class="sb-nav-link-icon"></div>
-                                Major                               
+                                View Application                               
                             </a>
-                            <a class="nav-link collapsed" href="Specialization.jsp">
+                            <a class="nav-link collapsed" href="NarrowRegister.jsp">
                                 <div class="sb-nav-link-icon"></div>
-                                Narrow                               
+                                Narrow Register                             
                             </a>                
-
-                            <a class="nav-link" href="Term.jsp">
-                                <div class="sb-nav-link-icon"></div>
-                                Term
-                            </a>
-                            <a class="nav-link" href="RegisterAD.jsp">
-                                <div class="sb-nav-link-icon"></div>
-                                Register Form
-                            </a>
-                            <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"></div>
-                                Notification
-                            </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

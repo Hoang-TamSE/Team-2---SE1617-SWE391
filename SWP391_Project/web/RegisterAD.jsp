@@ -25,17 +25,19 @@
 
     </head>
 
-    <body>
+    <body class="sb-nav-fixed jumbotron">
 
-        <header>
-            <h1>ADMIN HOME PAGE</h1> <!-- tiêu đề -->
-        </header>
-        
-        <%@include file="MenuAdmin.jsp" %>
+        <%@include file="Header.jsp" %>
 
-        <div class="container">
+        <div id="layoutSidenav_content">
+
+            <main class="container-fluid">
+                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Register Form</h1>
+                <div class="room container-fluid px-4">    
+                    <div class="tab-content ">
+                        <div class="container">
             <div class="head-form" style="margin: 20px 0; text-align: center;">
-                <h2>REGISTER FORM</h2>
+                
             </div>
 
             <div class="row" style="border: 1px solid #ddd; padding: 10px 5px;">
@@ -188,12 +190,22 @@
                 <button type="submit" class="btn btn-success">Submit</button>        
             </div>
 
-        </div> <!-- end-container -->
+        </div>
+                    </div>
 
-        <footer>
-            <p>Team</p>
-            <p>FPT University</p>
-        </footer>
 
-    </body>
+                </div>
+            </main>
+            <footer class="bg-dark">
+                <p>Team</p>
+                <p>FPT University</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+</body>
 </html>

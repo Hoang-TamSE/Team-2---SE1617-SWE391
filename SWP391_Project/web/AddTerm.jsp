@@ -10,67 +10,80 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add Term</title>
-        <link rel="stylesheet" type="text/css" href="css/cssforadmin.css">
+        <link rel="stylesheet" href="css/admincss.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <header>
-            <h1>ADMIN HOME PAGE</h1> <!-- tiêu đề -->
-        </header>
-        
-        <%@include file="MenuAdmin.jsp" %>
-        
-        <form action="MainController" method="post">
-            <table class="table table-responsive table-bordered table-hover">
-                <tr>
-                    <td></td>
-                    <td style="font-weight: bold;font-size: large">ADD TERM</td>
-                </tr>
-                <tr>
-                    <td>ID</td>
-                    <td>
-                        <input value="${requestScope.SEMESTER.semesterID}" type="text" name="semesterID">
-                    </td>
-                    <td>
-                        <p style="color: red; ">${requestScope.ERROR.semesterID}</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Name</td>
-                    <td>
-                        <input value="${requestScope.SEMESTER.semesterName}" type="text" name="semesterName">
-                    </td>
-                    <td>
-                        <p style="color: red; ">${requestScope.ERROR.semesterName}</p>
-                    </td>
-                </tr>
-                <tr style="text-align: center;">
-                    <td colspan="2">
-                        <input class="button" type="submit" name="action" value="AddTerm">
-                    </td>
-                </tr>
-            </table>
-        </form>
-        
-        <footer>
-            <p>Team</p>
-            <p>FPT University</p>
-        </footer>
-        
-        
-    </body>
-    
+    <body class="sb-nav-fixed jumbotron">
+
+        <%@include file="Header.jsp" %>
+
+        <div id="layoutSidenav_content">
+
+            <main class="container-fluid">
+                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Term Management</h1>
+
+
+                <div class="room container-fluid px-4">    
+                    <div class="tab-content ">
+                        <form action="MainController" method="post">
+                            <table class="">
+                                <tr>
+                                    <td></td>
+                                    <td style="font-weight: bold;font-size: large">ADD TERM</td>
+                                </tr>
+                                <tr>
+                                    <td>ID</td>
+                                    <td>
+                                        <input value="${requestScope.MAJOR.majorID}" type="text" name="majorID">
+                                    </td>
+                                    <td>
+                                        <p style="color: red; ">${requestScope.ERROR.majorID}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>
+                                        <input value="${requestScope.MAJOR.majorName}" type="text" name="majorName">
+                                    </td>
+                                    <td>
+                                        <p style="color: red; ">${requestScope.ERROR.majorName}</p>
+                                    </td>
+                                </tr>
+                                
+                                <tr style="text-align: center;">
+                                    <td colspan="2">
+                                        <input class="button" type="submit" name="action" value="AddMajor">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+
+                        <footer>
+                            <p>Team</p>
+                            <p>FPT University</p>
+                        </footer>
+                    </div>
+
+
+                </div>
+            </main>
+            <footer class="bg-dark">
+                <p>Team</p>
+                <p>FPT University</p>
+            </footer>
+        </div>
+    </div>
+
+
     <style>
         tr td
         {
             padding-left: 20px;
             padding-top: 10px;
             padding-bottom: 10px;
-            
-        }
 
+        }
         tr td input
         {
             border:none;
@@ -94,7 +107,10 @@
             width: 31%;
             text-align: center;
         }
-        
     </style>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 
+</body>
+</html>
