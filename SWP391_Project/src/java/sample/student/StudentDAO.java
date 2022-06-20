@@ -22,11 +22,11 @@ public class StudentDAO {
     private static final String SEARCH = "SELECT us.userID, us.name, us.email, us.phoneNumber, us.address,"
             + " us.roleID, st.semesterID, st.majorID, st.narrowID"
             + " FROM tblUser us INNER JOIN tblStudent st ON us.userID = st.userID "
-            + "WHERE us.status = 'true' AND us.name like ? ";
-    private static final String GETSTUDENT = "SELECT us.userID, us.name, us.email, us.phoneNumber, us.address,"
-            + " us.roleID, st.semesterID, st.majorID, st.narrowID"
-            + " FROM tblUser us INNER JOIN tblStudent st ON us.userID = st.userID "
-            + "WHERE us.status = 'true' AND us.userID like ? ";
+            + " WHERE us.status = 'true' AND us.name like ? ";
+    private static final String GETSTUDENT = " SELECT us.userID, us.name, us.email, us.phoneNumber, us.address,\n"
+            + "  us.roleID, st.semesterID, st.majorID, st.narrowID\n"
+            + "  FROM tblUser us INNER JOIN tblStudent st ON us.userID = st.userID \n"
+            + "  WHERE us.status = 'true' AND us.userID = ? ";
 
     private static final String DELETE = "UPDATE tblUser "
             + "SET status= 'false' "
@@ -102,7 +102,7 @@ public class StudentDAO {
             conn = DBUtils.getConnection();
             if (conn != null) {
                 ptm = conn.prepareStatement(GETSTUDENT);
-                ptm.setString(1, "%" + search + "%");
+                ptm.setString(1, search);
                 rs = ptm.executeQuery();
                 if (rs.next()) {
                     String userID = rs.getString("userID");
