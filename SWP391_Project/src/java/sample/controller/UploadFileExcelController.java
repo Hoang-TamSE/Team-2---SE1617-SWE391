@@ -65,6 +65,7 @@ public class UploadFileExcelController extends HttpServlet {
                     dao.createStudent(student);
                 }
             }
+            Files.deleteIfExists(Paths.get(excelFilePath));
             url = SUCCESS;
         } catch (Exception e) {
             log("Error at UploadFileExcelController: "+ e.toString());
