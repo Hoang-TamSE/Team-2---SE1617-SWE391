@@ -1,6 +1,6 @@
 <%-- 
-    Document   : UpdateMajor
-    Created on : Jun 12, 2022, 7:25:37 PM
+    Document   : UpdateSpecialization
+    Created on : Jun 20, 2022, 6:10:59 PM
     Author     : user
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Update Major</title>
+        <title>Update Narrow</title>
         <link rel="stylesheet" href="css/admincss.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>
@@ -21,7 +21,7 @@
         <div id="layoutSidenav_content">
 
             <main class="container-fluid">
-                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Update Major</h1>
+                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Update Narrow</h1>
 
 
                 <div class="room container-fluid px-4">    
@@ -31,13 +31,13 @@
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        ${requestScope.MAJOR.majorID}
+                                        
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Name</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.majorName}" type="text" name="majorName">
+                                        <input value="" type="text" name="">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.majorName}</p>
@@ -46,7 +46,7 @@
                                 <tr>
                                     <td>Link</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.linkFLM}" type="text" name="linkFLM">
+                                        <input value="" type="text" name="linkFLM">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.linkFLM}</p>
@@ -55,7 +55,7 @@
                                 <tr>
                                     <td>Description</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.description}" type="text" name="description">
+                                        <input value="" type="text" name="description">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.description}</p>
@@ -65,8 +65,8 @@
                                 <tr>
                                     <td colspan="2">
                                         <!--Mấy ông sửa cái này lại nha tui demo thôi_-->
-                                        <input class="button" type="submit" name="action" value="UpdateMajor">
-                                        <input type="hidden" name="majorID" value="${requestScope.MAJOR.majorID}">
+                                        <input class="button" type="submit" name="action" value="UpdateNarrow">
+                                        <input type="hidden" name="" value="">
                                     </td>
                                 </tr>
                             </table>
@@ -93,3 +93,4 @@
 
 </body>
 </html>
+
