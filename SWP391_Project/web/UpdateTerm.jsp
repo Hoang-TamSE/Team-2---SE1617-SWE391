@@ -9,20 +9,25 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Update Student</title>
-        <link rel="stylesheet" type="text/css" href="css/cssforadmin.css">
+        <title>Update Term</title>
+        <link rel="stylesheet" href="css/admincss.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <header>
-            <h1>ADMIN HOME PAGE</h1> <!-- tiêu đề -->
-        </header>
+    <body class="sb-nav-fixed jumbotron">
 
-        <%@include file="MenuAdmin.jsp" %>
+        <%@include file="Header.jsp" %>
 
-        <form action="MainController" method="GET">
+        <div id="layoutSidenav_content">
+
+            <main class="container-fluid">
+                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Update Term</h1>
+
+
+
+                <div class="room container-fluid px-4">    
+                    <div class="tab-content ">
+                        <form action="MainController" method="GET">
             <table class="table table-responsive table-bordered table-hover">
                 <tr>
                     <td>ID</td>
@@ -49,12 +54,18 @@
                 </tr>
             </table>
         </form>
-
-        <footer style="background-color: #f86c24;">
-            <p>Team</p>
-            <p>FPT University</p>
-        </footer>
+                    </div>
 
 
-    </body>
+                </div>
+            </main>
+            <%@include file="Footer.jsp" %>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+</body>
 </html>

@@ -50,10 +50,7 @@
 
                 </div>
             </main>
-            <footer style="background-color: #f86c24;">
-                <p>Team</p>
-                <p>FPT University</p>
-            </footer>
+            <%@include file="Footer.jsp" %>
         </div>
     </div>
 

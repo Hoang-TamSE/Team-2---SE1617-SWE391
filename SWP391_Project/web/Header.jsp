@@ -21,16 +21,17 @@
         <nav style="background-color: #f86c24;" class="sb-topnav navbar navbar-expand navbar-dark">
             <!-- Navbar Brand-->
 
-            <a class="navbar-brand ps-3" href="adminPage.jsp">Admin Page
-
+            <a class="navbar-brand ps-3" href="adminPage.jsp">
+                 <img src="https://downloadlogomienphi.com/sites/default/files/logos/download-logo-vector-dai-hoc-fpt-mien-phi.jpg" class="rounded-circle"  alt="logo"width="45" height="41">
+                 Admin Page
             </a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                    <input style="border: 2px solid black" class="form-control" type="text" placeholder="Search..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button style="background-color: black" class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
                 </div>
             </form>
             <!-- Navbar-->
