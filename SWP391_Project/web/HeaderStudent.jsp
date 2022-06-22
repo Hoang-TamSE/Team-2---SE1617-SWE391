@@ -18,10 +18,12 @@
         <link href="css/stylemenu.css" rel="stylesheet" />
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <nav style="background-color: #f86c24;border-bottom: 2px solid black;" class="sb-topnav navbar navbar-expand navbar-dark">
             <!-- Navbar Brand-->
 
-            <a class="navbar-brand ps-3" href="StudentPage.jsp">Student Page
+            <a class="navbar-brand ps-3" href="StudentPage.jsp">
+                <img src="https://downloadlogomienphi.com/sites/default/files/logos/download-logo-vector-dai-hoc-fpt-mien-phi.jpg" class="rounded-circle"  alt="logo"width="45" height="41">
+                Student Page
 
             </a>
             <!-- Sidebar Toggle-->

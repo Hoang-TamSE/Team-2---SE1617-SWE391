@@ -22,23 +22,20 @@
 
             <main class="container-fluid">
                 <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Supporter Management</h1>
-
-                <a href="AddSupporter.jsp">
-                    <button class="btnadd">Add Supporter: <i class="fa-solid fa-circle-plus"></i></button>
-                </a>
-
-                <form action="MainController" method="post">
-                    <input id="inputsearch" type="text" name="search" placeholder="Search..." value="${requestScope.SEARCH}">
-                    <select name="searchby">
-                        <option value="id" ${requestScope.ID} >By Id</option>
-                        <option value="name" ${requestScope.NAME} >By Name</option>
-                    </select>
-                    <input class="btnsearch" type="submit" value="Search" name="action" >
-                </form>
-
-
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
+                        <a href="AddSupporter.jsp">
+                            <button class="btnadd">Add Supporter: <i class="fa-solid fa-circle-plus"></i></button>
+                        </a>
+
+                        <form style="margin-bottom: 5px;" action="MainController" method="post">
+                            <input id="inputsearch" type="text" name="search" placeholder="Search..." value="${requestScope.SEARCH}">
+                            <select name="searchby">
+                                <option value="id" ${requestScope.ID} >By Id</option>
+                                <option value="name" ${requestScope.NAME} >By Name</option>
+                            </select>
+                            <input class="btnsearch" type="submit" value="Search" name="action" >
+                        </form>
                         <table class="table table-responsive table-bordered table-hover">
                             <tr>
                                 <th scope="col">ID</th>

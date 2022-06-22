@@ -15,7 +15,7 @@
         <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <footer class="py-4 bg-light mt-auto">
+        <footer style="border-top: 2px solid #f86c24;" class="py-4 bg-light mt-auto">
             <div class="container-fluid px-4">
                 <div class="d-flex align-items-center justify-content-between small">
                     <div class="text-muted">Copyright &copy; Team 3</div>
