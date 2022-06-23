@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Upate Information</title>
-        <link rel="stylesheet" href="css/admincss.css">
+        <link rel="stylesheet" href="css/studentcss.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>
     </head>
@@ -78,7 +78,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
+                                    <td style="text-align: center;" colspan="2">
                                         <input class="button" type="submit" name="action" value="UpdateStudent">
                                         <input type="hidden" name="userID" value="${requestScope.STUDENT.userID}">
                                         <input type="hidden" name="email" value="${requestScope.STUDENT.email}">

@@ -105,7 +105,6 @@
                             <a href="#">Software Engineering</a>
                             <a href="#">Artifical Intelligence</a>
                             <a href="#">Information Assurance</a>
-                            <a href="#">Graphic Design</a>
                         </div>
                     </figure>
                 </div>

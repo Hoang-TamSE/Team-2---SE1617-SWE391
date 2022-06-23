@@ -22,24 +22,21 @@
         <div id="layoutSidenav_content">
 
             <main class="container-fluid">
-                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Term Management</h1>
-
-                <a href="AddTerm.jsp">
-                    <button class="btnadd">Add Term: <i class="fa-solid fa-circle-plus"></i></button>
-                </a>
-
-                <form action="MainController" method="post">
-                    <input id="inputsearch" type="text" name="search" placeholder="Search..." value="${requestScope.SEARCH}">
-                    <select name="searchby">
-                        <option value="id" ${requestScope.ID} >By Id</option>
-                        <option value="name" ${requestScope.NAME} >By Name</option>
-                    </select>
-                    <input class="btnsearch" type="submit" value="Search" name="action" >
-                </form>
-
-
+                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Term Management</h1>     
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
+                        <a href="AddTerm.jsp">
+                            <button class="btnadd">Add Term: <i class="fa-solid fa-circle-plus"></i></button>
+                        </a>
+
+                        <form style="margin-bottom: 5px;" action="MainController" method="post">
+                            <input id="inputsearch" type="text" name="search" placeholder="Search..." value="${requestScope.SEARCH}">
+                            <select name="searchby">
+                                <option value="id" ${requestScope.ID} >By Id</option>
+                                <option value="name" ${requestScope.NAME} >By Name</option>
+                            </select>
+                            <input class="btnsearch" type="submit" value="Search" name="action" >
+                        </form>
                         <table class="table table-responsive table-bordered table-hover">
                             <tr>
                                 <th scope="col">ID</th>
