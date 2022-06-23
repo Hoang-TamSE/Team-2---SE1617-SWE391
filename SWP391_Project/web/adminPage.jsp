@@ -27,7 +27,7 @@
 
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <h1>Welcome Admin</h1>
+                        <h1>Welcome ${sessionScope.LOGIN_USER.name}</h1>
                     </div>
 
 

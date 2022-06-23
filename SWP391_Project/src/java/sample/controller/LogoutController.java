@@ -6,70 +6,37 @@
 package sample.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import sample.admin.AdminDAO;
-import sample.admin.AdminDTO;
-import sample.google.GooglePojo;
-import sample.student.StudentDAO;
-import sample.student.StudentDTO;
-import sample.utils.GoogleUtils;
 
 /**
  *
  * @author Hoang Tam
  */
-@WebServlet(name = "LoginGoogleController", urlPatterns = {"/login-google"})
-public class LoginGoogleController extends HttpServlet {
+@WebServlet(name = "LogoutController", urlPatterns = {"/LogoutController"})
+public class LogoutController extends HttpServlet {
 
-    private static final String ERROR = "error.jsp";
-    private static final String SUCCESS = "MainController?action=SearchForUser";
-    private static final long serialVersionUID = 1L;
-    private static final String AD = "AD";
-    private static final String ADMIN_PAGE = "adminPage.jsp";
-    private static final String ST = "ST";
-    private static final String STUDENT_PAGE = "StudentPage.jsp";
-
-    public LoginGoogleController() {
-        super();
-    }
-
+    private static final String ERROR ="HomePage.jsp";
+    private static final String SUCCESS ="HomePage.jsp";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String url = ERROR;
-        HttpSession session = request.getSession();
+        String url= ERROR;
         try {
-            String code = request.getParameter("code");
-            if (code == null || code.isEmpty()) {
-                url = ERROR;
-            } else {
-                String accessToken = GoogleUtils.getToken(code);
-                GooglePojo googlePojo = GoogleUtils.getUserInfo(accessToken);
-                AdminDAO dao = new AdminDAO();
-                AdminDTO user = dao.checkLoginGoogle(googlePojo.getEmail());
-                if (user != null) {
-                    String roleID = user.getRoleID().trim();
-                    if (AD.equals(roleID)) {
-                        url = ADMIN_PAGE;
-                        session.setAttribute("LOGIN_USER", user);
-
-                    } else if (ST.equals(roleID)) {
-                        url = STUDENT_PAGE;
-                        StudentDAO stdao = new StudentDAO();
-                        StudentDTO std = stdao.getStudent(user.getUserID());
-                        session.setAttribute("LOGIN_USER", std);
-                    }
-                }
+            HttpSession session = request.getSession(false);
+            if(session!=null){
+                session.invalidate();
+                url=SUCCESS;
             }
         } catch (Exception e) {
-            log("Error at LoginGoogleController: " + e);
-        } finally {
-            request.getRequestDispatcher(url).forward(request, response);
+            log("Error at LogoutController: "+ e.toString());
+        }finally{
+            response.sendRedirect(url);
         }
     }
 

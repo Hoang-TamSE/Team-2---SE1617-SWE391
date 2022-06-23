@@ -44,7 +44,7 @@
                         <li>
                             <hr class="dropdown-divider" />
                         </li>
-                        <li><a class="dropdown-item" href="">Logout</a></li>
+                        <li><a class="dropdown-item" href="MainController?action=Logout">Logout</a></li>
                     </ul>
                 </li>
             </ul>
