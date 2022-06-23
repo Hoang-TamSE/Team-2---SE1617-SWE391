@@ -16,7 +16,7 @@
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Home</a>
+            <a class="navbar-brand" href="HomePage.jsp">Trang chủ</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,26 +25,31 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">News <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Tin tức<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Information</a>
+                        <a class="nav-link" href="#">Thông tin</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
-                            Major
+                            Ngành đào tạo
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Information Technology</a>
-                            <a class="dropdown-item" href="#">Business Administration</a>
-                            <a class="dropdown-item" href="#">English Language</a>
-                            <a class="dropdown-item" href="#">Japanese Language</a>
-                            <a class="dropdown-item" href="#">Korean Language</a>
+                            <a class="dropdown-item" href="HomePage_IT.jsp">Kỹ thuật phần mềm</a>
+                            <a class="dropdown-item" href="#">An toàn thông tin</a>
+                            <a class="dropdown-item" href="#">Trí tuệ nhân tạo</a>
+                            <a class="dropdown-item" href="#">Quản trị kinh doanh</a>
+                            <a class="dropdown-item" href="#">Kinh doanh quốc tế</a>
+                            <a class="dropdown-item" href="#">Truyền thông đa phương tiện</a>
+                            <a class="dropdown-item" href="#">Thiết kế mỹ thuật số</a>
+                            <a class="dropdown-item" href="#">Quản trị khách sạn</a>
+                            <a class="dropdown-item" href="#">Ngôn ngữ Anh</a>
+                            <a class="dropdown-item" href="#">Ngôn ngữ Nhật</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Login.jsp">Login</a>
+                        <a class="nav-link" href="Login.jsp">Đăng nhập</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0 col-md-4">
@@ -53,13 +58,13 @@
                         <span class="search_span"></span>
                     </div>
                     <button class="ml-lg-3 btn btn-success my-2 my-sm-0 search_button tx--white" type="button"
-                            ripple="ripple">Search</button>
+                            ripple="ripple">Tìm kiếm</button>
                 </form>
             </div>
         </nav>
 
         <div class="logo">
-            <img width="14%" src="https://job.fpt.edu.vn/Content/images/logo_unit/fpt-university.png">
+            <img width="14%" src="images/logofpt.png">
         </div>
 
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -71,47 +76,60 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100"
-                         src="https://daihoc.fpt.edu.vn/wp-content/uploads/2022/04/DHFPT-TS-2022-bannerweb.png" alt="First slide">
+                         src="images/carousel1.png" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://daihoc.fpt.edu.vn/wp-content/uploads/2021/12/cover-web-FPTU-2022-2.png"
+                    <img class="d-block w-100" src="images/carousel3.png"
                          alt="Second slide">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100"
-                         src="https://daihoc.fpt.edu.vn/wp-content/uploads/2021/12/cover-web-FPTU-2022-1-1.png" alt="Third slide">
+                         src="images/carousel2.png" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+                <span class="sr-only">Trước</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+                <span class="sr-only">Sau</span>
             </a>
         </div>
         <div class="majors">
             <h1 class="text-center">
-                MAJORS
+                NGÀNH ĐÀO TẠO
             </h1>
 
-            <div class="row justify-content-center">
+            <div class="row">
                 <div class="col-md-4">
-                    <p class="text-center">Information Technology</p>
+                    <p class="text-center">Công nghệ thông tin</p>
                     <figure class="hover-menu">
-                        <img class="img-responsive" src="https://daihoc.fpt.edu.vn/wp-content/uploads/2016/11/cntt-1-373x206.jpg" />
+                        <img class="img-responsive" src="images/major1.jpg" />
                         <div>
-                            <a href="#">Software Engineering</a>
-                            <a href="#">Artifical Intelligence</a>
-                            <a href="#">Information Assurance</a>
+                            <a href="HomePage_IT.jsp">Kỹ thuật phần mềm</a>
+                            <a href="#">Trí tuệ nhân tạo</a>
+                            <a href="#">An toàn thông tin</a>
                         </div>
                     </figure>
                 </div>
+                
+                <div class="col-md-4">
+                    <p class="text-center">Graphic Design</p>
+                    <figure class="hover-menu">
+                        <img class="img-responsive" src="images/major2.jpg" />
+                        <div>
+                            <a href="#">Home</a>
+                            <a href="#">Pricing</a>
+                            <a href="#">About</a>
+                        </div>
+                    </figure>
+                </div>
+                
                 <div class="col-md-4">
                     <p class="text-center">Business Administration</p>
                     <figure class="hover-menu">
-                        <img class="img-responsive" src="https://daihoc.fpt.edu.vn/wp-content/uploads/2016/11/qtkd-373x206.jpg" />
+                        <img class="img-responsive" src="images/major3.jpg" />
                         <div>
                             <a href="#">Home</a>
                             <a href="#">Pricing</a>
@@ -123,9 +141,9 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <p class="text-center">English Language</p>
+                    <p class="text-center">Multimedia</p>
                     <figure class="hover-menu">
-                        <img class="img-responsive" src="https://daihoc.fpt.edu.vn/wp-content/uploads/2016/11/nna-373x206.jpg" />
+                        <img class="img-responsive" src="images/major4.jpg" />
                         <div>
                             <a href="#">Home</a>
                             <a href="#">Pricing</a>
@@ -134,9 +152,9 @@
                     </figure>
                 </div>
                 <div class="col-md-4">
-                    <p class="text-center">Japanese Language</p>
+                    <p class="text-center">Tourism - Hotel</p>
                     <figure class="hover-menu">
-                        <img class="img-responsive" src="https://daihoc.fpt.edu.vn/wp-content/uploads/2016/11/nnn-373x206.jpg" />
+                        <img class="img-responsive" src="images/major5.jpg" />
                         <div>
                             <a href="#">Home</a>
                             <a href="#">Pricing</a>
@@ -145,13 +163,12 @@
                     </figure>
                 </div>
                 <div class="col-md-4">
-                    <p class="text-center">Korean Language</p>
+                    <p class="text-center">Language</p>
                     <figure class="hover-menu">
-                        <img class="img-responsive" src="https://daihoc.fpt.edu.vn/wp-content/uploads/2016/11/nnh-373x206.jpg" />
+                        <img class="img-responsive" src="images/major6.jpg" />
                         <div>
-                            <a href="#">Home</a>
-                            <a href="#">Pricing</a>
-                            <a href="#">About</a>
+                            <a href="#">English</a>
+                            <a href="#">Japanese</a>
                         </div>
                     </figure>
                 </div>

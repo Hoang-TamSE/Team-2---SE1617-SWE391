@@ -18,7 +18,7 @@
         <footer style="border-top: 2px solid #f86c24;" class="py-4 bg-light mt-auto">
             <div class="container-fluid px-4">
                 <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright &copy; Team 3</div>
+                    <div class="text-muted">Copyright &copy; Team 2</div>
                     <div>
                         <a href="FPTUniversity@fe.edu.vn"><i class="fa-brands fa-youtube"></i></a>
                         <a href="https://www.facebook.com/uni.fpt.edu.vn/"><i class="fab fa-facebook-f"></i></a>

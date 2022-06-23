@@ -22,7 +22,7 @@
             <!-- Navbar Brand-->
 
             <a class="navbar-brand ps-3" href="StudentPage.jsp">
-                <img src="https://downloadlogomienphi.com/sites/default/files/logos/download-logo-vector-dai-hoc-fpt-mien-phi.jpg" class="rounded-circle"  alt="logo"width="45" height="41">
+                <img src="images/logoheader.jpg" class="rounded-circle"  alt="logo"width="45" height="41">
                 Student Page
 
             </a>
