@@ -84,6 +84,7 @@ public class AuthenFilter implements Filter {
         NON_AUTHEN_RESOURCES.add(".gif");
         NON_AUTHEN_RESOURCES.add(".jpg");
         NON_AUTHEN_RESOURCES.add(".png");
+        NON_AUTHEN_RESOURCES.add(".jpeg");
         NON_AUTHEN_RESOURCES.add(".css");
         NON_AUTHEN_RESOURCES.add(".js");
     }

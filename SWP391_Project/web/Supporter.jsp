@@ -34,7 +34,8 @@
                                 <option value="id" ${requestScope.ID} >By Id</option>
                                 <option value="name" ${requestScope.NAME} >By Name</option>
                             </select>
-                            <input class="btnsearch" type="submit" value="Search" name="action" >
+                            <input type="hidden" name="action" value="SearchSupporter"/>
+                            <input class="btnsearch" type="submit" value="Search" >
                         </form>
                         <table class="table table-responsive table-bordered table-hover">
                             <tr>
