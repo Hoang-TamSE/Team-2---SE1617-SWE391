@@ -418,8 +418,51 @@ display: block;
     background-image: url(../images/carousel2.jpeg); /* fallback for older browsers */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.1) 100%), url(../images/carousel2.jpeg);
     background-attachment: fixed;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.list-major
+{
+ background-color: #ffeddb;   
+}
+
+#narrow h4
+{
+    text-align: center;
+    color: #f86c24;
+    font-weight: bold;
+    padding-top: 15px; 
+}
+
+.list-major ul li a
+{
+    color: black;
+    
+}
+
+.list-major ul li
+{
+    border-bottom: 1px dotted graytext;
+    width: 100%;
+    padding: 10px;
+}
+
+#narrow h3
+{
+    text-align: center;
+    color: #f86c24;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+#narrow
+{
+    background-color: whitesmoke;
+}
+
+#narrowinfo
+{
+    background-color: white;
+}

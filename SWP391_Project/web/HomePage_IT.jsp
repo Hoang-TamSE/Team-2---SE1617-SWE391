@@ -180,7 +180,78 @@
                 <p style="font-size: small;">VINASA: Hiệp hội Phần mềm Việt Nam.</p>
             </div>  
         </div>
+        
+        <div style="height: 15px; background-color: whitesmoke"></div>
+        
+        <div id="narrow" class="row d-flex justify-content-center">
+            <div class="col-md-9">
+                <h3>Narrow of Software Engineering</h3>
+                <div class="row">
+            <div class="col-md-3">
+                <div class="list-major">
+                    <h4>NARROW LIST</h4>
+                        <ul class="nav nav-tabs p-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#IT" role="tab" data-toggle="tab">PRN211 (.NET)</a>
+                            </li>                   
+                            <li class="nav-item">
+                                <a class="nav-link" href="#BA" role="tab" data-toggle="tab">Bridge Software Engineer (JS)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#EL"role="tab" data-toggle="tab">PRP201c (Autonomous Car)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#JL" role="tab" data-toggle="tab">PRP201c (AI With Tensor Flow)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#KL" role="tab" data-toggle="tab">FER201m (React/NodeJS)</a>
+                            </li>
+                        </ul>
+                </div>
+            </div> <!-- col-left -->
 
+            <div id="narrowinfo" class="col-md-9">
+                <h4>NARROW INFORMATION</h4>
+                <div>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade show" id="IT">
+                            <p class=" d-none d-sm-block">
+                                sadsadsad
+                            </p>
+                        </div> <!-- IT -->
+
+                        <div role="tabpanel" class="tab-pane fade show" id="BA">
+                            <p class=" d-none d-sm-block">
+                                asassasa
+                            </p>
+                        </div> <!-- BA -->
+
+                        <div role="tabpanel" class="tab-pane fade show" id="EL">
+                            <p class=" d-none d-sm-block">
+                                saasasas
+                            </p>
+                        </div> <!-- EL -->
+
+                        <div role="tabpanel" class="tab-pane fade show" id="JL">
+                            <p class=" d-none d-sm-block">
+                                sasaas
+                            </p>
+                        </div> <!-- JL -->
+
+                        <div role="tabpanel" class="tab-pane fade show" id="KL">
+                            <p class=" d-none d-sm-block">
+                                asassa
+                            </p>
+                        </div> <!-- KL -->
+
+                    </div> <!-- Tab Content -->
+
+                </div>
+            </div><!-- col-right -->
+        </div>
+            </div>
+        </div>
+        
         <div id="program" class="row d-flex justify-content-center">
             <div class="col-md-9">
                 <h3>CHƯƠNG TRÌNH ĐÀO TẠO</h3>
