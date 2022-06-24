@@ -68,7 +68,9 @@
                 </div>
             </div>
         </div>
-
+        
+        <div style="height: 15px; background-color: whitesmoke"></div>
+        
         <div class="why">
             <h3>VÌ SAO HƠN 50.000 SINH VIÊN LỰA CHỌN ĐH FPT?</h3>
             <div class="row d-flex justify-content-center">
@@ -148,7 +150,9 @@
                 </div>
             </div>
         </div>
-
+        
+        <div style="height: 15px; background-color: whitesmoke"></div>
+        
         <div id="route" class="row d-flex justify-content-center">
             <div id="route-1" class="col-md-5">
                 <h3>LỘ TRÌNH ĐÀO TẠO</h3>
@@ -194,19 +198,19 @@
                 <h4>DANH SÁCH CHUYÊN NGÀNH HẸP</h4>
                 <ul class="nav nav-tabs p-3 ">
                     <li class="nav-item">
-                        <a aria-selected="true" class="nav-link active" href="#IT" role="tab" data-toggle="tab">Cross-platform với .NET</a>
+                        <a aria-selected="true" class="nav-link active font-weight-bold" href="#IT" role="tab" data-toggle="tab">Cross-platform với .NET</a>
                     </li>                   
                     <li class="nav-item">
-                        <a class="nav-link" href="#BA" role="tab" data-toggle="tab">Kỹ sư cầu nối Nhật</a>
+                        <a class="nav-link font-weight-bold" href="#BA" role="tab" data-toggle="tab">Kỹ sư cầu nối Nhật</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#EL"role="tab" data-toggle="tab">Autonomous Car</a>
+                        <a class="nav-link font-weight-bold" href="#EL"role="tab" data-toggle="tab">Autonomous Car</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#JL" role="tab" data-toggle="tab">AI with Tensor Flow</a>
+                        <a class="nav-link font-weight-bold" href="#JL" role="tab" data-toggle="tab">AI with Tensor Flow</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#KL" role="tab" data-toggle="tab">React/NodeJS</a>
+                        <a class="nav-link font-weight-bold" href="#KL" role="tab" data-toggle="tab">React/NodeJS</a>
                     </li>
                 </ul>
 
@@ -217,7 +221,7 @@
                 <div class="table-wrapper-scroll-y my-custom-scrollbar-2">
                     <div class="tab-content">
                         <div selected role="tabpanel" class="tab-pane fade active show selected" id="IT">
-                            <h5>Combo: Phát triển ứng dụng cross-platform với .NET</h5>
+                            <h5 class="font-weight-bold">Combo: Phát triển ứng dụng cross-platform với .NET</h5>
                             <table class="table" >
                                 <thead>
                                     <tr>
@@ -244,7 +248,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <h5>TỔNG QUAN VỀ .NET</h5>
+                            <h5 class="font-weight-bold">TỔNG QUAN VỀ .NET</h5>
                             <p>
                                 .NET hay còn được biết đến là Dotnet là một nền tảng (framework) cho phép lập trình viên sử
                                 dụng để phát triển các ứng dụng, game, website. Nền tảng này được phát triển bởi Microsoft và 
@@ -256,7 +260,7 @@
                                 Bản chất .NET không phải một ngôn ngữ lập trình mà là một nền tảng. Nó cho phép các ngôn ngữ lập trình khác nhau
                                 (như C#, VB.Net) sử dụng để tạo ra các sản phẩm ứng dụng mobile hoặc web.
                             </p>
-                            <h5>ƯU ĐIỂM</h5>
+                            <h5 class="font-weight-bold">ƯU ĐIỂM</h5>
                             <ul>
                                 <li>Tiết kiệm thời gian & chi phí, tăng hiệu suất</li>
                                 <li>Tính bảo mật cao, giảm xung đột</li>
@@ -266,7 +270,7 @@
                         </div> <!-- IT -->
 
                         <div role="tabpanel" class="tab-pane fade show" id="BA">
-                            <h5>Combo: Định hướng kỹ sư cầu nối Nhật</h5>
+                            <h5 class="font-weight-bold">Combo: Định hướng kỹ sư cầu nối Nhật</h5>
                             <h6>
                                 Lưu ý: Nếu sinh viên chọn chuyên ngành này thì cơ sở sẽ tổ chức cho sinh viên  đi OJT tại Nhật. Nếu sinh 
                                 viên không đồng ý với điều kiện này thì cơ sở không triển khai combo này. 
@@ -299,7 +303,7 @@
                         </div> <!-- BA -->
 
                         <div role="tabpanel" class="tab-pane fade show" id="EL">
-                            <h5>Combo: Autonomous Car</h5>
+                            <h5 class="font-weight-bold">Combo: Autonomous Car</h5>
                             <table class="table" >
                                 <thead>
                                     <tr>
@@ -328,7 +332,7 @@
                         </div> <!-- EL -->
 
                         <div role="tabpanel" class="tab-pane fade show" id="JL">
-                            <h5>Combo: AI with Tensor Flow</h5>
+                            <h5 class="font-weight-bold">Combo: AI with Tensor Flow</h5>
                             <table class="table" >
                                 <thead>
                                     <tr>
@@ -357,7 +361,7 @@
                         </div> <!-- JL -->
 
                         <div role="tabpanel" class="tab-pane fade show" id="KL">
-                            <h5>Combo: React/NodeJS</h5>
+                            <h5 class="font-weight-bold">Combo: React/NodeJS</h5>
                             <table class="table" >
                                 <thead>
                                     <tr>
@@ -392,6 +396,8 @@
 
 
         </div>
+        
+        <div style="height: 15px; background-color: whitesmoke"></div>
 
         <div id="program" class="row d-flex justify-content-center">
             <div class="col-md-9">

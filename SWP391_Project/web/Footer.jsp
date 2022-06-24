@@ -20,9 +20,9 @@
                 <div class="d-flex align-items-center justify-content-between small">
                     <div class="text-muted">Copyright &copy; Team 2</div>
                     <div>
-                        <a href="FPTUniversity@fe.edu.vn"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.facebook.com/uni.fpt.edu.vn/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.facebook.com/uni.fpt.edu.vn/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCfNrlxNgcTZDJ3jZeSSSJxg" target="_blank"><i class="fa-brands fa-youtube fa-2x"></i></a>
+                        <a href="https://www.facebook.com/uni.fpt.edu.vn/" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a href="https://www.instagram.com/fptuniversityhcm/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
                     </div>
                 </div>
             </div>
