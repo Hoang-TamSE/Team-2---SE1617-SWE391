@@ -194,7 +194,7 @@
                             <h4>NARROW LIST</h4>
                             <ul class="nav nav-tabs p-3 ">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#IT" role="tab" data-toggle="tab">PRN211(.NET)</a>
+                                    <a aria-selected="true" class="nav-link active" href="#IT" role="tab" data-toggle="tab">PRN211(.NET)</a>
                                 </li>                   
                                 <li class="nav-item">
                                     <a class="nav-link" href="#BA" role="tab" data-toggle="tab">Bridge Software Engineer(JS)</a>
@@ -214,11 +214,11 @@
 
                     <div id="narrowinfo" class="col-md-7">
                         <h4>NARROW INFORMATION</h4>
-                        <div>
+                        <div class="table-wrapper-scroll-y my-custom-scrollbar-2">
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane fade show" id="IT">
+                                <div selected role="tabpanel" class="tab-pane fade active show selected" id="IT">
                                     <p class=" d-none d-sm-block">
-                                        sadsadsad
+                                        ssssssasa
                                     </p>
                                 </div> <!-- IT -->
 
