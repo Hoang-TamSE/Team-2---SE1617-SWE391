@@ -26,7 +26,7 @@
 
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <form action="mainController" method="post">
+                        <form action="mainController">
                             <table class="">
                                 <tr>
                                     <td></td>

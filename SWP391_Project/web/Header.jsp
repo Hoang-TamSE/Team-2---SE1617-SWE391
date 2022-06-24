@@ -59,7 +59,7 @@
                                 <div class="sb-nav-link-icon"></div>
                                 Student
                             </a>
-                            <a class="nav-link collapsed" href="MainController?action=SearchSupporter">
+                            <a class="nav-link collapsed" href="MainController?action=SearchSupporter&searchby=name">
                                 <div class="sb-nav-link-icon"></div>
                                 Supporter                               
                             </a>
@@ -72,7 +72,7 @@
                                 Narrow                               
                             </a>                
 
-                            <a class="nav-link" href="Term.jsp">
+                            <a class="nav-link" href="MainController?action=SearchTerm">
                                 <div class="sb-nav-link-icon"></div>
                                 Term
                             </a>

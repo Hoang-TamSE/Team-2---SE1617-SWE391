@@ -87,6 +87,17 @@ public class MainController extends HttpServlet {
     private static final String UPDATETERM_CONTROLLER="UpdateTermController";
     private static final String PAGEUPDATETERM="PageUpdateTerm";
     private static final String PAGEUPDATETERM_CONTROLLER="PageUpdateTermController";
+   
+    private static final String ADDNARROW="AddNarrow";
+    private static final String ADDNARROW_CONTROLLER="AddNarrowController";
+    private static final String SEARCHNARROW="SearchNarrow";
+    private static final String SEARCHNARROW_CONTROLLER="SearchNarrowController";
+    private static final String DELETENARROW="DeleteNarrow";
+    private static final String DELETENARROW_CONTROLLER="DeleteNarrowController";
+    private static final String UPDATENARROW="UpdateNarrow";
+    private static final String UPDATENARROW_CONTROLLER="UpdateNarrowController";
+    private static final String PAGEUPDATENARROW="PageUpdateNarrow";
+    private static final String PAGEUPDATENARROW_CONTROLLER="PageUpdateNarrowController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -189,6 +200,15 @@ public class MainController extends HttpServlet {
             }
             else if(PAGEUPDATETERM.equals(action)){
                     url= PAGEUPDATETERM_CONTROLLER;
+            }
+            else if(SEARCHNARROW.equals(action)){
+                    url= SEARCHNARROW_CONTROLLER;
+            }
+            else if(UPDATENARROW.equals(action)){
+                    url= UPDATENARROW_CONTROLLER;
+            }
+            else if(PAGEUPDATENARROW.equals(action)){
+                    url= PAGEUPDATENARROW_CONTROLLER;
             }
         } catch (Exception e) {
             log("Error at MainController: "+ e.toString());

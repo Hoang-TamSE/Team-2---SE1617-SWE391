@@ -14,20 +14,23 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import sample.supporter.SupporterDAO;
-import sample.supporter.SupporterDTO;
+import sample.narrow.NarrowDAO;
+import sample.narrow.NarrowDTO;
+import sample.student.StudentDAO;
+import sample.student.StudentDTO;
 
 /**
  *
- * @author Admin
+ * @author Hoang Tam
  */
-@WebServlet(name = "SearchSupporterController", urlPatterns = {"/SearchSupporterController"})
-public class SearchSupporterController extends HttpServlet {
+@WebServlet(name = "SearchNarrowController", urlPatterns = {"/SearchNarrowController"})
+public class SearchNarrowController extends HttpServlet {
 
-    private static final String ERROR = "Supporter.jsp";
-    private static final String SUCCESS = "Supporter.jsp";
+    private static final String ERROR = "Specialization.jsp";
+    private static final String SUCCESS = "Specialization.jsp";
     private static final String SEARCHBYNAME = "name";
     private static final String SEARCHBYID = "id";
+    private static final String SEARCHBYMAJOR = "majorID";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -39,21 +42,26 @@ public class SearchSupporterController extends HttpServlet {
             if (search == null) {
                 search = "";
             }
-            SupporterDAO dao = new SupporterDAO();
-            List<SupporterDTO> listSupporters = new ArrayList();
-            if (searchBy.equals(SEARCHBYNAME)) {
-                listSupporters = dao.getListSupporterts(search);
+            List<NarrowDTO> listNarrows = new ArrayList();
+            NarrowDAO dao = new NarrowDAO();
+            if (SEARCHBYNAME.equals(searchBy)) {
+                listNarrows = dao.getListNarrow(search);
                 request.setAttribute("NAME", "selected");
-            } else if (searchBy.equals(SEARCHBYID)) {
-                SupporterDTO supporter = dao.getSupporter(search);
-                listSupporters.add(supporter);
+
+            } else if (SEARCHBYID.equals(searchBy)) {
+                listNarrows.add(dao.getNarrow(search));
                 request.setAttribute("ID", "selected");
+
+            } else if (SEARCHBYMAJOR.equals(searchBy)) {
+                listNarrows = dao.getListNarrowByMajorID(search);
+                request.setAttribute("ID", "selected");
+
             }
-            if (listSupporters.size() > 0) {
-                request.setAttribute("LIST_Supporters", listSupporters);
-                request.setAttribute("SEARCH", search);
+            if (listNarrows.size() > 0) {
+                request.setAttribute("LIST_Narrows", listNarrows);
                 url = SUCCESS;
             }
+            request.setAttribute("SEARCH", search);
         } catch (Exception e) {
             log("Error at SearchController: " + e.toString());
         } finally {

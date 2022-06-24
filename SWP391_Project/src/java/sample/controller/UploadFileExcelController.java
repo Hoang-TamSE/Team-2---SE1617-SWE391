@@ -39,8 +39,8 @@ import sample.student.StudentDAO;
 
 public class UploadFileExcelController extends HttpServlet {
 
-    private static final String ERROR = "error.jsp";
-    private static final String SUCCESS = "MainController?action=Search";
+    private static final String ERROR = "MainController?action=Search&searchby=name";
+    private static final String SUCCESS = "MainController?action=Search&searchby=name";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -51,31 +51,35 @@ public class UploadFileExcelController extends HttpServlet {
             Part part = request.getPart("file");
             String realPath = request.getServletContext().getRealPath("/excel-file");
             String fileName = Paths.get(part.getSubmittedFileName()).getFileName().toString();
-            if (!Files.exists(Paths.get(realPath))) {
-                Files.createDirectory(Paths.get(realPath));
-            }
-            String excelFilePath = realPath + "/" + fileName;
-            part.write(excelFilePath);
-            ReadExcelStudent readFile = new ReadExcelStudent();
-            List<StudentDTO> students = readFile.readExcel(excelFilePath);
-            StudentDAO dao = new StudentDAO();
-            for (StudentDTO student : students) {
-                boolean check = dao.createUser(student);
-                if (check) {
-                    dao.createStudent(student);
+            String error = "";
+            if (fileName.endsWith("xlsx")) {
+                if (!Files.exists(Paths.get(realPath))) {
+                    Files.createDirectory(Paths.get(realPath));
                 }
+                String excelFilePath = realPath + "/" + fileName;
+                part.write(excelFilePath);
+                ReadExcelStudent readFile = new ReadExcelStudent();
+                List<StudentDTO> students = readFile.readExcel(excelFilePath);
+                StudentDAO dao = new StudentDAO();
+                for (StudentDTO student : students) {
+                    boolean check = dao.createUser(student);
+                    if (check) {
+                        dao.createStudent(student);
+                    }
+                }
+                Files.deleteIfExists(Paths.get(excelFilePath));
+                url = SUCCESS;
+            }else{
+                error = "File need is excel file!";
+                request.setAttribute("ERROR", error);
             }
-            Files.deleteIfExists(Paths.get(excelFilePath));
-            url = SUCCESS;
         } catch (Exception e) {
-            log("Error at UploadFileExcelController: "+ e.toString());
-        }finally{
+            log("Error at UploadFileExcelController: " + e.toString());
+        } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }
 
     }
-
-    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     @Override

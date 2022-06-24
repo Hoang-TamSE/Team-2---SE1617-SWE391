@@ -27,7 +27,7 @@ public class SupporterDAO {
     private static final String GETSUPPORTER = "SELECT us.userID, us.name, us.email, us.phoneNumber, us.address,"
             + " us.roleID, sp.majorID"
             + " FROM tblUser us INNER JOIN tblSupporter sp ON us.userID = sp.userID "
-            + "WHERE us.status = 'true' AND us.userID like ? ";
+            + "WHERE us.status = 'true' AND us.userID = ? ";
     
     private static final String DELETE = "UPDATE tblUser "
             + "SET status= 'false' "
@@ -140,7 +140,7 @@ public class SupporterDAO {
             conn = DBUtils.getConnection();
             if (conn != null) {
                 ptm = conn.prepareStatement(SEARCH);
-                ptm.setString(1, "%" + search + "%");
+                ptm.setNString(1, "%" + search + "%");
                 rs = ptm.executeQuery();
                 while (rs.next()) {
                     String userID = rs.getString("userID");
@@ -178,7 +178,7 @@ public class SupporterDAO {
             conn = DBUtils.getConnection();
             if (conn != null) {
                 ptm = conn.prepareStatement(GETSUPPORTER);
-                ptm.setString(1, "%" + search + "%");
+                ptm.setString(1, search );
                 rs = ptm.executeQuery();
                 if (rs.next()) {
                     String userID = rs.getString("userID");

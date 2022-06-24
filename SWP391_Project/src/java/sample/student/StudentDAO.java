@@ -62,7 +62,7 @@ public class StudentDAO {
             conn = DBUtils.getConnection();
             if (conn != null) {
                 ptm = conn.prepareStatement(SEARCH);
-                ptm.setString(1, "%" + search + "%");
+                ptm.setNString(1, "%" + search + "%");
                 rs = ptm.executeQuery();
                 while (rs.next()) {
                     String userID = rs.getString("userID");

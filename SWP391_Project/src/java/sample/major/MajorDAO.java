@@ -25,7 +25,7 @@ public class MajorDAO {
     
     private static final String GETMAJOR = "SELECT majorID, majorName, linkFLM, description"
             + " FROM tblMajor "
-            + "WHERE status = 'true' AND majorID like ? ";
+            + "WHERE status = 'true' AND majorID = ? ";
     
     private static final String DELETE = "UPDATE tblMajor "
             + "SET status = 'false' "
@@ -72,7 +72,7 @@ public class MajorDAO {
             conn = DBUtils.getConnection();
             if (conn != null) {
                 ptm = conn.prepareStatement(SEARCH);
-                ptm.setString(1, "%" + search + "%");
+                ptm.setNString(1, "%" + search + "%");
                 rs = ptm.executeQuery();
                 while (rs.next()) {
                     String majorID = rs.getString("majorID");
@@ -134,7 +134,7 @@ public class MajorDAO {
             conn = DBUtils.getConnection();
             if (conn != null) {
                 ptm = conn.prepareStatement(GETMAJOR);
-                ptm.setString(1, "%" + search + "%");
+                ptm.setString(1, search );
                 rs = ptm.executeQuery();
                 if (rs.next()) {
                     String majorID = rs.getString("majorID");

@@ -44,7 +44,7 @@ public class AddTermController extends HttpServlet {
                 checkVaild = false;
             }
             if (semesterName.length() > 13 || semesterName.length() < 0) {
-                error.setSemesterName("Length name is < 11 characters");
+                error.setSemesterName("Length name is < 13 characters");
                 checkVaild = false;
             }
             

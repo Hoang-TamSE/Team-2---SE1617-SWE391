@@ -26,7 +26,7 @@
 
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <form action="MainController" method="post">
+                        <form action="MainController">
                             <table class="">
                                 <tr>
                                     <td></td>
@@ -35,25 +35,25 @@
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.majorID}" type="text" name="majorID">
+                                        <input value="${requestScope.SEMESTER.semesterID}" type="text" name="semesterID">
                                     </td>
                                     <td>
-                                        <p style="color: red; ">${requestScope.ERROR.majorID}</p>
+                                        <p style="color: red; ">${requestScope.ERROR.semesterID}</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Name</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.majorName}" type="text" name="majorName">
+                                        <input value="${requestScope.SEMESTER.semesterName}" type="text" name="semesterName">
                                     </td>
                                     <td>
-                                        <p style="color: red; ">${requestScope.ERROR.majorName}</p>
+                                        <p style="color: red; ">${requestScope.ERROR.semesterName}</p>
                                     </td>
                                 </tr>
 
                                 <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button" type="submit" name="action" value="AddMajor">
+                                        <input class="button" type="submit" name="action" value="AddTerm">
                                     </td>
                                 </tr>
                             </table>

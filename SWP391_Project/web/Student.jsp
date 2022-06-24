@@ -40,9 +40,10 @@
                                     <input  type="file" name="file" accept=".xlsx">
                                     <input type="submit" value="Upload" name="action">
                                 </form>
+                                <p style="color: red;">${requestScope.ERROR}</p>
                             </div>
                         </div>
-                        <form style="margin-bottom: 4px;" action="MainController" method="post">
+                        <form style="margin-bottom: 4px;" action="MainController">
                             <input id="inputsearch" type="text" name="search" placeholder="Search..." value="${requestScope.SEARCH}">
                             <select name="searchby">
                                 <option value="id" ${requestScope.ID} >By Id</option>

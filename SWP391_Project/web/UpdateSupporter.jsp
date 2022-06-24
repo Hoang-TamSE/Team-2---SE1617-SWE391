@@ -27,7 +27,7 @@
 
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <form action="MainController" method="post">
+                        <form action="MainController">
                             <table class="table table-responsive table-bordered table-hover">
                                 <tr>
                                     <td>ID</td>
@@ -48,6 +48,15 @@
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.name}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Major ID</td>
+                                    <td>
+                                        <input value="${requestScope.SUPPORTER.majorID}" type="text" name="majorID">
+                                    </td>
+                                    <td>
+                                        <p style="color: red; ">${requestScope.ERROR.majorID}</p>
                                     </td>
                                 </tr>
                                 <tr>

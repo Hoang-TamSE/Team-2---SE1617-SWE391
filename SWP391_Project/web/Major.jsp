@@ -31,43 +31,34 @@
 
                         <form style="margin-bottom: 5px;" action="MainController" method="post">
                             <input id="inputsearch" type="text" name="search" placeholder="Search..." value="${requestScope.SEARCH}">
-                            <select name="searchby">
-                                <option value="id" ${requestScope.ID} >By Id</option>
-                                <option value="name" ${requestScope.NAME} >By Name</option>
-                            </select>
-                            <input class="btnsearch" type="submit" value="Search" name="action" >
+                            <input type="hidden" name="action" value="SearchMajor"/>
+                            <input class="btnsearch" type="submit" value="Search">
                         </form>
                         <table class="table table-responsive table-bordered table-hover">
                             <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Phone</th>
-                                <th scope="col">Address</th>
-                                <th scope="col">Role</th>
-                                <th scope="col">Major</th>
+                                <th scope="col">linkFLM</th>
+                                <th scope="col">description</th>
                                 <th scope="col">Update</th>
                                 <th scope="col">Delete</th>
                             </tr>
-                            <c:forEach var="sp" items="${requestScope.LIST_Supporters}">
+                            <c:forEach var="mj" items="${requestScope.LIST_Majors}">
                                 <tr>
-                                    <td><c:out value="${sp.userID}"></c:out></td>
-                                    <td><c:out value="${sp.name}"></c:out></td>
-                                    <td><c:out value="${sp.email}"></c:out></td>
-                                    <td><c:out value="${sp.phoneNumber}"></c:out></td>
-                                    <td><c:out value="${sp.address}"></c:out></td>
-                                    <td><c:out value="${sp.roleID}"></c:out></td>
-                                    <td><c:out value="${sp.majorID}"></c:out></td>  
+                                    <td><c:out value="${mj.majorID}"></c:out></td>
+                                    <td><c:out value="${mj.majorName}"></c:out></td>
+                                    <td><c:out value="${mj.linkFLM}"></c:out></td>
+                                    <td><c:out value="${mj.description}"></c:out></td>
                                         <td>
                                         <c:url  var="update" value="MainController">
-                                            <c:param name="userID" value="${sp.userID}"></c:param>
-                                            <c:param name="action" value="PageUpdateSupporter"></c:param>
+                                            <c:param name="majorID" value="${mj.majorID}"></c:param>
+                                            <c:param name="action" value="PageUpdateMajor"></c:param>
                                         </c:url>
                                         <a href="${update}"><i class="fas fa-edit"></i></a>
                                     </td>
                                     <td>              
                                         <c:url  var="delete" value="MainController">
-                                            <c:param name="userID" value="${sp.userID}"></c:param>
+                                            <c:param name="majorID" value="${mj.majorID}"></c:param>
                                             <c:param name="action" value="DeleteSupporter"></c:param>
                                         </c:url>
                                         <a href="${delete}"><i class="fas fa-trash"></i></a>

@@ -34,33 +34,41 @@
                             <select name="searchby">
                                 <option value="id" ${requestScope.ID} >By Id</option>
                                 <option value="name" ${requestScope.NAME} >By Name</option>
+                                <option value="majorID" ${requestScope.MAJORID} >By MajorID</option>
                             </select>
-                            <input class="btnsearch" type="submit" value="Search" name="action" >
+                            <input type="hidden" name="action" value="SearchNarrow"/>
+                            <input class="btnsearch" type="submit" value="Search" >
                         </form>
                         <table class="table table-responsive table-bordered table-hover">
                             <tbody>
                                 <tr>
                                     <td>ID</td>
                                     <td>Name</td>
+                                    <td>LinkFLM</td>
+                                    <td>Description</td>
+                                    <td>majorID</td>
                                     <td>Update</td>
                                     <td>Delete</td>
                                 </tr>
-                                <c:forEach var="s" items="${specializationList}">
+                                <c:forEach var="n" items="${requestScope.LIST_Narrows}">
                                     <tr>
-                                        <td>${s.id}</td>
-                                        <td>${s.name}</td>
-                                        <td>              
-                                            <c:url  var="update" value="mainController">
-                                                <c:param name="sid" value="${sp.getId()}"></c:param>
+                                        <td><c:out value="${n.narrowID}"></c:out></td>
+                                        <td><c:out value="${n.narrowName}"></c:out></td>
+                                        <td><c:out value="${n.linkFLM}"></c:out></td>
+                                        <td><c:out value="${n.description}"></c:out></td>
+                                        <td><c:out value="${n.majorID}"></c:out></td>
+                                            <td>              
+                                            <c:url  var="update" value="MainController">
+                                                <c:param name="nid" value="${n.narrowID}"></c:param>
 
-                                                <c:param name="action" value="updateStudent"></c:param>
+                                                <c:param name="action" value="PageUpdateNarrow"></c:param>
                                             </c:url>
                                             <a href="${update}"><i class="fas fa-edit"></i></a>
                                         </td>
                                         <td>              
-                                            <c:url  var="delete" value="mainController">
-                                                <c:param name="sid" value="${sp.getId()}"></c:param>
-                                                <c:param name="action" value="deleteStudent"></c:param>
+                                            <c:url  var="delete" value="MainController">
+                                                <c:param name="nid" value="${n.narrowID}"></c:param>
+                                                <c:param name="action" value="DeleteNarrow"></c:param>
                                             </c:url>
                                             <a href="${delete}"><i class="fas fa-trash"></i></a>
                                         </td>

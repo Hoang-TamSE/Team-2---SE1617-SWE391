@@ -31,13 +31,13 @@
                                 <tr>
                                     <td>ID</td>
                                     <td>
-
+                                        ${requestScope.NARROW.narrowID}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Name</td>
                                     <td>
-                                        <input value="" type="text" name="">
+                                        <input value=" ${requestScope.NARROW.narrowName}" type="text" name="narrowName">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.majorName}</p>
@@ -46,7 +46,7 @@
                                 <tr>
                                     <td>Link</td>
                                     <td>
-                                        <input value="" type="text" name="linkFLM">
+                                        <input value=" ${requestScope.NARROW.linkFLM}" type="text" name="linkFLM">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.linkFLM}</p>
@@ -55,10 +55,16 @@
                                 <tr>
                                     <td>Description</td>
                                     <td>
-                                        <input value="" type="text" name="description">
+                                        <input value=" ${requestScope.NARROW.description}" type="text" name="description">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.description}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>MajorID</td>
+                                    <td>
+                                         ${requestScope.NARROW.majorID}
                                     </td>
                                 </tr>
 
@@ -66,9 +72,10 @@
                                     <td colspan="2">
                                         <!--Mấy ông sửa cái này lại nha tui demo thôi_-->
                                         <input class="button" type="submit" name="action" value="UpdateNarrow">
-                                        <input type="hidden" name="" value="">
+                                        <input type="hidden" name="narrowID" value="${requestScope.NARROW.narrowID}">
                                     </td>
                                 </tr>
+
                             </table>
                         </form>
 

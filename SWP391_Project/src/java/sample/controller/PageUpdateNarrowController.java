@@ -7,55 +7,40 @@ package sample.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import sample.supporter.SupporterDAO;
-import sample.supporter.SupporterDTO;
+import sample.major.MajorDAO;
+import sample.major.MajorDTO;
+import sample.narrow.NarrowDAO;
+import sample.narrow.NarrowDTO;
 
 /**
  *
- * @author Admin
+ * @author Hoang Tam
  */
-@WebServlet(name = "SearchSupporterController", urlPatterns = {"/SearchSupporterController"})
-public class SearchSupporterController extends HttpServlet {
+@WebServlet(name = "PageUpdateNarrowController", urlPatterns = {"/PageUpdateNarrowController"})
+public class PageUpdateNarrowController extends HttpServlet {
 
-    private static final String ERROR = "Supporter.jsp";
-    private static final String SUCCESS = "Supporter.jsp";
-    private static final String SEARCHBYNAME = "name";
-    private static final String SEARCHBYID = "id";
+    private static final String ERROR = "UpdateSpecialization.jsp";
+    private static final String SUCCESS = "UpdateSpecialization.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
         try {
-            String search = request.getParameter("search");
-            String searchBy = request.getParameter("searchby");
-            if (search == null) {
-                search = "";
-            }
-            SupporterDAO dao = new SupporterDAO();
-            List<SupporterDTO> listSupporters = new ArrayList();
-            if (searchBy.equals(SEARCHBYNAME)) {
-                listSupporters = dao.getListSupporterts(search);
-                request.setAttribute("NAME", "selected");
-            } else if (searchBy.equals(SEARCHBYID)) {
-                SupporterDTO supporter = dao.getSupporter(search);
-                listSupporters.add(supporter);
-                request.setAttribute("ID", "selected");
-            }
-            if (listSupporters.size() > 0) {
-                request.setAttribute("LIST_Supporters", listSupporters);
-                request.setAttribute("SEARCH", search);
+            String narrowID = request.getParameter("nid");
+            NarrowDAO dao = new NarrowDAO();
+            NarrowDTO narrow = dao.getNarrow(narrowID.trim());
+            if (narrow != null) {
+                request.setAttribute("NARROW", narrow);
                 url = SUCCESS;
             }
         } catch (Exception e) {
-            log("Error at SearchController: " + e.toString());
+            log("error at DeleteController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

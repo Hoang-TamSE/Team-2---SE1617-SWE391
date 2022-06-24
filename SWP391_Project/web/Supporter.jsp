@@ -28,7 +28,7 @@
                             <button class="btnadd">Add Supporter: <i class="fa-solid fa-circle-plus"></i></button>
                         </a>
 
-                        <form style="margin-bottom: 5px;" action="MainController" method="post">
+                        <form style="margin-bottom: 5px;" action="MainController">
                             <input id="inputsearch" type="text" name="search" placeholder="Search..." value="${requestScope.SEARCH}">
                             <select name="searchby">
                                 <option value="id" ${requestScope.ID} >By Id</option>
