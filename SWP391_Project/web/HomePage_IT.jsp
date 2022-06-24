@@ -141,7 +141,7 @@
                         </div>
                         <div class="col-md-8">
                             <p id="percent">5%</p>
-                           
+
                             <p>Sinh viên khởi nghiệp</p>
                         </div>
                     </div>  
@@ -186,72 +186,211 @@
         <div style="height: 15px; background-color: whitesmoke"></div>
 
         <div id="narrow" class="row d-flex justify-content-center">
-            
-                <h3>Narrow of Software Engineering</h3>
-                
-                    <div class="col-md-2 list-major">
-                      
-                            <h4>NARROW LIST</h4>
-                            <ul class="nav nav-tabs p-3 ">
-                                <li class="nav-item">
-                                    <a aria-selected="true" class="nav-link active" href="#IT" role="tab" data-toggle="tab">PRN211(.NET)</a>
-                                </li>                   
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#BA" role="tab" data-toggle="tab">Bridge Software Engineer(JS)</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#EL"role="tab" data-toggle="tab">PRP201c(Autonomous Car)</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#JL" role="tab" data-toggle="tab">PRP201c(AI With Tensor Flow)</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#KL" role="tab" data-toggle="tab">FER201m(React/NodeJS)</a>
-                                </li>
+
+            <h3>CHUYÊN NGÀNH HẸP NGÀNH CÔNG NGHỆ THÔNG TIN</h3>
+
+            <div class="col-md-2 list-major">
+
+                <h4>DANH SÁCH CHUYÊN NGÀNH HẸP</h4>
+                <ul class="nav nav-tabs p-3 ">
+                    <li class="nav-item">
+                        <a aria-selected="true" class="nav-link active" href="#IT" role="tab" data-toggle="tab">Cross-platform với .NET</a>
+                    </li>                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#BA" role="tab" data-toggle="tab">Kỹ sư cầu nối Nhật</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#EL"role="tab" data-toggle="tab">Autonomous Car</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#JL" role="tab" data-toggle="tab">AI with Tensor Flow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#KL" role="tab" data-toggle="tab">React/NodeJS</a>
+                    </li>
+                </ul>
+
+            </div> <!-- col-left -->
+
+            <div id="narrowinfo" class="col-md-7">
+                <h4>THÔNG TIN CHUYÊN NGÀNH HẸP</h4>
+                <div class="table-wrapper-scroll-y my-custom-scrollbar-2">
+                    <div class="tab-content">
+                        <div selected role="tabpanel" class="tab-pane fade active show selected" id="IT">
+                            <h5>Combo: Phát triển ứng dụng cross-platform với .NET</h5>
+                            <table class="table" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mã học phần</th>
+                                        <th scope="col">Tên học phần</th>
+                                        <th scope="col">Tiết</th>
+                                        <th scope="col">Tín chỉ</th>
+                                        <th scope="col">Học phần tiên quyết</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">PRN211</th>
+                                        <td>
+                                            <ul>
+                                                <li>Lập trình ứng dụng cross-platform cơ bản với .NET</li>
+                                                <li>Basic Cross-Platform Application</li>
+                                                <li>Programming With .NET</li>
+                                            </ul>
+                                        </td>
+                                        <td>60</td>
+                                        <td>3</td>
+                                        <td>PRO192 & DBI202</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h5>TỔNG QUAN VỀ .NET</h5>
+                            <p>
+                                .NET hay còn được biết đến là Dotnet là một nền tảng (framework) cho phép lập trình viên sử
+                                dụng để phát triển các ứng dụng, game, website. Nền tảng này được phát triển bởi Microsoft và 
+                                chạy trên hệ điều hành Window. Bản chất .NET không phải một ngôn ngữ lập trình mà là một nền 
+                                tảng. Nó cho phép các ngôn ngữ lập trình khác nhau (như C#, VB.Net) sử dụng để tạo ra các sản 
+                                phẩm ứng dụng mobile hoặc web.
+                            </p>
+                            <p>
+                                Bản chất .NET không phải một ngôn ngữ lập trình mà là một nền tảng. Nó cho phép các ngôn ngữ lập trình khác nhau
+                                (như C#, VB.Net) sử dụng để tạo ra các sản phẩm ứng dụng mobile hoặc web.
+                            </p>
+                            <h5>ƯU ĐIỂM</h5>
+                            <ul>
+                                <li>Tiết kiệm thời gian & chi phí, tăng hiệu suất</li>
+                                <li>Tính bảo mật cao, giảm xung đột</li>
+                                <li>Đa ngôn ngữ, đa nền tảng</li>
+                                <li>Tận dụng các dịch vụ có sẵn</li>
                             </ul>
-                        
-                    </div> <!-- col-left -->
+                        </div> <!-- IT -->
 
-                    <div id="narrowinfo" class="col-md-7">
-                        <h4>NARROW INFORMATION</h4>
-                        <div class="table-wrapper-scroll-y my-custom-scrollbar-2">
-                            <div class="tab-content">
-                                <div selected role="tabpanel" class="tab-pane fade active show selected" id="IT">
-                                    <p class=" d-none d-sm-block">
-                                        ssssssasa
-                                    </p>
-                                </div> <!-- IT -->
+                        <div role="tabpanel" class="tab-pane fade show" id="BA">
+                            <h5>Combo: Định hướng kỹ sư cầu nối Nhật</h5>
+                            <h6>
+                                Lưu ý: Nếu sinh viên chọn chuyên ngành này thì cơ sở sẽ tổ chức cho sinh viên  đi OJT tại Nhật. Nếu sinh 
+                                viên không đồng ý với điều kiện này thì cơ sở không triển khai combo này. 
+                            </h6>
+                            <table class="table" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mã học phần</th>
+                                        <th scope="col">Tên học phần</th>
+                                        <th scope="col">Tiết</th>
+                                        <th scope="col">Tín chỉ</th>
+                                        <th scope="col">Học phần tiên quyết</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">JPD133</th>
+                                        <td>
+                                            <ul>
+                                                <li>Tiếng Nhật sơ cấp 1-A1/A2</li>
+                                                <li>ElementaryJapanese  1-A1/A2</li>
+                                            </ul>
+                                        </td>
+                                        <td>60</td>
+                                        <td>3</td>
+                                        <td> JPD121 or JPD123</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> <!-- BA -->
 
-                                <div role="tabpanel" class="tab-pane fade show" id="BA">
-                                    <p class=" d-none d-sm-block">
-                                        asassasa
-                                    </p>
-                                </div> <!-- BA -->
+                        <div role="tabpanel" class="tab-pane fade show" id="EL">
+                            <h5>Combo: Autonomous Car</h5>
+                            <table class="table" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mã học phần</th>
+                                        <th scope="col">Tên học phần</th>
+                                        <th scope="col">Tiết</th>
+                                        <th scope="col">Tín chỉ</th>
+                                        <th scope="col">Học phần tiên quyết</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">PRP201c</th>
+                                        <td>
+                                            <ul>
+                                                <li>Lập trình Python</li>
+                                                <li>Python Programing</li>
+                                            </ul>
+                                        </td>
+                                        <td>5</td>
+                                        <td>3</td>
+                                        <td>Không</td>
+                                    </tr>
+                                </tbody>
+                            </table>      
+                        </div> <!-- EL -->
 
-                                <div role="tabpanel" class="tab-pane fade show" id="EL">
-                                    <p class=" d-none d-sm-block">
-                                        saasasas
-                                    </p>
-                                </div> <!-- EL -->
+                        <div role="tabpanel" class="tab-pane fade show" id="JL">
+                            <h5>Combo: AI with Tensor Flow</h5>
+                            <table class="table" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mã học phần</th>
+                                        <th scope="col">Tên học phần</th>
+                                        <th scope="col">Tiết</th>
+                                        <th scope="col">Tín chỉ</th>
+                                        <th scope="col">Học phần tiên quyết</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">PRP201c</th>
+                                        <td>
+                                            <ul>
+                                                <li>Lập trình Python</li>
+                                                <li>Python Programing</li>
+                                            </ul>
+                                        </td>
+                                        <td>5</td>
+                                        <td>3</td>
+                                        <td>Không</td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div> <!-- JL -->
 
-                                <div role="tabpanel" class="tab-pane fade show" id="JL">
-                                    <p class=" d-none d-sm-block">
-                                        sasaas
-                                    </p>
-                                </div> <!-- JL -->
+                        <div role="tabpanel" class="tab-pane fade show" id="KL">
+                            <h5>Combo: React/NodeJS</h5>
+                            <table class="table" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mã học phần</th>
+                                        <th scope="col">Tên học phần</th>
+                                        <th scope="col">Tiết</th>
+                                        <th scope="col">Tín chỉ</th>
+                                        <th scope="col">Học phần tiên quyết</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">FER201m</th>
+                                        <td>
+                                            <ul>
+                                                <li>Phát triển web Front-End với React</li>
+                                                <li>Front-End web development with React</li>
+                                            </ul>
+                                        </td>
+                                        <td>60</td>
+                                        <td>3</td>
+                                        <td>WED201c</td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div> <!-- KL -->
 
-                                <div role="tabpanel" class="tab-pane fade show" id="KL">
-                                    <p class=" d-none d-sm-block">
-                                        asassa
-                                    </p>
-                                </div> <!-- KL -->
+                    </div> <!-- Tab Content -->
 
-                            </div> <!-- Tab Content -->
+                </div>
+            </div><!-- col-right -->
 
-                        </div>
-                    </div><!-- col-right -->
-                
-            
+
         </div>
 
         <div id="program" class="row d-flex justify-content-center">
