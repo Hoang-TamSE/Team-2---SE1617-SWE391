@@ -67,7 +67,7 @@
                                 <div class="sb-nav-link-icon"></div>
                                 Major                               
                             </a>
-                            <a class="nav-link collapsed" href="Specialization.jsp">
+                            <a class="nav-link collapsed" href="MainController?action=SearchNarrow&searchby=name">
                                 <div class="sb-nav-link-icon"></div>
                                 Narrow                               
                             </a>                

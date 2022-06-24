@@ -98,6 +98,8 @@ public class MainController extends HttpServlet {
     private static final String UPDATENARROW_CONTROLLER="UpdateNarrowController";
     private static final String PAGEUPDATENARROW="PageUpdateNarrow";
     private static final String PAGEUPDATENARROW_CONTROLLER="PageUpdateNarrowController";
+    private static final String PAGEADDNARROW="PageAddNarrow";
+    private static final String PAGEADDNARROW_CONTROLLER="PageAddNarrowController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -209,6 +211,15 @@ public class MainController extends HttpServlet {
             }
             else if(PAGEUPDATENARROW.equals(action)){
                     url= PAGEUPDATENARROW_CONTROLLER;
+            }
+            else if(DELETENARROW.equals(action)){
+                    url= DELETENARROW_CONTROLLER;
+            }
+            else if(PAGEADDNARROW.equals(action)){
+                    url= PAGEADDNARROW_CONTROLLER;
+            }
+            else if(ADDNARROW.equals(action)){
+                    url= ADDNARROW_CONTROLLER;
             }
         } catch (Exception e) {
             log("Error at MainController: "+ e.toString());

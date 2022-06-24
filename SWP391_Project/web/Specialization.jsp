@@ -25,7 +25,7 @@
                 <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Narrow Management</h1>
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <a href="AddSpecialization.jsp">
+                        <a href="MainController?action=PageAddNarrow">
                             <button class="btnadd">Add Narrow: <i class="fa-solid fa-circle-plus"></i></button>
                         </a>
 

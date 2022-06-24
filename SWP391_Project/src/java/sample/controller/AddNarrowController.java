@@ -7,6 +7,7 @@ package sample.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,51 +19,56 @@ import sample.major.MajorERROR;
 import sample.narrow.NarrowDAO;
 import sample.narrow.NarrowDTO;
 import sample.narrow.NarrowERROR;
+import sample.validation.Validation;
 
 /**
  *
  * @author Hoang Tam
  */
-@WebServlet(name = "UpdateNarrowController", urlPatterns = {"/UpdateNarrowController"})
-public class UpdateNarrowController extends HttpServlet {
-private static final String ERROR = "UpdateSpecialization.jsp";
+@WebServlet(name = "AddNarrowController", urlPatterns = {"/AddNarrowController"})
+public class AddNarrowController extends HttpServlet {
+
+    private static final String ERROR = "AddSpecialization.jsp";
     private static final String SUCCESS = "MainController?action=SearchNarrow&searchby=name";
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
         try {
             boolean checkVaild = true;
-            boolean checkUpdate = false;
+            boolean checkCreateNarrow = false;
             NarrowERROR error = new NarrowERROR();
-            String narrowName = request.getParameter("narrowName");
+            String majorID = request.getParameter("majorID");
             String narrowID = request.getParameter("narrowID");
+            String narrowName = request.getParameter("narrowName");
             String linkFLM = request.getParameter("linkFLM");
             String description = request.getParameter("description");
             NarrowDAO dao = new NarrowDAO();
-            
-            if (narrowName.length() < 8 || narrowName.length() > 50) {
-                error.setNarrowName("Length name is form 8 to 50!");
+            if (Validation.checkNarrowID(majorID, narrowID)) {
+                error.setNarrowID("Dupplicate narrow ID!!");
                 checkVaild = false;
             }
-            
-
+            if (narrowName.length() < 8 || narrowName.length() > 50) {
+                error.setNarrowName("Length name is from 8 to 50!");
+                checkVaild = false;
+            }
+            NarrowDTO narrow = new NarrowDTO(narrowID, narrowName, linkFLM, description, majorID);
             if (checkVaild) {
-                NarrowDTO narrow = new NarrowDTO(narrowID, narrowName, linkFLM, description, "");
-                checkUpdate = dao.updateNarrow(narrow);
-                if (checkUpdate) {
+                checkCreateNarrow = dao.createNarrow(narrow);
+                if (checkCreateNarrow) {
                     url = SUCCESS;
-                    request.setAttribute("SUCCESS", "Update "+ narrow.getNarrowID()+ " successfully!!");
+                    request.setAttribute("SUCCESS", "Create " + narrow.getNarrowID() + " successfully!!");
                 }
-                request.setAttribute("MAJOR", narrow);
             } else {
-                NarrowDTO narrow = dao.getNarrow(narrowID);
                 request.setAttribute("ERROR", error);
-                request.setAttribute("MAJOR", narrow);
+                request.setAttribute("NARROW", narrow);
+                MajorDAO majorDao = new MajorDAO();
+                List<MajorDTO> listMajor = majorDao.getListMajor("");
+                request.setAttribute("LIST_MAJOR", listMajor);
             }
         } catch (Exception e) {
-            log("Error at UpdateNarrowController: " + e.toString());
+            log("Error at UpdateMajorController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

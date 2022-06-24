@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 
     Document   : AddSpecialization
     Created on : Jun 8, 2022, 11:28:19 PM
@@ -26,7 +27,7 @@
 
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <form action="mainController">
+                        <form action="MainController">
                             <table class="">
                                 <tr>
                                     <td></td>
@@ -35,20 +36,55 @@
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        <input value="" type="text" name="">
+                                        <input value="${requestScope.NARROW.narrowID}" type="text" name="narrowID">
+                                    </td>
+                                    <td>
+                                        <p style="color: red;">${requestScope.ERROR.narrowID}</p>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>Name</td>
                                     <td>
-                                        <input value="" type="text" name="">
+                                        <input value="${requestScope.NARROW.narrowName}" type="text" name="narrowName">
+                                    </td>
+                                    <td>
+                                        <p style="color: red;">${requestScope.ERROR.narrowName}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>LinkFLM</td>
+                                    <td>
+                                        <input value="${requestScope.NARROW.linkFLM}" type="text" name="linkFLM">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Description</td>
+                                    <td>
+                                        <input value="${requestScope.NARROW.description}" type="text" name="description">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>MajorID</td>
+                                    <td>
+                                        <select name="majorID">
+                                            <c:forEach var="major" items="${requestScope.LIST_MAJOR}">
+                                                <option value="${major.majorID}">${major.majorID}</option>
+                                            </c:forEach>
+                                        </select>
                                     </td>
                                 </tr>
 
                                 <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button" type="submit" name="action" value="Add">
+                                        <input type="hidden" name="action" value="AddNarrow"/>
+                                        <input class="button" type="submit" value="Add Narrow">
+                                    </td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2">
+                                        <input class="button" type="reset" name="action" value="Reset">
                                     </td>
                                 </tr>
                             </table>

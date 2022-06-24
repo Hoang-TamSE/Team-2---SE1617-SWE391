@@ -39,7 +39,7 @@
                         <div id="display-error" style="margin-bottom: 10px"></div>
                         <div class="buttom-form-login">
                             <button class="buttom-st3 fa fa-google btn btn-primary">
-                                <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/SWP391_Project/login-google&responsasas_type=code
+                                <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/SWP391_Project/login-google&response_type=code
                                &client_id=87164938910-2onepbbjdpgpde3b4sevt3v2s549kcsq.apps.googleusercontent.com&approval_prompt=force" style="color: white;">
                                     Đăng nhập
                                 </a>
