@@ -416,7 +416,7 @@ display: block;
 .why
 {
     background-image: url(../images/carousel2.jpeg); /* fallback for older browsers */
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.1) 100%), url(../images/carousel2.jpeg);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../images/carousel2.jpeg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -426,6 +426,7 @@ display: block;
 .list-major
 {
  background-color: #ffeddb;   
+ box-sizing: border-box;
 }
 
 #narrow h4
@@ -446,7 +447,8 @@ display: block;
 {
     border-bottom: 1px dotted graytext;
     width: 100%;
-    padding: 10px;
+    padding-top: 10px;
+    font-size: 15px;
 }
 
 #narrow h3
@@ -465,4 +467,6 @@ display: block;
 #narrowinfo
 {
     background-color: white;
+    border-left: 1px solid #f86c24;
 }
+
