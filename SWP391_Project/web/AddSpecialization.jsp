@@ -62,8 +62,7 @@
                                 <tr>
                                     <td>Description</td>
                                     <td>
-                                        
-                                        <input value="${requestScope.NARROW.description}" type="text" name="description">
+                                        <textarea style="width: 820px; height: 175px;" id="description"  type="text" name="description">${requestScope.NARROW.description}</textarea>
                                     </td>
                                 </tr>
                                 <tr>
@@ -142,6 +141,9 @@
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script>
+        CKEDITOR.replace('description');
+    </script>
 
 </body>
 </html>
