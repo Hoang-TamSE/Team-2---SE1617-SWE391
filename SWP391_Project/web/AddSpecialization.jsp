@@ -62,6 +62,7 @@
                                 <tr>
                                     <td>Description</td>
                                     <td>
+                                        
                                         <input value="${requestScope.NARROW.description}" type="text" name="description">
                                     </td>
                                 </tr>
@@ -70,7 +71,14 @@
                                     <td>
                                         <select name="majorID">
                                             <c:forEach var="major" items="${requestScope.LIST_MAJOR}">
-                                                <option value="${major.majorID}">${major.majorID}</option>
+                                                <c:choose>
+                                                    <c:when test="${requestScope.CURRENT_MAJORID == major.majorID}">
+                                                        <option value="${major.majorID}" selected="true">${major.majorID}</option>
+                                                    </c:when>    
+                                                    <c:otherwise>
+                                                        <option value="${major.majorID}">${major.majorID}</option>
+                                                    </c:otherwise>
+                                                </c:choose>
                                             </c:forEach>
                                         </select>
                                     </td>

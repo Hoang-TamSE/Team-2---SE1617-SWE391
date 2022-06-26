@@ -6,7 +6,6 @@
 package sample.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import sample.major.MajorDAO;
 import sample.major.MajorDTO;
-import sample.major.MajorERROR;
 import sample.narrow.NarrowDAO;
 import sample.narrow.NarrowDTO;
 import sample.narrow.NarrowERROR;
@@ -66,6 +64,7 @@ public class AddNarrowController extends HttpServlet {
                 MajorDAO majorDao = new MajorDAO();
                 List<MajorDTO> listMajor = majorDao.getListMajor("");
                 request.setAttribute("LIST_MAJOR", listMajor);
+                request.setAttribute("CURRENT_MAJORID", majorID);
             }
         } catch (Exception e) {
             log("Error at UpdateMajorController: " + e.toString());
