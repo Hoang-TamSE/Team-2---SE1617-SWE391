@@ -9,7 +9,9 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.Timestamp;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.imageio.ImageIO;
 import sun.rmi.runtime.Log;
@@ -79,11 +81,20 @@ public class Validation {
         return check;
     }
 
-    public static String takeCurrentDate() {
-        LocalDate dateObj = LocalDate.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String date = dateObj.format(formatter);
-        return date;
+    public static Timestamp takeCurrentDate() {
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        return timestamp;
+    }
+    public static Timestamp dateStringToTimestamp(String date) {
+        String dateTimeString = date.replace("T", " ");
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        LocalDateTime dateTime = LocalDateTime.parse(dateTimeString, formatter);
+        Timestamp examDateTime = Timestamp.valueOf(dateTime);
+        return examDateTime;
+    }
+    public static int compareDate(Timestamp date1,Timestamp date2) {
+        return date1.compareTo(date2);
     }
 
     public static boolean testImage(String url) throws IOException {

@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 
     Document   : RegisterAD
     Created on : Jun 10, 2022, 10:57:32 AM
@@ -30,181 +31,146 @@
         <%@include file="Header.jsp" %>
 
         <div id="layoutSidenav_content">
+            <form action="MainController" method="POST">
+                <main class="container-fluid">
+                    <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Register Form</h1>
+                    <div class="room container-fluid px-4">    
+                        <div class="tab-content ">
+                            <div id="regisAD" class="container">
 
-            <main class="container-fluid">
-                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Register Form</h1>
-                <div class="room container-fluid px-4">    
-                    <div class="tab-content ">
-                        <div id="regisAD" class="container">
+                                <div class="row" style="border: 1px solid #ddd; padding: 20px; border-radius: 10px;">
+                                    <div class="form-row">
+                                        <div class="col-4">
 
-                            <div class="row" style="border: 1px solid #ddd; padding: 20px; border-radius: 10px;">
-                                <div class="form-row">
-                                    <div class="col-4">
+                                            <div class="term" style="border: 1px solid #ddd; padding: 15px; text-align: center; margin-bottom: 15px; border-radius: 10px;">
+                                                <select name="term">
+                                                    <c:forEach var="semester" items="${requestScope.LIST_SEMESTER}">
+                                                        <option value="${semester.semesterID}">${semester.semesterName}</option>
+                                                    </c:forEach>
+                                                </select>
 
-                                        <div class="term" style="border: 1px solid #ddd; padding: 15px; text-align: center; margin-bottom: 15px; border-radius: 10px;">
-                                            <select id="id">
-                                                <option value="first">TERM</option>
-                                                <option value="second">Fall</option>
-                                                <option value="third">Spring</option>
-                                                <option value="quara">Summer</option>
-                                            </select>
-
-<!--                                            <div class="dropdown">
-                                                <button type="button" class="btn btn-outline-secondary" data-toggle="dropdown">
-                                                    TERM
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="">Fall</a>
-                                                    <a class="dropdown-item" href="">Spring</a>
-                                                    <a class="dropdown-item" href="">Summer</a>
-                                                </div>
-                                            </div>-->
-                                        </div>
-
-                                        <div id="list-major" style="border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 10px; height: 310px;">
-                                            <h3 style="text-align: center; color: orangered;">List Major</h3>
-
-                                            <div style="text-justify: auto; padding: 10px;">
-                                                <ul class="nav nav-tabs">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link btn-outline-info" href="#IT" role="tab" data-toggle="tab">Information Technology</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link btn-outline-info" href="#BA" role="tab" data-toggle="tab">Business Administration</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link btn-outline-info" href="#EL" role="tab" data-toggle="tab">English Language</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link btn-outline-info" href="#JL" role="tab" data-toggle="tab">Japanese Language</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link btn-outline-info" href="#KL" role="tab" data-toggle="tab">Korean Language</a>
-                                                    </li>
-                                                </ul>
-
+                                                <!--                                            <div class="dropdown">
+                                                                                                <button type="button" class="btn btn-outline-secondary" data-toggle="dropdown">
+                                                                                                    TERM
+                                                                                                </button>
+                                                                                                <div class="dropdown-menu">
+                                                                                                    <a class="dropdown-item" href="">Fall</a>
+                                                                                                    <a class="dropdown-item" href="">Spring</a>
+                                                                                                    <a class="dropdown-item" href="">Summer</a>
+                                                                                                </div>
+                                                                                            </div>-->
                                             </div>
 
-                                        </div>
-                                    </div> <!-- col-left -->
+                                            <div id="list-major" style="border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 10px; height: 310px;">
+                                                <h3 style="text-align: center; color: orangered;">List Major</h3>
 
-                                    <div class="col-8">
-                                        <div  style="border: 1px solid #ddd; padding: 10px; margin-bottom: 20px; border-radius: 10px;">
-                                            Start date: <input type="type" name="name">
-                                            End date: <input type="type" name="name">
-                                        </div>
+                                                <div style="text-justify: auto; padding: 10px;">
+                                                    <ul class="nav nav-tabs">
 
-                                        <div class="mutil-list" style="border: 1px solid #ddd; padding: 10px; border-radius: 10px; height: 310px;">
-                                            <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane fade show" id="IT">
-                                                    <p class=" d-none d-sm-block">
-                                                        <label class="form-check-inline" for="radio1">
-                                                            <input type="checkbox" class="form-check-input" id="radio1" name="optradio" value="option1" >PRN211 (.NET)
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio2">
-                                                            <input type="checkbox" class="form-check-input" id="radio2" name="optradio" value="option2">Bridge Software Engineer (JS)
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio3">
-                                                            <input type="checkbox" class="form-check-input" id="radio3" name="optradio" value="option3">PRP201c (Autonomous Car)
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio4">
-                                                            <input type="checkbox" class="form-check-input" id="radio4" name="optradio" value="option4">PRP201c (AI with tensor flow)
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio5">
-                                                            <input type="checkbox" class="form-check-input" id="radio5" name="optradio" value="option5">FER201m (React/NodeJS)
-                                                        </label>
-                                                    </p>
-                                                </div> <!-- IT -->
 
-                                                <div role="tabpanel" class="tab-pane fade show" id="BA">
-                                                    <p class=" d-none d-sm-block">
-                                                        <label class="form-check-inline" for="radio6">
-                                                            <input type="checkbox" class="form-check-input" id="radio6" name="optradio" value="option1">Digital Marketing
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio7">
-                                                            <input type="checkbox" class="form-check-input" id="radio7" name="optradio" value="option2">Kinh doanh quốc tế
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio8">
-                                                            <input type="checkbox" class="form-check-input" id="radio8" name="optradio" value="option3">Quản trị khách sạn
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio9">
-                                                            <input type="checkbox" class="form-check-input" id="radio9" name="optradio" value="option4">Quản trị dịch vụ du lịch và lữu hành
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio10">
-                                                            <input type="checkbox" class="form-check-input" id="radio10" name="optradio" value="option5">Quản trị truyền thông đa phương tiện
-                                                        </label>
-                                                    </p>
-                                                </div> <!-- BA -->
+                                                        <c:forEach var="major" items="${LIST_MAJOR}">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link btn-outline-info" href="#${major.majorID}" role="tab" data-toggle="tab">${major.majorName}</a>
+                                                            </li>
+                                                        </c:forEach>
+                                                        <!--                                                        <li class="nav-item">
+                                                                                                                    <a class="nav-link btn-outline-info" href="#IT" role="tab" data-toggle="tab">Information Technology</a>
+                                                                                                                </li>
+                                                                                                                <li class="nav-item">
+                                                                                                                    <a class="nav-link btn-outline-info" href="#BA" role="tab" data-toggle="tab">Business Administration</a>
+                                                                                                                </li>
+                                                                                                                <li class="nav-item">
+                                                                                                                    <a class="nav-link btn-outline-info" href="#EL" role="tab" data-toggle="tab">English Language</a>
+                                                                                                                </li>
+                                                                                                                <li class="nav-item">
+                                                                                                                    <a class="nav-link btn-outline-info" href="#JL" role="tab" data-toggle="tab">Japanese Language</a>
+                                                                                                                </li>
+                                                                                                                <li class="nav-item">
+                                                                                                                    <a class="nav-link btn-outline-info" href="#KL" role="tab" data-toggle="tab">Korean Language</a>
+                                                                                                                </li>-->
+                                                    </ul>
 
-                                                <div role="tabpanel" class="tab-pane fade show" id="EL">
-                                                    <p class=" d-none d-sm-block">
-                                                        <label class="form-check-inline" for="radio11">
-                                                            <input type="checkbox" class="form-check-input" id="radio11" name="optradio" value="option1">Phiên dịch viên
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio12">
-                                                            <input type="checkbox" class="form-check-input" id="radio12" name="optradio" value="option2">Thư ký, trợ lý đối ngoại
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio13">
-                                                            <input type="checkbox" class="form-check-input" id="radio13" name="optradio" value="option3">Giảng dạy
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio14">
-                                                            <input type="checkbox" class="form-check-input" id="radio14" name="optradio" value="option4">Nghiên cứu viên
-                                                        </label>
-                                                    </p>
-                                                </div> <!-- EL -->
+                                                </div>
 
-                                                <div role="tabpanel" class="tab-pane fade show" id="JL">
-                                                    <p class=" d-none d-sm-block">
-                                                        <label class="form-check-inline" for="radio15">
-                                                            <input type="checkbox" class="form-check-input" id="radio15" name="optradio" value="option1">Phiên dịch viên
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio16">
-                                                            <input type="checkbox" class="form-check-input" id="radio16" name="optradio" value="option2">Thư ký, trợ lý đối ngoại
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio17">
-                                                            <input type="checkbox" class="form-check-input" id="radio17" name="optradio" value="option3">Giảng dạy
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio18">
-                                                            <input type="checkbox" class="form-check-input" id="radio18" name="optradio" value="option4">Nghiên cứu viên
-                                                        </label>
-                                                    </p>
-                                                </div> <!-- JL -->
+                                            </div>
+                                        </div> <!-- col-left -->
 
-                                                <div role="tabpanel" class="tab-pane fade show" id="KL">
-                                                    <p class=" d-none d-sm-block">
-                                                        <label class="form-check-inline" for="radio19">
-                                                            <input type="checkbox" class="form-check-input" id="radio19" name="optradio" value="option1">Phiên dịch viên
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio20">
-                                                            <input type="checkbox" class="form-check-input" id="radio20" name="optradio" value="option2">Thư ký, trợ lý đối ngoại
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio21">
-                                                            <input type="checkbox" class="form-check-input" id="radio21" name="optradio" value="option3">Giảng dạy
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio22">
-                                                            <input type="checkbox" class="form-check-input" id="radio22" name="optradio" value="option4">Nghiên cứu viên
-                                                        </label>
-                                                    </p>
-                                                </div> <!-- KL -->
+                                        <div class="col-8">
+                                            <div  style="border: 1px solid #ddd; padding: 10px; margin-bottom: 20px; border-radius: 10px;">
+                                                <table class="">
+                                                    <tr>
+                                                        <td>Start date:</td>
+                                                        <td><input type="datetime-local" name="startDate"></td>
+                                                        <td><p style="color: red;">${requestScope.ERROR.importDate}</p> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>End date:</td>
+                                                        <td><input type="datetime-local" name="endDate"></td>
+                                                        <td><p style="color: red;">${requestScope.ERROR.usingDate}</p> </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
 
-                                            </div> <!-- Tab Content -->
 
-                                        </div>
-                                    </div><!-- col-right -->
+                                            <div class="mutil-list" style="border: 1px solid #ddd; padding: 10px; border-radius: 10px; height: 310px;">
+                                                <div class="tab-content">
+                                                    <c:forEach var="major" items="${requestScope.LIST_MAJOR}">
+                                                        <div role="tabpanel" class="tab-pane fade show" id="${major.majorID}">
+                                                            <p class=" d-none d-sm-block">
+                                                                <c:forEach var="narrow" items="${requestScope.LIST_NARROW}">
+                                                                    <c:if test="${major.majorID == narrow.majorID}">
+                                                                        <label class="form-check-inline" for="${narrow.narrowID}">
+                                                                            <input type="checkbox" class="form-check-input" id="${narrow.narrowID}" name="${major.majorID}" value="${narrow.narrowID}" >${narrow.narrowName}
+                                                                        </label> <br>
+                                                                    </c:if>
+                                                                </c:forEach>
+
+                                                            </p>
+                                                        </div> <!-- IT -->
+                                                    </c:forEach>
+
+
+                                                    <!--                                                    <div role="tabpanel" class="tab-pane fade show" id="AB">
+                                                                                                            <p class=" d-none d-sm-block">
+                                                                                                                <label class="form-check-inline" for="radio1">
+                                                                                                                    <input type="checkbox" class="form-check-input" id="radio1" name="optradio" value="option1" >PRN211 (.NET)
+                                                                                                                </label> <br>
+                                                                                                                <label class="form-check-inline" for="radio2">
+                                                                                                                    <input type="checkbox" class="form-check-input" id="radio2" name="optradio" value="option2">Bridge Software Engineer (JS)
+                                                                                                                </label> <br>
+                                                                                                                <label class="form-check-inline" for="radio3">
+                                                                                                                    <input type="checkbox" class="form-check-input" id="radio3" name="optradio" value="option3">PRP201c (Autonomous Car)
+                                                                                                                </label> <br>
+                                                                                                                <label class="form-check-inline" for="radio4">
+                                                                                                                    <input type="checkbox" class="form-check-input" id="radio4" name="optradio" value="option4">PRP201c (AI with tensor flow)
+                                                                                                                </label> <br>
+                                                                                                                <label class="form-check-inline" for="radio5">
+                                                                                                                    <input type="checkbox" class="form-check-input" id="radio5" name="optradio" value="option5">FER201m (React/NodeJS)
+                                                                                                                </label>
+                                                                                                            </p>
+                                                                                                        </div>  IT -->
+
+
+
+                                                </div> <!-- Tab Content -->
+
+                                            </div>
+                                        </div><!-- col-right -->
+                                    </div>
+
+                                    <div class="buttons">
+                                        <button type="reset" class="btn btn-danger">Reset</button>
+                                        <button type="submit" class="btn btn-success" value="MakeFormRegister" name="action">Submit</button>        
+                                    </div>
                                 </div>
 
-                                <div class="buttons">
-                                    <button type="reset" class="btn btn-danger">Reset</button>
-                                    <button type="submit" class="btn btn-success">Submit</button>        
-                                </div>
-                            </div>
+                            </div> <!-- end-container -->
+                        </div>
 
-                        </div> <!-- end-container -->
+
                     </div>
-
-
-                </div>
-            </main>
+                </main>
+            </form>
             <footer style="background-color: #f86c24;">
                 <p>Team</p>
                 <p>FPT University</p>

@@ -101,6 +101,11 @@ public class MainController extends HttpServlet {
     private static final String PAGEADDNARROW="PageAddNarrow";
     private static final String PAGEADDNARROW_CONTROLLER="PageAddNarrowController";
     
+    private static final String GETINFORMATIONFORREGISTERFORM="GetInformationForRegisterForm";
+    private static final String GETINFORMATIONFORREGISTERFORM_CONTROLLER="GetInformationForRegisterFormController";
+    private static final String MAKEFORMREGISTER="MakeFormRegister";
+    private static final String MAKEFORMREGISTER_CONTROLLER="MakeFormRegisterController";
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -220,6 +225,12 @@ public class MainController extends HttpServlet {
             }
             else if(ADDNARROW.equals(action)){
                     url= ADDNARROW_CONTROLLER;
+            }
+            else if(GETINFORMATIONFORREGISTERFORM.equals(action)){
+                    url= GETINFORMATIONFORREGISTERFORM_CONTROLLER;
+            }
+            else if(MAKEFORMREGISTER.equals(action)){
+                    url= MAKEFORMREGISTER_CONTROLLER;
             }
         } catch (Exception e) {
             log("Error at MainController: "+ e.toString());

@@ -76,7 +76,7 @@
                                 <div class="sb-nav-link-icon"></div>
                                 Term
                             </a>
-                            <a class="nav-link" href="RegisterAD.jsp">
+                            <a class="nav-link" href="MainController?action=GetInformationForRegisterForm">
                                 <div class="sb-nav-link-icon"></div>
                                 Register Form
                             </a>
