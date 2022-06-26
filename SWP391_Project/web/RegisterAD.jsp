@@ -42,7 +42,14 @@
                                     <div class="col-4">
 
                                         <div class="term" style="border: 1px solid #ddd; padding: 15px; text-align: center; margin-bottom: 15px; border-radius: 10px;">
-                                            <div class="dropdown">
+                                            <select id="id">
+                                                <option value="first">TERM</option>
+                                                <option value="second">Fall</option>
+                                                <option value="third">Spring</option>
+                                                <option value="quara">Summer</option>
+                                            </select>
+
+<!--                                            <div class="dropdown">
                                                 <button type="button" class="btn btn-outline-secondary" data-toggle="dropdown">
                                                     TERM
                                                 </button>
@@ -51,7 +58,7 @@
                                                     <a class="dropdown-item" href="">Spring</a>
                                                     <a class="dropdown-item" href="">Summer</a>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                         </div>
 
                                         <div id="list-major" style="border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 10px; height: 310px;">
@@ -82,12 +89,12 @@
                                     </div> <!-- col-left -->
 
                                     <div class="col-8">
-                                        <div  style="border: 1px solid #ddd; padding: 10px; margin-bottom: 15px; border-radius: 10px;">
-                                            <p>Start date: </p>
-                                            <p>End date: </p>
+                                        <div  style="border: 1px solid #ddd; padding: 10px; margin-bottom: 20px; border-radius: 10px;">
+                                            Start date: <input type="type" name="name">
+                                            End date: <input type="type" name="name">
                                         </div>
 
-                                        <div class="mutil-list" style="border: 1px solid #ddd; padding: 10px; border-radius: 10px; height: 280px;">
+                                        <div class="mutil-list" style="border: 1px solid #ddd; padding: 10px; border-radius: 10px; height: 310px;">
                                             <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane fade show" id="IT">
                                                     <p class=" d-none d-sm-block">

@@ -31,9 +31,8 @@
             <h1>REGISTER FORM</h1> <!-- tiêu đề -->
         </header>
 
-        <form action="">
-            <div id="regisStu" class="container">
-
+        <div id="regisStu" class="container">
+            <form action="">
                 <div class="row" style="border: 1px solid #ddd; margin: 20px; padding: 10px; border-radius: 10px;">
                     <div class="col-4" >
                         <div class="term" style="border: 1px solid #ddd; padding: 15px; text-align: center; margin-bottom: 15px; border-radius: 10px;">
@@ -192,9 +191,8 @@
                     </div><!-- col-right -->
 
                 </div>
-
-            </div> <!-- end -->
-        </form>
+            </form>
+        </div> <!-- end -->
 
         <footer style="background-color: #f86c24;">
             <p>Team</p>

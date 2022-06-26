@@ -7,8 +7,7 @@ and open the template in the editor.
     Created on : Jun 13, 2022, 9:46:06 AM
     Author     : lamtr
 */
-header
-{
+header {
     width: 100%;
     background-color: #f86c24;
     text-align: center;
@@ -19,13 +18,15 @@ header
     top: 0;
 }
 
-header h1
-{
+header h1 {
     color: white;
 }
 
-footer
-{
+#regisStu{
+    margin-top: 15ex;
+}
+
+footer {
     width: 100%;
     background-color: #f86c24;
     text-align: center;
