@@ -80,9 +80,9 @@
                                 <div class="sb-nav-link-icon"></div>
                                 Register Form
                             </a>
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="CreatedRegisterForm.jsp">
                                 <div class="sb-nav-link-icon"></div>
-                                Notification
+                                Created Register Form
                             </a>
                         </div>
                     </div>
