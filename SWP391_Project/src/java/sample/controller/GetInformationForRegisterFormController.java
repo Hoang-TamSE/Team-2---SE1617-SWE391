@@ -13,6 +13,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import sample.RegisterAD.RegisterADDAO;
+import sample.RegisterAD.RegisterADDTO;
 import sample.major.MajorDAO;
 import sample.major.MajorDTO;
 import sample.narrow.NarrowDAO;
@@ -35,16 +37,39 @@ public class GetInformationForRegisterFormController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
         try {
+            String termCurrent = request.getParameter("termCurrent");
             MajorDAO majorDao = new MajorDAO();
             List<MajorDTO> listMajor = majorDao.getListMajor("");
             NarrowDAO narrowDao = new NarrowDAO();
             List<NarrowDTO> listNarrow = narrowDao.getListNarrow("");
             SemesterDAO semesterDao = new SemesterDAO();
             List<SemesterDTO> listSemester = semesterDao.getListSemester("");
-            if (listMajor.size() > 0) {
+            if(termCurrent == null){
+                termCurrent = listSemester.get(1).getSemesterID();
+            }
+            RegisterADDAO registerDao = new RegisterADDAO();
+            List<RegisterADDTO> listRegisterAD = registerDao.getListSemester(termCurrent);
+            boolean checklist = true;
+            if (listMajor.size() == 0 || listNarrow.size() == 0 || listSemester.size() == 0) {
+                checklist = false;
+            }
+            if (checklist) {
+                if(!listRegisterAD.isEmpty()){
+                    for (RegisterADDTO registerAD : listRegisterAD) {
+                        for (int i = 0; i < listNarrow.size(); i++ ) {
+                            if(listNarrow.get(i).getNarrowID().equals(registerAD.getNarrowID())){
+                                listNarrow.remove(i);
+                                i--;
+                                continue;
+                            }
+                        }
+                    }
+                }
                 request.setAttribute("LIST_MAJOR", listMajor);
                 request.setAttribute("LIST_NARROW", listNarrow);
                 request.setAttribute("LIST_SEMESTER", listSemester);
+                request.setAttribute("LIST_RegisterForm", listRegisterAD);
+                request.setAttribute("CURRENT_TERMID", termCurrent);
                 url = SUCCESS;
             }
         } catch (Exception e) {

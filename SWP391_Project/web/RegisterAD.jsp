@@ -1,3 +1,5 @@
+<%@page import="sample.term.SemesterDTO"%>
+<%@page import="java.util.List"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 
     Document   : RegisterAD
@@ -31,6 +33,10 @@
         <%@include file="Header.jsp" %>
 
         <div id="layoutSidenav_content">
+            <%
+                List<SemesterDTO> listSemeter = (List<SemesterDTO>) request.getAttribute("LIST_SEMESTER");
+                if (listSemeter != null) {
+            %>
             <form action="MainController" method="POST">
                 <main class="container-fluid">
                     <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Register Form</h1>
@@ -43,22 +49,23 @@
                                         <div class="col-4">
 
                                             <div class="term" style="border: 1px solid #ddd; padding: 15px; text-align: center; margin-bottom: 15px; border-radius: 10px;">
-                                                <select name="term">
-                                                    <c:forEach var="semester" items="${requestScope.LIST_SEMESTER}">
-                                                        <option value="${semester.semesterID}">${semester.semesterName}</option>
-                                                    </c:forEach>
+                                                <select name="term" class="selectpicker term" onchange="location = this.options[this.selectedIndex].value;" data-width="auto" data-title="Manage entries" data-style="btn-sm btn-info">
+                                                    <%
+                                                        String currentTerm = (String) request.getAttribute("CURRENT_TERMID");
+                                                        for (SemesterDTO semester : listSemeter) {
+                                                            if (semester.getSemesterID().equals(currentTerm)) {
+                                                    %>
+
+                                                    <option value="MainController?action=GetInformationForRegisterForm&termCurrent=<%=semester.getSemesterID()%>" selected="true"> <%=semester.getSemesterName()%> </option>
+                                                    <% } else {
+                                                    %>
+                                                    <option value="MainController?action=GetInformationForRegisterForm&termCurrent=<%=semester.getSemesterID()%>"> <%=semester.getSemesterName()%> </option>
+                                                    <%
+                                                            }
+                                                        }
+                                                    %>
                                                 </select>
 
-                                                <!--                                            <div class="dropdown">
-                                                                                                <button type="button" class="btn btn-outline-secondary" data-toggle="dropdown">
-                                                                                                    TERM
-                                                                                                </button>
-                                                                                                <div class="dropdown-menu">
-                                                                                                    <a class="dropdown-item" href="">Fall</a>
-                                                                                                    <a class="dropdown-item" href="">Spring</a>
-                                                                                                    <a class="dropdown-item" href="">Summer</a>
-                                                                                                </div>
-                                                                                            </div>-->
                                             </div>
 
                                             <div id="list-major" style="border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 10px; height: 310px;">
@@ -171,6 +178,8 @@
                     </div>
                 </main>
             </form>
+            <%}
+            %>
             <footer style="background-color: #f86c24;">
                 <p>Team</p>
                 <p>FPT University</p>
