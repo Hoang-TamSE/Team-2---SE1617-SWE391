@@ -1,102 +1,92 @@
 <%-- 
-    Document   : SupportPage
-    Created on : Jun 25, 2022, 9:11:55 PM
+    Document   : SupportAD
+    Created on : Jun 28, 2022, 10:13:36 PM
     Author     : lamtr
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-
-        <title>Support Page</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap-social.css">
-        <link href="css/" rel="stylesheet">
-
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Supporter Management</title>
+        <link rel="stylesheet" href="css/admincss.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center mb-5">
-                    <h2 class="heading-section">Page Support</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-12">
-                    <div class="wrapper">
-                        <div class="row no-gutters">
-                            <div class="col-md-7 d-flex align-items-stretch">
-                                <div class="contact-wrap w-100 p-md-5 p-4">
-                                    <h3 class="mb-4">Support</h3>
-<!--                                    <div id="form-message-warning" class="mb-4"></div> 
-                                    <div id="form-message-success" class="mb-4">
-                                        Your message was sent, thank you!
-                                    </div>-->
-                                    <form method="POST" id="contactForm" name="contactForm">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" name="problem" id="problem" placeholder="Problem">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="submit" value="Send Message" class="btn btn-primary">
-                                                    <div class="submitting"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-md-5 d-flex align-items-stretch">
-                                <div class="info-wrap bg-primary w-100 p-lg-5 p-4">
-                                    <h3 class="mb-4 mt-md-4">Contact us</h3>
-                                    <div class="dbox w-100 d-flex align-items-start">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-map-marker"></span>
-                                        </div>
-                                        <div class="text pl-3">
-                                            <p><span>Address:</span> Lô E2a-7, Đường D1 Khu Công nghệ cao, P. Long Thạnh Mỹ, TP. Thủ Đức, TP. Hồ Chí Minh</p>
-                                        </div>
-                                    </div>
-                                    <div class="dbox w-100 d-flex align-items-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-phone"></span>
-                                        </div>
-                                        <div class="text pl-3">
-                                            <p><span>Phone:</span> 028 7300 1866</p>
-                                        </div>
-                                    </div>
-                                    <div class="dbox w-100 d-flex align-items-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-paper-plane"></span>
-                                        </div>
-                                        <div class="text pl-3">
-                                            <p><span>Email:</span> daihocfpt@fpt.edu.vn</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <body class="sb-nav-fixed jumbotron">
+
+        <%@include file="Header.jsp" %>
+
+        <div id="layoutSidenav_content">
+
+            <main class="container-fluid">
+                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Supporter Management</h1>
+                <div class="room container-fluid px-4">    
+                    <div class="tab-content ">
+                        <a href="AddSupporter.jsp">
+                            <button class="btnadd">Add Supporter: <i class="fa-solid fa-circle-plus"></i></button>
+                        </a>
+
+                        <form style="margin-bottom: 5px;" action="MainController">
+                            <input id="inputsearch" type="text" name="search" placeholder="Search..." value="${requestScope.SEARCH}">
+                            <select name="searchby">
+                                <option value="id" ${requestScope.ID} >By Id</option>
+                                <option value="name" ${requestScope.NAME} >By Name</option>
+                            </select>
+                            <input type="hidden" name="action" value="SearchSupporter"/>
+                            <input class="btnsearch" type="submit" value="Search" >
+                        </form>
+                        <table class="table table-responsive table-bordered table-hover">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Question</th>
+                                <th scope="col">Answer</th>
+                                <th scope="col">Update</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                            <c:forEach var="sp" items="${requestScope.LIST_Supporters}">
+                                <tr>
+                                    <td><c:out value="${sp.userID}"></c:out></td>
+                                    <td><c:out value="${sp.name}"></c:out></td>
+                                    <td><c:out value="${sp.email}"></c:out></td>
+                                    <td><c:out value="${sp.question}"></c:out></td>
+                                    <td><c:out value="${sp.answer}"></c:out></td>
+                                        <td>
+                                        <c:url  var="update" value="MainController">
+                                            <c:param name="userID" value="${sp.userID}"></c:param>
+                                            <c:param name="action" value="PageUpdateSupporter"></c:param>
+                                        </c:url>
+                                        <a href="${update}"><i class="fas fa-edit"></i></a>
+                                    </td>
+                                    <td>              
+                                        <c:url  var="delete" value="MainController">
+                                            <c:param name="userID" value="${sp.userID}"></c:param>
+                                            <c:param name="action" value="DeleteSupporter"></c:param>
+                                        </c:url>
+                                        <a href="${delete}"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                        </table>
+                        <c:if test="${not empty requestScope.SUCCESS}">
+                            <p style="color: lightgreen">${requestScope.SUCCESS}</p>
+                        </c:if>
                     </div>
+
+
                 </div>
-            </div> 
-        </div> <!--container-->
-    </body>
+            </main>
+            <%@include file="Footer.jsp" %>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+</body>
 </html>
