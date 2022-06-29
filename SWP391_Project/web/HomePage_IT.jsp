@@ -230,6 +230,7 @@
                                         <th scope="col">Tiết</th>
                                         <th scope="col">Tín chỉ</th>
                                         <th scope="col">Học phần tiên quyết</th>
+                                        <th scope="col">Thông tin</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -245,6 +246,9 @@
                                         <td>60</td>
                                         <td>3</td>
                                         <td>PRO192 & DBI202</td>
+                                        <td style="text-align: center">
+                                            <a target=”_blank” style="color: black;"href="https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylID=5821"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
