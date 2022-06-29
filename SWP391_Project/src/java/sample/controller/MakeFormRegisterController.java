@@ -6,7 +6,6 @@
 package sample.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Timestamp;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -14,6 +13,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import sample.RegisterAD.RegisterADDAO;
+import sample.RegisterAD.RegisterADDTO;
 import sample.RegisterAD.RegisterADERROR;
 import sample.major.MajorDAO;
 import sample.major.MajorDTO;
@@ -30,8 +31,8 @@ import sample.validation.Validation;
 @WebServlet(name = "MakeFormRegisterController", urlPatterns = {"/MakeFormRegisterController"})
 public class MakeFormRegisterController extends HttpServlet {
 
-    private static final String ERROR = "RegisterAD.jsp";
-    private static final String SUCCESS = "RegisterAD.jsp";
+    private static  String ERROR = "MainController?action=GetInformationForRegisterForm&termCurrent=";
+    private static  String SUCCESS = "MainController?action=GetInformationForRegisterForm&termCurrent=";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -40,6 +41,9 @@ public class MakeFormRegisterController extends HttpServlet {
         try {
             String startDateString = request.getParameter("startDate");
             String endDateString = request.getParameter("endDate");
+            String termID = request.getParameter("term").substring(64);
+            ERROR = ERROR + termID;
+            SUCCESS = SUCCESS + termID;
             Timestamp startDate = Validation.dateStringToTimestamp(startDateString);
             Timestamp endDate = Validation.dateStringToTimestamp(endDateString);
             Timestamp currentDate = Validation.takeCurrentDate();
@@ -56,32 +60,26 @@ public class MakeFormRegisterController extends HttpServlet {
             if (checkValid) {
                 MajorDAO majorDao = new MajorDAO();
                 List<MajorDTO> listMajor = majorDao.getListMajor("");
+                RegisterADDAO dao = new RegisterADDAO();
                 String mjID = "";
                 String a[] = null;
+                boolean checkVaildCreate = true;
+                RegisterADDTO registerAD = new RegisterADDTO();
                 for (MajorDTO major : listMajor) {
                     mjID = major.getMajorID();
                     a = request.getParameterValues(mjID);
-                    for (String nwID : a) {
-
+                    if (a != null) {
+                        for (String nwID : a) {
+                            registerAD = new RegisterADDTO(0, mjID, nwID, termID, startDate, endDate, 20);
+                            checkVaildCreate = dao.createSemester(registerAD);
+                        }
                     }
                 }
-                int l = a.length;
-
-                if (listMajor.size() > 0) {
-
+                if(checkVaildCreate){
                     url = SUCCESS;
                 }
             } else {
                 request.setAttribute("ERROR", error);
-                MajorDAO majorDao = new MajorDAO();
-                List<MajorDTO> listMajor = majorDao.getListMajor("");
-                NarrowDAO narrowDao = new NarrowDAO();
-                List<NarrowDTO> listNarrow = narrowDao.getListNarrow("");
-                SemesterDAO semesterDao = new SemesterDAO();
-                List<SemesterDTO> listSemester = semesterDao.getListSemester("");
-                request.setAttribute("LIST_MAJOR", listMajor);
-                request.setAttribute("LIST_NARROW", listNarrow);
-                request.setAttribute("LIST_SEMESTER", listSemester);
             }
         } catch (Exception e) {
             log("error at DeleteController: " + e.toString());
