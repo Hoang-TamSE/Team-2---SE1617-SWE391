@@ -27,45 +27,16 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController" method="GET">
-                            <table>
-                                <tr>
-                                    <td>Application Type</td>
-                                    <td>
-                                        <select>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Purpose</td>
-                                    <td>
-                                        <textarea></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>File Attach</td>
-                                    <td>
-                                        <form style="margin-top:3%;" method="POST" action="MainController" enctype="multipart/form-data" >
-                                            <input  type="file" name="file">
-                                            <input style="border:3px solid black" type="submit" value="Upload" name="action">
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td colspan="2">
-                                        <input class="button" type="submit" name="action" value="Send">                       
-                                    </td>
-                                </tr>
-                            </table>
+                            <div class="form-group">
+                                <label for="usr">Type:</label>
+                                <input type="text" class="form-control" id="usr">
+                                <label for="comment">Question:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                            <br>
+                            <button type="button" class="btn btn-success">Submit</button>
                         </form>
                     </div>
-
-
                 </div>
             </main>
             <%@include file="Footer.jsp" %>
@@ -73,21 +44,7 @@
     </div>
 
     <style>
-        table
-        {
-            border:2px solid black;
-            margin: auto;
-        }
-        tr td
-        {
-            border: 2px solid black;
-            padding: 15px;
-        }
-        textarea
-        {
-            width: 100%;
-            height: 200px;
-        }
+
     </style>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

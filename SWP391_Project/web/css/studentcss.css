@@ -13,9 +13,9 @@ table
 }
 tr td input
 {
-    border:none;
-    border-bottom: 1px solid black;
-    width: 125%;
+    
+    border-radius: 15px;
+    width: 150%;
 }
 
 tr td
@@ -26,6 +26,7 @@ tr td
 
 .button
 {
+    text-align: center;
     width: 45%;
     border: 2px solid black;
 }

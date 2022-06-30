@@ -79,7 +79,7 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;" colspan="2">
-                                        <input class="button" type="submit" name="action" value="UpdateStudent">
+                                        <input class="button btn btn-success" type="submit" name="action" value="UpdateStudent">
                                         <input type="hidden" name="userID" value="${requestScope.STUDENT.userID}">
                                         <input type="hidden" name="email" value="${requestScope.STUDENT.email}">
                                     </td>

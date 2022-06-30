@@ -34,7 +34,6 @@
             <main class="container-fluid">
                 <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Narrow Register</h1>
 
-
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <div class="main_form">
@@ -44,7 +43,7 @@
 
                                     <ul class="nav nav-tabs bg-light p-3">
                                         <li class="nav-item">
-                                            <a class="nav-link active" href="#IT"
+                                            <a class="nav-link" href="#IT"
                                                role="tab" data-toggle="tab">Information Technology</a>
                                         </li>
                                         <li class="nav-item">
@@ -66,119 +65,185 @@
                                     </ul>
 
                                     <div class="tab-content" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px;">
-                                        <div role="tabpanel" class="tab-pane fade show active" id="IT">
-                                            <p class=" d-none d-sm-block">
-                                            <h4>Software Engineering</h4>
-                                            <label class="form-check-inline" for="radio1">
-                                                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" >PRN211 (.NET)
-                                            </label> <br>
-                                            <label class="form-check-inline" for="radio2">
-                                                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Kỹ sư cầu nối (JS)
-                                            </label> <br>
-                                            <label class="form-check-inline" for="radio3">
-                                                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">PRP201c (Autonomous Car)
-                                            </label> <br>
-                                            <label class="form-check-inline" for="radio4">
-                                                <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">PRP201c (AI with tensor flow)
-                                            </label> <br>
-                                            <label class="form-check-inline" for="radio5">
-                                                <input type="radio" class="form-check-input" id="radio5" name="optradio" value="option5">FER201m (React/NodeJS)
-                                            </label><br>
+                                        <div role="tabpanel" class="tab-pane fade show" id="IT">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <h4>Narrow Specialization</h4>
+                                                    </div>
+                                                </div>
 
-                                            <h4>Artifical Intelligence</h4>
-                                            <label class="form-check-inline" for="radio1">
-                                                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" >PRN211 (.NET)
-                                            </label> <br>
-                                            <label class="form-check-inline" for="radio2">
-                                                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Kỹ sư cầu nối (JS)
-                                            </label> <br>
-                                            <label class="form-check-inline" for="radio3">
-                                                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">PRP201c (Autonomous Car)
-                                            </label> <br>
-                                            <label class="form-check-inline" for="radio4">
-                                                <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">PRP201c (AI with tensor flow)
-                                            </label> <br>
-                                            <label class="form-check-inline" for="radio5">
-                                                <input type="radio" class="form-check-input" id="radio5" name="optradio" value="option5">FER201m (React/NodeJS)
-                                            </label><br>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <p class=" d-none d-sm-block">
+                                                            <label class="form-check-inline" for="radio1">
+                                                                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" >PRN211 (.NET)
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio2">
+                                                                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Kỹ sư cầu nối (JS)
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio3">
+                                                                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">PRP201c (Autonomous Car)
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio4">
+                                                                <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">PRP201c (AI with tensor flow)
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio5">
+                                                                <input type="radio" class="form-check-input" id="radio5" name="optradio" value="option5">FER201m (React/NodeJS)
+                                                            </label><br>
+                                                        </p>
+                                                    </div>
+                                                </div>
 
-                                            <button class="submit btn btn-outline-success">Submit</button>
-                                            </p>
+                                                <div class="col-12 text-center">
+                                                    <div class="form-group">
+                                                        <button class="submit btn btn-outline-success">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div role="tabpanel" class="tab-pane fade show" id="BA">
-                                            <p class=" d-none d-sm-block">
-                                                <label class="form-check-inline" for="radio1">
-                                                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Digital Marketing
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio2">
-                                                    <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Kinh doanh quốc tế
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio3">
-                                                    <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Quản trị khách sạn
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio4">
-                                                    <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">Quản trị dịch vụ du lịch và lữu hành
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio5">
-                                                    <input type="radio" class="form-check-input" id="radio5" name="optradio" value="option5">Quản trị truyền thông đa phương tiện
-                                                </label> <br>
-                                                <button class="submit btn btn-outline-success">Submit</button>
-                                            </p>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <h4>Narrow Specialization</h4>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <p class=" d-none d-sm-block">
+                                                            <label class="form-check-inline" for="radio1">
+                                                                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Digital Marketing
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio2">
+                                                                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Kinh doanh quốc tế
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio3">
+                                                                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Quản trị khách sạn
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio4">
+                                                                <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">Quản trị dịch vụ du lịch và lữu hành
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio5">
+                                                                <input type="radio" class="form-check-input" id="radio5" name="optradio" value="option5">Quản trị truyền thông đa phương tiện
+                                                            </label> <br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 text-center">
+                                                    <div class="form-group">
+                                                        <button class="submit btn btn-outline-success">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div role="tabpanel" class="tab-pane fade show" id="EL">
-                                            <p class=" d-none d-sm-block">
-                                                <label class="form-check-inline" for="radio1">
-                                                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Phiên dịch viên
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio2">
-                                                    <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Thư ký, trợ lý đối ngoại
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio3">
-                                                    <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Giảng dạy
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio4">
-                                                    <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">Nghiên cứu viên
-                                                </label> <br>
-                                                <button class="submit btn btn-outline-success">Submit</button>
-                                            </p>    
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <h4>Narrow Specialization</h4>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <p class=" d-none d-sm-block">
+                                                            <label class="form-check-inline" for="radio1">
+                                                                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Phiên dịch viên
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio2">
+                                                                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Thư ký, trợ lý đối ngoại
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio3">
+                                                                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Giảng dạy
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio4">
+                                                                <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">Nghiên cứu viên
+                                                            </label> <br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 text-center">
+                                                    <div class="form-group">
+                                                        <button class="submit btn btn-outline-success">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>   
                                         </div>
 
                                         <div role="tabpanel" class="tab-pane fade show" id="JL">
-                                            <p class=" d-none d-sm-block">
-                                                <label class="form-check-inline" for="radio1">
-                                                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Phiên dịch viên
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio2">
-                                                    <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Thư ký, trợ lý đối ngoại
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio3">
-                                                    <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Giảng dạy
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio4">
-                                                    <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">Nghiên cứu viên
-                                                </label> <br>
-                                                <button class="submit btn btn-outline-success">Submit</button>
-                                            </p>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <h4>Narrow Specialization</h4>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <p class=" d-none d-sm-block">
+                                                            <label class="form-check-inline" for="radio1">
+                                                                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Phiên dịch viên
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio2">
+                                                                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Thư ký, trợ lý đối ngoại
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio3">
+                                                                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Giảng dạy
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio4">
+                                                                <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">Nghiên cứu viên
+                                                            </label> <br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 text-center">
+                                                    <div class="form-group">
+                                                        <button class="submit btn btn-outline-success">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div role="tabpanel" class="tab-pane fade show" id="KL">
-                                            <p class=" d-none d-sm-block">
-                                                <label class="form-check-inline" for="radio1">
-                                                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Phiên dịch viên
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio2">
-                                                    <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Thư ký, trợ lý đối ngoại
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio3">
-                                                    <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Giảng dạy
-                                                </label> <br>
-                                                <label class="form-check-inline" for="radio4">
-                                                    <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">Nghiên cứu viên
-                                                </label> <br>
-                                                <button class="submit btn btn-outline-success">Submit</button>
-                                            </p>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <h4>Narrow Specialization</h4>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <p class=" d-none d-sm-block">
+                                                            <label class="form-check-inline" for="radio1">
+                                                                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Phiên dịch viên
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio2">
+                                                                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Thư ký, trợ lý đối ngoại
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio3">
+                                                                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Giảng dạy
+                                                            </label> <br>
+                                                            <label class="form-check-inline" for="radio4">
+                                                                <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">Nghiên cứu viên
+                                                            </label> <br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 text-center">
+                                                    <div class="form-group">
+                                                        <button class="submit btn btn-outline-success">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 

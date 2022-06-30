@@ -26,17 +26,15 @@
 
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <table>
+                        <table class="table">
                             <tr>
                                 <td>Purpose</td>
                                 <td>Create Date</td>
                                 <td>Process Note</td>
-                                <td>File</td>
                                 <td>Status</td>
                                 <td>Change Status Time</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
