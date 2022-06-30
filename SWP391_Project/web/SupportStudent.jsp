@@ -30,7 +30,7 @@
         <div id="layoutSidenav_content">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-6 text-center mb-5">
+                    <div class="col-md-12 text-center">
                         <h2 class="heading-section">Page Support</h2>
                     </div>
                 </div>
@@ -38,13 +38,9 @@
                     <div class="col-lg-10 col-md-12">
                         <div class="wrapper">
                             <div class="row no-gutters">
-                                <div class="col-md-7 d-flex align-items-stretch">
-                                    <div class="contact-wrap w-100 p-md-5 p-4">
-                                        <h3 class="mb-4">Support</h3>
-                                        <!--                                    <div id="form-message-warning" class="mb-4"></div> 
-                                                                            <div id="form-message-success" class="mb-4">
-                                                                                Your message was sent, thank you!
-                                                                            </div>-->
+                                <div class="col-md-12 d-flex align-items-stretch">
+                                    <div class="contact-wrap w-100 p-md-4 p-3">
+
                                         <form method="POST" id="contactForm" name="contactForm">
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -57,7 +53,7 @@
                                                         <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
+                                                <div class="col-md-12 text-center">
                                                     <div class="form-group">
                                                         <input type="submit" value="Send Message" class="btn btn-primary">
                                                         <div class="submitting"></div>
@@ -67,7 +63,8 @@
                                         </form>
                                     </div>
                                 </div>
-                                <div class="col-md-5 d-flex align-items-stretch">
+
+                                <!-- <div class="col-md-5 d-flex align-items-stretch">
                                     <div class="info-wrap bg-primary w-100 p-lg-5 p-4">
                                         <h3 class="mb-4 mt-md-4">Contact us</h3>
                                         <div class="dbox w-100 d-flex align-items-start">
@@ -95,12 +92,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
+                                <!-- Contact us -->
                             </div>
                         </div>
                     </div>
-                </div> 
-            </div> <!--container-->
+                </div>
+            </div> <!-- container -->
 
             <%@include file="Footer.jsp" %>
         </div>

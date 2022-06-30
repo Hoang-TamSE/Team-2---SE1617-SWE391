@@ -48,7 +48,7 @@
                                     <div class="form-row">
                                         <div class="col-4">
 
-                                            <div class="term" style="border: 1px solid #ddd; padding: 15px; text-align: center; margin-bottom: 15px; border-radius: 10px;">
+                                            <div class="term" style="border: 1px solid #ddd; padding: 15px; text-align: center; margin-bottom: 15px; border-radius: 10px; height: 100px;">
                                                 <select name="term" class="selectpicker term" onchange="location = this.options[this.selectedIndex].value;" data-width="auto" data-title="Manage entries" data-style="btn-sm btn-info">
                                                     <%
                                                         String currentTerm = (String) request.getAttribute("CURRENT_TERMID");
@@ -68,7 +68,7 @@
 
                                             </div>
 
-                                            <div id="list-major" style="border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 10px; height: 310px;">
+                                            <div id="list-major" style="border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 10px; height: 70%;">
                                                 <h3 style="text-align: center; color: orangered;">List Major</h3>
 
                                                 <div style="text-justify: auto; padding: 10px;">
@@ -103,7 +103,7 @@
                                         </div> <!-- col-left -->
 
                                         <div class="col-8">
-                                            <div  style="border: 1px solid #ddd; padding: 10px; margin-bottom: 20px; border-radius: 10px;">
+                                            <div  style="border: 1px solid #ddd; padding: 10px; margin-bottom: 20px; border-radius: 10px; height: 100px;">
                                                 <table class="">
                                                     <tr>
                                                         <td>Start date:</td>
@@ -119,7 +119,7 @@
                                             </div>
 
 
-                                            <div class="mutil-list" style="border: 1px solid #ddd; padding: 10px; border-radius: 10px; height: 310px;">
+                                            <div class="mutil-list" style="border: 1px solid #ddd; padding: 10px; border-radius: 10px; height: 70%;">
                                                 <div class="tab-content">
                                                     <c:forEach var="major" items="${requestScope.LIST_MAJOR}">
                                                         <div role="tabpanel" class="tab-pane fade show" id="${major.majorID}">
@@ -165,9 +165,11 @@
                                         </div><!-- col-right -->
                                     </div>
 
-                                    <div class="buttons">
-                                        <button type="reset" class="btn btn-danger">Reset</button>
-                                        <button type="submit" class="btn btn-success" value="MakeFormRegister" name="action">Submit</button>        
+                                    <div class="col-md-12 text-center buttons" style="margin-top: 10px;">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success" value="MakeFormRegister" name="action">Submit</button>      
+                                            <button type="reset" class="btn btn-danger" style="margin-left: 5px;">Reset</button>
+                                        </div>
                                     </div>
                                 </div>
 
