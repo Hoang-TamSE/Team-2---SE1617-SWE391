@@ -25,7 +25,7 @@ import sample.validation.Validation;
 public class UpdateStudentController extends HttpServlet {
 
     private static final String ERROR = "UpdateStudent.jsp";
-    private static final String SUCCESS = "MainController?action=Search";
+    private static final String SUCCESS = "MainController?action=Search&searchby=name";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

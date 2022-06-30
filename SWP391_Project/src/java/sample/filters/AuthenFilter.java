@@ -21,6 +21,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import sample.admin.AdminDTO;
 import sample.student.StudentDTO;
 
 /**
@@ -33,7 +34,7 @@ public class AuthenFilter implements Filter {
     private static List<String> US_RESOURCES;
     private static List<String> AD_RESOURCES;
     private static List<String> NON_AUTHEN_RESOURCES;
-    private static final String US = "US";
+    private static final String ST = "ST";
     private static final String AD = "AD";
     private static final String LOGIN_PAGE = "HomePage.jsp";
     private static final boolean debug = true;
@@ -47,16 +48,17 @@ public class AuthenFilter implements Filter {
         //khai bao nhung resources ma quyen US duoc phep truy cap
         US_RESOURCES = new ArrayList<>();
         US_RESOURCES.add("StudenPage.jsp");
-        US_RESOURCES.add("UpdateInfomation.jsp");
+        US_RESOURCES.add("UpdateInformation.jsp");
         US_RESOURCES.add("ViewApplication.jsp");
         US_RESOURCES.add("SendApplication.jsp");
-        US_RESOURCES.add("RegisterStu.jsp");
+        US_RESOURCES.add("NarrowRegister.jsp");
 
         //khai bao nhung resources ma ko can xac thuc phan quyen
         AD_RESOURCES = new ArrayList<>();
         AD_RESOURCES.add("adminPage.jsp");
         AD_RESOURCES.add("AddMajor.jsp");
         AD_RESOURCES.add("AddSpecialization.jsp");
+        AD_RESOURCES.add("CreatedRegisterForm.jsp");
         AD_RESOURCES.add("AddStudent.jsp");
         AD_RESOURCES.add("AddSupporter.jsp");
         AD_RESOURCES.add("AddTerm.jsp");
@@ -79,8 +81,8 @@ public class AuthenFilter implements Filter {
         NON_AUTHEN_RESOURCES.add("Footer.jsp");
         NON_AUTHEN_RESOURCES.add("HeaderStudent");
         NON_AUTHEN_RESOURCES.add("login-google");
-        NON_AUTHEN_RESOURCES.add("https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/SWP391_Project/login-google&response_type=code\n" +
-"&client_id=87164938910-2onepbbjdpgpde3b4sevt3v2s549kcsq.apps.googleusercontent.com&approval_prompt=force");
+        NON_AUTHEN_RESOURCES.add("https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/SWP391_Project/login-google&response_type=code\n"
+                + "&client_id=87164938910-2onepbbjdpgpde3b4sevt3v2s549kcsq.apps.googleusercontent.com&approval_prompt=force");
         NON_AUTHEN_RESOURCES.add(".gif");
         NON_AUTHEN_RESOURCES.add(".jpg");
         NON_AUTHEN_RESOURCES.add(".png");
@@ -163,6 +165,9 @@ public class AuthenFilter implements Filter {
             String requestResource = uri.substring(index + 1);
             //neu request den non authen resources thi ko can xac thuc -> cho di tiep
             for (String value : NON_AUTHEN_RESOURCES) {
+                if (uri.endsWith(".jsp") && value.equals(".js")) {
+                    continue;
+                }
                 if (uri.contains(value)) {
                     chain.doFilter(request, response);
                     return;
@@ -173,17 +178,33 @@ public class AuthenFilter implements Filter {
             if (session == null || session.getAttribute("LOGIN_USER") == null) {
                 res.sendRedirect(LOGIN_PAGE);
             } else {
-                StudentDTO loginUser = (StudentDTO) session.getAttribute("LOGIN_USER");
+                boolean check = false;
+                AdminDTO loginUser = (AdminDTO) session.getAttribute("CHECK_AUTHORIZATION");
                 String roleID = loginUser.getRoleID();
-                if (AD.equals(roleID) && AD_RESOURCES.contains(requestResource)) {
-                    chain.doFilter(request, response);
-                } else if (US.equals(roleID) && US_RESOURCES.contains(requestResource)) {
-                    chain.doFilter(request, response);
+                if (AD.equals(roleID)) {
+                    for (String value : AD_RESOURCES) {
+                        if (requestResource.contains(value)) {
+                            chain.doFilter(request, response);
+                            check = true;
+                        }
+
+                    }
+                } else if (ST.equals(roleID)) {
+                    for (String value : US_RESOURCES) {
+                        if (requestResource.contains(value)) {
+                            chain.doFilter(request, response);
+                            check = true;
+                        }
+                    }
                 } else {
+                    res.sendRedirect(LOGIN_PAGE);
+                }
+                if (!check) {
                     res.sendRedirect(LOGIN_PAGE);
                 }
             }
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
