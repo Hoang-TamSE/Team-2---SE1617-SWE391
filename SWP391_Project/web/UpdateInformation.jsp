@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Upate Information</title>
-        <link rel="stylesheet" href="css/studentcss.css">
+       
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>
     </head>
@@ -27,54 +27,54 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController" method="GET">
-                            <table class="">
+                            <table class="table w-50">
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        <input value="" name="id" readonly>
+                                        <input value="${LOGIN_USER.userID}" name="id" readonly type="email" class="form-control">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
                                     <td>
-                                        <input value="" name="email" readonly>
+                                        <input value="${LOGIN_USER.email}" name="email" readonly class="form-control" >
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Full name</td>
                                     <td>
-                                        <input value="" name="fullname" readonly>
+                                        <input value="${LOGIN_USER.name}" name="name" readonly class="form-control" >
                                     </td>                  
                                 </tr>
                                 <tr>
                                     <td>Phone</td>
                                     <td>
-                                        <input value="" type="text" name="phone">
+                                        <input value="${LOGIN_USER.phoneNumber}" name="id" class="form-control" placeholder="Enter Phone..." >
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Address</td>
                                     <td>
-                                        <input value="" type="text" name="address">
+                                        <input value="${LOGIN_USER.address}" name="PhoneNumber" class="form-control" placeholder="Enter Address..."  >
                                     </td>                
                                 </tr>
                                 <tr>
                                     <td>Semester</td>
                                     <td>
-                                        <input value="" name="semester" readonly>
+                                        <input value="${LOGIN_USER.semesterID}" name="semesterID" readonly class="form-control" >
                                     </td> 
                                 </tr>
                                 <tr>
                                     <td>Major</td>
                                     <td>
-                                        <input value="" name="major" readonly>
+                                        <input value="${LOGIN_USER.majorID}" name="majorID" readonly class="form-control" >
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td>Narrow</td>
                                     <td>
-                                        <input value="" name="narrow" readonly>
+                                        <input value="${LOGIN_USER.narrowID}" name="narrowID" readonly class="form-control"  >
                                     </td>
                                 </tr>
                                 <tr>
@@ -86,6 +86,8 @@
                                 </tr>
                             </table>
                         </form>
+
+                        
                     </div>
 
 

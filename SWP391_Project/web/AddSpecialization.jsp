@@ -29,7 +29,7 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController">
-                            <table class="">
+                            <table class="table w-50">
                                 <tr>
                                     <td></td>
                                     <td style="font-weight: bold;font-size: large">ADD NARROW</td>
@@ -37,7 +37,7 @@
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        <input value="${requestScope.NARROW.narrowID}" type="text" name="narrowID">
+                                        <input value="${requestScope.NARROW.narrowID}" type="text" name="narrowID" class="form-control" placeholder="Enter ID...">
                                     </td>
                                     <td>
                                         <p style="color: red;">${requestScope.ERROR.narrowID}</p>
@@ -47,7 +47,7 @@
                                 <tr>
                                     <td>Name</td>
                                     <td>
-                                        <input value="${requestScope.NARROW.narrowName}" type="text" name="narrowName">
+                                        <input value="${requestScope.NARROW.narrowName}" type="text" name="narrowName" class="form-control" placeholder="Enter Name...">
                                     </td>
                                     <td>
                                         <p style="color: red;">${requestScope.ERROR.narrowName}</p>
@@ -56,7 +56,7 @@
                                 <tr>
                                     <td>LinkFLM</td>
                                     <td>
-                                        <input value="${requestScope.NARROW.linkFLM}" type="text" name="linkFLM">
+                                        <input value="${requestScope.NARROW.linkFLM}" type="text" name="linkFLM" class="form-control" placeholder="Enter Link...">
                                     </td>
 
                                 </tr>
@@ -69,7 +69,7 @@
                                 <tr>
                                     <td>MajorID</td>
                                     <td>
-                                        <select name="majorID">
+                                        <select class="form-select w-25" name="majorID">
                                             <c:forEach var="major" items="${requestScope.LIST_MAJOR}">
                                                 <c:choose>
                                                     <c:when test="${requestScope.CURRENT_MAJORID == major.majorID}">
@@ -87,12 +87,12 @@
                                 <tr style="text-align: center;">
                                     <td colspan="2">
                                         <input type="hidden" name="action" value="AddNarrow"/>
-                                        <input class="button" type="submit" value="Add Narrow">
+                                        <input class="button btn btn-success" type="submit" value="Add Narrow">
                                     </td>
                                 </tr>
                                 <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button" type="reset" name="action" value="Reset">
+                                        <input class="button btn btn-danger" type="reset" name="action" value="Reset">
                                     </td>
                                 </tr>
                             </table>
@@ -107,38 +107,7 @@
     </div>
 
 
-    <style>
-        tr td
-        {
-            padding-left: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
 
-        }
-        tr td input
-        {
-            border:none;
-            border-bottom: 2px solid black;
-            width: 220px;
-        }
-        table
-        {
-            margin: auto;
-            border: 3px solid black;
-            transition: 0.5s;
-            background-color: #fff;
-            -webkit-border-radius:15px;
-            border-radius: 15px;
-            border-collapse: separate;
-        }
-        .button
-        {
-            border:2px solid black;
-            background-color: white;
-            width: 31%;
-            text-align: center;
-        }
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>

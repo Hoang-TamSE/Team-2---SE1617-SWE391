@@ -27,7 +27,7 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController">
-                            <table class="">
+                            <table class="table w-50">
                                 <tr>
                                     <td></td>
                                     <td style="font-weight: bold;font-size: large">ADD MAJOR</td>
@@ -35,7 +35,7 @@
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.majorID}" type="text" name="majorID">
+                                        <input value="${requestScope.MAJOR.majorID}" type="text" name="majorID" class="form-control" placeholder="Enter ID...">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.majorID}</p>
@@ -44,7 +44,7 @@
                                 <tr>
                                     <td>Name</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.majorName}" type="text" name="majorName">
+                                        <input value="${requestScope.MAJOR.majorName}" type="text" name="majorName" class="form-control" placeholder="Enter Name...">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.majorName}</p>
@@ -53,7 +53,7 @@
                                 <tr>
                                     <td>Link</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.linkFLM}" type="text" name="linkFLM">
+                                        <input value="${requestScope.MAJOR.linkFLM}" type="text" name="linkFLM" class="form-control" placeholder="Enter Link...">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.linkFLM}</p>
@@ -62,7 +62,7 @@
                                 <tr>
                                     <td>Description</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.description}" type="text" name="description">
+                                        <input value="${requestScope.MAJOR.description}" type="text" name="description" class="form-control" placeholder="Enter Description...">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.description}</p>
@@ -70,7 +70,7 @@
                                 </tr>
                                 <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button" type="submit" name="action" value="AddMajor">
+                                        <input class="button btn btn-success" type="submit" name="action" value="AddMajor">
                                     </td>
                                 </tr>
                             </table>
@@ -85,38 +85,7 @@
     </div>
 
 
-    <style>
-        tr td
-        {
-            padding-left: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-
-        }
-        tr td input
-        {
-            border:none;
-            border-bottom: 2px solid black;
-            width: 220px;
-        }
-        table
-        {
-            margin: auto;
-            border: 3px solid black;
-            transition: 0.5s;
-            background-color: #fff;
-            -webkit-border-radius:15px;
-            border-radius: 15px;
-            border-collapse: separate;
-        }
-        .button
-        {
-            border:2px solid black;
-            background-color: white;
-            width: 31%;
-            text-align: center;
-        }
-    </style>
+    
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>

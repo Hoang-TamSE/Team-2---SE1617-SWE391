@@ -27,7 +27,7 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController">
-                            <table class="">
+                            <table class="table w-50">
                                 <tr>
                                     <td></td>
                                     <td style="font-weight: bold;font-size: large">ADD SUPPORTER</td>
@@ -35,7 +35,7 @@
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.userID}" type="text" name="userID">
+                                        <input value="${requestScope.SUPPORTER.userID}" type="text" name="userID" class="form-control" placeholder="Enter ID...">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.userID}</p>
@@ -44,7 +44,7 @@
                                 <tr>
                                     <td>Email</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.email}" type="text" name="email">
+                                        <input value="${requestScope.SUPPORTER.email}" type="text" name="email" class="form-control" placeholder="Enter Email...">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.email}</p>
@@ -53,7 +53,7 @@
                                 <tr>
                                     <td>Full name</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.name}" type="text" name="name">
+                                        <input value="${requestScope.SUPPORTER.name}" type="text" name="name" class="form-control" placeholder="Enter ID...">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.name}</p>
@@ -62,7 +62,7 @@
                                 <tr>
                                     <td>Phone</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.phoneNumber}" type="text" name="phoneNumber">
+                                        <input value="${requestScope.SUPPORTER.phoneNumber}" type="text" name="phoneNumber" class="form-control" placeholder="Enter ID...">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.phoneNumber}</p>
@@ -71,13 +71,13 @@
                                 <tr>
                                     <td>Address</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.address}" type="text" name="address">
+                                        <input value="${requestScope.SUPPORTER.address}" type="text" name="address" class="form-control" placeholder="Enter ID...">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Major</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.majorID}" type="text" name="majorID">
+                                        <input value="${requestScope.SUPPORTER.majorID}" type="text" name="majorID" class="form-control" placeholder="Enter ID...">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.majorID}</p>
@@ -85,7 +85,7 @@
                                 </tr>
                                 <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button" type="submit" name="action" value="AddSupporter">
+                                        <input class="button btn btn-success" type="submit" name="action" value="AddSupporter">
                                     </td>
                                 </tr>
                             </table>
@@ -100,38 +100,7 @@
     </div>
 
 
-    <style>
-        tr td
-        {
-            padding-left: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-
-        }
-        tr td input
-        {
-            border:none;
-            border-bottom: 2px solid black;
-            width: 220px;
-        }
-        table
-        {
-            margin: auto;
-            border: 3px solid black;
-            transition: 0.5s;
-            background-color: #fff;
-            -webkit-border-radius:15px;
-            border-radius: 15px;
-            border-collapse: separate;
-        }
-        .button
-        {
-            border:2px solid black;
-            background-color: white;
-            width: 31%;
-            text-align: center;
-        }
-    </style>
+   
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
