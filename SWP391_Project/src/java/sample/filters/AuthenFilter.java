@@ -47,7 +47,7 @@ public class AuthenFilter implements Filter {
     public AuthenFilter() {
         //khai bao nhung resources ma quyen US duoc phep truy cap
         US_RESOURCES = new ArrayList<>();
-        US_RESOURCES.add("StudenPage.jsp");
+        US_RESOURCES.add("StudentPage.jsp");
         US_RESOURCES.add("UpdateInformation.jsp");
         US_RESOURCES.add("ViewApplication.jsp");
         US_RESOURCES.add("SendApplication.jsp");
