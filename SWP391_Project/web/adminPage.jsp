@@ -29,6 +29,53 @@
                     <div class="tab-content ">
                         <h1>Welcome ${sessionScope.LOGIN_USER.name}</h1>
                     </div>
+                </div>
+                <div class="row">
+
+                    <div style="max-width: 30%;" class="card-item col-xl-4 col-sm-6 col-12">
+                        <div class="card-item_employee">
+                            <i style="color: #00c5fb" class="fas fa-building"></i>
+                        </div>
+
+                        <div>
+                            
+                            <a 
+                                class="card-item_link"
+                                href="Student.jsp">Student</a>
+                        </div>
+
+                    </div>
+                    <div style="width: 20px"></div>
+
+                    <div style="max-width: 30%" class="card-item col-xl-4 col-sm-6 col-12">
+                        <div class="card-item_employee">
+                            <i style="color: #00c5fb" class="fas fa-user"></i>
+                        </div>
+
+                        <div>
+                            
+                            <a 
+                                class="card-item_link"
+                                href="Major.jsp">Major</a>
+                        </div>    
+                    </div>
+                    <div style="width: 20px"></div>
+
+                    <div style="max-width: 30%" class="card-item col-xl-4 col-sm-6 col-12">
+                        <div class="card-item_employee">
+                            <i style="color: #00c5fb" class="fas fa-book-open"></i>
+                        </div>
+
+                        <div>
+                           
+                            <a                         
+                                class="card-item_link"
+                                href="Specialization.jsp">
+                                Narrow
+                            </a>
+                        </div>    
+                    </div>
+
 
 
                 </div>

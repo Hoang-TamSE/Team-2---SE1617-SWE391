@@ -27,32 +27,60 @@
                         <table class="table">
                             <tr>
                                 <th scope="col">Term</th>
-                                <th scope="col">Start Date</th>
-                                <th scope="col">End Date</th>
                                 <th scope="col">Total</th>
                                 <th scope="col">Submit</th>
+                                <th scope="col">Load</th>
                             </tr>
                             <tr>
                                 <td scope="row">
                                     <div class="term">
-                                        <select name="term">
+                                        <select class="form-select w-25" name="term">
                                             <c:forEach var="semester" items="${requestScope.LIST_SEMESTER}">
                                                 <option value="${semester.semesterID}">${semester.semesterName}</option>
                                             </c:forEach>
                                         </select>
                                     </div>
                                 </td>
+
                                 <td scope="row">
-                                    <input type="datetime-local" name="startDate">
-                                </td>
-                                <td scope="row">
-                                    <input type="datetime-local" name="startDate">
-                                </td>
-                                <td scope="row">
-                                    
+                                    5
                                 </td>
                                 <td scope="row">
                                     <button type="submit" class="btn btn-success" value="MakeFormRegister" name="action">Submit</button>        
+                                </td>
+                                <td>
+                                    <button class="btn btn-success" type="submit" value="" name="action"><i class="fas fa-angle-double-down"></i></button>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table">
+                            <tr>
+                                <th scope="col">Narrow</th>
+                                <th scope="col">Major</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">End Date</th>
+                                <th scope="col">Number Of Register</th>
+                                <th scope="col">Check</th>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    SE
+                                </td>
+                                <td scope="row">
+                                    .NET
+                                </td>
+                                <td scope="row">
+                                    <input type="datetime-local" name="startDate">
+                                </td>
+                                <td scope="row">
+                                    <input type="datetime-local" name="startDate">
+                                </td>
+                                <td scope="row">
+                                    4
+                                </td>
+                                <td scope="row">
+                                    <input type="checkbox" id="checkbox" name="" value="">
+                                    <label for="vehicle1">Choose Form</label><br>
                                 </td>
                             </tr>
                         </table>
