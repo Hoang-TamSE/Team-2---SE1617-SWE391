@@ -22,8 +22,8 @@ import sample.student.StudentDTO;
 @WebServlet(name = "DeleteStudentController", urlPatterns = {"/DeleteStudentController"})
 public class DeleteStudentController extends HttpServlet {
 
-    private static final String ERROR = "SearchStudentController";
-    private static final String SUCCESS = "SearchStudentController";
+    private static final String ERROR = "MainController?action=Search&searchby=name";
+    private static final String SUCCESS = "MainController?action=Search&searchby=name";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

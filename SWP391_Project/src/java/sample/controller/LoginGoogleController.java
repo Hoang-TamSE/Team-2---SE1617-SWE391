@@ -64,6 +64,7 @@ public class LoginGoogleController extends HttpServlet {
                         StudentDTO std = stdao.getStudent(user.getUserID());
                         session.setAttribute("LOGIN_USER", std);
                     }
+                    session.setAttribute("CHECK_AUTHORIZATION", user);
                 }
             }
         } catch (Exception e) {
