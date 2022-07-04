@@ -1,3 +1,5 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@page import="sample.term.SemesterDTO"%>
 <%@page import="java.util.List"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -125,9 +127,20 @@
                                                         <div role="tabpanel" class="tab-pane fade show" id="${major.majorID}">
                                                             <p class=" d-none d-sm-block">
                                                                 <c:forEach var="narrow" items="${requestScope.LIST_NARROW}">
+
                                                                     <c:if test="${major.majorID == narrow.majorID}">
-                                                                        <label class="form-check-inline" for="${narrow.narrowID}">
-                                                                            <input type="checkbox" class="form-check-input" id="${narrow.narrowID}" name="${major.majorID}" value="${narrow.narrowID}" >${narrow.narrowName}
+                                                                        <c:set var="splitNarrowID" value="${fn:split(narrow.narrowID, '-')}" />
+
+                                                                        <label class="form-check-inline" for="${splitNarrowID[0]}">
+                                                                            <c:choose>
+                                                                                <c:when test="${splitNarrowID[1] == 'true'}">
+                                                                                    <input type="checkbox" class="form-check-input" disabled="disabled" id="${narrow.narrowID}"  checked="checked" name="${major.majorID}" value="true" >${narrow.narrowName}
+                                                                                </c:when>
+                                                                                <c:otherwise>
+                                                                                    <input type="checkbox" class="form-check-input" id="${narrow.narrowID}" name="${major.majorID}" value="${splitNarrowID[0]}" >${narrow.narrowName}
+                                                                                </c:otherwise>
+                                                                            </c:choose>
+
                                                                         </label> <br>
                                                                     </c:if>
                                                                 </c:forEach>

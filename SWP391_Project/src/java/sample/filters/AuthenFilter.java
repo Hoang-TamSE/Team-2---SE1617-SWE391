@@ -73,7 +73,7 @@ public class AuthenFilter implements Filter {
         AD_RESOURCES.add("UpdateSupporter.jsp");
         AD_RESOURCES.add("UpdateTerm.jsp");
         AD_RESOURCES.add("RegisterAD.jsp");
-        // khai boa nhung resources ma ko can xac thuc, phan quyen
+        // khai boa nhung resources msa ko can xac thuc, phan quyen
         NON_AUTHEN_RESOURCES = new ArrayList<>();
         NON_AUTHEN_RESOURCES.add("Login.jsp");
         NON_AUTHEN_RESOURCES.add("HomePage.jsp");

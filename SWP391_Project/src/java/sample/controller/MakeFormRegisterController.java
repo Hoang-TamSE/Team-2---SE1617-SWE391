@@ -70,6 +70,9 @@ public class MakeFormRegisterController extends HttpServlet {
                     a = request.getParameterValues(mjID);
                     if (a != null) {
                         for (String nwID : a) {
+                            if(nwID.equals("true")){
+                                continue;
+                            }
                             registerAD = new RegisterADDTO(0, mjID, nwID, termID, startDate, endDate, 20);
                             checkVaildCreate = dao.createSemester(registerAD);
                         }

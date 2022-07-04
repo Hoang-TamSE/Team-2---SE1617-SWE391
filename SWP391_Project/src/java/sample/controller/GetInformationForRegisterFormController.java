@@ -58,8 +58,8 @@ public class GetInformationForRegisterFormController extends HttpServlet {
                     for (RegisterADDTO registerAD : listRegisterAD) {
                         for (int i = 0; i < listNarrow.size(); i++ ) {
                             if(listNarrow.get(i).getNarrowID().equals(registerAD.getNarrowID())){
-                                listNarrow.remove(i);
-                                i--;
+                                listNarrow.get(i).setNarrowID(listNarrow.get(i).getNarrowID() + "-true");
+                                
                                 continue;
                             }
                         }
