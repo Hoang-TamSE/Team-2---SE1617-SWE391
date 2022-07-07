@@ -1,6 +1,6 @@
 <%-- 
-    Document   : HomePage_IT
-    Created on : Jun 23, 2022, 1:41:13 PM
+    Document   : HomePage_GD
+    Created on : Jul 6, 2022, 2:38:32 PM
     Author     : user
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Kỹ Thuật Phần Mềm</title>
+        <title>Thiết Kế Đồ Họa</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="css/homepagecss.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -19,17 +19,16 @@
         <div id="myCarousel" class="carousel item" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="images/it.jpg" alt="IT">
+                    <img src="images/GD.jpg" alt="GD">
                     <div class="carousel-caption">
-                        <h3 class="hcaption-carousel">KỸ THUẬT PHẦN MỀM</h3>
+                        <h3 class="hcaption-carousel">THIẾT KẾ MỸ THUẬT SỐ  </h3>
                         <div class="caption-carousel">
-                            <p>Với sự hỗ trợ của phần mềm, các quy trình hoạt động tối ưu hóa,</p>
-                            <p>con người được giải phóng khỏi những công việc thủ công nhàm</p>
-                            <p>chán, giảm thiểu sai sót, nâng cao năng suất và hiệu quả công</p>
-                            <p>việc. Khi phần mềm được ứng dụng rộng và trở thành “hạt nhân”</p>
-                            <p>cho sự phát triển của đời sống, sinh viên ngành Kỹ thuật Phần</p>
-                            <p>mềm trở thành nhân tố được săn đón hàng đầu trên thị trường</p>
-                            <p>lao động.</p>
+                            <p>Với sự phát triển nhanh chóng của truyền thông và quảng cáo tại</p>
+                            <p>Việt Nam, Thiết kế Mỹ thuật số (Digital Art Design) trở thành</p>
+                            <p>chuyên ngành hấp dẫn với bạn trẻ đam mê sáng tạo và năng</p>
+                            <p>động. Sinh viên tốt nghiệp có khả năng kết hợp giữa thiết kế với</p>
+                            <p>truyền thông, mỹ thuật, thương mại đáp ứng yêu cầu nền công</p>
+                            <p>nghiệp hiện đại.</p>
                         </div>
                     </div>
                 </div>
@@ -41,13 +40,24 @@
                 <h3>TRIỄN VỌNG NGHỀ NGHIỆP</h3>
                 <div>
                     <p>
-                        Hiện tại, sinh viên Đại học FPT đã và đang làm việc tại Mỹ, Đức, Nhật Bản, Singapore –
-                        những thị trường Công nghệ Thông tin hàng đầu của thế giới.
-                        Tốt nghiệp ngành Kỹ thuật Phần mềm, sinh viên trở thành Chuyên viên giải pháp phần mềm;
-                        Chuyên viên phân tích dữ liệu; Chuyên viên kiểm thử phần mềm; Chuyên viên đảm bảo chất 
-                        lượng phần mềm; Chuyên viên phân tích nghiệp vụ sản phẩm phần mềm; Chuyên viên phát triển 
-                        ứng dụng di động. Sinh viên là những Kỹ sư lập trình, Kỹ sư phát triển hệ thống nhúng tương 
-                        lai tại các doanh nghiệp phần mềm, doanh nghiệp ứng dụng Công nghệ Thông tin vào vận hành.
+                        Thể hiện qua sự phát triển như vũ bão của công nghệ truyền thông - quảng cáo, ngành Thiết kế Mỹ 
+                        thuật số trở thành một ngành học hấp dẫn với các bạn trẻ có cá tính, đam mê thiết kế và thích 
+                        làm việc trong môi trường năng động, trẻ trung. 
+
+
+                        Theo số liệu thống kê của Hiệp hội quảng cáo (VAA), ở nước ta hiện tại có hơn 50 công ty quảng cáo nước ngoài, khoảng
+                        3.000 công ty quảng cáo Việt Nam, hàng nghìn công ty chuyên về Thiết kế Mỹ thuật số. Không chỉ các công ty quảng cáo, các công ty truyền thông,
+                        các đơn vị xuất bản, tòa soạn, cơ quan báo đài, … rất nhiều công ty, tập đoàn lớn đều có nhu cầu tuyển dụng nhân sự trong lĩnh vực thiết kế.
+
+
+                        Từ nhu cầu thực tế của xã hội, các bạn sinh viên tốt nghiệp ngành Thiết kế đồ họa dễ dàng tìm được công việc phù hợp với mức lương khởi điểm 
+                        khá cao so với mặt bằng chung. Mức lương trung bình khởi điểm của sinh viên ngành Thiết kế Mỹ thuật số từ khoảng 8-10 triệu đồng/tháng và đối 
+                        với người có kinh nghiệm từ một đến hai năm là 12-15 triệu/tháng. 
+
+
+                        Một số trường hợp khác, nếu bạn là một người không muốn bị gò bó trong môi trường công sở thì sinh viên theo học ngành Thiết kế Mỹ thuật số có 
+                        thể lựa chọn làm freelance. Lựa chọn này ngày càng khá phổ biến và được nhiều bạn trẻ yêu thích. Mức thu nhập cao, cơ hội việc làm luôn rộng mở,
+                        chính vì vậy, không khó để giải thích ngành Thiết kế Mỹ thuật số luôn thu hút đông đảo thí sinh theo học.
                     </p>
                 </div>
             </div>
@@ -55,22 +65,21 @@
                 <h3>HỌC NGÀNH NÀY LÀM NGHỀ GÌ?</h3>
                 <div>
                     <ul>
-                        <li>Giám đốc kỹ thuật</li>
-                        <li>Quản lý dự án (PM)</li>
-                        <li>Lập trình viên (Coder)</li>
-                        <li>Kỹ sư cầu nối (BrSE)</li>
-                        <li>Kiểm thử phần mềm (Tester)</li>
-                        <li>Kỹ sư đảm bảo chất lượng phần mềm</li>
-                        <li>Quản lý dự án Công nghệ Thông tin</li>
-                        <li>Quản lý kỹ thuật</li>
-                        <li>Quản trị viên dự án phần mềm và CNTT</li>
+                        <li>Giám đốc sản xuất phim hoạt hình, game.</li>
+                        <li>Giám đốc sản xuất tại các Production House.</li>
+                        <li>Giám đốc tạo hình, Giám đốc diễn hoạt 2D - 3D, Giám đốc sáng tạo.</li>
+                        <li>Sinh viên trở thành Chuyên viên Thiết kế Diễn hoạt tạo hình nhân vật 2D, 3D cho phim hoạt hình, game, quảng cáo.</li>
+                        <li>Thiết kế giao diện Game, Ứng dụng di động trên điện thoại thông minh.</li>
+                        <li>Giảng dạy về thiết kế tại các cơ sở có đào tạo Đồ hoạ kỹ thuật số. Chuyên viên nghiên cứu trải nghiệm người dùng.</li>
+                        <li>Chuyên gia dựng hình 3D, Chuyên gia diễn hoạt 3D, xử lý vật liệu, chất liệu.</li>
+                        <li>Chuyên gia kĩ xảo hình ảnh; Chuyên gia công nghệ thực tế ảo(VR), thực tế tăng cường(AR); Khởi nghiệp các studio sản xuất và hậu kỳ.</li>
                     </ul>
                 </div>
             </div>
         </div>
-        
+
         <div style="height: 15px; background-color: whitesmoke"></div>
-        
+
         <div class="why">
             <h3>VÌ SAO HƠN 50.000 SINH VIÊN LỰA CHỌN ĐH FPT?</h3>
             <div class="row d-flex justify-content-center">
@@ -150,9 +159,9 @@
                 </div>
             </div>
         </div>
-        
+
         <div style="height: 15px; background-color: whitesmoke"></div>
-        
+
         <div id="route" class="row d-flex justify-content-center">
             <div id="route-1" class="col-md-5">
                 <h3>LỘ TRÌNH ĐÀO TẠO</h3>
@@ -163,27 +172,17 @@
             <div id="route-2" class="col-md-4">
                 <h3>ĐÀO TẠO KHÁC BIỆT</h3>
                 <p>
-                    Với lợi thế là thành viên của tập đoàn công nghệ FPT, sinh viên Đại 
-                    học FPT được tiếp cận nhanh chóng với xu hướng phát triển thế giới. 
-                    Chương trình đào tạo cử nhân ngành Kỹ thuật Phần mềm tại Đại học FPT 
-                    được thiết kế căn cứ chuẩn ACM, ABET, VINASA (*), các chuẩn học thuật -
-                    nghề nghiệp toàn cầu với sự tư vấn của các chuyên gia và doanh nghiệp 
-                    danh tiếng như Tập đoàn FPT, Tập đoàn IBM… Chương trình đào tạo chuyên
-                    ngành Kỹ thuật Phần mềm của Đại học FPT tích hợp kiến thức và kỹ năng, 
-                    sinh viên nhanh chóng thích nghi nhanh chóng với môi trường doanh nghiệp.
+                    Ngành Thiết kế Mỹ thuật số (Thiết kế Đồ hoạ) tại Đại học FPT đào tạo đồ hoạ động, nghệ thuật số và tương tác
+                    theo định hướng Digital, khác biệt so với nhiều trường đại học đào tạo ngành Thiết kế Đồ họa.
                 </p>
                 <p>
-                    Đội ngũ Giảng viên có kinh nghiệm và chuyên môn cao với trình độ Tiến sĩ, Thạc sĩ. 
-                    Lãnh đạo ưu tú của các doanh nghiệp phần mềm danh tiếng là diễn giả trong các hội thảo,
-                    cố vấn trong các cuộc thi tại Đại học FPT. 100% sinh viên tham gia Học kỳ Đào tạo trong 
-                    doanh nghiệp và thực hiện Khoá luận tốt nghiệp. Sinh viên ngành Kỹ thuật Phần mềm tại Đại
-                    học FPT thông thạo Tiếng Anh và Tiếng Nhật, sẵn sàng cho sự nghiệp toàn cầu. Sinh viên đạt
-                    trình độ tiếng Anh tối thiểu tương đương IELTS 6.0 trước khi bước vào Học kỳ chuyên ngành,
-                    Học kỳ đào tạo trong doanh nghiệp.
+                    Chương trình đào tạo được cập nhật, đáp ứng nhu cầu thực tế của doanh nghiệp. Sinh viên được đào tạo theo chuẩn quốc tế
+                    NASAD, sử dụng giáo trình bản quyền quốc tế, cập nhật những xu hướng và ứng dụng công nghệ về thiết kế mới nhất trên thế giới.
                 </p>
-                <p style="font-size: small;">(*) ACM: Association for Computing Machinery.</p>
-                <p style="font-size: small;">ABET: Accreditation Board for Engineering and Technology.</p>
-                <p style="font-size: small;">VINASA: Hiệp hội Phần mềm Việt Nam.</p>
+                <p>Những hoạt động/sự kiện/triển lãm diễn ra thường xuyên tại Đại học FPT và liên kết với các doanh nghiệp, tổ chức trong lĩnh vực Mỹ thuật
+                    – Thiết kế tạo điều kiện cho sinh viên rèn luyện kỹ năng và thẩm mĩ, tiếp cận những ý tưởng độc đáo và công nghệ hiện đại nhất.</p>
+                <p>Tiếng Anh là ngôn ngữ được sử dụng trong học tập, công việc và cuộc sống của sinh viên ngành Thiết kế Đồ họa tại Đại học FPT. Sinh viên ngành
+                    Thiết kế Đồ họa được đào tạo ngoại ngữ thứ hai là tiếng Trung, sử dụng tốt cả hai ngoại ngữ và sẵn sàng cho sự nghiệp toàn cầu.</p>
             </div>  
         </div>
 
@@ -400,7 +399,7 @@
 
 
         </div>
-        
+
         <div style="height: 15px; background-color: whitesmoke"></div>
 
         <div id="program" class="row d-flex justify-content-center">
@@ -457,36 +456,30 @@
                                 <th scope="row">1</th>
                                 <td>
                                     <ul>
-                                        <li>Nhập môn khoa học máy tính</li>
-                                        <li>Tổ chức và Kiến trúc máy tính</li>
-                                        <li>Cơ sở lập trình Toán cho ngành kỹ thuật</li>
-                                        <li>Kỹ năng học tập đại học</li>
+                                        <li>Hình hoạ - Vẽ Khối, tĩnh vật</li>
+                                        <li>Hình hoạ - Vẽ đầu tượng, chân dung</li>
+                                        <li>Công cụ Thiết kế Trực quan</li>
+                                        <li>Hình chiếu phối cảnh</li>
+                                        <li>Cơ sở văn hóa Việt Nam</li>
+                                        <li>Nguyên lý thị giác</li>
                                         <li>Vovinam 2</li>
                                     </ul>
                                 </td>
                                 <td>
                                     <ul>
                                         <li>
-                                            Sinh viên có bức tranh tổng thể về CNTT thông qua các khái niệm cơ bản: 
-                                            lịch sử phát triển, công cụ, kiến trúc phần cứng, phần mềm, hệ điều hành,
-                                            mạng và Internet, cấu trúc dữ liệu...
+                                            Sinh viên có thể sử dụng thành thạo phần mềm thiết kế 2D, thực hiện bản vẽ chính xác,
+                                            xây dựng bố cục hoàn chỉnh cho những sản phẩm thị giác.
                                         </li>
                                         <li>
-                                            Sinh viên tìm hiểu về kiến trúc và tổ chức máy tính: bao gồm các chủ đề 
-                                            về thiết kế vật lý của máy tính (tổ chức) và thiết kế lôgic của máy tính
-                                            (kiến trúc).
+                                            Sinh viên sẽ nắm vững phương pháp khảo sát các xu hướng thẩm mỹ của nghệ thuật thị giác,
+                                            nghiên cứu những nguyên lý thị giác cơ bản ứng dụng trong không gian 2 chiều và 3 chiều.
                                         </li>
 
                                         <li>
-                                            Sinh viên được học về các ngôn ngữ lập trình, ngôn ngữ C; quá trình phát
-                                            triển phần mềm; lập trình căn bản dùng C.
+                                            Sinh viên được phân tích và đánh giá tác dụng của đơn vị tạo hình ảnh hưởng tới các yếu tố thị giác, 
+                                            chỉ ra những đặc điểm cơ bản của văn hóa các dân tộc Việt Nam.
                                         </li>
-                                        <li>
-                                            Sinh viên được tăng cường các kiến thức cơ bản của giải tích và đại số 
-                                            tuyến tính và các ứng dụng của chúng trong khoa học, kỹ thuật. Sinh viên
-                                            được trang bị phương pháp học đại học hiệu quả.
-                                        </li>
-
                                     </ul>
                                 </td>
                             </tr>
@@ -494,10 +487,10 @@
                                 <th scope="row">2</th>
                                 <td>
                                     <ul>
-                                        <li>Hệ điều hành</li>
-                                        <li>Mạng máy tính</li>
-                                        <li>Lập trình hướng đối tượng</li>
-                                        <li>Toán rời rạc</li>
+                                        <li>Phối cảnh</li>
+                                        <li>Giải phẫu tạo hình</li>
+                                        <li>Hình hoạ - Vẽ tốc họa</li>
+                                        <li>Nguyên lý đồ hoạ cơ bản  </li>
                                         <li>Kỹ năng giao tiếp và cộng tác</li>
                                         <li>Vovinam 3</li>
                                     </ul>
@@ -505,14 +498,15 @@
                                 <td>
                                     <ul>
                                         <li>
-                                            Sinh viên được giới thiệu về hệ điều hành, nắm được các kiến thức về hệ
-                                            thống mạng máy tính, kiến trúc mạng, các mô hình tham chiếu, các giao thức
-                                            , họ giao thức TCP/IP, một số kiến thức cơ bản về an ninh mạng.
+                                            Sinh viên sẽ sử dụng thuần thục những hòa sắc cơ bản, các yếu tố và nguyên lý 
+                                            tạo hình một cách hài hòa, đồng thời sáng tạo những sản phẩm đồ họa 2D hoàn chỉnh.
                                         </li>
-                                        <li>Sinh viên có kiến thức nền tảng toán học cho khoa học máy tính.</li>
+                                        <li>Sinh viên được hoàn thiện kiến thức về nghiên cứu hình họa, được giải thích 
+                                            những nguyên lý cơ bản của khoa học về màu sắc.
+                                        </li>
                                         <li>
-                                            Sinh viên được trang bị kỹ năng làm việc nhóm, bao gồm cả cách làm việc, 
-                                            triển khai, trao đổi các chiến lược và giao tiếp trong nhóm hiệu quả.
+                                            Sinh viên được học cách phân tích hiệu quả thị giác của các nguyên tố và nguyên lý 
+                                            trong thiết kế đồ họa, nắm vững cách phác hình và làm phác thảo nhanh.
                                         </li>
                                     </ul>
                                 </td>
@@ -521,36 +515,32 @@
                                 <th scope="row">3</th>
                                 <td>
                                     <ul>
-                                        <li>Các hệ cơ sở dữ liệu</li>
-                                        <li>Thiết kế Web</li>
-                                        <li>Thực hành OOP với Java</li>
-                                        <li>Cấu trúc dữ liệu và giải thuật</li>
-                                        <li>Ngoại ngữ 2 : Tiếng Nhật 1</li>
+                                        <li>Nghệ thuật đồ họa chữ 1</li>
+                                        <li>Nhiếp ảnh</li>
+                                        <li>Phát triển ý tưởng và kịch bản</li>
+                                        <li>Vẽ màu nước</li>
+                                        <li>Ngoại ngữ 2: tiếng Nhật (1)</li>
                                     </ul>
                                 </td>
                                 <td>
                                     <ul>
                                         <li>
-                                            Sinh viên có kiến thức về các hệ cơ sở dữ liệu với các mô hình cơ sở 
-                                            dữ liệu quan hệ.
+                                            Sinh viên được thoả sức sáng tạo nhân vật, ứng dụng nghệ thuật chữ trong thiết kế, 
+                                            hoàn thiện những sản phẩm hoạt hình thể hiện cá tính riêng.
                                         </li>
                                         <li>
-                                            Sinh viên hiểu về Ngôn ngữ Đánh dấu Siêu văn bản để tạo các trang 
-                                            web, Cascading Style Sheets, Javascript.
+                                            Sinh viên tìm hiểu về: Nền tảng lịch sử của nhiếp ảnh, Phân loại nhiếp ảnh, Cấu trúc máy ảnh,
+                                            hoạt động của máy ảnh, thành phần nền tảng và ngôn ngữ hình ảnh của nhiếp ảnh, các hiếp ảnh gia 
+                                            vĩ đại nhất,  xử lý hậu kỳ, thẩm mỹ trong nhiếp ảnh.
                                         </li>
                                         <li>
-                                            Sinh viên được thực hành các bài lập trình hướng đối tượng với 
-                                            ngôn ngữ Java.
+                                            Sinh viên được trang bị kiến thức về viết kịch bản, từ ý tưởng đến kịch bản, làm thế nào để tạo ra ý tưởng,
+                                            viết tóm tắt cốt truyện, đưa ra các nhân vật, cấu trúc câu chuyện để tạo ra một câu chuyện hấp dẫn. 
                                         </li>
                                         <li>
-                                            Sinh viên nắm vững các khái niệm cơ bản về cấu trúc dữ liệu và các 
-                                            thuật toán được cài đặt cho các cấu trúc dữ liệu, sử dụng ngôn ngữ 
-                                            Java để minh họa.
+                                            Sinh viên sử dụng Tiếng Nhật ở mức độ căn bản: đọc, viết, giao tiếp ở môi trường làm việc.
                                         </li>
-                                        <li>
-                                            Sinh viên sử dụng Tiếng Nhật ở mức độ căn bản: đọc, viết, giao 
-                                            tiếp ở môi trường làm việc.
-                                        </li>
+                                       
                                     </ul>
                                 </td>
                             </tr>
@@ -558,29 +548,27 @@
                                 <th scope="row">4</th>
                                 <td>
                                     <ul>
-                                        <li>Phát triển ứng dụng Java web</li>
-                                        <li>Nhập môn kỹ thuật phần mềm</li>
-                                        <li>Internet vạn vật</li>
-                                        <li>Xác suất thống kê</li>
-                                        <li>Ngoại ngữ 2 : Tiếng Nhật 2</li>
+                                        <li>Tạo hình nhân vật hoạt hình</li>
+                                        <li>Nguyên lý thiết kế trải nghiệm người dùng</li>
+                                        <li>Nghệ thuật đồ họa chữ 2</li>
+                                        <li>Phát triển trực quan cho hoạt hình máy tính</li>
+                                        <li>Ngoại ngữ 2 (2)</li>
                                     </ul>
                                 </td>
                                 <td>
                                     <ul>
                                         <li>
-                                            Sinh viên biết cách xây dựng các ứng dụng web phức tạp trong môi 
-                                            trường doanh nghiệp, được giới thiệu về Java Enterprise Edition.
+                                            Sinh viên được học phương pháp tạo bộ chữ mới làm chất liệu cho những sản phẩm sáng tạo.
                                         </li>
                                         <li>
-                                            Sinh viên có kiến thức chung về các tiến trình và vòng đời trong 
-                                            Kỹ thuật phần mềm và quản lý các dự án.
+                                            Sinh viên được hoàn thiện các kỹ năng tạo hình và phát triển nhân vật để làm việc trong ngành công nghiệp hoạt hình.
                                         </li>
                                         <li>
-                                            Sinh viên được tiếp cận với các kiến thức cơ bản của Internet vạn vật.
+                                            Sinh viên học về các nguyên tắc của thiết kế như lắng nghe người dùng, tìm hiểu các phương tiện di động, cách thức tương
+                                            tác của người dùng trên thiết bị để thiết kế tăng trải nghiệm cho người dùng.
                                         </li>
                                         <li>
-                                            Sinh viên sử dụng Tiếng Nhật ở mức độ nâng cao: đọc, viết, giao tiếp
-                                            ở môi trường làm việc.
+                                            Sinh viên có kỹ năng minh họa, vẽ và thiết kế để tạo ra các hình ảnh thể hiện đúng tác phẩm mình đã hình dung.
                                         </li>
                                     </ul>
                                 </td>
@@ -589,27 +577,25 @@
                                 <th scope="row">5</th>
                                 <td>
                                     <ul>
-                                        <li>Lập trình di động</li>
-                                        <li>Yêu cầu phần mềm</li>
-                                        <li>Kiểm thử phần mềm</li>
-                                        <li>Quản trị dự án</li>
-                                        <li>Đạo đức trong CNTT</li>
+                                        <li>Thiết kế hình ảnh và âm thanh trong làm phim</li>
+                                        <li>Lịch sử mỹ thuật VN &TG</li>
+                                        <li>Nguyên lý truyền thông và quảng cáo</li>
+                                        <li>Môn chuyên ngành tự chọn</li>
                                     </ul>
                                 </td>
                                 <td>
                                     <ul>
                                         <li>
-                                            Sinh viên có đủ kiến thức cơ bản về lập trình Android để sinh
-                                            viên có thể phát triển các ứng dụng hữu ích cũng như tự học thêm
-                                            dễ dàng hơn.
+                                            Sinh viên nắm vững kiến thức nền tảng về sự chuyển động của hình ảnh,
+                                            phân tích hiệu ứng của hình ảnh và âm thanh
                                         </li>
                                         <li>
-                                            Sinh viên biết cách Quản trị dự án nói chung và dự án CNTT nói
-                                            riêng một cách hiệu quả.</li>
+                                            Sinh viên sẽ được ứng dụng kiến thức lịch sử mỹ thuật cho chuyên ngành đồ họa, chỉ ra đặc điểm và đặc trưng tư tưởng
+                                            thẩm mỹ của các thời kỳ lịch sử, nhận biết các dạng thức cơ bản và tính thẩm mỹ của các bộ chữ.
+                                        </li>
                                         <li>
-                                            Sinh viên nắm vững các vấn đề liên quan đến đạo đức của người 
-                                            làm CNTT và người dùng CNTT, sở hữu trí tuệ, an toàn và bảo mật,
-                                            tội phạm máy tính và Internet…
+                                            Để tạo nên những sản phẩm được đánh giá cao, sinh viên tiến hành khảo sát tâm lý, thị hiếu khách hàng,
+                                            khảo sát tương quan thẩm mỹ và công năng.
                                         </li>
                                     </ul>
                                 </td>
@@ -618,15 +604,13 @@
                                 <th scope="row">6</th>
                                 <td>
                                     <ul>
-                                        <li>Thực tập làm việc thực tế tại doanh nghiệp</li>
+                                        <li>Sinh viên làm việc thực tế tại doanh nghiệp theo sự sắp xếp của nhà trường</li>
                                     </ul>
                                 </td>
                                 <td>
                                     <ul>
                                         <li>
-                                            Sinh viên làm việc thực tế từ 4 – 8 tháng tại các công ty thành 
-                                            viên thuộc tập đoàn FPT hoặc hơn 300 doanh nghiệp là đối tác của 
-                                            tập đoàn FPT trên toàn thế giới.
+                                            Sinh làm việc thực tế tại tại các đơn vị sáng tạo nghệ thuật, truyền thông, quảng cáo trong và ngoài nước.
                                         </li>
                                     </ul>
                                 </td>
@@ -635,39 +619,9 @@
                                 <th scope="row">7</th>
                                 <td>
                                     <ul>
-                                        <li>UI/IX</li>
-                                        <li>Kiến trúc và Thiết kế phần mềm</li>
-                                        <li>Phương pháp nghiên cứu</li>
-                                        <li>Môn chuyên ngành tự chọn 1</li>
-                                        <li>Môn chuyên ngành tự chọn 2</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>
-                                            Sinh viên hiểu rõ nguyên tắc tâm lý của giao tiếp người máy, Đánh giá 
-                                            giao diện người sử dụng. Phân tích nhiệm vụ, thiết kế hướng người sử 
-                                            dụng, mô hình hóa và các công nghệ liên quan.
-                                        </li>
-                                        <li>
-                                            Sinh viên nắm vững các phương pháp luận quan trọng về thiết kế phần 
-                                            mềm, các kiểu kiến trúc phần mềm, hướng dẫn thiết kế và công cụ thiết
-                                            kế.
-                                        </li>
-                                        <li>
-                                            Sinh viên được trang bị một số phương pháp nghiên cứu hữu ích, 
-                                            điểm mạnh và điểm yếu của các phương pháp luận, các thức thiết kế 
-                                            và thực hiện dự án nghiên cứu để sinh viên có thể tự thực hiện các 
-                                            dự án nghiên cứu sau này.
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">8</th>
-                                <td>
-                                    <ul>
-                                        <li>Dự án phát triển ứng dụng</li>
+                                        <li>Cơ sở văn hóa Việt Nam</li>
+                                        <li>Sản xuất âm thanh</li>
+                                        <li>Kỹ năng viết bài nghiên cứu</li>
                                         <li>Môn chuyên ngành tự chọn 3</li>
                                         <li>Môn chuyên ngành tự chọn 4</li>
                                     </ul>
@@ -675,10 +629,42 @@
                                 <td>
                                     <ul>
                                         <li>
-                                            Sinh viên có kiến thức của vai trò Quản lý dự án như: Lập kế hoạch, 
-                                            dự đoán các rủi ro, điều phối nhân lực và chia công việc. Ngoài ra, 
-                                            các kiến thức về quản lý nhân sự, phối hợp nhân viên, xử lý xung đột 
-                                            sẽ được cung cấp để nâng cao kinh nghiệm cho việc quản lý. 
+                                            Sinh viên được phân tích và đánh giá tác dụng của đơn vị tạo hình ảnh hưởng tới các yếu tố thị giác, 
+                                            chỉ ra những đặc điểm cơ bản của văn hóa các dân tộc Việt Nam.
+                                        </li>
+                                        <li>
+                                            Sinh viên nắm vững kiến thức nền tảng về hiệu ứng âm thanh, ứng dụng trên nhiều phương tiện khác nhau,
+                                            có kỹ thuật chuyên nghiệp để thu, chỉnh sửa và tạo ra âm thanh chất lượng.
+                                        </li>
+                                        <li>
+                                            Học sinh được học về các kỹ năng viết bài nghiên cứu: xác định các hình thức điển hình của bài tiểu luận; 
+                                            lựa chọn và nghiên cứu các chủ đề; soạn thảo, sử dụng ngôn ngữ học thuật và trình bày nghiên cứu; trích dẫn tài liệu tham khảo và tránh đạo văn.
+                                        </li>
+                                        <li>Sinh viên có kỹ năng tìm hiểu, nghiên cứu và viết các bài nghiên cứu học thuật.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>
+                                    <ul>
+                                        <li>Mỹ học và lịch sử thiết kế</li>
+                                        <li>Luật sở hữu trí tuệ</li>
+                                        <li>Thiết kế hồ sơ cá nhân</li>
+                                        <li>Môn chuyên ngành tự chọn 5</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            Sinh viên sẽ tiếp cận với các các định nghĩa, quan điểm thẩm mỹ khác nhau để góp phần giáo dục phát triển thẩm mỹ, 
+                                            cảm nhận và sáng tạo theo quy luật của cái đẹp.
+                                        </li>
+                                        <li>
+                                            Bên cạnh kiến thức chuyên môn, sinh viên còn nắm vững Luật bản quyền, kiến thức về quan hệ xã hội và công việc.
+                                        </li>
+                                        <li>
+                                            Sinh viên có kỹ năng thể sự sáng tạo, năng lực, cá tính nghệ thuật trong hồ sơ năng lực của bản thân.
                                         </li>
                                     </ul>
                                 </td>
@@ -688,16 +674,16 @@
                                 <td>
                                     <ul>
                                         <li>Khóa luận tốt nghiệp</li>
-                                        <li>Khởi sự doanh nghiệp</li>
                                     </ul>
                                 </td>
                                 <td>
                                     <ul>
                                         <li>
-                                            Sinh viên thực hiện và sở hữu đồ án/ứng dụng/mô hình kinh doanh 
-                                            dịch vụ của riêng mình.
+                                            Sinh viên thực hiện và sở hữu đồ án/ ứng dụng/ mô hình khoa học đáp ứng tốt những yêu cầu khắt khe từ hội đồng.
                                         </li>
-                                        <li>Sinh viên tự tin làm việc tại hầu hết các quốc gia trên thế giới.</li>
+                                        <li>
+                                            Từ những kinh nghiệm tích luỹ xuyên suốt quá trình đào tạo, sinh viên sẵn sàng làm việc tại các doanh nghiệp trong và ngoài nước.
+                                        </li>
                                     </ul>
                                 </td>
                             </tr>

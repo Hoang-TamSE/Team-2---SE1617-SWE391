@@ -77,6 +77,8 @@ public class AuthenFilter implements Filter {
         NON_AUTHEN_RESOURCES = new ArrayList<>();
         NON_AUTHEN_RESOURCES.add("Login.jsp");
         NON_AUTHEN_RESOURCES.add("HomePage.jsp");
+        NON_AUTHEN_RESOURCES.add("HomePage_IT.jsp");
+        NON_AUTHEN_RESOURCES.add("HomePage_GD.jsp");
         NON_AUTHEN_RESOURCES.add("MainController");
         NON_AUTHEN_RESOURCES.add("Footer.jsp");
         NON_AUTHEN_RESOURCES.add("HeaderStudent");
