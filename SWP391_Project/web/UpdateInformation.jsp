@@ -31,7 +31,7 @@
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        <input value="${LOGIN_USER.userID}" name="id" readonly type="email" class="form-control">
+                                        <input value="${LOGIN_USER.userID}" name="userID" readonly type="email" class="form-control">
                                     </td>
                                 </tr>
                                 <tr>
@@ -49,13 +49,16 @@
                                 <tr>
                                     <td>Phone</td>
                                     <td>
-                                        <input value="${LOGIN_USER.phoneNumber}" name="id" class="form-control" placeholder="Enter Phone..." >
+                                        <input value="${LOGIN_USER.phoneNumber}" name="phoneNumber" class="form-control" placeholder="Enter Phone..." >
+                                    </td>
+                                    <td>
+                                        <p style="color: red;">${ERROR.phoneNumber}</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Address</td>
                                     <td>
-                                        <input value="${LOGIN_USER.address}" name="PhoneNumber" class="form-control" placeholder="Enter Address..."  >
+                                        <input value="${LOGIN_USER.address}" name="address" class="form-control" placeholder="Enter Address..."  >
                                     </td>                
                                 </tr>
                                 <tr>
@@ -79,9 +82,8 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;" colspan="2">
-                                        <input class="button btn btn-success" type="submit" name="action" value="UpdateStudent">
-                                        <input type="hidden" name="userID" value="${requestScope.STUDENT.userID}">
-                                        <input type="hidden" name="email" value="${requestScope.STUDENT.email}">
+                                        <input class="button btn btn-success" type="submit" name="action" value="UpdateStudentInformation">
+                                        
                                     </td>
                                 </tr>
                             </table>

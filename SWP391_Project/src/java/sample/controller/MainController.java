@@ -106,6 +106,12 @@ public class MainController extends HttpServlet {
     private static final String MAKEFORMREGISTER="MakeFormRegister";
     private static final String MAKEFORMREGISTER_CONTROLLER="MakeFormRegisterController";
     
+    private static final String UPDATESTUDENTINFORMATION="UpdateStudentInformation";
+    private static final String UPDATESTUDENTINFORMATION_CONTROLLER="UpdateStudentInformationController";
+    
+    private static final String SENDMESS="SendMess";
+    private static final String SENDMESS_CONTROLLER="SendMessController";
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -231,6 +237,12 @@ public class MainController extends HttpServlet {
             }
             else if(MAKEFORMREGISTER.equals(action)){
                     url= MAKEFORMREGISTER_CONTROLLER;
+            }
+            else if(UPDATESTUDENTINFORMATION.equals(action)){
+                    url= UPDATESTUDENTINFORMATION_CONTROLLER;
+            }
+            else if(SENDMESS.equals(action)){
+                    url= SENDMESS_CONTROLLER;
             }
         } catch (Exception e) {
             log("Error at MainController: "+ e.toString());

@@ -29,13 +29,19 @@
                         <form action="MainController" method="GET">
                             <div class="form-group">
                                 <label for="usr">Type:</label>
-                                <input type="text" class="form-control" id="usr">
+                                <input type="text" class="form-control" id="usr" name="title">
+                                <p style="color: red;">${ERROR.messTitle}</p>
                                 <label for="comment">Question:</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                                <p style="color: red;">${ERROR.messText}</p>
                             </div>
                             <br>
-                            <button type="button" class="btn btn-success">Submit</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                            <input type="hidden" name="userID" value="${LOGIN_USER.userID}" />
+                            <input type="hidden" name="majorID" value="${LOGIN_USER.majorID}" />
+                            <input type="hidden" name="action" value="SendMess" />
                         </form>
+                            <p style="color: lightgreen;">${SUCCESS}</p>
                     </div>
                 </div>
             </main>

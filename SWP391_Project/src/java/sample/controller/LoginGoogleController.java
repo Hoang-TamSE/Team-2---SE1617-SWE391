@@ -27,7 +27,6 @@ import sample.utils.GoogleUtils;
 public class LoginGoogleController extends HttpServlet {
 
     private static final String ERROR = "error.jsp";
-    private static final String SUCCESS = "MainController?action=SearchForUser";
     private static final long serialVersionUID = 1L;
     private static final String AD = "AD";
     private static final String ADMIN_PAGE = "adminPage.jsp";
