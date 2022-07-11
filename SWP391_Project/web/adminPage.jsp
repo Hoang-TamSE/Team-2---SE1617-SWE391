@@ -30,52 +30,45 @@
                         <h1>Welcome ${sessionScope.LOGIN_USER.name}</h1>
                     </div>
                 </div>
-                <div class="row">
-
-                    <div style="max-width: 30%;" class="card-item col-xl-4 col-sm-6 col-12">
-                        <div class="card-item_employee">
-                            <i style="color: #00c5fb" class="fas fa-building"></i>
-                        </div>
-
-                        <div>
-                            
-                            <a 
-                                class="card-item_link"
-                                href="Student.jsp">Student</a>
-                        </div>
-
+                    <div style="height: 50px;">
+                        
                     </div>
-                    <div style="width: 20px"></div>
+                <div class="row d-flex justify-content-center">
 
-                    <div style="max-width: 30%" class="card-item col-xl-4 col-sm-6 col-12">
+                    <div style="max-width: 25%;height: 200px" class="border border-danger rounded card-item col-xl-4 col-sm-6 col-12 w-75">
                         <div class="card-item_employee">
-                            <i style="color: #00c5fb" class="fas fa-user"></i>
-                        </div>
-
-                        <div>
-                            
-                            <a 
-                                class="card-item_link"
-                                href="Major.jsp">Major</a>
-                        </div>    
-                    </div>
-                    <div style="width: 20px"></div>
-
-                    <div style="max-width: 30%" class="card-item col-xl-4 col-sm-6 col-12">
-                        <div class="card-item_employee">
-                            <i style="color: #00c5fb" class="fas fa-book-open"></i>
-                        </div>
-
-                        <div>
-                           
-                            <a                         
-                                class="card-item_link"
-                                href="Specialization.jsp">
-                                Narrow
+                            <a style="text-decoration: none;color: black;" class="card-item_link d-flex justify-content-center" href="MainController?action=Search&searchby=name">
+                                <i class="fa-solid fa-user fa-3x p-5"></i>
                             </a>
-                        </div>    
+                            <div class="d-flex justify-content-center">
+                                <a class="card-item_link" style="text-decoration: none; color: black" class="card-item_link d-flex justify-content-center" href="MainController?action=Search&searchby=name">Student</a>
+                            </div>
+                        </div>
                     </div>
+                    <div style="width: 20px"></div>
 
+                    <div style="max-width: 25%;height: 200px" class="border border-danger rounded card-item col-xl-4 col-sm-6 col-12 w-75">
+                        <div class="card-item_employee">
+                            <a style="text-decoration: none; color: black;" class="card-item_link d-flex justify-content-center" href="MainController?action=SearchNarrow&searchby=name">
+                                <i class="fa-brands fa-leanpub fa-3x p-5"></i>
+                            </a>
+                            <div class="d-flex justify-content-center">
+                                <a class="card-item_link" style="text-decoration: none; color: black" class="card-item_link d-flex justify-content-center" href="MainController?action=SearchNarrow&searchby=name">Narrow</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 20px"></div>
+
+                    <div style="max-width: 25%;height: 200px" class="border border-danger rounded card-item col-xl-4 col-sm-6 col-12 w-75">
+                        <div class="card-item_employee">
+                            <a style="text-decoration: none;color: black;" class="card-item_link d-flex justify-content-center" href="MainController?action=GetInformationForRegisterForm">
+                                <i class="fa-solid fa-calendar-plus fa-3x p-5"></i>
+                            </a>
+                            <div class="d-flex justify-content-center">
+                                <a class="card-item_link" style="text-decoration: none; color: black" class="card-item_link d-flex justify-content-center" href="MainController?action=GetInformationForRegisterForm">Create Form</a>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -87,6 +80,5 @@
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-
 </body>
 </html>
