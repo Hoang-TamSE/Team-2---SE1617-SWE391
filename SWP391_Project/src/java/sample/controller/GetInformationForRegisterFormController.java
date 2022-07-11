@@ -29,7 +29,7 @@ import sample.term.SemesterDTO;
 @WebServlet(name = "GetInformationForRegisterFormController", urlPatterns = {"/GetInformationForRegisterFormController"})
 public class GetInformationForRegisterFormController extends HttpServlet {
 
-    private static final String ERROR = "error.jsp";
+    private static final String ERROR = "RegisterAD.jsp";
     private static final String SUCCESS = "RegisterAD.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -44,7 +44,7 @@ public class GetInformationForRegisterFormController extends HttpServlet {
             List<NarrowDTO> listNarrow = narrowDao.getListNarrow("");
             SemesterDAO semesterDao = new SemesterDAO();
             List<SemesterDTO> listSemester = semesterDao.getListSemester("");
-            if(termCurrent == null){
+            if(termCurrent == null || termCurrent.isEmpty()){
                 termCurrent = listSemester.get(1).getSemesterID();
             }
             RegisterADDAO registerDao = new RegisterADDAO();
