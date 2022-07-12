@@ -85,15 +85,19 @@ public class Validation {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         return timestamp;
     }
-    public static Timestamp dateStringToTimestamp(String date) {
-        String dateTimeString = date.replace("T", " ");
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        LocalDateTime dateTime = LocalDateTime.parse(dateTimeString, formatter);
-        Timestamp examDateTime = Timestamp.valueOf(dateTime);
+    public static Timestamp dateStringToTimestamp(String date) {
+        Timestamp examDateTime = null;
+        if (date != null && !"".equals(date)) {
+            String dateTimeString = date.replace("T", " ");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+            LocalDateTime dateTime = LocalDateTime.parse(dateTimeString, formatter);
+            examDateTime = Timestamp.valueOf(dateTime);
+        }
         return examDateTime;
     }
-    public static int compareDate(Timestamp date1,Timestamp date2) {
+
+    public static int compareDate(Timestamp date1, Timestamp date2) {
         return date1.compareTo(date2);
     }
 
@@ -153,10 +157,11 @@ public class Validation {
             check = dao.checkSemesterID(semesterID);
 
         } catch (Exception e) {
-           e.printStackTrace();
-        } 
+            e.printStackTrace();
+        }
         return check;
     }
+
     public static boolean checkDuplicateUserID(String userID) {
         ValidationDAO dao = new ValidationDAO();
         boolean check = false;
@@ -164,20 +169,22 @@ public class Validation {
             check = dao.checkDuplicateUserID(userID);
 
         } catch (Exception e) {
-           e.printStackTrace();
-        } 
+            e.printStackTrace();
+        }
         return check;
     }
+
     public static boolean checkVaildEmail(String email) {
         boolean check = false;
         try {
             check = email.matches("^\\w+[a-z0-9]*@fpt.edu.vn");
 
         } catch (Exception e) {
-           e.printStackTrace();
-        } 
+            e.printStackTrace();
+        }
         return check;
     }
+
     public static boolean checkMajorID(String majorID) {
         ValidationDAO dao = new ValidationDAO();
         boolean check = false;
@@ -185,10 +192,11 @@ public class Validation {
             check = dao.checkMajorID(majorID);
 
         } catch (Exception e) {
-           e.printStackTrace();
-        } 
+            e.printStackTrace();
+        }
         return check;
     }
+
     public static boolean checkNarrowID(String majorID, String narrowID) {
         ValidationDAO dao = new ValidationDAO();
         boolean check = false;
@@ -196,8 +204,8 @@ public class Validation {
             check = dao.checkNarrowID(majorID, narrowID);
 
         } catch (Exception e) {
-           e.printStackTrace();
-        } 
+            e.printStackTrace();
+        }
         return check;
     }
 

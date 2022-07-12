@@ -19,6 +19,7 @@ public class RegisterADDTO {
     private Timestamp importDate;
     private Timestamp usingDate;
     private int minQuantity;
+    private String narrowName;
 
     public RegisterADDTO() {
         this.registerID = 0;
@@ -40,6 +41,25 @@ public class RegisterADDTO {
         this.minQuantity = minQuantity;
     }
 
+    public RegisterADDTO(int registerID, String majorID, String narrowID, String semesterID, Timestamp importDate, Timestamp usingDate, int minQuantity, String narrowName) {
+        this.registerID = registerID;
+        this.majorID = majorID;
+        this.narrowID = narrowID;
+        this.semesterID = semesterID;
+        this.importDate = importDate;
+        this.usingDate = usingDate;
+        this.minQuantity = minQuantity;
+        this.narrowName = narrowName;
+    }
+
+    public String getNarrowName() {
+        return narrowName;
+    }
+
+    public void setNarrowName(String narrowName) {
+        this.narrowName = narrowName;
+    }
+    
     public int getRegisterID() {
         return registerID;
     }

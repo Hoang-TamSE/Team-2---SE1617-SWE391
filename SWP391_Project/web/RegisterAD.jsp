@@ -134,7 +134,7 @@
                                                                         <label class="form-check-inline" for="${splitNarrowID[0]}">
                                                                             <c:choose>
                                                                                 <c:when test="${splitNarrowID[1] == 'true'}">
-                                                                                    <input type="checkbox" class="form-check-input" disabled="disabled" id="${narrow.narrowID}"  checked="checked" name="${major.majorID}" value="true" >${narrow.narrowName}
+                                                                                    <input type="checkbox" class="form-check-input" disabled="disabled"  checked="checked" name="${major.majorID}" value="true" >${narrow.narrowName}
                                                                                 </c:when>
                                                                                 <c:otherwise>
                                                                                     <input type="checkbox" class="form-check-input" id="${narrow.narrowID}" name="${major.majorID}" value="${splitNarrowID[0]}" >${narrow.narrowName}

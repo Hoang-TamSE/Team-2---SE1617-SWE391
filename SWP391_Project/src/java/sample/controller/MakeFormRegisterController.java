@@ -31,30 +31,40 @@ import sample.validation.Validation;
 @WebServlet(name = "MakeFormRegisterController", urlPatterns = {"/MakeFormRegisterController"})
 public class MakeFormRegisterController extends HttpServlet {
 
-    private static  String ERROR = "MainController?action=GetInformationForRegisterForm&termCurrent=";
-    private static  String SUCCESS = "MainController?action=GetInformationForRegisterForm&termCurrent=";
+    private String ERROR = "MainController?action=GetInformationForRegisterForm&termCurrent=";
+    private String SUCCESS = "MainController?action=GetInformationForRegisterForm&termCurrent=";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String termID = request.getParameter("term").substring(64);
+        ERROR = "MainController?action=GetInformationForRegisterForm&termCurrent=" + termID;
         String url = ERROR;
         try {
             String startDateString = request.getParameter("startDate");
             String endDateString = request.getParameter("endDate");
-            String termID = request.getParameter("term").substring(64);
-            ERROR = ERROR + termID;
-            SUCCESS = SUCCESS + termID;
+            SUCCESS = "MainController?action=GetInformationForRegisterForm&termCurrent=" + termID;
             Timestamp startDate = Validation.dateStringToTimestamp(startDateString);
             Timestamp endDate = Validation.dateStringToTimestamp(endDateString);
             Timestamp currentDate = Validation.takeCurrentDate();
             boolean checkValid = true;
             RegisterADERROR error = new RegisterADERROR();
-            if (Validation.compareDate(startDate, currentDate) == -1) {
-                error.setImportDate("The start date need greater than or equal current date!!");
+            if (startDate != null ) {
+                if (Validation.compareDate(startDate, currentDate) == -1) {
+                    error.setImportDate("The start date need greater than or equal current date!!");
+                    checkValid = false;
+                }
+            } else {
+                error.setImportDate("Please fill start date!");
                 checkValid = false;
             }
-            if (Validation.compareDate(endDate, startDate) == -1 || Validation.compareDate(endDate, startDate) == 0) {
-                error.setUsingDate("The end date need greater than  start date!!");
+            if (endDate != null) {
+                if (Validation.compareDate(endDate, startDate) == -1 || Validation.compareDate(endDate, startDate) == 0) {
+                    error.setUsingDate("The end date need greater than  start date!!");
+                    checkValid = false;
+                }
+            } else {
+                error.setUsingDate("Please fill end date!");
                 checkValid = false;
             }
             if (checkValid) {
@@ -70,7 +80,7 @@ public class MakeFormRegisterController extends HttpServlet {
                     a = request.getParameterValues(mjID);
                     if (a != null) {
                         for (String nwID : a) {
-                            if(nwID.equals("true")){
+                            if (nwID.equals("true")) {
                                 continue;
                             }
                             registerAD = new RegisterADDTO(0, mjID, nwID, termID, startDate, endDate, 20);
@@ -78,7 +88,7 @@ public class MakeFormRegisterController extends HttpServlet {
                         }
                     }
                 }
-                if(checkVaildCreate){
+                if (checkVaildCreate) {
                     url = SUCCESS;
                 }
             } else {

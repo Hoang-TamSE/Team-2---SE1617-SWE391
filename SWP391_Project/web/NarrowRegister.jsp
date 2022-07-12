@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 
     Document   : NarrowRegister
     Created on : Jun 12, 2022, 7:21:55 PM
@@ -36,69 +37,69 @@
 
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <div class="main_form">
-                            <div class="row row-content mt-5">
-                                <div class="col-12">
-                                    <div class="text-center">
-                                        <h2>REGISTER</h2>
-                                    </div>
-
-                                    <div class="content" style="border: 1px solid #ddd; padding: 15px; border-radius: 15px; background-color: #f3b467;">
-                                        <div class="row" style="margin-bottom: 20px;">
-                                            <div class="col-6">
-                                                <div class="form-group" style="padding-left: 70px;">
-                                                    <h4>Major</h4>
+                        <c:choose>
+                            <c:when test="${ not empty requestScope.LIST_NARROW }">
+                                <form action="MainController">
+                                    <div class="main_form">
+                                        <div class="row row-content mt-5">
+                                            <div class="col-12">
+                                                <div class="text-center">
+                                                    <h2>REGISTER</h2>
                                                 </div>
-                                            </div>
 
-                                            <div class="col-6">
-                                                <div class="form-group">
-                                                    <h4>Software Engineer</h4>
+                                                <div class="content" style="border: 1px solid #ddd; padding: 15px; border-radius: 15px; background-color: #f3b467;">
+                                                    <div class="row" style="margin-bottom: 20px;">
+                                                        <div class="col-6">
+                                                            <div class="form-group" style="padding-left: 70px;">
+                                                                <h4>Major</h4>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-6">
+                                                            <div class="form-group">
+                                                                <h4>${MAJOR.majorName}</h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="form-group" style="padding-left: 70px;">
+                                                                <h4>Narrow Specialization</h4>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-6">
+                                                            <div class="form-group">
+                                                                <p class=" d-none d-sm-block">
+                                                                    <c:forEach var="narrow" items="${LIST_NARROW}">
+                                                                        <label class="form-check-inline" for="radio1">
+                                                                            <input type="radio" class="form-check-input" id="${narrow.narrowID}" name="narrowRegister" value="${narrow.registerID}" >${narrow.narrowName}
+                                                                        </label> <br>
+                                                                    </c:forEach>
+
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 text-center">
+                                                            <div class="form-group">
+                                                                <button class="submit btn btn-success">Submit</button>
+                                                                <input type="hidden" name="action" value="RegisterNarrow"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
+
+
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="form-group" style="padding-left: 70px;">
-                                                    <h4>Narrow Specialization</h4>
-                                                </div>
-                                            </div>
 
-                                            <div class="col-6">
-                                                <div class="form-group">
-                                                    <p class=" d-none d-sm-block">
-                                                        <label class="form-check-inline" for="radio1">
-                                                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" >PRN211 (.NET)
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio2">
-                                                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Kỹ sư cầu nối (JS)
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio3">
-                                                            <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">PRP201c (Autonomous Car)
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio4">
-                                                            <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">PRP201c (AI with tensor flow)
-                                                        </label> <br>
-                                                        <label class="form-check-inline" for="radio5">
-                                                            <input type="radio" class="form-check-input" id="radio5" name="optradio" value="option5">FER201m (React/NodeJS)
-                                                        </label><br>
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12 text-center">
-                                                <div class="form-group">
-                                                    <button class="submit btn btn-success">Submit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                        </div><!-- MAIN-FORM -->
+                                    </div><!-- MAIN-FORM -->
+                                </form>
+                            </c:when>
+                        </c:choose>
+                        <p style="color: red">${requestScope.ERROR}</p>
+                        <p style="color: lightgreen">${requestScope.SUCCESS}</p>
                     </div>
 
                 </div>
