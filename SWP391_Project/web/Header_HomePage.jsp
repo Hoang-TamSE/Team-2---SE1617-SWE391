@@ -39,11 +39,11 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="HomePage_IT.jsp">Kỹ thuật phần mềm</a>
                             <a class="dropdown-item" href="HomePage_GD.jsp">Thiết kế mỹ thuật số</a>
+                            <a class="dropdown-item" href="HomePage_TTDPT.jsp">Truyền thông đa phương tiện</a>
                             <a class="dropdown-item" href="#">An toàn thông tin</a>
                             <a class="dropdown-item" href="#">Trí tuệ nhân tạo</a>
                             <a class="dropdown-item" href="#">Quản trị kinh doanh</a>
                             <a class="dropdown-item" href="#">Kinh doanh quốc tế</a>
-                            <a class="dropdown-item" href="#">Truyền thông đa phương tiện</a>
                             <a class="dropdown-item" href="#">Quản trị khách sạn</a>
                             <a class="dropdown-item" href="#">Ngôn ngữ Anh</a>
                             <a class="dropdown-item" href="#">Ngôn ngữ Nhật</a>
