@@ -26,6 +26,15 @@ public class RegisterADDAO {
     private static final String GETREGISTERFORMBYTERM = "SELECT registerID, majorID, narrowID, semesterID \n"
             + "FROM tblRegisterNarrow \n"
             + "WHERE semesterID = ? AND status = 'true'";
+    private static final String GET_REGISTER_FORM_BY_MAJOR_AND_TERM = "SELECT RG.registerID, RG.majorID, RG.semesterID, RG.narrowID, NR.narrowName"
+            + " FROM tblRegisterNarrow RG "
+            + "INNER JOIN tblNarrow NR "
+            + "ON RG.narrowID = NR.narrowID "
+            + "WHERE RG.majorID = ? "
+            + "AND RG.semesterID = ? "
+            + "AND RG.status = 'true' "
+            + "AND RG.importDate <= GETDATE() "
+            + "AND RG.usingDate  >= GETDATE()";
 
     public boolean createSemester(RegisterADDTO registerAD) throws SQLException {
         boolean check = false;
@@ -72,6 +81,43 @@ public class RegisterADDAO {
                     String narrowID = rs.getString("narrowID");
                     String semesterID = rs.getString("semesterID");
                     list.add(new RegisterADDTO(registerID, majorID, narrowID, semesterID, null, null, 0));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return list;
+    }
+
+    public List<RegisterADDTO> getListRegiterByTermAndMajor(String semester, String majorOfST) throws SQLException {
+        List<RegisterADDTO> list = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(GET_REGISTER_FORM_BY_MAJOR_AND_TERM);
+                ptm.setString(1, majorOfST);
+                ptm.setString(2, semester);
+                rs = ptm.executeQuery();
+                while (rs.next()) {
+                    int registerID = rs.getInt("registerID");
+                    String majorID = rs.getString("majorID");
+                    String narrowID = rs.getString("narrowID");
+                    String semesterID = rs.getString("semesterID");
+                    String narrowName = rs.getString("narrowName");
+                    list.add(new RegisterADDTO(registerID, majorID, narrowID, semesterID, null, null, 0, narrowName));
                 }
             }
         } catch (Exception e) {

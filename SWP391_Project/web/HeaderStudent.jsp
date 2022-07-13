@@ -64,7 +64,7 @@
                                 <div class="sb-nav-link-icon"></div>
                                 View Application                               
                             </a>
-                            <a class="nav-link collapsed" href="NarrowRegister.jsp">
+                            <a class="nav-link collapsed" href="MainController?action=FormRegisterNarrow">
                                 <div class="sb-nav-link-icon"></div>
                                 Narrow Register                             
                             </a>                

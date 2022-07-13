@@ -13,67 +13,57 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import sample.RegisterAD.RegisterADDAO;
 import sample.RegisterAD.RegisterADDTO;
+import sample.RegisterDetail.RegisterDetailDAO;
 import sample.major.MajorDAO;
 import sample.major.MajorDTO;
 import sample.narrow.NarrowDAO;
 import sample.narrow.NarrowDTO;
-import sample.term.SemesterDAO;
-import sample.term.SemesterDTO;
+import sample.student.StudentDAO;
+import sample.student.StudentDTO;
 
 /**
  *
  * @author Hoang Tam
  */
-@WebServlet(name = "GetInformationForRegisterFormController", urlPatterns = {"/GetInformationForRegisterFormController"})
-public class GetInformationForRegisterFormController extends HttpServlet {
+@WebServlet(name = "FormRegisterNarrowController", urlPatterns = {"/FormRegisterNarrowController"})
+public class FormRegisterNarrowController extends HttpServlet {
 
-    private static final String ERROR = "RegisterAD.jsp";
-    private static final String SUCCESS = "RegisterAD.jsp";
+    private final String ERROR = "NarrowRegister.jsp";
+    private final String SUCCESS = "NarrowRegister.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
+        HttpSession session = request.getSession();
         try {
-            String termCurrent = request.getParameter("termCurrent");
-            MajorDAO majorDao = new MajorDAO();
-            List<MajorDTO> listMajor = majorDao.getListMajor("");
-            NarrowDAO narrowDao = new NarrowDAO();
-            List<NarrowDTO> listNarrow = narrowDao.getListNarrow("");
-            SemesterDAO semesterDao = new SemesterDAO();
-            List<SemesterDTO> listSemester = semesterDao.getListSemester("");
-            if(termCurrent == null || termCurrent.isEmpty()){
-                termCurrent = listSemester.get(1).getSemesterID();
-            }
-            RegisterADDAO registerDao = new RegisterADDAO();
-            List<RegisterADDTO> listRegisterAD = registerDao.getListSemester(termCurrent);
-            boolean checklist = true;
-            if (listMajor.size() == 0 || listNarrow.size() == 0 || listSemester.size() == 0) {
-                checklist = false;
-            }
-            if (checklist) {
-                if(!listRegisterAD.isEmpty()){
-                    for (RegisterADDTO registerAD : listRegisterAD) {
-                        for (int i = 0; i < listNarrow.size(); i++ ) {
-                            if(listNarrow.get(i).getNarrowID().equals(registerAD.getNarrowID())){
-                                listNarrow.get(i).setNarrowID(listNarrow.get(i).getNarrowID() + "-true");
-                                
-                                continue;
-                            }
-                        }
+            StudentDTO student = (StudentDTO) session.getAttribute("LOGIN_USER");
+            if (student != null) {
+                String userID = student.getUserID();
+                RegisterADDAO daoRegister = new RegisterADDAO();
+                RegisterDetailDAO daoRegisterDetail = new RegisterDetailDAO();
+                boolean checkStudentRegisted = daoRegisterDetail.checkRegisted(userID);
+                if (!checkStudentRegisted) {
+                    MajorDAO majorDAO = new MajorDAO();
+                    MajorDTO major = majorDAO.getMajor(student.getMajorID());
+                    String semesterID = student.getSemesterID();
+                    List<RegisterADDTO> ListRegister = daoRegister.getListRegiterByTermAndMajor(semesterID, student.getMajorID());
+                    if (major != null && ListRegister.size() != 0) {
+                        request.setAttribute("MAJOR", major);
+                        request.setAttribute("LIST_NARROW", ListRegister);
+                        url = SUCCESS;
+                    } else {
+                        request.setAttribute("ERROR", "Have something wrong please contact with admin!");
                     }
+                } else {
+                    request.setAttribute("ERROR", "You are registed narrow specialization");
+
                 }
-                request.setAttribute("LIST_MAJOR", listMajor);
-                request.setAttribute("LIST_NARROW", listNarrow);
-                request.setAttribute("LIST_SEMESTER", listSemester);
-                request.setAttribute("LIST_RegisterForm", listRegisterAD);
-                request.setAttribute("CURRENT_TERMID", termCurrent);
-                url = SUCCESS;
             }
         } catch (Exception e) {
-            log("error at DeleteController: " + e.toString());
+            log("Error at FormRegisterNarrowController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }
