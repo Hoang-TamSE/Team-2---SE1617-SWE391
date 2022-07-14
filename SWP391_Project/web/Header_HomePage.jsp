@@ -53,14 +53,7 @@
                         <a class="nav-link" href="Login.jsp">Đăng nhập</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0 col-md-4">
-                    <div style="position: relative;">
-                        <input class="custom_search form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <span class="search_span"></span>
-                    </div>
-                    <button class="ml-lg-3 btn btn-success my-2 my-sm-0 search_button tx--white" type="button"
-                            ripple="ripple">Tìm kiếm</button>
-                </form>
+                
             </div>
         </nav>
 
