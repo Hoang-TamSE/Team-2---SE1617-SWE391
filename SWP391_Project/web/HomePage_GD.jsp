@@ -190,27 +190,25 @@
 
         <div id="narrow" class="row d-flex justify-content-center">
 
-            <h3>CHUYÊN NGÀNH HẸP NGÀNH CÔNG NGHỆ THÔNG TIN</h3>
+            <h3>CHUYÊN NGÀNH HẸP NGÀNH THIẾT KẾ ĐỒ HỌA</h3>
 
             <div class="col-md-2 list-major">
 
                 <h4>DANH SÁCH CHUYÊN NGÀNH HẸP</h4>
                 <ul class="nav nav-tabs p-3 ">
                     <li class="nav-item">
-                        <a aria-selected="true" class="nav-link active font-weight-bold" href="#IT" role="tab" data-toggle="tab">Cross-platform với .NET</a>
+                        <a aria-selected="true" class="nav-link active font-weight-bold" href="#IT" role="tab" data-toggle="tab">Digital Project 2D</a>
                     </li>                   
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#BA" role="tab" data-toggle="tab">Kỹ sư cầu nối Nhật</a>
+                        <a class="nav-link font-weight-bold" href="#BA" role="tab" data-toggle="tab">Digital Project 3D</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#EL"role="tab" data-toggle="tab">Autonomous Car</a>
+                        <a class="nav-link font-weight-bold" href="#EL"role="tab" data-toggle="tab">Visual Communication Project</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#JL" role="tab" data-toggle="tab">AI with Tensor Flow</a>
+                        <a class="nav-link font-weight-bold" href="#JL" role="tab" data-toggle="tab">Web Design</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#KL" role="tab" data-toggle="tab">React/NodeJS</a>
-                    </li>
+                    
                 </ul>
 
             </div> <!-- col-left -->
@@ -220,7 +218,7 @@
                 <div class="table-wrapper-scroll-y my-custom-scrollbar-2">
                     <div class="tab-content">
                         <div selected role="tabpanel" class="tab-pane fade active show selected" id="IT">
-                            <h5 class="font-weight-bold">Combo: Phát triển ứng dụng cross-platform với .NET</h5>
+                            <h5 class="font-weight-bold">Digital Project 2D</h5>
                             <table class="table" >
                                 <thead>
                                     <tr>
@@ -234,50 +232,27 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">PRN211</th>
+                                        <th scope="row">2DP491</th>
                                         <td>
                                             <ul>
-                                                <li>Lập trình ứng dụng cross-platform cơ bản với .NET</li>
-                                                <li>Basic Cross-Platform Application</li>
-                                                <li>Programming With .NET</li>
+                                                <li>Dự án kỹ thuật số 2D</li>
                                             </ul>
                                         </td>
-                                        <td>60</td>
+                                        <td>30</td>
                                         <td>3</td>
-                                        <td>PRO192 & DBI202</td>
+                                        <td>ANB401 and ANT401 and ANO301</td>
                                         <td style="text-align: center">
-                                            <a target=”_blank” style="color: black;"href="https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylID=5821"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                            <a target=”_blank” style="color: black;"href="https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylid=5460"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <h5 class="font-weight-bold">TỔNG QUAN VỀ .NET</h5>
-                            <p>
-                                .NET hay còn được biết đến là Dotnet là một nền tảng (framework) cho phép lập trình viên sử
-                                dụng để phát triển các ứng dụng, game, website. Nền tảng này được phát triển bởi Microsoft và 
-                                chạy trên hệ điều hành Window. Bản chất .NET không phải một ngôn ngữ lập trình mà là một nền 
-                                tảng. Nó cho phép các ngôn ngữ lập trình khác nhau (như C#, VB.Net) sử dụng để tạo ra các sản 
-                                phẩm ứng dụng mobile hoặc web.
-                            </p>
-                            <p>
-                                Bản chất .NET không phải một ngôn ngữ lập trình mà là một nền tảng. Nó cho phép các ngôn ngữ lập trình khác nhau
-                                (như C#, VB.Net) sử dụng để tạo ra các sản phẩm ứng dụng mobile hoặc web.
-                            </p>
-                            <h5 class="font-weight-bold">ƯU ĐIỂM</h5>
-                            <ul>
-                                <li>Tiết kiệm thời gian & chi phí, tăng hiệu suất</li>
-                                <li>Tính bảo mật cao, giảm xung đột</li>
-                                <li>Đa ngôn ngữ, đa nền tảng</li>
-                                <li>Tận dụng các dịch vụ có sẵn</li>
-                            </ul>
+                            
                         </div> <!-- IT -->
 
                         <div role="tabpanel" class="tab-pane fade show" id="BA">
-                            <h5 class="font-weight-bold">Combo: Định hướng kỹ sư cầu nối Nhật</h5>
-                            <h6>
-                                Lưu ý: Nếu sinh viên chọn chuyên ngành này thì cơ sở sẽ tổ chức cho sinh viên  đi OJT tại Nhật. Nếu sinh 
-                                viên không đồng ý với điều kiện này thì cơ sở không triển khai combo này. 
-                            </h6>
+                            <h5 class="font-weight-bold">Digital Project 3D</h5>
+                            
                             <table class="table" >
                                 <thead>
                                     <tr>
@@ -286,27 +261,30 @@
                                         <th scope="col">Tiết</th>
                                         <th scope="col">Tín chỉ</th>
                                         <th scope="col">Học phần tiên quyết</th>
+                                        <th scope="col">Thông tin</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">JPD133</th>
+                                        <th scope="row">3DP491</th>
                                         <td>
                                             <ul>
-                                                <li>Tiếng Nhật sơ cấp 1-A1/A2</li>
-                                                <li>ElementaryJapanese  1-A1/A2</li>
+                                                <li>Dự án kỹ thuật số 3D</li>
                                             </ul>
                                         </td>
-                                        <td>60</td>
+                                        <td>30</td>
                                         <td>3</td>
-                                        <td> JPD121 or JPD123</td>
+                                        <td>ANM322 & ANA401</td>
+                                        <td style="text-align: center">
+                                            <a target=”_blank” style="color: black;"href="https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylid=5470"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div> <!-- BA -->
 
                         <div role="tabpanel" class="tab-pane fade show" id="EL">
-                            <h5 class="font-weight-bold">Combo: Autonomous Car</h5>
+                            <h5 class="font-weight-bold">Visual Communication Project</h5>
                             <table class="table" >
                                 <thead>
                                     <tr>
@@ -315,27 +293,31 @@
                                         <th scope="col">Tiết</th>
                                         <th scope="col">Tín chỉ</th>
                                         <th scope="col">Học phần tiên quyết</th>
+                                        <th scope="col">Thông tin</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">PRP201c</th>
+                                        <th scope="row">ADE301</th>
                                         <td>
                                             <ul>
-                                                <li>Lập trình Python</li>
-                                                <li>Python Programing</li>
+                                                <li>Dự án thiết kế truyền thông</li>
+                                               
                                             </ul>
                                         </td>
-                                        <td>5</td>
+                                        <td>30</td>
                                         <td>3</td>
-                                        <td>Không</td>
+                                        <td>ADI201 and (AGD301 or DID301)</td>
+                                        <td style="text-align: center">
+                                            <a target=”_blank” style="color: black;"href="https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylid=5471"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>      
                         </div> <!-- EL -->
 
                         <div role="tabpanel" class="tab-pane fade show" id="JL">
-                            <h5 class="font-weight-bold">Combo: AI with Tensor Flow</h5>
+                            <h5 class="font-weight-bold">Web Dsign</h5>
                             <table class="table" >
                                 <thead>
                                     <tr>
@@ -344,20 +326,24 @@
                                         <th scope="col">Tiết</th>
                                         <th scope="col">Tín chỉ</th>
                                         <th scope="col">Học phần tiên quyết</th>
+                                        <th scope="col">Thông tin</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">PRP201c</th>
+                                        <th scope="row">WDT401</th>
                                         <td>
                                             <ul>
-                                                <li>Lập trình Python</li>
-                                                <li>Python Programing</li>
+                                                <li>Thiết kế web</li>
+                                                
                                             </ul>
                                         </td>
                                         <td>5</td>
                                         <td>3</td>
-                                        <td>Không</td>
+                                        <td>WDL301 or WDL202</td>
+                                        <td style="text-align: center">
+                                            <a target=”_blank” style="color: black;"href="https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylid=4522"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table> 
