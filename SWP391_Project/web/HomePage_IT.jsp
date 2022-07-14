@@ -308,6 +308,30 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <h5 class="font-weight-bold">TỔNG QUAN VỀ KỸ SƯ CẦU NỐI NHẬT</h5>
+                            <p>
+                                Kỹ sư cầu nối hay còn được biết đến với tên gọi BrSE viết tắt của từ Bridge System Engineer. Hiểu một cách đơn giản kỹ sư cầu nối là một kỹ sư IT đứng ở giữa làm công việc kết nối giữa
+                                khách hàng (customer) và đội phát triển (offshore) để truyền tải những yêu cầu của khách hàng đến đội ngũ phát triển, đảm bảo cho dự án đi đúng tiến độ và chất lượng.
+                            </p>
+                            <p>
+                                Kỹ sư cầu nối có thể đảm nhiệm rất nhiều công việc khác nhau từ phân tích yêu cầu của khách hàng (Business Analyst), viết tài liệu thiết kế, phát triển, cho đến vận hành hệ thống,….
+                                Tuy nhiên không phải lúc nào BrSE cũng làm hết tất cả các việc trên. Tùy thuộc vào quy mô và tính chất của từng dự án mà công việc của BrSE sẽ khác nhau.
+                            </p>
+                            <h5 class="font-weight-bold">NHỮNG KỸ NĂNG CẦN CÓ</h5>
+                            <ul>
+                                <li>
+                                    Kiến thức chuyên môn về kỹ thuật IT
+                                </li>
+                                <li>
+                                    Khả năng ngoại ngữ
+                                </li>
+                                <li>
+                                    Kỹ năng giao tiếp tốt
+                                </li>
+                                <li>
+                                    Tinh thần trách nhiệm cao
+                                </li>
+                            </ul>
                         </div> <!-- BA -->
 
                         <div role="tabpanel" class="tab-pane fade show" id="EL">
@@ -340,7 +364,17 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>      
+                            </table>    
+                            <h5 class="font-weight-bold">TỔNG QUAN VỀ AUTONOMOUS CAR</h5>
+                            <p>
+                                Công nghệ xe tự lái trong nước đã có những tín hiệu phát triển tích cực và ngày càng phù hợp với ngành giao thông thế hệ mới. Các hãng xe nội địa đang tận dụng nền khoa học -
+                                kỹ thuật tiên tiến nhất để tạo ra đế chế xe tự lái “Made in Vietnam”. Doanh nghiệp Việt đang từng bước gia nhập thị trường xe tự lái để đón đầu cuộc cách mạng 4.0 và chinh phục “cơn lốc” phát triển công nghệ ô tô thế giới.
+                            </p>
+                            <p>
+                                Có thể thấy, FPT là công ty đầu tiên ra mắt công nghệ xe tự hành tại Việt Nam vào năm 2017 và là một trong số ít các công ty tiên phong trong lĩnh vực xe tự hành tại khu vực Đông Nam Á. 
+                                FPT đã thử nghiệm thành công công nghệ xe tự hành trên xe ô tô thương mại 4 chỗ và dòng xe điện sân golf di chuyển trong khuôn viên khu công nghệ cao TP. HCM và khu campus FPT Complex tại Đà Nẵng.
+                            </p>
+                            
                         </div> <!-- EL -->
 
                         <div role="tabpanel" class="tab-pane fade show" id="JL">
@@ -374,6 +408,27 @@
                                     </tr>
                                 </tbody>
                             </table> 
+                            <h5 class="font-weight-bold">TỔNG QUAN VỀ AI WITH TENSORFLOW</h5>
+                            <p>
+                                Với sự bùng nổ của lĩnh vực Trí Tuệ Nhân Tạo – A.I. trong thập kỷ vừa qua, machine learning và deep learning rõ ràng cũng phát triển theo cùng. Và ở thời điểm hiện tại, TensorFlow chính
+                                là thư viện mã nguồn mở cho machine learning nổi tiếng nhất thế giới, được phát triển bởi các nhà nghiên cứu từ Google. Việc hỗ trợ mạnh mẽ các phép toán học để tính toán trong machine learning và deep learning đã giúp việc tiếp cận các bài toán trở nên đơn giản, nhanh chóng và tiện lợi hơn nhiều. 
+                            </p>
+                            <p>
+                                Được viết bằng C++ và thao tác interface bằng Python nên phần performance của TensorFlow cực kỳ tốt. Đối tượng sử dụng nó cũng đa dạng không kém: từ các nhà nghiên cứu, nhà khoa học dữ liệu và dĩ nhiên không thể thiếu các lập trình viên. 
+                            </p>
+                            <h5 class="font-weight-bold">ƯU ĐIỂM</h5>
+                            <ul>
+                                <li>
+                                    Thể hiện góc nhìn tổng quan
+                                </li>
+                                <li>
+                                    Dễ dàng chỉnh sửa định hướng
+                                </li>
+                                <li>
+                                    Dựa trên một nền tảng mạnh mẽ – Google
+
+                                </li>
+                            </ul>
                         </div> <!-- JL -->
 
                         <div role="tabpanel" class="tab-pane fade show" id="KL">
@@ -407,6 +462,29 @@
                                     </tr>
                                 </tbody>
                             </table> 
+                            <h5 class="font-weight-bold">TỔNG QUAN VỀ REACT/NODE JS</h5>
+                            <p>
+                                React JS đang là một trong những thư viện phổ biến nhất giới frontend. Sử dụng React Js để build các ứng dụng front-end với hiệu năng cao và thời gian xây dựng nhanh nhất có thể.
+                            </p>
+                            <p>
+                                Node.js là một hệ thống phần mềm được thiết kế để viết các ứng dụng internet có khả năng mở rộng, đặc biệt là máy chủ web. Chương trình được viết bằng JavaScript, sử dụng kỹ thuật điều khiển theo sự kiện, nhập/xuất không đồng bộ để tối thiểu tổng tài nguyên và tối đa khả năng mở rộng.
+                                Node.js bao gồm có V8 JavaScript engine của Google, libUV, và vài thư viện khác. 
+                            </p>
+                            <h5 class="font-weight-bold">ƯU ĐIỂM</h5>
+                            <ul>
+                                <li>
+                                    NodeJs viết bằng Javascript nên có cộng đồng hỗ trợ cực lớn, nên những vấn đề gặp phải sẽ nhận được sự support rộng rãi so với nhiều framework khác.
+                                </li>
+                                <li>
+                                    Hiệu năng cao + real time: NodeJs với cơ chế xử lý bất đồng bộ - non-blocking giúp NodeJs tiếp nhận và xử lý hàng ngàn request một lúc mà không gặp một khó khăn nào.
+                                </li>
+                                <li>
+                                    Dễ dàng mở rộng.
+                                </li>
+                                <li>
+                                    JSON API - Với javascript thì NodeJS + Nosql làm server là sự lựa chọn số 1 cho JSON API.
+                                </li>
+                            </ul>
                         </div> <!-- KL -->
 
                     </div> <!-- Tab Content -->
