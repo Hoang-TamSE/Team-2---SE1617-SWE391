@@ -18,61 +18,29 @@
                 <!--Grid row-->
                 <div class="row">
                     <!--Grid column-->
-                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase font-weight-bold">Location</h5>
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase font-weight-bold">TRƯỜNG ĐẠI HỌC FPT</h5>
                         <p> TP. Hồ Chí Minh</p>
                         <p>Lô E2a-7, Đường D1 Khu Công nghệ cao, P. Long Thạnh Mỹ, TP. Thủ Đức, TP. Hồ Chí Minh</p>
                         <p>Phone: 028 7300 1866</p>   
                         <p>Email: daihocfpt@fpt.edu.vn</p>
                     </div>
                     <!--Grid column-->
-
+                    <div class="col-lg-5 col-md-6 mb-4 mb-md-0"></div>
+                    
                     <!--Grid column-->
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase font-weight-bold">Name</h5>
-
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <p>Nguyễn Tiến Phát</p>
-                            </li>
-                            <li>
-                                <p>NTP</p>
-                            </li>
-                            <li>
-                                <p>NTP</p>
-                            </li>
-                            <li>
-                                <p>NTP</p>
-                            </li>
-                            <li>
-                                <p>NTP</p>
-                            </li>
-                        </ul>
+                        <h5 class="text-uppercase font-weight-bold">Kết nối với chúng tôi</h5>
+                        <div class="d-flex justify-content-center">
+                            <a href="https://www.youtube.com/channel/UCfNrlxNgcTZDJ3jZeSSSJxg" target="_blank"><i class="fa-brands fa-youtube fa-2x"></i></a>
+                            <a href="https://www.facebook.com/uni.fpt.edu.vn/" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+                            <a href="https://www.instagram.com/fptuniversityhcm/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                        </div>
                     </div>
                     <!--Grid column-->
 
                     <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase mb-0 font-weight-bold">ID</h5>
-
-                        <ul class="list-unstyled">
-                            <li>
-                                <p>SE150133</p>
-                            </li>
-                            <li>
-                                <p>SExxxxxx</p>
-                            </li>
-                            <li>
-                                <p>SExxxxxx</p>
-                            </li>
-                            <li>
-                                <p>SExxxxxx</p>
-                            </li>
-                            <li>
-                                <p>SExxxxxx</p>
-                            </li>
-                        </ul>
-                    </div>
+                      
                     <!--Grid column-->
                 </div>
                 <!--Grid row-->
@@ -83,11 +51,6 @@
             <div class="text-center p-3 font-weight-bold" style="">
                 © 2022 Copyright:
                 <p>Team 2</p>
-                <div>
-                        <a href="https://www.youtube.com/channel/UCfNrlxNgcTZDJ3jZeSSSJxg" target="_blank"><i class="fa-brands fa-youtube fa-2x"></i></a>
-                        <a href="https://www.facebook.com/uni.fpt.edu.vn/" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
-                        <a href="https://www.instagram.com/fptuniversityhcm/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
-                </div>
             </div>
             <!-- Copyright -->
         </footer>
@@ -101,6 +64,7 @@
     div a
     {
         color: white;
+        margin: 10px;
     }
     </style>
 </html>
