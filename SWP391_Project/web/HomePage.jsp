@@ -32,12 +32,12 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="HomePage_IT.jsp">Kỹ thuật phần mềm</a>
+                            <a class="dropdown-item" href="HomePage_GD.jsp">Thiết kế mỹ thuật số</a>
+                            <a class="dropdown-item" href="HomePage_TTDPT.jsp">Truyền thông đa phương tiện</a>
                             <a class="dropdown-item" href="#">An toàn thông tin</a>
                             <a class="dropdown-item" href="#">Trí tuệ nhân tạo</a>
                             <a class="dropdown-item" href="#">Quản trị kinh doanh</a>
                             <a class="dropdown-item" href="#">Kinh doanh quốc tế</a>
-                            <a class="dropdown-item" href="#">Truyền thông đa phương tiện</a>
-                            <a class="dropdown-item" href="#">Thiết kế mỹ thuật số</a>
                             <a class="dropdown-item" href="#">Quản trị khách sạn</a>
                             <a class="dropdown-item" href="#">Ngôn ngữ Anh</a>
                             <a class="dropdown-item" href="#">Ngôn ngữ Nhật</a>
@@ -103,25 +103,22 @@
                 </div>
                 
                 <div class="col-md-4">
-                    <p class="text-center">Graphic Design</p>
+                    <p class="text-center">Thiết kế Mỹ Thuật Số</p>
                     <figure class="hover-menu">
                         <img class="img-responsive" src="images/major2.jpg" />
                         <div>
-                            <a href="#">Home</a>
-                            <a href="#">Pricing</a>
-                            <a href="#">About</a>
+                            <a href="HomePage_GD.jsp">Thiết kế Mỹ Thuật Số</a>
                         </div>
                     </figure>
                 </div>
                 
                 <div class="col-md-4">
-                    <p class="text-center">Business Administration</p>
+                    <p class="text-center">Quản trị kinh doanh</p>
                     <figure class="hover-menu">
                         <img class="img-responsive" src="images/major3.jpg" />
                         <div>
-                            <a href="#">Home</a>
-                            <a href="#">Pricing</a>
-                            <a href="#">About</a>
+                            <a href="#">Kinh doanh quốc tế</a>
+                            <a href="#">Digital Marketing</a>
                         </div>
                     </figure>
                 </div>
@@ -129,116 +126,38 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <p class="text-center">Multimedia</p>
+                    <p class="text-center">Truyền thông đa phương tiện</p>
                     <figure class="hover-menu">
                         <img class="img-responsive" src="images/major4.jpg" />
                         <div>
-                            <a href="#">Home</a>
-                            <a href="#">Pricing</a>
-                            <a href="#">About</a>
+                            <a href="HomePage_TTDPT.jsp">Truyền thông đa phương tiện</a>
                         </div>
                     </figure>
                 </div>
                 <div class="col-md-4">
-                    <p class="text-center">Tourism - Hotel</p>
+                    <p class="text-center">Du lịch & Khách sạn</p>
                     <figure class="hover-menu">
                         <img class="img-responsive" src="images/major5.jpg" />
                         <div>
-                            <a href="#">Home</a>
-                            <a href="#">Pricing</a>
-                            <a href="#">About</a>
+                            <a href="#">Quản trị khách sạn</a>
+                            <a href="#">Quản trị dịch vụ du lịch & lữ hành</a>
                         </div>
                     </figure>
                 </div>
                 <div class="col-md-4">
-                    <p class="text-center">Language</p>
+                    <p class="text-center">Ngôn ngữ</p>
                     <figure class="hover-menu">
                         <img class="img-responsive" src="images/major6.jpg" />
                         <div>
-                            <a href="#">English</a>
-                            <a href="#">Japanese</a>
+                            <a href="#">Ngôn ngữ Anh</a>
+                            <a href="#">Ngôn ngữ Nhật</a>
+                            <a href="#">Ngôn ngữ Hàn Quốc</a>
                         </div>
                     </figure>
                 </div>
             </div>
         </div>
-
-
-        <footer>
-            <!-- Grid container -->
-            <div class="container p-4">
-                <!--Grid row-->
-                <div class="row">
-                    <!--Grid column-->
-                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Location</h5>
-
-                        <p> TP. Hồ Chí Minh</p>
-                        <p>Lô E2a-7, Đường D1 Khu Công nghệ cao, P. Long Thạnh Mỹ, TP. Thủ Đức, TP. Hồ Chí Minh</p>
-                        <p>Phone: 028 7300 1866</p>   
-                        <p>Email: daihocfpt@fpt.edu.vn</p>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Name</h5>
-
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <p>NTP</p>
-                            </li>
-                            <li>
-                                <p>NTP</p>
-                            </li>
-                            <li>
-                                <p>NTP</p>
-                            </li>
-                            <li>
-                                <p>NTP</p>
-                            </li>
-                            <li>
-                                <p>NTP</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase mb-0">ID</h5>
-
-                        <ul class="list-unstyled">
-                            <li>
-                                <p>SExxxxxx</p>
-                            </li>
-                            <li>
-                                <p>SExxxxxx</p>
-                            </li>
-                            <li>
-                                <p>SExxxxxx</p>
-                            </li>
-                            <li>
-                                <p>SExxxxxx</p>
-                            </li>
-                            <li>
-                                <p>SExxxxxx</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Grid column-->
-                </div>
-                <!--Grid row-->
-            </div>
-            <!-- Grid container -->
-
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2022 Copyright:
-                <p>Team 2</p>
-            </div>
-            <!-- Copyright -->
-        </footer>
+        <%@include file="Footer_HomePage.jsp" %>
 
     </body>
 
@@ -479,6 +398,8 @@
       border-bottom: 2px solid black;
       border-top: 2px solid black;
       font-weight: bold;
+      padding: 7px;
+      margin-top: 5px;
     }
     .majors p{
       color: #c128ea;
