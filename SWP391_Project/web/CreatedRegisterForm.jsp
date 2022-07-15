@@ -66,6 +66,7 @@
                                                 <th scope="col">Start Date</th>
                                                 <th scope="col">End Date</th>
                                                 <th scope="col">Number Of Register</th>
+                                                <th style="text-align: center" scope="col">Update</th>
                                             </tr>
                                             <c:forEach var="form" items="${LIST_CREATEDFROM}">
                                                 <tr>
@@ -74,7 +75,14 @@
                                                     <td><c:out value="${form.startDate}"></c:out></td>
                                                     <td><c:out value="${form.endDate}"></c:out></td>
                                                     <td><c:out value="${form.totalStudent}/${requestScope.TOTAL_STUDENT}"></c:out></td>
-                                                    </tr>
+                                                        <td style="text-align: center">              
+                                                        <c:url  var="" value="MainController">
+                                                            <c:param name="" value="${id}"></c:param>
+                                                            <c:param name="action" value=""></c:param>
+                                                        </c:url>
+                                                        <a href="${update}"><i class="fas fa-edit"></i></a>
+                                                    </td>
+                                                </tr>
                                             </c:forEach>
                                             <td>
                                                 <form action="MainController">    
@@ -88,8 +96,8 @@
                                             <c:forEach var="invalid" items="${LIST_ERROR}">
                                                 <p style="color: red"><c:out value="${invalid}"></c:out></p>
                                             </c:forEach>
-                                                <p style="color: red"><c:out value="${UPADTE_ERROR}"></c:out></p>
-                                        </table>
+                                            <p style="color: red"><c:out value="${UPADTE_ERROR}"></c:out></p>
+                                            </table>
                                     </c:when>
                                     <c:otherwise>
                                         <p style="color: red;">${requestScope.ERROR_FORMCREATED}</p>

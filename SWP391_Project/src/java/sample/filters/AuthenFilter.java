@@ -59,6 +59,7 @@ public class AuthenFilter implements Filter {
         AD_RESOURCES.add("AddMajor.jsp");
         AD_RESOURCES.add("AddSpecialization.jsp");
         AD_RESOURCES.add("CreatedRegisterForm.jsp");
+        AD_RESOURCES.add("CreatedFormUpdate.jsp");
         AD_RESOURCES.add("AddStudent.jsp");
         AD_RESOURCES.add("AddSupporter.jsp");
         AD_RESOURCES.add("AddTerm.jsp");
