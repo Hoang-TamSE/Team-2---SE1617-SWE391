@@ -103,25 +103,22 @@
                 </div>
                 
                 <div class="col-md-4">
-                    <p class="text-center">Graphic Design</p>
+                    <p class="text-center">Thiết kế Mỹ Thuật Số</p>
                     <figure class="hover-menu">
                         <img class="img-responsive" src="images/major2.jpg" />
                         <div>
-                            <a href="#">Home</a>
-                            <a href="#">Pricing</a>
-                            <a href="#">About</a>
+                            <a href="HomePage_GD.jsp">Thiết kế Mỹ Thuật Số</a>
                         </div>
                     </figure>
                 </div>
                 
                 <div class="col-md-4">
-                    <p class="text-center">Business Administration</p>
+                    <p class="text-center">Quản trị kinh doanh</p>
                     <figure class="hover-menu">
                         <img class="img-responsive" src="images/major3.jpg" />
                         <div>
-                            <a href="#">Home</a>
-                            <a href="#">Pricing</a>
-                            <a href="#">About</a>
+                            <a href="#">Kinh doanh quốc tế</a>
+                            <a href="#">Digital Marketing</a>
                         </div>
                     </figure>
                 </div>
@@ -129,34 +126,32 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <p class="text-center">Multimedia</p>
+                    <p class="text-center">Truyền thông đa phương tiện</p>
                     <figure class="hover-menu">
                         <img class="img-responsive" src="images/major4.jpg" />
                         <div>
-                            <a href="#">Home</a>
-                            <a href="#">Pricing</a>
-                            <a href="#">About</a>
+                            <a href="HomePage_TTDPT.jsp">Truyền thông đa phương tiện</a>
                         </div>
                     </figure>
                 </div>
                 <div class="col-md-4">
-                    <p class="text-center">Tourism - Hotel</p>
+                    <p class="text-center">Du lịch & Khách sạn</p>
                     <figure class="hover-menu">
                         <img class="img-responsive" src="images/major5.jpg" />
                         <div>
-                            <a href="#">Home</a>
-                            <a href="#">Pricing</a>
-                            <a href="#">About</a>
+                            <a href="#">Quản trị khách sạn</a>
+                            <a href="#">Quản trị dịch vụ du lịch & lữ hành</a>
                         </div>
                     </figure>
                 </div>
                 <div class="col-md-4">
-                    <p class="text-center">Language</p>
+                    <p class="text-center">Ngôn ngữ</p>
                     <figure class="hover-menu">
                         <img class="img-responsive" src="images/major6.jpg" />
                         <div>
-                            <a href="#">English</a>
-                            <a href="#">Japanese</a>
+                            <a href="#">Ngôn ngữ Anh</a>
+                            <a href="#">Ngôn ngữ Nhật</a>
+                            <a href="#">Ngôn ngữ Hàn Quốc</a>
                         </div>
                     </figure>
                 </div>
@@ -479,6 +474,8 @@
       border-bottom: 2px solid black;
       border-top: 2px solid black;
       font-weight: bold;
+      padding: 7px;
+      margin-top: 5px;
     }
     .majors p{
       color: #c128ea;
