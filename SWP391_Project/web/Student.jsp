@@ -43,6 +43,7 @@
                                     <input  type="file" name="file" accept=".xlsx">
                                     <input class="btn-success" type="submit" value="Upload" name="action">
                                 </form>
+                                <span>Template file to add students: <a href="MainController?action=DownloadFileDemo&value=aaa.png">Download</a></span>
                                 <p style="color: red;">${requestScope.ERROR}</p>
                             </div>
                         </div>

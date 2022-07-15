@@ -19,10 +19,9 @@ public class RegisterDetailDAO {
 
     private final String REGISTERBYSTUDENT = "Insert into tblRegisterNarrowDetail (importdate, userID, registerID, status) \n"
             + "VALUES(GETDATE(), ?, ?, 'processing')";
-    private final String CHECKREGISTED = "SELECT * FROM tblRegisterNarrowDetail "
-            + "WHERE userID = ? "
-            + "AND status = 'approve' "
-            + "OR status = 'processing'";
+    private final String CHECKREGISTED = "SELECT * FROM tblRegisterNarrowDetail \n"
+            + "WHERE userID = ? AND (status = 'approve' \n"
+            + "OR status = 'processing')";
 
     public boolean createRegisterByST(RegisterDetailDTO registerST) throws SQLException {
         boolean check = false;
@@ -48,7 +47,7 @@ public class RegisterDetailDAO {
         }
         return check;
     }
-    
+
     public boolean checkRegisted(String userID) throws SQLException {
         boolean check = false;
         Connection conn = null;
@@ -60,7 +59,9 @@ public class RegisterDetailDAO {
                 ptm = conn.prepareStatement(CHECKREGISTED);
                 ptm.setString(1, userID);
                 rs = ptm.executeQuery();
-                check = rs.next();
+                if (rs.next()) {
+                    check = true;
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

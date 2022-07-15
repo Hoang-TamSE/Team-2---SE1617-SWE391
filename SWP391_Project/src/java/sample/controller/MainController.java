@@ -54,6 +54,8 @@ public class MainController extends HttpServlet {
     private static final String SENDMAIL_CONTROLLER="SendMailController";
     private static final String UPLOADFILEEXCEL="Upload";
     private static final String UPLOADFILEEXCEL_CONTROLLER="UploadFileExcelController";
+    private static final String DOWNLOADFILEDEMO="DownloadFileDemo";
+    private static final String DOWNLOADFILEDEMO_CONTROLLER="DownloadFileDemoController";
     
     private static final String ADDSUPPORTER="AddSupporter";
     private static final String ADDSUPPORTER_CONTROLLER="AddSupporterController";
@@ -116,6 +118,13 @@ public class MainController extends HttpServlet {
     private static final String FORMREGISTERNARROW_CONTROLLER="FormRegisterNarrowController";
     private static final String REGISTERNARROW="RegisterNarrow";
     private static final String REGISTERNARROW_CONTROLLER="RegisterNarrowController";
+    
+    private static final String GETSEMESTERFORCREATEDREGUSTERFORM="GetSemesterForCreatedRegisterForm";
+    private static final String GETSEMESTERFORCREATEDREGUSTERFORM_CONTROLLER="GetSemesterForCreatedRegisterFormController";
+    private static final String GETLISTCREATENARROW="GetListCreatedNarrow";
+    private static final String GETLISTCREATENARROW_CONTROLLER="GetListCreatedNarrowController";
+    private static final String APCCEPTREGISTEROFSTUDENT="AcceptRegisterOfStudent";
+    private static final String APCCEPTREGISTEROFSTUDENT_CONTROLLER="AcceptRegisterOfStudentController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -254,6 +263,18 @@ public class MainController extends HttpServlet {
             }
             else if(REGISTERNARROW.equals(action)){
                     url= REGISTERNARROW_CONTROLLER;
+            }
+            else if(GETSEMESTERFORCREATEDREGUSTERFORM.equals(action)){
+                    url= GETSEMESTERFORCREATEDREGUSTERFORM_CONTROLLER;
+            }
+            else if(GETLISTCREATENARROW.equals(action)){
+                    url= GETLISTCREATENARROW_CONTROLLER;
+            }
+            else if(APCCEPTREGISTEROFSTUDENT.equals(action)){
+                    url= APCCEPTREGISTEROFSTUDENT_CONTROLLER;
+            }
+            else if(DOWNLOADFILEDEMO.equals(action)){
+                    url= DOWNLOADFILEDEMO_CONTROLLER;
             }
         } catch (Exception e) {
             log("Error at MainController: "+ e.toString());

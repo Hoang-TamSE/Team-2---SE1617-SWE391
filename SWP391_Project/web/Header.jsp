@@ -75,7 +75,7 @@
                                 <div class="sb-nav-link-icon"></div>
                                 Register Form
                             </a>
-                            <a class="nav-link" href="CreatedRegisterForm.jsp">
+                            <a class="nav-link" href="MainController?action=GetSemesterForCreatedRegisterForm">
                                 <div class="sb-nav-link-icon"></div>
                                 Created Register Form
                             </a>
