@@ -16,7 +16,7 @@
     </head>
     <body class="sb-nav-fixed jumbotron">
 
-        <%@include file="Header.jsp" %>
+        <%@include file="HeaderSupport.jsp" %>
 
         <div id="layoutSidenav_content">
 
