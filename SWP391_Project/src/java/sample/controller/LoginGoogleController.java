@@ -17,6 +17,8 @@ import sample.admin.AdminDTO;
 import sample.google.GooglePojo;
 import sample.student.StudentDAO;
 import sample.student.StudentDTO;
+import sample.supporter.SupporterDAO;
+import sample.supporter.SupporterDTO;
 import sample.utils.GoogleUtils;
 
 /**
@@ -32,6 +34,8 @@ public class LoginGoogleController extends HttpServlet {
     private static final String ADMIN_PAGE = "adminPage.jsp";
     private static final String ST = "ST";
     private static final String STUDENT_PAGE = "StudentPage.jsp";
+    private static final String SP = "SP";
+    private static final String SUPPORT_PAGE = "MainController?action=ViewQuestion";
 
     public LoginGoogleController() {
         super();
@@ -62,6 +66,11 @@ public class LoginGoogleController extends HttpServlet {
                         StudentDAO stdao = new StudentDAO();
                         StudentDTO std = stdao.getStudent(user.getUserID());
                         session.setAttribute("LOGIN_USER", std);
+                    } else if (SP.equals(roleID)) {
+                        url = SUPPORT_PAGE;
+                        SupporterDAO spdao = new SupporterDAO();
+                        SupporterDTO sp = spdao.getSupporter(user.getUserID());
+                        session.setAttribute("LOGIN_USER", sp);
                     }
                     session.setAttribute("CHECK_AUTHORIZATION", user);
                 }

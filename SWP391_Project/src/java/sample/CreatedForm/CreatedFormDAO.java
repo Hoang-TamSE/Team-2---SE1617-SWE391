@@ -25,11 +25,11 @@ public class CreatedFormDAO {
             + "ON SM.semesterID = ST.semesterID "
             + "WHERE SM.semesterID = ? "
             + "GROUP BY SM.semesterID";
-    private String GETLISTCREATEDNARROWFORMOFSEMESTER = "SELECT RN.registerID, RN.majorID, RN.narrowID, "
-            + "RN.importDate, RN.usingDate, count(RN.registerID) AS total"
-            + " FROM tblRegisterNarrow RN INNER JOIN tblRegisterNarrowDetail RND ON RN.registerID = RND.registerID"
-            + " WHERE RN.semesterID = ? "
-            + "GROUP BY RN.registerID, RN.narrowID, RN.importDate, RN.usingDate, RN.majorID";
+    private String GETLISTCREATEDNARROWFORMOFSEMESTER = "SELECT RN.registerID, RN.majorID, RN.narrowID,\n"
+            + "RN.importDate, RN.usingDate, COUNT(RND.registerID) AS total\n"
+            + "			FROM tblRegisterNarrow RN left JOIN tblRegisterNarrowDetail RND ON RN.registerID = RND.registerID\n"
+            + "			WHERE RN.semesterID = ? \n"
+            + "			GROUP BY RN.registerID, RN.narrowID, RN.importDate, RN.usingDate, RN.majorID";
     private String UPDATESTATUSVALID = "Update tblRegisterNarrowDetail "
             + "SET status = 'accepted' "
             + "WHERE registerID = ? ";
@@ -40,7 +40,7 @@ public class CreatedFormDAO {
             + "FROM tblStudent ST INNER JOIN tblRegisterNarrowDetail RND "
             + "ON ST.userID = RND.userID "
             + "WHERE RND.registerID = ? AND RND.status = 'accepted'";
-    
+
     public boolean updateValid(int registerID) throws SQLException {
         boolean check = false;
         Connection conn = null;
@@ -64,6 +64,7 @@ public class CreatedFormDAO {
         }
         return check;
     }
+
     public boolean updateNarrowStValid(int registerID, String narrowID) throws SQLException {
         boolean check = false;
         Connection conn = null;
@@ -88,6 +89,7 @@ public class CreatedFormDAO {
         }
         return check;
     }
+
     public boolean updateInvalid(int registerID) throws SQLException {
         boolean check = false;
         Connection conn = null;
@@ -111,6 +113,7 @@ public class CreatedFormDAO {
         }
         return check;
     }
+
     public List<CreatedFormDTO> getListCreatedNarrowFormBySemester(String semesterID) throws SQLException {
         List<CreatedFormDTO> list = new ArrayList<>();
         Connection conn = null;
@@ -145,7 +148,7 @@ public class CreatedFormDAO {
                 conn.close();
             }
         }
-            return list;
+        return list;
     }
 
     public int getTotalStudentOfSemester(String semesterID) throws SQLException {

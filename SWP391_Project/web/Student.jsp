@@ -49,7 +49,7 @@
                         </div>
 
                         <input class="form-control w-25" id="myInput" type="text" placeholder="Search...">
-                        
+
                         <table class="table table-responsive table-hover table-striped">
                             <thead>
                                 <tr>
@@ -99,9 +99,7 @@
                             </tbody>
 
                         </table>
-                        <c:if test="${not empty requestScope.SUCCESS}">
-                            <p style="color: lightgreen">${requestScope.SUCCESS}</p>
-                        </c:if>
+                        <p style="color: lightgreen">${requestScope.SUCCESS}</p>
                     </div>
                 </div>
             </main>

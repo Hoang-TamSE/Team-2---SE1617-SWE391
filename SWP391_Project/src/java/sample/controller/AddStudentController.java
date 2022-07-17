@@ -6,7 +6,6 @@
 package sample.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -50,6 +49,10 @@ public class AddStudentController extends HttpServlet {
             }
             if (!Validation.checkVaildEmail(email)) {
                 error.setEmail("The email is ivalid!");
+                checkVaild = false;
+            }
+            if (Validation.checkDuplicateEmail(email)) {
+                error.setEmail("The email is duplicated!");
                 checkVaild = false;
             }
             if (name.length() < 8 || name.length() > 50) {

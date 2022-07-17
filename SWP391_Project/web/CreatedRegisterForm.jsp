@@ -76,7 +76,7 @@
                                                     <td><c:out value="${form.endDate}"></c:out></td>
                                                     <td><c:out value="${form.totalStudent}/${requestScope.TOTAL_STUDENT}"></c:out></td>
                                                         <td style="text-align: center">              
-                                                        <c:url  var="" value="MainController">
+                                                        <c:url  var="update" value="MainController">
                                                             <c:param name="" value="${id}"></c:param>
                                                             <c:param name="action" value=""></c:param>
                                                         </c:url>
@@ -90,14 +90,8 @@
                                                     <button type="submit" class="btn btn-success" value="AcceptRegisterOfStudent" name="action">Submit</button>        
                                                 </form>
                                             </td>
-                                            <c:forEach var="success" items="${LIST_SUCCESS}">
-                                                <p style="color: lightgreen"><c:out value="${success}"></c:out></p>
-                                            </c:forEach>
-                                            <c:forEach var="invalid" items="${LIST_ERROR}">
-                                                <p style="color: red"><c:out value="${invalid}"></c:out></p>
-                                            </c:forEach>
-                                            <p style="color: red"><c:out value="${UPADTE_ERROR}"></c:out></p>
-                                            </table>
+
+                                        </table>
                                     </c:when>
                                     <c:otherwise>
                                         <p style="color: red;">${requestScope.ERROR_FORMCREATED}</p>
@@ -110,8 +104,14 @@
                             <p style="color: red;">${requestScope.ERROR}</p>
                         </c:otherwise>
                     </c:choose>
-
-            </main>
+                    <c:forEach var="success" items="${LIST_SUCCESS}">
+                        <p style="color: lightgreen"><c:out value="${success}"></c:out></p>
+                    </c:forEach>
+                    <c:forEach var="invalid" items="${LIST_ERROR}">
+                        <p style="color: red"><c:out value="${invalid}"></c:out></p>
+                    </c:forEach>
+                    <p style="color: red"><c:out value="${UPADTE_ERROR}"></c:out></p>
+                </main>
             <%@include file="Footer.jsp" %>
         </div>
 

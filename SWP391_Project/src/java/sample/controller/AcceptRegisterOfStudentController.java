@@ -54,7 +54,7 @@ public class AcceptRegisterOfStudentController extends HttpServlet {
                     }
                     listSuccess.add(formNarrow.getNarrowID() + " approved!");
                 } else {
-                    checkValid = dao.updateInvalid(formNarrow.getRegisterID());
+                    dao.updateInvalid(formNarrow.getRegisterID());
                     listError.add(formNarrow.getNarrowID() + " don't enough students!");
                 }
                 if(!checkValid){

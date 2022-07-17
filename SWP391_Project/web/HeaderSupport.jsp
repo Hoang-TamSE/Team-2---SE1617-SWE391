@@ -21,7 +21,7 @@
         <nav style="background-color: #f86c24;border-bottom: 2px solid black;" class="sb-topnav navbar navbar-expand navbar-dark">
             <!-- Navbar Brand-->
 
-            <a class="navbar-brand ps-3" href="StudentPage.jsp">
+            <a class="navbar-brand ps-3" href="SupportPage.jsp">
                 <img src="images/logoheader.jpg" class="rounded-circle"  alt="logo"width="45" height="41">
                 Supporter Page
 
@@ -51,7 +51,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
 
-                            <a class="nav-link" href="SupportPage.jsp">
+                            <a class="nav-link" href="MainController?action=ViewQuestion">
                                 <div class="sb-nav-link-icon"></div>
                                 View Question
                             </a>

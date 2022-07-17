@@ -33,6 +33,7 @@ public class DeleteStudentController extends HttpServlet {
             StudentDAO dao = new StudentDAO();
             boolean check = dao.delete(userID);
             if (check) {
+                request.setAttribute("SUCCESS", "The "+ userID + "deleted");
                 url = SUCCESS;
             }
         } catch (Exception e) {

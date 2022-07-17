@@ -12,24 +12,68 @@ import java.sql.Timestamp;
  * @author Hoang Tam
  */
 public class MessDTO {
+    private String SPID;
+    private String STID;
     private int messID;
     private String messText;
     private String messTitle;
     private Timestamp messDate;
+    private int replyForST;
 
     public MessDTO() {
+        this.SPID = "";
+        this.STID = "";
         this.messID = 0;
         this.messText = "";
         this.messTitle = "";
         this.messDate = null;
+        this.replyForST = 0;
     }
 
-    public MessDTO(int messID, String messText, String messTitle, Timestamp messDate) {
+    public MessDTO(int messID, String messText, String messTitle, Timestamp messDate, int replyForST) {
         this.messID = messID;
         this.messText = messText;
         this.messTitle = messTitle;
         this.messDate = messDate;
+        this.replyForST = replyForST;
     }
+
+    public MessDTO(String SPID, String STID, int messID, String messText, String messTitle, Timestamp messDate, int relyForST) {
+        this.SPID = SPID;
+        this.STID = STID;
+        this.messID = messID;
+        this.messText = messText;
+        this.messTitle = messTitle;
+        this.messDate = messDate;
+        this.replyForST = relyForST;
+    }
+
+    public String getSPID() {
+        return SPID;
+    }
+
+    public void setSPID(String SPID) {
+        this.SPID = SPID;
+    }
+
+    public String getSTID() {
+        return STID;
+    }
+
+    public void setSTID(String STID) {
+        this.STID = STID;
+    }
+    
+
+    public int getReplyForST() {
+        return replyForST;
+    }
+
+    public void setReplyForST(int relyForST) {
+        this.replyForST = relyForST;
+    }
+
+    
 
     public int getMessID() {
         return messID;

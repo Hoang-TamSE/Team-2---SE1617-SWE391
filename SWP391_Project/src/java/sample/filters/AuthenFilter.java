@@ -29,13 +29,14 @@ import sample.student.StudentDTO;
  * @author Hoang Tam
  */
 @WebFilter(filterName = "AuthenFilter", urlPatterns = {"/*"})
-
 public class AuthenFilter implements Filter {
 
     private static List<String> US_RESOURCES;
     private static List<String> AD_RESOURCES;
+    private static List<String> SP_RESOURCES;
     private static List<String> NON_AUTHEN_RESOURCES;
     private static final String ST = "ST";
+    private static final String SP = "SP";
     private static final String AD = "AD";
     private static final String LOGIN_PAGE = "HomePage.jsp";
     private static final boolean debug = true;
@@ -53,6 +54,10 @@ public class AuthenFilter implements Filter {
         US_RESOURCES.add("ViewApplication.jsp");
         US_RESOURCES.add("SendApplication.jsp");
         US_RESOURCES.add("NarrowRegister.jsp");
+        
+        SP_RESOURCES = new ArrayList<>();
+        SP_RESOURCES.add("SupportPage.jsp");
+        SP_RESOURCES.add("SupportPage_ViewAnswer.jsp");
 
         //khai bao nhung resources ma ko can xac thuc phan quyen
         AD_RESOURCES = new ArrayList<>();
@@ -139,7 +144,6 @@ public class AuthenFilter implements Filter {
 	    String name = (String)en.nextElement();
 	    Object value = request.getAttribute(name);
 	    log("attribute: " + name + "=" + value.toString());
-
 	}
          */
         // For example, a filter might append something to the response.
@@ -196,6 +200,13 @@ public class AuthenFilter implements Filter {
                     }
                 } else if (ST.equals(roleID)) {
                     for (String value : US_RESOURCES) {
+                        if (requestResource.contains(value)) {
+                            chain.doFilter(request, response);
+                            check = true;
+                        }
+                    }
+                } else if (SP.equals(roleID)) {
+                    for (String value : SP_RESOURCES) {
                         if (requestResource.contains(value)) {
                             chain.doFilter(request, response);
                             check = true;

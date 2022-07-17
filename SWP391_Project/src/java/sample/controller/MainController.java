@@ -126,6 +126,11 @@ public class MainController extends HttpServlet {
     private static final String APCCEPTREGISTEROFSTUDENT="AcceptRegisterOfStudent";
     private static final String APCCEPTREGISTEROFSTUDENT_CONTROLLER="AcceptRegisterOfStudentController";
     
+    private static final String VIEWQUESTION="ViewQuestion";
+    private static final String VIEWQUESTION_CONTROLLER="ViewQuestionController";
+    private static final String REPLY="Reply";
+    private static final String REPLY_CONTROLLER="ReplyController";
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -275,6 +280,12 @@ public class MainController extends HttpServlet {
             }
             else if(DOWNLOADFILEDEMO.equals(action)){
                     url= DOWNLOADFILEDEMO_CONTROLLER;
+            }
+            else if(VIEWQUESTION.equals(action)){
+                    url= VIEWQUESTION_CONTROLLER;
+            }
+            else if(REPLY.equals(action)){
+                    url= REPLY_CONTROLLER;
             }
         } catch (Exception e) {
             log("Error at MainController: "+ e.toString());

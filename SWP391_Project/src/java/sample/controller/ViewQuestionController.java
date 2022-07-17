@@ -7,69 +7,51 @@ package sample.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Timestamp;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import sample.Mess.MessDAO;
 import sample.Mess.MessDTO;
-import sample.Mess.MessERROR;
-import sample.validation.Validation;
+import sample.supporter.SupporterDTO;
 
 /**
  *
  * @author Hoang Tam
  */
-@WebServlet(name = "SendMessController", urlPatterns = {"/SendMessController"})
-public class SendMessController extends HttpServlet {
+@WebServlet(name = "ViewQuestionController", urlPatterns = {"/ViewQuestionController"})
+public class ViewQuestionController extends HttpServlet {
 
-    private final String ERROR = "SendApplication.jsp";
-    private final String SUCCESS = "SendApplication.jsp";
+    private static final String ERROR = "error.jsp";
+    private static final String SUCCESS = "SupportPage.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String url = ERROR;
+        HttpSession session = request.getSession();
         try {
-            String userID = request.getParameter("userID");
-            String majorID = request.getParameter("majorID");
-            String messTitle = request.getParameter("title");
-            String messText = request.getParameter("text");
-            MessERROR error = new MessERROR();
-            Timestamp messDate = Validation.takeCurrentDate();
-            boolean checkValid = true;
-            if(messText.isEmpty()){
-                checkValid = false;
-                error.setMessText("Please fill text before send mess!!");
-            }
-            if(messTitle.isEmpty()){
-                checkValid = false;
-                error.setMessTitle("Please fill title before send mess!!");
-            }
-            if(checkValid){
-                MessDTO mess = new MessDTO(0, messText, messTitle, messDate, 0);
+            SupporterDTO sp = (SupporterDTO) session.getAttribute("LOGIN_USER");
+            if (sp != null) {
                 MessDAO dao = new MessDAO();
-                boolean checkCreatMess = dao.createMess(mess);
-                if(checkCreatMess){
-                    int messID = dao.getLastMessID();
-                    dao.createSend(userID, messID);
-                    String supporterID = dao.getSupporterID(majorID);
-                    dao.createReceive(supporterID, messID);
-                    url = SUCCESS;
-                    request.setAttribute("SUCCESS", "Send the question success!!");
+                List<MessDTO> listMess = dao.getMess(sp.getUserID());
+                if (listMess.size() > 0) {
+                    request.setAttribute("LIST_MESS", listMess);
+                } else {
+                    request.setAttribute("ERROR", "Don't have any mess for you!");
                 }
-            }else{
-                request.setAttribute("ERROR", error);
+                url = SUCCESS;
             }
         } catch (Exception e) {
-            log("Error at SendMessController: "+ e.toString());
+            log("Error at ViewQuestionController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }
     }
 
-// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *

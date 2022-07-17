@@ -173,6 +173,17 @@ public class Validation {
         }
         return check;
     }
+    public static boolean checkDuplicateEmail(String email) {
+        ValidationDAO dao = new ValidationDAO();
+        boolean check = false;
+        try {
+            check = dao.checkDuplicateEmail(email);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return check;
+    }
 
     public static boolean checkVaildEmail(String email) {
         boolean check = false;
