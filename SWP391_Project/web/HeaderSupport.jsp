@@ -13,17 +13,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Support Page</title>
+        <title>Admin Page</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/stylemenu.css" rel="stylesheet" />
     </head>
-    <body>
+    <body class="sb-nav-fixed">
         <nav style="background-color: #f86c24;border-bottom: 2px solid black;" class="sb-topnav navbar navbar-expand navbar-dark">
             <!-- Navbar Brand-->
 
             <a class="navbar-brand ps-3" href="StudentPage.jsp">
                 <img src="images/logoheader.jpg" class="rounded-circle"  alt="logo"width="45" height="41">
-                Support Page
+                Supporter Page
 
             </a>
             <!-- Sidebar Toggle-->
@@ -45,23 +45,24 @@
                 </li>
             </ul>
         </nav>
-        <div id="layoutSidenav_nav">
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
 
-                            <a class="nav-link" href="ViewAnswer.jsp">
+                            <a class="nav-link" href="SupportPage.jsp">
                                 <div class="sb-nav-link-icon"></div>
-                                View Answer
+                                View Question
                             </a>
-                            <a class="nav-link collapsed" href="ViewQuestion.jsp">
+                            <a class="nav-link collapsed" href="SupportPage_ViewAnswer.jsp">
                                 <div class="sb-nav-link-icon"></div>
-                                View Question                               
-                            </a>
+                                View Answer                              
+                            </a>               
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as: ${sessionScope.LOGIN_USER.name}</div>                                               
+                        <div class="small">Logged in as: ${LOGIN_USER.name}</div>                                               
                     </div>
                 </nav>
             </div>    

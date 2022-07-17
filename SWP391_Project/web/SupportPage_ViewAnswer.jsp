@@ -1,10 +1,9 @@
 <%-- 
-    Document   : SupportAD
-    Created on : Jun 28, 2022, 10:13:36 PM
-    Author     : lamtr
+    Document   : SupportPage_ViewAnswer
+    Created on : Jul 17, 2022, 3:51:31 PM
+    Author     : user
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -32,7 +31,8 @@
                                 <th scope="col">Title</th>
                                 <th scope="col">Question</th>
                                 <th scope="col">Sent Date</th>
-                                <th scope="col">Reply</th>
+                                <th scope="col">View Reply</th>
+                                <th scope="col">Reply Date</th>
                             </tr>
                             <!--Foreach -->
                             <tr>
@@ -48,18 +48,7 @@
                                 <td>
                                     <details>
                                         <summary>Click</summary>
-                                        <div class="row">
-                                            <div class="col-md-10">
-                                                <textarea class="w-100" style="height: 75px;"></textarea>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <c:url  var="delete" value="MainController">
-                                                    <c:param name="userID" value="${sp.userID}"></c:param>
-                                                    <c:param name="action" value="DeleteSupporter"></c:param>
-                                                </c:url>
-                                                <a href="${delete}"><i class="fa-solid fa-reply"></i></a>
-                                            </div>
-                                        </div>
+                                        <p>Câu tl</p>
                                     </details>
                                 </td>
                             </tr>
