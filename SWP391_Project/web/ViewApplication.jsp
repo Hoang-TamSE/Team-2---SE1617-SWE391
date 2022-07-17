@@ -26,20 +26,20 @@
 
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <table class="table">
-                            <tr>
-                                <td>Purpose</td>
-                                <td>Create Date</td>
-                                <td>Process Note</td>
-                                <td>Status</td>
-                                <td>Change Status Time</td>
+                        <table class="table table-responsive table-bordered table-hover">
+                            <tr class="bg-light">
+                                <th scope="col">Purpose</th>
+                                <th scope="col">Create Date</th>
+                                <th scope="col">Process Note</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Change Status Time</th>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
                             </tr>
                         </table>
 
