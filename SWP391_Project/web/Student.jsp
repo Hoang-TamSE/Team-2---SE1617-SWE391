@@ -30,7 +30,7 @@
                     <div class="tab-content ">
                         <div class="row">
                             <div class="col-md-3">
-                                <a href="AddStudent.jsp">
+                                <a href="MainController?action=PageAddStudent">
                                     <button class="btnadd btn btn-success">Add Student: <i class="fa-solid fa-circle-plus"></i></button>
                                 </a>
                             </div>

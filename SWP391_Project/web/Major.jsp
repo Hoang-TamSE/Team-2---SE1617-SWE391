@@ -28,7 +28,7 @@
                 <br>
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <a href="AddMajor.jsp">
+                        <a href="MainController?action=PageAddMajor">
                             <button class="btnadd btn btn-success">Add Major: <i class="fa-solid fa-circle-plus"></i></button>
                         </a>
                         <br>

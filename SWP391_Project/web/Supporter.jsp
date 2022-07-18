@@ -27,7 +27,7 @@
                 <br>
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <a href="AddSupporter.jsp">
+                        <a href="MainController?action=PageAddSupporter">
                             <button class="btnadd btn btn-success">Add Supporter: <i class="fa-solid fa-circle-plus"></i></button>
                         </a>
                         <br>
