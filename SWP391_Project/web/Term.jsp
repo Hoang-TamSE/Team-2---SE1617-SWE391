@@ -28,7 +28,7 @@
                 <br>
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <a href="AddTerm.jsp">
+                        <a href="MainController?action=PageAddTerm">
                             <button class="btnadd btn btn-success">Add Term: <i class="fa-solid fa-circle-plus"></i></button>
                         </a>
                         <br>

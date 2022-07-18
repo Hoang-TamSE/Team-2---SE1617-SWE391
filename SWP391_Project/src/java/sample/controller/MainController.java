@@ -130,6 +130,14 @@ public class MainController extends HttpServlet {
     private static final String VIEWQUESTION_CONTROLLER="ViewQuestionController";
     private static final String REPLY="Reply";
     private static final String REPLY_CONTROLLER="ReplyController";
+    private static final String PAGEADDMAJOR="PageAddMajor";
+    private static final String PAGEADDMAJOR_CONTROLLER="PageAddMajorController";
+    private static final String PAGEADDSTUDENT="PageAddStudent";
+    private static final String PAGEADDSTUDENT_CONTROLLER="PageAddStudentController";
+    private static final String PAGEADDSUPPORTER="PageAddSupporter";
+    private static final String PAGEADDSUPPORTER_CONTROLLER="PageAddSupporterController";
+    private static final String PAGEADDTERM="PageAddTerm";
+    private static final String PAGEADDTERM_CONTROLLER="PageAddTermController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -286,6 +294,18 @@ public class MainController extends HttpServlet {
             }
             else if(REPLY.equals(action)){
                     url= REPLY_CONTROLLER;
+            }
+            else if(PAGEADDMAJOR.equals(action)){
+                    url= PAGEADDMAJOR_CONTROLLER;
+            }
+            else if(PAGEADDSUPPORTER.equals(action)){
+                    url= PAGEADDSUPPORTER_CONTROLLER;
+            }
+            else if(PAGEADDSTUDENT.equals(action)){
+                    url= PAGEADDSTUDENT_CONTROLLER;
+            }
+            else if(PAGEADDTERM.equals(action)){
+                    url= PAGEADDTERM_CONTROLLER;
             }
         } catch (Exception e) {
             log("Error at MainController: "+ e.toString());
