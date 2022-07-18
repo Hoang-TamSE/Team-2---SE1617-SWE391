@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ViewApplication
-    Created on : Jun 15, 2022, 6:29:08 PM
+    Document   : StudentRegisterStatus
+    Created on : Jul 18, 2022, 3:40:21 PM
     Author     : user
 --%>
 
@@ -9,8 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>View Application</title>
-        <link rel="stylesheet" href="css/admincss.css">
+        <title>Student Page</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>
     </head>
@@ -21,18 +20,16 @@
         <div id="layoutSidenav_content">
 
             <main class="container-fluid">
-                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>View Application</h1>
-
-
+                <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>Register Status</h1>
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <table class="table table-responsive table-bordered table-hover">
                             <tr class="bg-light">
-                                <th scope="col">Purpose</th>
-                                <th scope="col">Create Date</th>
-                                <th scope="col">Process Note</th>
+                                <th scope="col">Semester</th>
+                                <th scope="col">Major</th>
+                                <th scope="col">Narrow</th>
+                                <th scope="col">Register Date</th>
                                 <th scope="col">Status</th>
-                                <th scope="col">Change Status Time</th>
                             </tr>
                             <tr>
                                 <td>1</td>
@@ -42,10 +39,7 @@
                                 <td>5</td>
                             </tr>
                         </table>
-
                     </div>
-
-
                 </div>
             </main>
             <%@include file="Footer.jsp" %>

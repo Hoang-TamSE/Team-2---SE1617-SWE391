@@ -66,7 +66,11 @@
                             <a class="nav-link collapsed" href="MainController?action=FormRegisterNarrow">
                                 <div class="sb-nav-link-icon"></div>
                                 Narrow Register                             
-                            </a>                
+                            </a>  
+                            <a class="nav-link collapsed" href="StudentRegisterStatus.jsp">
+                                <div class="sb-nav-link-icon"></div>
+                                Register Status                             
+                            </a>  
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
