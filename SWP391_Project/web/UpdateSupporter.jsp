@@ -28,23 +28,25 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController">
-                            <table class="table table-responsive table-bordered table-hover">
+                            <table class="table w-50 table-borderless">
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        ${requestScope.SUPPORTER.userID}
+                                       
+                                        <input readonly="" class="form-control" value=" ${requestScope.SUPPORTER.userID}" type="text">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
                                     <td>
-                                        ${requestScope.SUPPORTER.email}
+                                        
+                                        <input readonly="" class="form-control" value="${requestScope.SUPPORTER.email}" type="text">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Full name</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.name}" type="text" name="name">
+                                        <input class="form-control" value="${requestScope.SUPPORTER.name}" type="text" name="name">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.name}</p>
@@ -53,7 +55,7 @@
                                 <tr>
                                     <td>Major ID</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.majorID}" type="text" name="majorID">
+                                        <input class="form-control" value="${requestScope.SUPPORTER.majorID}" type="text" name="majorID">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.majorID}</p>
@@ -62,7 +64,7 @@
                                 <tr>
                                     <td>Phone</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.phoneNumber}" type="text" name="phoneNumber">
+                                        <input class="form-control" value="${requestScope.SUPPORTER.phoneNumber}" type="text" name="phoneNumber">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.phoneNumber}</p>
@@ -71,14 +73,14 @@
                                 <tr>
                                     <td>Address</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.address}" type="text" name="address">
+                                        <input class="form-control" value="${requestScope.SUPPORTER.address}" type="text" name="address">
                                     </td>
 
                                 </tr>
 
-                                <tr>
+                                <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button" type="submit" name="action" value="UpdateSupporter">
+                                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="UpdateSupporter">Update</button>
                                         <input type="hidden" name="userID" value="${requestScope.SUPPORTER.userID}">
                                         <input type="hidden" name="email" value="${requestScope.SUPPORTER.email}">
                                     </td>

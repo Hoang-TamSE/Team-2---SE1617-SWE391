@@ -28,23 +28,23 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController" method="GET">
-                            <table class="table table-responsive table-bordered table-hover">
+                            <table class="table w-50 table-borderless">
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        ${requestScope.STUDENT.userID}
+                                        <input readonly="" class="form-control" value="${requestScope.STUDENT.userID}" type="text">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
                                     <td>
-                                        ${requestScope.STUDENT.email}
+                                        <input readonly="" class="form-control" value="${requestScope.STUDENT.email}" type="text">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Full name</td>
                                     <td>
-                                        <input value="${requestScope.STUDENT.name}" type="text" name="name">
+                                        <input class="form-control" value="${requestScope.STUDENT.name}" type="text" name="name">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.name}</p>
@@ -53,7 +53,7 @@
                                 <tr>
                                     <td>Phone</td>
                                     <td>
-                                        <input value="${requestScope.STUDENT.phoneNumber}" type="text" name="phoneNumber">
+                                        <input class="form-control" value="${requestScope.STUDENT.phoneNumber}" type="text" name="phoneNumber">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.phoneNumber}</p>
@@ -62,14 +62,14 @@
                                 <tr>
                                     <td>Address</td>
                                     <td>
-                                        <input value="${requestScope.STUDENT.address}" type="text" name="address">
+                                        <input class="form-control" value="${requestScope.STUDENT.address}" type="text" name="address">
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td>Semester</td>
                                     <td>
-                                        <input value="${requestScope.STUDENT.semesterID}" type="text" name="semesterID">
+                                        <input class="form-control" value="${requestScope.STUDENT.semesterID}" type="text" name="semesterID">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.semesterID}</p>
@@ -78,7 +78,7 @@
                                 <tr>
                                     <td>Major</td>
                                     <td>
-                                        <input value="${requestScope.STUDENT.majorID}" type="text" name="majorID">
+                                        <input class="form-control" value="${requestScope.STUDENT.majorID}" type="text" name="majorID">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.majorID}</p>
@@ -87,15 +87,15 @@
                                 <tr>
                                     <td>Narrow</td>
                                     <td>
-                                        <input value="${requestScope.STUDENT.narrowID}" type="text" name="narrowID">
+                                        <input class="form-control" value="${requestScope.STUDENT.narrowID}" type="text" name="narrowID">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.narrowID}</p>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button" type="submit" name="action" value="UpdateStudent">
+                                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="UpdateStudent">Update</button>
                                         <input type="hidden" name="userID" value="${requestScope.STUDENT.userID}">
                                         <input type="hidden" name="email" value="${requestScope.STUDENT.email}">
                                     </td>
@@ -117,3 +117,51 @@
 
 </body>
 </html>
+
+
+<!--<form class="w-50" action="MainController" method="GET">
+    <table class="table">
+        <div class="form-group">
+            <label for="exampleInputEmail1">ID</label>
+            <input readonly value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input readonly value="" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Full Name</label>
+            <input name="name" value=" class="form-control">
+            <p style="color: red; "></p>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Phone</label>
+            <input name="phoneNumber" value="" class="form-control">
+            <p style="color: red; "></p>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Address</label>
+            <input name="address" value="" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Semester</label>
+            <input name="semesterID" value="" class="form-control">
+            <p style="color: red; "></p>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Major</label>
+            <input name="majorID" value="" class="form-control">
+            <p style="color: red; "></p>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Narrow</label>
+            <input name="narrowID" value="" class="form-control">
+            <p style="color: red; "></p>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="UpdateStudent">Update</button>
+            <input type="hidden" name="userID" value="">
+            <input type="hidden" name="email" value="">
+        </div>
+    </table>
+</form>-->

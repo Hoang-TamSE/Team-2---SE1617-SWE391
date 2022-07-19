@@ -27,7 +27,7 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController">
-                            <table class="table w-50">
+                            <table class="table w-50 table-borderless">
                                 <tr>
                                     <td></td>
                                     <td style="font-weight: bold;font-size: large">ADD SUPPORTER</td>
@@ -85,7 +85,7 @@
                                 </tr>
                                 <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button btn btn-success" type="submit" name="action" value="AddSupporter">
+                                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="AddSupporter">Add</button>
                                     </td>
                                 </tr>
                             </table>

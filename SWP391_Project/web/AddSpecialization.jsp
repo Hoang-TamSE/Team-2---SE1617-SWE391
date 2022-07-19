@@ -29,7 +29,7 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController">
-                            <table class="table w-50">
+                            <table class="table w-50 table-borderless">
                                 <tr>
                                     <td></td>
                                     <td style="font-weight: bold;font-size: large">ADD NARROW</td>
@@ -86,8 +86,7 @@
 
                                 <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input type="hidden" name="action" value="AddNarrow"/>
-                                        <input class="button btn btn-success" type="submit" value="Add Narrow">
+                                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="Add Narrow">Add</button>
                                     </td>
                                 </tr>
                                 <tr style="text-align: center;">

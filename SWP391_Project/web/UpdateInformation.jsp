@@ -27,7 +27,7 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController" method="GET">
-                            <table class="table w-50">
+                            <table class="table w-50 table-borderless">
                                 <tr>
                                     <td>ID</td>
                                     <td>
@@ -82,8 +82,7 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;" colspan="2">
-                                        <input class="button btn btn-success" type="submit" name="action" value="UpdateStudentInformation">
-                                        
+                                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="UpdateStudentInformation">Update</button>
                                     </td>
                                 </tr>
                             </table>

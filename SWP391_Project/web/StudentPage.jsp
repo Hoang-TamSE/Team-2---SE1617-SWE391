@@ -29,7 +29,7 @@
                         <h1>Welcome ${LOGIN_USER.name}</h1>
                         <h3>You information</h3>
                         <form action="MainController" method="GET">
-                            <table class="table w-50">
+                            <table class="table w-50 table-borderless">
                                 <tr>
                                     <td>ID</td>
                                     <td>
