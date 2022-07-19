@@ -37,6 +37,24 @@ public class MessDAO {
             + "		 WHERE R.userID = ? AND M.status = 'true'";
     private String updateReply = "UPDATE tblMess SET status = 'replied' "
             + "WHERE messID = ? ";
+
+    private String GETREPLYOFSTUDENT = "SELECT	M2.messTitle, M2.messText AS question,\n"
+            + "M2.messDate AS SendDate, M.messText AS reply ,\n"
+            + "M.messDate AS ReplyDate, M2.status \n"
+            + "FROM tblReceive R INNER JOIN tblMess M ON R.messID = M.messID\n"
+            + "INNER JOIN tblMess M2 ON M.replyForST = M2.messID\n"
+            + "WHERE R.userID = ? ";
+    private String GETREPLYOFSUPPORTER = "SELECT M2.messTitle, M2.messText AS question,\n"
+            + "M2.messDate AS SendDate, M.messText AS reply ,\n"
+            + "M.messDate AS ReplyDate, M2.status \n"
+            + "FROM tblSend S INNER JOIN tblMess M ON S.messID = M.messID\n"
+            + "INNER JOIN tblMess M2 ON M.replyForST = M2.messID\n"
+            + "WHERE S.userID = ? ";
+    private String GETQUESTIONOFSTUDENT = "SELECT M.messTitle, M.messText AS question, \n"
+            + "M.messDate AS SendDate, M.status \n"
+            + "FROM tblSend S INNER JOIN tblMess M ON S.messID = M.messID\n"
+            + "WHERE S.userID = ? AND M.status = 'true' ";
+
     public boolean updateReply(int messID) throws SQLException {
         boolean check = false;
         Connection conn = null;
@@ -60,6 +78,7 @@ public class MessDAO {
         }
         return check;
     }
+
     public boolean createMess(MessDTO mess) throws SQLException {
         boolean check = false;
         Connection conn = null;
@@ -187,6 +206,114 @@ public class MessDAO {
                     Timestamp messDate = rs.getTimestamp("messDate");
                     int replyForST = rs.getInt("replyForST");
                     list.add(new MessDTO(SPID, STID, messID, messText, messTitle, messDate, replyForST));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return list;
+    }
+
+    public List<QADTO> GetReplyOfStudenet(String userID) throws SQLException {
+        List<QADTO> list = new ArrayList();
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(GETREPLYOFSTUDENT);
+                ptm.setString(1, userID);
+                rs = ptm.executeQuery();
+                while (rs.next()) {
+                    String messTitle = rs.getString("messTitle");
+                    String question = rs.getString("question");
+                    Timestamp sendDate = rs.getTimestamp("SendDate");
+                    String reply = rs.getString("reply");
+                    Timestamp replyDate = rs.getTimestamp("ReplyDate");
+                    String status = rs.getString("status");
+                    list.add(new QADTO(messTitle, question, sendDate, reply, replyDate, status));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return list;
+    }
+    public List<QADTO> GetReplyOfSupporter(String userID) throws SQLException {
+        List<QADTO> list = new ArrayList();
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(GETREPLYOFSUPPORTER);
+                ptm.setString(1, userID);
+                rs = ptm.executeQuery();
+                while (rs.next()) {
+                    String messTitle = rs.getString("messTitle");
+                    String question = rs.getString("question");
+                    Timestamp sendDate = rs.getTimestamp("SendDate");
+                    String reply = rs.getString("reply");
+                    Timestamp replyDate = rs.getTimestamp("ReplyDate");
+                    String status = rs.getString("status");
+                    list.add(new QADTO(messTitle, question, sendDate, reply, replyDate, status));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return list;
+    }
+
+    public List<QADTO> GetQuestionOfStudenet(String userID) throws SQLException {
+        List<QADTO> list = new ArrayList();
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(GETQUESTIONOFSTUDENT);
+                ptm.setString(1, userID);
+                rs = ptm.executeQuery();
+                while (rs.next()) {
+                    String messTitle = rs.getString("messTitle");
+                    String question = rs.getString("question");
+                    Timestamp sendDate = rs.getTimestamp("SendDate");
+                    String status = rs.getString("status");
+                    list.add(new QADTO(messTitle, question, sendDate, "", null, status));
                 }
             }
         } catch (Exception e) {

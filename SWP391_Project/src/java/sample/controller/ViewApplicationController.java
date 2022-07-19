@@ -7,27 +7,27 @@ package sample.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import sample.RegisterDetail.RegisterDetailDAO;
-import sample.RegisterDetail.RegisterDetailDTO;
+import sample.Mess.MessDAO;
+import sample.Mess.QADTO;
 import sample.student.StudentDTO;
-import sample.validation.Validation;
 
 /**
  *
  * @author Hoang Tam
  */
-@WebServlet(name = "RegisterNarrowController", urlPatterns = {"/RegisterNarrowController"})
-public class RegisterNarrowController extends HttpServlet {
+@WebServlet(name = "ViewApplicationController", urlPatterns = {"/ViewApplicationController"})
+public class ViewApplicationController extends HttpServlet {
 
-    private final String ERROR = "MainController?action=FormRegisterNarrow";
-    private final String SUCCESS = "MainController?action=FormRegisterNarrow";
+    private final String ERROR = "ViewApplication.jsp";
+    private final String SUCCESS = "ViewApplication.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -35,34 +35,21 @@ public class RegisterNarrowController extends HttpServlet {
         HttpSession session = request.getSession();
         try {
             StudentDTO student = (StudentDTO) session.getAttribute("LOGIN_USER");
-            if (student != null) {
-                String userID = student.getUserID();
-                int registerID = Integer.parseInt(request.getParameter("narrowRegister"));
-                RegisterDetailDTO registerST = new RegisterDetailDTO(null, userID, registerID, "");
-                RegisterDetailDAO dao = new RegisterDetailDAO();
-                boolean checkReject = dao.checkRegistedReject(userID);
-                if (!checkReject) {
-                    boolean checkRegister = dao.createRegisterByST(registerST);
-                    if (checkRegister) {
-                        request.setAttribute("SUCCESS", "Registed success!!");
-                        url = SUCCESS;
-                    } else {
-                        request.setAttribute("ERROR", "Something wrong please contact with admin to support!");
-                    }
-                } else {
-                    boolean checkUpdate = dao.updateNarrowForSTRJ(registerST);
-                    if (checkUpdate) {
-                        request.setAttribute("SUCCESS", "Registed success!!");
-                        url = SUCCESS;
-                    } else {
-                        request.setAttribute("ERROR", "Something wrong please contact with admin to support!");
-
-                    }
-                }
+            MessDAO dao = new MessDAO();
+            ArrayList<QADTO> allList = new ArrayList();
+            List<QADTO> listReply = dao.GetReplyOfStudenet(student.getUserID());
+            List<QADTO> listQuestion = dao.GetQuestionOfStudenet(student.getUserID());
+            allList.addAll(listReply);
+            allList.addAll(listQuestion);
+            if(allList.size() > 0){
+                request.setAttribute("LISTQUESTIONANDREPLY", allList);
+                url = SUCCESS;
+            }else{
+                request.setAttribute("ERROR", "Don't have any application!");
             }
         } catch (Exception e) {
-            log("Error at RegisterNarrowController: " + e.toString());
-        } finally {
+            log("Error at ViewApplicationController: " + e.toString() );
+        }finally{
             request.getRequestDispatcher(url).forward(request, response);
         }
     }

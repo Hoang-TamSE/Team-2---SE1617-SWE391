@@ -13,57 +13,40 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import sample.RegisterDetail.RegisterDetailDAO;
-import sample.RegisterDetail.RegisterDetailDTO;
-import sample.student.StudentDTO;
+import sample.RegisterAD.RegisterADDAO;
 import sample.validation.Validation;
 
 /**
  *
  * @author Hoang Tam
  */
-@WebServlet(name = "RegisterNarrowController", urlPatterns = {"/RegisterNarrowController"})
-public class RegisterNarrowController extends HttpServlet {
+@WebServlet(name = "ChangeDateController", urlPatterns = {"/ChangeDateController"})
+public class ChangeDateController extends HttpServlet {
 
-    private final String ERROR = "MainController?action=FormRegisterNarrow";
-    private final String SUCCESS = "MainController?action=FormRegisterNarrow";
+    private final String ERROR = "MainController?action=GetListCreatedNarrow";
+    private final String SUCCESS = "MainController?action=GetListCreatedNarrow";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String url = ERROR;
-        HttpSession session = request.getSession();
         try {
-            StudentDTO student = (StudentDTO) session.getAttribute("LOGIN_USER");
-            if (student != null) {
-                String userID = student.getUserID();
-                int registerID = Integer.parseInt(request.getParameter("narrowRegister"));
-                RegisterDetailDTO registerST = new RegisterDetailDTO(null, userID, registerID, "");
-                RegisterDetailDAO dao = new RegisterDetailDAO();
-                boolean checkReject = dao.checkRegistedReject(userID);
-                if (!checkReject) {
-                    boolean checkRegister = dao.createRegisterByST(registerST);
-                    if (checkRegister) {
-                        request.setAttribute("SUCCESS", "Registed success!!");
-                        url = SUCCESS;
-                    } else {
-                        request.setAttribute("ERROR", "Something wrong please contact with admin to support!");
-                    }
-                } else {
-                    boolean checkUpdate = dao.updateNarrowForSTRJ(registerST);
-                    if (checkUpdate) {
-                        request.setAttribute("SUCCESS", "Registed success!!");
-                        url = SUCCESS;
-                    } else {
-                        request.setAttribute("ERROR", "Something wrong please contact with admin to support!");
-
-                    }
-                }
+            String startDateString = request.getParameter("startDate");
+            String endDateString = request.getParameter("endDate");
+            Timestamp startDate = Validation.dateStringToTimestamp(startDateString);
+            Timestamp endDate = Validation.dateStringToTimestamp(endDateString);
+            int registerID = Integer.parseInt(request.getParameter("registerID"));
+            RegisterADDAO dao = new RegisterADDAO();
+            boolean check = dao.updateDate(startDate, endDate, registerID);
+            if (check) {
+                url = SUCCESS;
+            } else {
+                request.setAttribute("ERROR", "Update error!");
             }
         } catch (Exception e) {
-            log("Error at RegisterNarrowController: " + e.toString());
+            log("Error at ChangeDateController: " + e.toString());
         } finally {
-            request.getRequestDispatcher(url).forward(request, response);
+            request.getRequestDispatcher(url).include(request, response);
+
         }
     }
 

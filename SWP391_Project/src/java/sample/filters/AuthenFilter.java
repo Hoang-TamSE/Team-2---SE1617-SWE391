@@ -54,6 +54,7 @@ public class AuthenFilter implements Filter {
         US_RESOURCES.add("ViewApplication.jsp");
         US_RESOURCES.add("SendApplication.jsp");
         US_RESOURCES.add("NarrowRegister.jsp");
+        US_RESOURCES.add("StudentRegisterStatus.jsp");
         
         SP_RESOURCES = new ArrayList<>();
         SP_RESOURCES.add("SupportPage.jsp");

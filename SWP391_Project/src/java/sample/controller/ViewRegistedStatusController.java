@@ -7,7 +7,6 @@ package sample.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Timestamp;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,54 +14,36 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import sample.RegisterDetail.RegisterDetailDAO;
-import sample.RegisterDetail.RegisterDetailDTO;
+import sample.RegisterDetail.RegisterStatusDTO;
 import sample.student.StudentDTO;
-import sample.validation.Validation;
 
 /**
  *
  * @author Hoang Tam
  */
-@WebServlet(name = "RegisterNarrowController", urlPatterns = {"/RegisterNarrowController"})
-public class RegisterNarrowController extends HttpServlet {
+@WebServlet(name = "ViewRegistedStatusController", urlPatterns = {"/ViewRegistedStatusController"})
+public class ViewRegistedStatusController extends HttpServlet {
 
-    private final String ERROR = "MainController?action=FormRegisterNarrow";
-    private final String SUCCESS = "MainController?action=FormRegisterNarrow";
+    private static final String ERROR = "StudentRegisterStatus.jsp";
+    private static final String SUCCESS = "StudentRegisterStatus.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String url = ERROR;
         HttpSession session = request.getSession();
         try {
-            StudentDTO student = (StudentDTO) session.getAttribute("LOGIN_USER");
-            if (student != null) {
-                String userID = student.getUserID();
-                int registerID = Integer.parseInt(request.getParameter("narrowRegister"));
-                RegisterDetailDTO registerST = new RegisterDetailDTO(null, userID, registerID, "");
-                RegisterDetailDAO dao = new RegisterDetailDAO();
-                boolean checkReject = dao.checkRegistedReject(userID);
-                if (!checkReject) {
-                    boolean checkRegister = dao.createRegisterByST(registerST);
-                    if (checkRegister) {
-                        request.setAttribute("SUCCESS", "Registed success!!");
-                        url = SUCCESS;
-                    } else {
-                        request.setAttribute("ERROR", "Something wrong please contact with admin to support!");
-                    }
-                } else {
-                    boolean checkUpdate = dao.updateNarrowForSTRJ(registerST);
-                    if (checkUpdate) {
-                        request.setAttribute("SUCCESS", "Registed success!!");
-                        url = SUCCESS;
-                    } else {
-                        request.setAttribute("ERROR", "Something wrong please contact with admin to support!");
-
-                    }
-                }
+            StudentDTO student =  (StudentDTO) session.getAttribute("LOGIN_USER");
+            RegisterDetailDAO dao = new RegisterDetailDAO();
+            RegisterStatusDTO registedStatus = dao.getRegistedStatus(student.getUserID());
+            if(registedStatus != null){
+                request.setAttribute("REGISTED_STATUS", registedStatus);
+                url = SUCCESS;
+            }else{
+                request.setAttribute("ERROR", "You don't register any narrow specification");
             }
         } catch (Exception e) {
-            log("Error at RegisterNarrowController: " + e.toString());
-        } finally {
+            log("Error at ViewRegistedStatusController: " + e.toString());
+        }finally{
             request.getRequestDispatcher(url).forward(request, response);
         }
     }

@@ -55,7 +55,7 @@
                                 <div class="sb-nav-link-icon"></div>
                                 View Question
                             </a>
-                            <a class="nav-link collapsed" href="SupportPage_ViewAnswer.jsp">
+                            <a class="nav-link collapsed" href="MainController?action=ViewAnswer">
                                 <div class="sb-nav-link-icon"></div>
                                 View Answer                              
                             </a>               

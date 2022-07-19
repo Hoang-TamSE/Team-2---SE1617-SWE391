@@ -69,20 +69,21 @@
                                                 <th style="text-align: center" scope="col">Update</th>
                                             </tr>
                                             <c:forEach var="form" items="${LIST_CREATEDFROM}">
-                                                <tr>
-                                                    <td><c:out value="${form.majorID}"></c:out></td>
-                                                    <td><c:out value="${form.narrowID}"></c:out></td>
-                                                    <td><c:out value="${form.startDate}"></c:out></td>
-                                                    <td><c:out value="${form.endDate}"></c:out></td>
-                                                    <td><c:out value="${form.totalStudent}/${requestScope.TOTAL_STUDENT}"></c:out></td>
-                                                        <td style="text-align: center">              
-                                                        <c:url  var="update" value="MainController">
-                                                            <c:param name="" value="${id}"></c:param>
-                                                            <c:param name="action" value=""></c:param>
-                                                        </c:url>
-                                                        <a href="${update}"><i class="fas fa-edit"></i></a>
-                                                    </td>
-                                                </tr>
+                                                <form action="MainController">
+                                                    <tr>
+                                                        <td><c:out value="${form.majorID}"></c:out></td>
+                                                        <td><c:out value="${form.narrowID}"></c:out></td>
+                                                        <td><input type="datetime-local" name="startDate" value="${form.startDate}"/></td>
+                                                        <td><input type="datetime-local" name="endDate" value="${form.endDate}"/></td>
+                                                        <td><c:out value="${form.totalStudent}/${requestScope.TOTAL_STUDENT}"></c:out></td>
+                                                            <td style="text-align: center">              
+                                                                <button name="action" value="ChangeDate"><i class="fas fa-edit"></i></button>
+                                                                <input type="hidden" name="semesterID" value="${requestScope.CURRENT_SEMESTER}">
+                                                                <input type="hidden" name="registerID" value="${form.registerID}">
+                                                        </td>
+                                                    </tr>
+                                                </form>
+
                                             </c:forEach>
                                             <td>
                                                 <form action="MainController">    

@@ -18,10 +18,6 @@ import sample.RegisterAD.RegisterADDTO;
 import sample.RegisterAD.RegisterADERROR;
 import sample.major.MajorDAO;
 import sample.major.MajorDTO;
-import sample.narrow.NarrowDAO;
-import sample.narrow.NarrowDTO;
-import sample.term.SemesterDAO;
-import sample.term.SemesterDTO;
 import sample.validation.Validation;
 
 /**

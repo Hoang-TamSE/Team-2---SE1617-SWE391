@@ -64,6 +64,7 @@ public class AcceptRegisterOfStudentController extends HttpServlet {
             if (checkValid) {
                 request.setAttribute("LIST_SUCCESS", listSuccess);
                 request.setAttribute("LIST_ERROR", listError);
+                url = SUCCESS;
             }else{
                 request.setAttribute("UPADTE_ERROR", "Update error!");
             }

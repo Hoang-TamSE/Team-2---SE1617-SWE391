@@ -24,57 +24,62 @@
 
             <main class="container-fluid">
                 <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>View Question</h1>
-                <div class="room container-fluid px-4">    
-                    <div class="tab-content ">
+                <c:if test="${ not empty LIST_MESS}">
+                    <div class="room container-fluid px-4">    
+                        <div class="tab-content ">
 
-                        <table class="table table-responsive table-bordered table-hover">
-                            <tr class="bg-light">
-                                <th scope="col">STID</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Question</th>
-                                <th scope="col">Sent Date</th>
-                                <th scope="col">Reply</th>
-                            </tr>
-                            <!--Foreach -->
-                            <c:forEach var="mess" items="${LIST_MESS}">
-                                <form action="MainController">
-                                    <tr>
-                                        <td><c:out value="${mess.STID}"></c:out></td>
-                                        <td><c:out value="${mess.messTitle}"></c:out></td>
-                                            <td>
-                                                <details>
-                                                    <summary>Click</summary>
-                                                    <div>${mess.messText}</div>
-                                            </details>
-                                        </td>
-                                        <td><c:out value="${mess.messDate}"></c:out></td>
-                                            <td>
-                                                <details>
-                                                    <summary>Click</summary>
-                                                    <div class="row">
-                                                        <div class="col-md-10">
-                                                            <textarea class="w-100" style="height: 75px;" id="reply" name="reply"></textarea>
+                            <table class="table table-responsive table-bordered table-hover">
+                                <tr class="bg-light">
+                                    <th scope="col">NO</th>
+                                    <th scope="col">STID</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Question</th>
+                                    <th scope="col">Sent Date</th>
+                                    <th scope="col">Reply</th>
+                                </tr>
+                                <!--Foreach -->
+                                <c:forEach var="mess" items="${LIST_MESS}" varStatus="counter">
+                                    <form action="MainController">
+                                        <tr>
+                                            <td><c:out value="${counter.count}"></c:out></td>
+                                            <td><c:out value="${mess.STID}"></c:out></td>
+                                            <td><c:out value="${mess.messTitle}"></c:out></td>
+                                                <td>
+                                                    <details>
+                                                        <summary>Click</summary>
+                                                        <div>${mess.messText}</div>
+                                                </details>
+                                            </td>
+                                            <td><c:out value="${mess.messDate}"></c:out></td>
+                                                <td>
+                                                    <details>
+                                                        <summary>Click</summary>
+                                                        <div class="row">
+                                                            <div class="col-md-10">
+                                                                <textarea class="w-100" style="height: 75px;" id="reply" name="reply"></textarea>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <button type="submit" name="action" value="Reply"><i class="fa-solid fa-reply"></i></button>
+                                                                <input type="hidden" name="STID" value="${mess.STID}"/>
+                                                            <input type="hidden" name="SPID" value="${mess.SPID}"/>
+                                                            <input type="hidden" name="messID" value="${mess.messID}"/>
                                                         </div>
-                                                        <div class="col-md-2">
-                                                            <button type="submit" name="action" value="Reply"><i class="fa-solid fa-reply"></i></button>
-                                                            <input type="hidden" name="STID" value="${mess.STID}"/>
-                                                        <input type="hidden" name="SPID" value="${mess.SPID}"/>
-                                                        <input type="hidden" name="messID" value="${mess.messID}"/>
                                                     </div>
-                                                </div>
-                                            </details>
-                                        </td>
-                                    </tr>
-                                </form>
+                                                </details>
+                                            </td>
+                                        </tr>
+                                    </form>
 
-                            </c:forEach>
+                                </c:forEach>
 
-                            <!--Foreach -->
-                        </table>
+                                <!--Foreach -->
+                            </table>
+                        </div>
+
+
                     </div>
-
-
-                </div>
+                </c:if>
+                <p style="color: red;">${ERROR}</p>
             </main>
             <%@include file="Footer.jsp" %>
         </div>

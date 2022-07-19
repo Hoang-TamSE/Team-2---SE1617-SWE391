@@ -98,8 +98,7 @@
                                 </form>
                             </c:when>
                         </c:choose>
-                        <p style="color: red">${requestScope.ERROR}</p>
-                        <p style="color: lightgreen">${requestScope.SUCCESS}</p>
+                        <p style="color: lightgreen">${requestScope.ERROR}</p>
                     </div>
 
                 </div>

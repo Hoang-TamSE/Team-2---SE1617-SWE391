@@ -139,6 +139,15 @@ public class MainController extends HttpServlet {
     private static final String PAGEADDTERM="PageAddTerm";
     private static final String PAGEADDTERM_CONTROLLER="PageAddTermController";
     
+    private static final String VIEWAPPLICATION="ViewApplication";
+    private static final String VIEWAPPLICATION_CONTROLLER="ViewApplicationController";
+    private static final String VIEWREGISTEDSTATUS="ViewRegistedStatus";
+    private static final String VIEWREGISTEDSTATUS_CONTROLLER="ViewRegistedStatusController";
+    private static final String VIEWANSWER="ViewAnswer";
+    private static final String VIEWANSWER_CONTROLLER="ViewAnswerController";
+    private static final String CHANGEDATE="ChangeDate";
+    private static final String CHANGEDATE_CONTROLLER="ChangeDateController";
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -306,6 +315,18 @@ public class MainController extends HttpServlet {
             }
             else if(PAGEADDTERM.equals(action)){
                     url= PAGEADDTERM_CONTROLLER;
+            }
+            else if(VIEWAPPLICATION.equals(action)){
+                    url= VIEWAPPLICATION_CONTROLLER;
+            }
+            else if(VIEWREGISTEDSTATUS.equals(action)){
+                    url= VIEWREGISTEDSTATUS_CONTROLLER;
+            }
+            else if(VIEWANSWER.equals(action)){
+                    url= VIEWANSWER_CONTROLLER;
+            }
+            else if(CHANGEDATE.equals(action)){
+                    url= CHANGEDATE_CONTROLLER;
             }
         } catch (Exception e) {
             log("Error at MainController: "+ e.toString());

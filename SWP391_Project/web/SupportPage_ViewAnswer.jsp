@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 
     Document   : SupportPage_ViewAnswer
     Created on : Jul 17, 2022, 3:51:31 PM
@@ -23,39 +24,48 @@
             <main class="container-fluid">
                 <h1 class="mt-4 col-md-4"><i class="fa fa-house"></i>View Question</h1>
                 <div class="room container-fluid px-4">    
-                    <div class="tab-content ">
+                    <c:if test="${not empty LIST_REPLY}">
+                        <div class="tab-content ">
 
-                        <table class="table table-responsive table-bordered table-hover">
-                            <tr class="bg-light">
-                                <th scope="col">ID</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Question</th>
-                                <th scope="col">Sent Date</th>
-                                <th scope="col">View Reply</th>
-                                <th scope="col">Reply Date</th>
-                            </tr>
-                            <!--Foreach -->
-                            <tr>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>
-                                    <details>
-                                        <summary>Click</summary>
-                                        <p>Hỏiiii</p>
-                                    </details>
-                                </td>
-                                <td>4</td>
-                                <td>
-                                    <details>
-                                        <summary>Click</summary>
-                                        <p>Câu tl</p>
-                                    </details>
-                                </td>
-                            </tr>
-                            <!--Foreach -->
-                        </table>
-                    </div>
-
+                            <table class="table table-responsive table-bordered table-hover">
+                                <tr class="bg-light">
+                                    <th scope="col">NO</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Question</th>
+                                    <th scope="col">Sent Date</th>
+                                    <th scope="col">View Reply</th>
+                                    <th scope="col">Reply Date</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                                <!--Foreach -->
+                                <c:forEach var="mess" items="${LIST_REPLY}" varStatus="counter">
+                                    <tr>
+                                        <td>${counter.count}</td>
+                                        <td>${mess.messTitle}</td>
+                                        <td>
+                                            <details>
+                                                <summary>Click</summary>
+                                                <p>${mess.question}</p>
+                                            </details>
+                                        </td>
+                                        <td>${mess.sendDate}</td>
+                                        <td>
+                                            <c:if test="${not empty mess.reply}">
+                                                <details>
+                                                    <summary>Click</summary>
+                                                    <p>${mess.reply}</p>
+                                                </details>
+                                            </c:if>
+                                        </td>
+                                        <td>${mess.replyDate}</td>
+                                        <td>${mess.status}</td>
+                                    </tr>
+                                </c:forEach>
+                                <!--Foreach -->
+                            </table>
+                        </div>
+                    </c:if>
+                    <p style="color: red">${ERROR}</p>
 
                 </div>
             </main>

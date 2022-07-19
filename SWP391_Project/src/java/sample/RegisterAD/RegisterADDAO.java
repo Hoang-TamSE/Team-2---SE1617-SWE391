@@ -9,8 +9,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+import sample.student.StudentDTO;
 import sample.term.SemesterDTO;
 import sample.utils.DBUtils;
 
@@ -35,6 +37,36 @@ public class RegisterADDAO {
             + "AND RG.status = 'true' "
             + "AND RG.importDate <= GETDATE() "
             + "AND RG.usingDate  >= GETDATE()";
+    private static final String UPDATE_STARTDATE_ENDDATE = "Update tblRegisterNarrow set\n"
+            + "importDate = ? ,\n"
+            + "usingDate = ? \n"
+            + "WHERE registerID = ? ";
+
+    public boolean updateDate(Timestamp startDate, Timestamp endDate, int registerID) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(UPDATE_STARTDATE_ENDDATE);
+                ptm.setTimestamp(1, startDate);
+                ptm.setTimestamp(2, endDate);
+                ptm.setInt(3, registerID);
+                check = ptm.executeUpdate() > 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return check;
+    }
 
     public boolean createSemester(RegisterADDTO registerAD) throws SQLException {
         boolean check = false;

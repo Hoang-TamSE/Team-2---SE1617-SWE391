@@ -59,7 +59,7 @@
                                 <div class="sb-nav-link-icon"></div>
                                 Send Application                               
                             </a>
-                            <a class="nav-link collapsed" href="ViewApplication.jsp">
+                            <a class="nav-link collapsed" href="MainController?action=ViewApplication">
                                 <div class="sb-nav-link-icon"></div>
                                 View Application                               
                             </a>
@@ -67,7 +67,7 @@
                                 <div class="sb-nav-link-icon"></div>
                                 Narrow Register                             
                             </a>  
-                            <a class="nav-link collapsed" href="StudentRegisterStatus.jsp">
+                            <a class="nav-link collapsed" href="MainController?action=ViewRegistedStatus">
                                 <div class="sb-nav-link-icon"></div>
                                 Register Status                             
                             </a>  
