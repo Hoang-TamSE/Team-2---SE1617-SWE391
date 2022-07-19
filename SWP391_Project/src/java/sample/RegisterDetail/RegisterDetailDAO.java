@@ -24,7 +24,7 @@ public class RegisterDetailDAO {
     private final String REGISTERBYSTUDENT = "Insert into tblRegisterNarrowDetail (importdate, userID, registerID, status) \n"
             + "VALUES(GETDATE(), ?, ?, 'processing')";
     private final String CHECKREGISTED = "SELECT * FROM tblRegisterNarrowDetail \n"
-            + "WHERE userID = ? AND (status = 'approve' \n"
+            + "WHERE userID = ? AND (status = 'accepted' \n"
             + "OR status = 'processing')";
     private final String CHECKREGISTEDREJECT = "SELECT * FROM tblRegisterNarrowDetail \n"
             + "WHERE userID = ? AND status = 'rejected'";

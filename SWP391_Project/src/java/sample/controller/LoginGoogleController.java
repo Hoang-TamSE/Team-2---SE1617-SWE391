@@ -28,7 +28,7 @@ import sample.utils.GoogleUtils;
 @WebServlet(name = "LoginGoogleController", urlPatterns = {"/login-google"})
 public class LoginGoogleController extends HttpServlet {
 
-    private static final String ERROR = "error.jsp";
+    private static final String ERROR = "Login.jsp";
     private static final long serialVersionUID = 1L;
     private static final String AD = "AD";
     private static final String ADMIN_PAGE = "adminPage.jsp";
@@ -73,6 +73,8 @@ public class LoginGoogleController extends HttpServlet {
                         session.setAttribute("LOGIN_USER", sp);
                     }
                     session.setAttribute("CHECK_AUTHORIZATION", user);
+                }else{
+                    request.setAttribute("ERROR", "Your account can't login to system!");
                 }
             }
         } catch (Exception e) {

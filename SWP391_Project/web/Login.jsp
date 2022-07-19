@@ -45,6 +45,7 @@
                                 </a>
                             </button>
                         </div>
+                        <p style="color: red; text-align: center;">${ERROR}</p>
                     </div>
                     <div class="clear"></div>
                 </div>
