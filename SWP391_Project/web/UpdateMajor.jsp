@@ -27,11 +27,12 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController" method="GET">
-                            <table class="table w-50">
+                            <table class="table w-50 table-borderless">
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        ${requestScope.MAJOR.majorID}
+                                        
+                                        <input readonly="" class="form-control" value="${requestScope.MAJOR.majorID}" type="text">
                                     </td>
                                 </tr>
                                 <tr>

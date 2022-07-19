@@ -28,7 +28,7 @@
                     <div class="tab-content ">
                         <form action="MainController">
 
-                            <table class=" table w-50 addtable">
+                            <table class=" table w-50 addtable table-borderless">
                                 <tr>
                                     <td></td>
                                     <td style="font-weight: bold;font-size: large">ADD STUDENT</td>
@@ -130,7 +130,7 @@
 
 
     <style>
-        
+
     </style>
     
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>

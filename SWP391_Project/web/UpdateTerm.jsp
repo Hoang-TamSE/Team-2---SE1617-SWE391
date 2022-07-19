@@ -26,13 +26,14 @@
 
 
                 <div class="room container-fluid px-4">    
-                    <div class="tab-content ">
+                    <div class="tab-content table-borderless">
                         <form action="MainController" method="GET">
             <table class="table w-50">
                 <tr>
                     <td>ID</td>
                     <td>
-                        ${requestScope.SEMESTER.semesterID}
+                        
+                        <input readonly="" class="form-control" value="${requestScope.SEMESTER.semesterID}" type="text">
                     </td>
                 </tr>
                 <tr>

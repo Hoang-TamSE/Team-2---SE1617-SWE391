@@ -28,17 +28,19 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController">
-                            <table class="table w-50">
+                            <table class="table w-50 table-borderless">
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        ${requestScope.SUPPORTER.userID}
+                                       
+                                        <input readonly="" class="form-control" value=" ${requestScope.SUPPORTER.userID}" type="text">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
                                     <td>
-                                        ${requestScope.SUPPORTER.email}
+                                        
+                                        <input readonly="" class="form-control" value="${requestScope.SUPPORTER.email}" type="text">
                                     </td>
                                 </tr>
                                 <tr>

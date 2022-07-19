@@ -28,17 +28,17 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController" method="GET">
-                            <table class="table w-50">
+                            <table class="table w-50 table-borderless">
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        ${requestScope.STUDENT.userID}
+                                        <input readonly="" class="form-control" value="${requestScope.STUDENT.userID}" type="text">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
                                     <td>
-                                        ${requestScope.STUDENT.email}
+                                        <input readonly="" class="form-control" value="${requestScope.STUDENT.email}" type="text">
                                     </td>
                                 </tr>
                                 <tr>
@@ -117,3 +117,51 @@
 
 </body>
 </html>
+
+
+<!--<form class="w-50" action="MainController" method="GET">
+    <table class="table">
+        <div class="form-group">
+            <label for="exampleInputEmail1">ID</label>
+            <input readonly value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input readonly value="" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Full Name</label>
+            <input name="name" value=" class="form-control">
+            <p style="color: red; "></p>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Phone</label>
+            <input name="phoneNumber" value="" class="form-control">
+            <p style="color: red; "></p>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Address</label>
+            <input name="address" value="" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Semester</label>
+            <input name="semesterID" value="" class="form-control">
+            <p style="color: red; "></p>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Major</label>
+            <input name="majorID" value="" class="form-control">
+            <p style="color: red; "></p>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Narrow</label>
+            <input name="narrowID" value="" class="form-control">
+            <p style="color: red; "></p>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="UpdateStudent">Update</button>
+            <input type="hidden" name="userID" value="">
+            <input type="hidden" name="email" value="">
+        </div>
+    </table>
+</form>-->

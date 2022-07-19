@@ -27,7 +27,7 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController">
-                            <table class="table w-50">
+                            <table class="table w-50 table-borderless">
                                 <tr>
                                     <td></td>
                                     <td style="font-weight: bold;font-size: large">ADD SUPPORTER</td>
