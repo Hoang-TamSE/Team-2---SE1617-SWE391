@@ -106,8 +106,7 @@
                                 </tr>
                                 <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button btn btn-success" type="submit" name="action" value="AddStudent">
-
+                                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="AddStudent">Add</button>
                                     </td>
 
                                 </tr>

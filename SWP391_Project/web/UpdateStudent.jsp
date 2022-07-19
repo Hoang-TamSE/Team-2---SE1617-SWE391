@@ -95,7 +95,7 @@
                                 </tr>
                                 <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button btn-success" type="submit" name="action" value="UpdateStudent">
+                                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="UpdateStudent">Update</button>
                                         <input type="hidden" name="userID" value="${requestScope.STUDENT.userID}">
                                         <input type="hidden" name="email" value="${requestScope.STUDENT.email}">
                                     </td>

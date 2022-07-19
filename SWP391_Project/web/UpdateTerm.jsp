@@ -48,7 +48,7 @@
                 <tr style="text-align: center;">
                     <td colspan="2">
                         <!--Mấy ông sửa cái này lại nha tui demo thôi_-->
-                        <input class="button btn-success" type="submit" name="action" value="UpdateTerm">
+                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="UpdateTerm">Update</button>
                         <input type="hidden" name="semesterID" value="${requestScope.SEMESTER.semesterID}">
                     </td>
                 </tr>

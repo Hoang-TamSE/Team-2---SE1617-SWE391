@@ -53,7 +53,7 @@
 
                                 <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button btn btn-success " type="submit" name="action" value="AddTerm">
+                                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="AddTerm">Add</button>
                                     </td>
                                 </tr>
                             </table>

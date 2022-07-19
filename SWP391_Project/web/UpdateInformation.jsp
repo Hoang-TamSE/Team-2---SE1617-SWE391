@@ -82,8 +82,7 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;" colspan="2">
-                                        <input class="button btn btn-success" type="submit" name="action" value="UpdateStudentInformation">
-                                        
+                                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="UpdateStudentInformation">Update</button>
                                     </td>
                                 </tr>
                             </table>
