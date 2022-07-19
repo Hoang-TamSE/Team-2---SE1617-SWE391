@@ -28,7 +28,7 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController">
-                            <table class="table table-responsive table-bordered table-hover">
+                            <table class="table w-50">
                                 <tr>
                                     <td>ID</td>
                                     <td>
@@ -44,7 +44,7 @@
                                 <tr>
                                     <td>Full name</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.name}" type="text" name="name">
+                                        <input class="form-control" value="${requestScope.SUPPORTER.name}" type="text" name="name">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.name}</p>
@@ -53,7 +53,7 @@
                                 <tr>
                                     <td>Major ID</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.majorID}" type="text" name="majorID">
+                                        <input class="form-control" value="${requestScope.SUPPORTER.majorID}" type="text" name="majorID">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.majorID}</p>
@@ -62,7 +62,7 @@
                                 <tr>
                                     <td>Phone</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.phoneNumber}" type="text" name="phoneNumber">
+                                        <input class="form-control" value="${requestScope.SUPPORTER.phoneNumber}" type="text" name="phoneNumber">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.phoneNumber}</p>
@@ -71,14 +71,14 @@
                                 <tr>
                                     <td>Address</td>
                                     <td>
-                                        <input value="${requestScope.SUPPORTER.address}" type="text" name="address">
+                                        <input class="form-control" value="${requestScope.SUPPORTER.address}" type="text" name="address">
                                     </td>
 
                                 </tr>
 
-                                <tr>
+                                <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <input class="button" type="submit" name="action" value="UpdateSupporter">
+                                        <input class="button btn-success" type="submit" name="action" value="UpdateSupporter">
                                         <input type="hidden" name="userID" value="${requestScope.SUPPORTER.userID}">
                                         <input type="hidden" name="email" value="${requestScope.SUPPORTER.email}">
                                     </td>

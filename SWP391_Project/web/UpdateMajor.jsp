@@ -27,7 +27,7 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController" method="GET">
-                            <table class="table table-responsive table-bordered table-hover">
+                            <table class="table w-50">
                                 <tr>
                                     <td>ID</td>
                                     <td>
@@ -37,7 +37,7 @@
                                 <tr>
                                     <td>Name</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.majorName}" type="text" name="majorName">
+                                        <input class="form-control" value="${requestScope.MAJOR.majorName}" type="text" name="majorName">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.majorName}</p>
@@ -46,7 +46,7 @@
                                 <tr>
                                     <td>Link</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.linkFLM}" type="text" name="linkFLM">
+                                        <input class="form-control" value="${requestScope.MAJOR.linkFLM}" type="text" name="linkFLM">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.linkFLM}</p>
@@ -55,27 +55,22 @@
                                 <tr>
                                     <td>Description</td>
                                     <td>
-                                        <input value="${requestScope.MAJOR.description}" type="text" name="description">
+                                        <input class="form-control" value="${requestScope.MAJOR.description}" type="text" name="description">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.description}</p>
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr style="text-align: center;">
                                     <td colspan="2">
                                         <!--Mấy ông sửa cái này lại nha tui demo thôi_-->
-                                        <input class="button" type="submit" name="action" value="UpdateMajor">
+                                        <input class="button btn-success" type="submit" name="action" value="UpdateMajor">
                                         <input type="hidden" name="majorID" value="${requestScope.MAJOR.majorID}">
                                     </td>
                                 </tr>
                             </table>
                         </form>
-
-                        <footer>
-                            <p>Team</p>
-                            <p>FPT University</p>
-                        </footer>
                     </div>
 
 

@@ -28,7 +28,7 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController" method="GET">
-            <table class="table table-responsive table-bordered table-hover">
+            <table class="table w-50">
                 <tr>
                     <td>ID</td>
                     <td>
@@ -38,17 +38,17 @@
                 <tr>
                     <td>Name</td>
                     <td>
-                        <input value="${requestScope.SEMESTER.semesterName}" type="text" name="semesterName">
+                        <input class="form-control" value="${requestScope.SEMESTER.semesterName}" type="text" name="semesterName">
                     </td>
                     <td>
                         <p style="color: red; ">${requestScope.ERROR.semesterName}</p>
                     </td>
                 </tr>
 
-                <tr>
+                <tr style="text-align: center;">
                     <td colspan="2">
                         <!--Mấy ông sửa cái này lại nha tui demo thôi_-->
-                        <input class="button" type="submit" name="action" value="UpdateTerm">
+                        <input class="button btn-success" type="submit" name="action" value="UpdateTerm">
                         <input type="hidden" name="semesterID" value="${requestScope.SEMESTER.semesterID}">
                     </td>
                 </tr>

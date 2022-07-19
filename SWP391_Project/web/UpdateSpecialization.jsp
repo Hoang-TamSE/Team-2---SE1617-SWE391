@@ -27,7 +27,7 @@
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
                         <form action="MainController" method="GET">
-                            <table class="table table-responsive table-bordered table-hover">
+                            <table class="table w-50">
                                 <tr>
                                     <td>ID</td>
                                     <td>
@@ -37,7 +37,7 @@
                                 <tr>
                                     <td>Name</td>
                                     <td>
-                                        <input value=" ${requestScope.NARROW.narrowName}" type="text" name="narrowName">
+                                        <input class="form-control" value=" ${requestScope.NARROW.narrowName}" type="text" name="narrowName">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.majorName}</p>
@@ -46,7 +46,7 @@
                                 <tr>
                                     <td>Link</td>
                                     <td>
-                                        <input value=" ${requestScope.NARROW.linkFLM}" type="text" name="linkFLM">
+                                        <input class="form-control" value=" ${requestScope.NARROW.linkFLM}" type="text" name="linkFLM">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.linkFLM}</p>
@@ -55,7 +55,7 @@
                                 <tr>
                                     <td>Description</td>
                                     <td>
-                                        <input value=" ${requestScope.NARROW.description}" type="text" name="description">
+                                        <input class="form-control" value=" ${requestScope.NARROW.description}" type="text" name="description">
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.description}</p>
@@ -68,21 +68,16 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr style="text-align: center;">
                                     <td colspan="2">
                                         <!--Mấy ông sửa cái này lại nha tui demo thôi_-->
-                                        <input class="button" type="submit" name="action" value="UpdateNarrow">
+                                        <input class="button btn-success" type="submit" name="action" value="UpdateNarrow">
                                         <input type="hidden" name="narrowID" value="${requestScope.NARROW.narrowID}">
                                     </td>
                                 </tr>
 
                             </table>
                         </form>
-
-                        <footer>
-                            <p>Team</p>
-                            <p>FPT University</p>
-                        </footer>
                     </div>
 
 
