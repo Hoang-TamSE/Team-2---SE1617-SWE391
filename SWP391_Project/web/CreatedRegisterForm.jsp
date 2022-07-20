@@ -61,8 +61,8 @@
                                     <c:when test="${not empty LIST_CREATEDFROM}">
                                         <table class="table">
                                             <tr>
-                                                <th scope="col">Narrow</th>
                                                 <th scope="col">Major</th>
+                                                <th scope="col">Narrow</th>
                                                 <th scope="col">Start Date</th>
                                                 <th scope="col">End Date</th>
                                                 <th scope="col">Number Of Register</th>
