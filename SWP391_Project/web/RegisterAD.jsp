@@ -26,7 +26,6 @@
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/bootstrap-social.css">
-        <link href="css/register.css" rel="stylesheet">
 
     </head>
 
@@ -195,13 +194,33 @@
             </form>
             <%}
             %>
-            <footer style="background-color: #f86c24;">
-                <p>Team</p>
-                <p>FPT University</p>
-            </footer>
+            <footer style="border-top: 2px solid #f86c24;" class="py-4 bg-light mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div style="padding-left: 13%" class="text-muted">Copyright &copy; Team 2</div>
+                    <div>
+                        <a href="https://www.youtube.com/channel/UCfNrlxNgcTZDJ3jZeSSSJxg" target="_blank"><i class="fa-brands fa-youtube fa-2x"></i></a>
+                        <a href="https://www.facebook.com/uni.fpt.edu.vn/" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a href="https://www.instagram.com/fptuniversityhcm/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer> 
         </div>
     </div>
-
+    <style>
+    footer
+    {
+        position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    }
+    body
+    {
+        background-color: white !important;
+    }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
