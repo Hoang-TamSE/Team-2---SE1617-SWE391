@@ -86,7 +86,7 @@
 
                                 <tr style="text-align: center;">
                                     <td colspan="2">
-                                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="Add Narrow">Add</button>
+                                        <button class="btn btn-success" type="submit" name="action" id="sumbitButton" value="AddNarrow">Add</button>
                                     </td>
                                 </tr>
                                 <tr style="text-align: center;">
