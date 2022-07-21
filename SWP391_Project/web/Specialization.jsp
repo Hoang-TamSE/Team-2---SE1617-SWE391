@@ -77,6 +77,7 @@
                         <c:if test="${not empty requestScope.SUCCESS}">
                             <p style="color: lightgreen">${requestScope.SUCCESS}</p>
                         </c:if>
+                        <p style="color: red">${requestScope.ERROR}</p>
                     </div>
 
 

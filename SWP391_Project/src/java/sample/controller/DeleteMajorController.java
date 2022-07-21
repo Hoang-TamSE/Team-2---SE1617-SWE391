@@ -33,6 +33,9 @@ public class DeleteMajorController extends HttpServlet {
             boolean check = dao.delete(majorID);
             if (check) {
                 url = SUCCESS;
+                request.setAttribute("SUCCESS", "Delete "+ majorID+"succefull!");
+            }else{
+                request.setAttribute("ERROR", "Delete "+ majorID+ "failed!");
             }
         } catch (Exception e) {
             log("error at DeleteController: " + e.toString());

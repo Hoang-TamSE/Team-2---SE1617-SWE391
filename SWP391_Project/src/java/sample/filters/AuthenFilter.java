@@ -55,10 +55,21 @@ public class AuthenFilter implements Filter {
         US_RESOURCES.add("SendApplication.jsp");
         US_RESOURCES.add("NarrowRegister.jsp");
         US_RESOURCES.add("StudentRegisterStatus.jsp");
-        
+        US_RESOURCES.add("UpdateStudentInformation");
+        US_RESOURCES.add("SendMess");
+        US_RESOURCES.add("FormRegisterNarrow");
+        US_RESOURCES.add("RegisterNarrow");
+        US_RESOURCES.add("ViewApplication");
+        US_RESOURCES.add("ViewRegistedStatus");
+        US_RESOURCES.add("Logout");
+
         SP_RESOURCES = new ArrayList<>();
         SP_RESOURCES.add("SupportPage.jsp");
         SP_RESOURCES.add("SupportPage_ViewAnswer.jsp");
+        SP_RESOURCES.add("ViewQuestion");
+        SP_RESOURCES.add("Reply");
+        SP_RESOURCES.add("ViewAnswer");
+        SP_RESOURCES.add("Logout");
 
         //khai bao nhung resources ma ko can xac thuc phan quyen
         AD_RESOURCES = new ArrayList<>();
@@ -81,14 +92,55 @@ public class AuthenFilter implements Filter {
         AD_RESOURCES.add("UpdateSupporter.jsp");
         AD_RESOURCES.add("UpdateTerm.jsp");
         AD_RESOURCES.add("RegisterAD.jsp");
+        AD_RESOURCES.add("Search");
+        AD_RESOURCES.add("Login");
+        AD_RESOURCES.add("deleteStudent");
+        AD_RESOURCES.add("UpdateStudent");
+        AD_RESOURCES.add("pageUpdateStudent");
+        AD_RESOURCES.add("AddStudent");
+        AD_RESOURCES.add("Upload");
+        AD_RESOURCES.add("DownloadFileDemo");
+        AD_RESOURCES.add("AddSupporter");
+        AD_RESOURCES.add("SearchSupporter");
+        AD_RESOURCES.add("DeleteSupporter");
+        AD_RESOURCES.add("UpdateSupporter");
+        AD_RESOURCES.add("PageUpdateSupporter");
+        AD_RESOURCES.add("AddMajor");
+        AD_RESOURCES.add("SearchMajor");
+        AD_RESOURCES.add("DeleteMajor");
+        AD_RESOURCES.add("UpdateMajor");
+        AD_RESOURCES.add("PageUpdateMajor");
+        AD_RESOURCES.add("AddTerm");
+        AD_RESOURCES.add("SearchTerm");
+        AD_RESOURCES.add("DeleteTerm");
+        AD_RESOURCES.add("UpdateTerm");
+        AD_RESOURCES.add("PageUpdateTerm");
+        AD_RESOURCES.add("AddNarrow");
+        AD_RESOURCES.add("SearchNarrow");
+        AD_RESOURCES.add("DeleteNarrow");
+        AD_RESOURCES.add("UpdateNarrow");
+        AD_RESOURCES.add("PageUpdateNarrow");
+        AD_RESOURCES.add("PageAddNarrow");
+        AD_RESOURCES.add("GetInformationForRegisterForm");
+        AD_RESOURCES.add("MakeFormRegister");
+        AD_RESOURCES.add("GetSemesterForCreatedRegisterForm");
+        AD_RESOURCES.add("GetListCreatedNarrow");
+        AD_RESOURCES.add("PageAddMajor");
+        AD_RESOURCES.add("PageAddStudent");
+        AD_RESOURCES.add("PageAddSupporter");
+        AD_RESOURCES.add("PageAddTerm");
+        AD_RESOURCES.add("ChangeDate");
+        AD_RESOURCES.add("AcceptRegisterOfStudent");
+        AD_RESOURCES.add("Logout");
+
         // khai boa nhung resources msa ko can xac thuc, phan quyen
         NON_AUTHEN_RESOURCES = new ArrayList<>();
         NON_AUTHEN_RESOURCES.add("Login.jsp");
+        NON_AUTHEN_RESOURCES.add("Logout");
         NON_AUTHEN_RESOURCES.add("HomePage.jsp");
         NON_AUTHEN_RESOURCES.add("HomePage_IT.jsp");
         NON_AUTHEN_RESOURCES.add("HomePage_GD.jsp");
         NON_AUTHEN_RESOURCES.add("HomePage_TTDPT.jsp");
-        NON_AUTHEN_RESOURCES.add("MainController");
         NON_AUTHEN_RESOURCES.add("Footer.jsp");
         NON_AUTHEN_RESOURCES.add("HeaderStudent");
         NON_AUTHEN_RESOURCES.add("login-google");
@@ -170,6 +222,7 @@ public class AuthenFilter implements Filter {
         try {
             HttpServletRequest req = (HttpServletRequest) request;
             HttpServletResponse res = (HttpServletResponse) response;
+            String action = request.getParameter("action");
             String uri = req.getRequestURI();
             int index = uri.lastIndexOf("/");
             String requestResource = uri.substring(index + 1);
@@ -197,6 +250,10 @@ public class AuthenFilter implements Filter {
                             chain.doFilter(request, response);
                             check = true;
                         }
+                        if (value.equalsIgnoreCase(action)) {
+                            chain.doFilter(request, response);
+                            check = true;
+                        }
 
                     }
                 } else if (ST.equals(roleID)) {
@@ -205,10 +262,18 @@ public class AuthenFilter implements Filter {
                             chain.doFilter(request, response);
                             check = true;
                         }
+                        if (value.equalsIgnoreCase(action)) {
+                            chain.doFilter(request, response);
+                            check = true;
+                        }
                     }
                 } else if (SP.equals(roleID)) {
                     for (String value : SP_RESOURCES) {
                         if (requestResource.contains(value)) {
+                            chain.doFilter(request, response);
+                            check = true;
+                        }
+                        if (value.equalsIgnoreCase(action)) {
                             chain.doFilter(request, response);
                             check = true;
                         }

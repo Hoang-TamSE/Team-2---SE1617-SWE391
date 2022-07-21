@@ -61,7 +61,7 @@
                                         <td style="text-align: center">              
                                             <c:url  var="delete" value="MainController">
                                                 <c:param name="majorID" value="${mj.majorID}"></c:param>
-                                                <c:param name="action" value="DeleteSupporter"></c:param>
+                                                <c:param name="action" value="DeleteMajor"></c:param>
                                             </c:url>
                                             <a href="${delete}"><i class="fas fa-trash"></i></a>
                                         </td>
@@ -73,6 +73,7 @@
                         <c:if test="${not empty requestScope.SUCCESS}">
                             <p style="color: lightgreen">${requestScope.SUCCESS}</p>
                         </c:if>
+                        <p style="color: red">${requestScope.ERROR}</p>
                     </div>
 
 

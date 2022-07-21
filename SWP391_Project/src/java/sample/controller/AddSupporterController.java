@@ -25,7 +25,7 @@ import sample.validation.Validation;
 public class AddSupporterController extends HttpServlet {
 
     private static final String ERROR = "AddSupporter.jsp";
-    private static final String SUCCESS = "SearchSupporterController";
+    private static final String SUCCESS = "MainController?action=SearchSupporter&searchby=name";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

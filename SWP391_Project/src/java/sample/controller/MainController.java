@@ -34,24 +34,6 @@ public class MainController extends HttpServlet {
     private static final String LOGOUT_CONTROLLER="LogoutController";
     private static final String ADDSTUDENT="AddStudent";
     private static final String ADDSTUDENT_CONTROLLER="AddStudentController";
-    private static final String VIEW="View";
-    private static final String VIEW_CONTROLLER="viewCart.jsp";
-    private static final String REMOVE="Remove";
-    private static final String REMOVE_CONTROLLER="RemoveController";
-    private static final String EDIT="Edit";
-    private static final String EDIT_CONTROLLER="EditController";
-    private static final String SEARCHFORUSER="SearchForUser";
-    private static final String SEARCHFORUSER_CONTROLLER="SearchForUserController";
-    private static final String DETAIL="Detail";
-    private static final String DETAIL_CONTROLLER="DetailController";
-    private static final String ADDTOCART="AddToCart";
-    private static final String ADDTOCART_CONTROLLER="AddToCartController";
-    private static final String VIEWCART="ViewCart";
-    private static final String VIEWCART_CONTROLLER="ViewCartController";
-    private static final String CHECKOUT="CheckOut";
-    private static final String CHECKOUT_CONTROLLER="CheckOutController";
-    private static final String SENDMAIL="SendMail";
-    private static final String SENDMAIL_CONTROLLER="SendMailController";
     private static final String UPLOADFILEEXCEL="Upload";
     private static final String UPLOADFILEEXCEL_CONTROLLER="UploadFileExcelController";
     private static final String DOWNLOADFILEDEMO="DownloadFileDemo";
@@ -178,33 +160,6 @@ public class MainController extends HttpServlet {
                     url= ADDSTUDENT_CONTROLLER;
             }
             
-            else if(VIEW.equals(action)){
-                    url= VIEW_CONTROLLER;
-            }
-            else if(REMOVE.equals(action)){
-                    url= REMOVE_CONTROLLER;
-            }
-            else if(EDIT.equals(action)){
-                    url= EDIT_CONTROLLER;
-            }
-            else if(SEARCHFORUSER.equals(action)){
-                    url= SEARCHFORUSER_CONTROLLER;
-            }
-            else if(DETAIL.equals(action)){
-                    url= DETAIL_CONTROLLER;
-            }
-            else if(ADDTOCART.equals(action)){
-                    url= ADDTOCART_CONTROLLER;
-            }
-            else if(VIEWCART.equals(action)){
-                    url= VIEWCART_CONTROLLER;
-            }
-            else if(CHECKOUT.equals(action)){
-                    url= CHECKOUT_CONTROLLER;
-            }
-            else if(SENDMAIL.equals(action)){
-                    url= SENDMAIL_CONTROLLER;
-            }
             else if(ADDSUPPORTER.equals(action)){
                     url= ADDSUPPORTER_CONTROLLER;
             }

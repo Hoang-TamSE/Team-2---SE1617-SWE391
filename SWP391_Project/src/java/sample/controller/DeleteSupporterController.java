@@ -23,7 +23,7 @@ public class DeleteSupporterController extends HttpServlet {
 
     private static final String ERROR = "MainController?action=SearchSupporter&searchby=name";
     private static final String SUCCESS = "MainController?action=SearchSupporter&searchby=name";
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -34,6 +34,9 @@ public class DeleteSupporterController extends HttpServlet {
             boolean check = dao.delete(userID);
             if (check) {
                 url = SUCCESS;
+                request.setAttribute("SUCCESS", "Delete " + userID + "succefull!");
+            } else {
+                request.setAttribute("ERROR", "Delete " + userID + "failed!");
             }
         } catch (Exception e) {
             log("error at DeleteController: " + e.toString());

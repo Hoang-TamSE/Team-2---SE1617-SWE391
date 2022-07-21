@@ -19,8 +19,10 @@ import sample.narrow.NarrowDAO;
  */
 @WebServlet(name = "DeleteNarrowController", urlPatterns = {"/DeleteNarrowController"})
 public class DeleteNarrowController extends HttpServlet {
+
     private static final String ERROR = "MainController?action=SearchNarrow&searchby=name";
     private static final String SUCCESS = "MainController?action=SearchNarrow&searchby=name";
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -31,6 +33,10 @@ public class DeleteNarrowController extends HttpServlet {
             boolean check = dao.delete(narrowID);
             if (check) {
                 url = SUCCESS;
+                request.setAttribute("SUCCESS", "Delete " + narrowID + "succefull!");
+            } else {
+                request.setAttribute("ERROR", "Delete " + narrowID + "falied!");
+
             }
         } catch (Exception e) {
             log("error at DeleteController: " + e.toString());
@@ -38,6 +44,7 @@ public class DeleteNarrowController extends HttpServlet {
             request.getRequestDispatcher(url).forward(request, response);
         }
     }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
