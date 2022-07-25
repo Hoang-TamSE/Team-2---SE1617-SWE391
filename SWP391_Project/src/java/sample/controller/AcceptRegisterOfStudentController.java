@@ -61,6 +61,13 @@ public class AcceptRegisterOfStudentController extends HttpServlet {
                     break;
                 }
             }
+            List<String> listMajorID = dao.GetMajorInForm(semesterID);
+            if(listMajorID.size() > 0){
+                for (String majorID : listMajorID) {
+                    String narrowID = dao.GetMinimunValidNarrow(semesterID, majorID);
+                    dao.updateNarrowForNAST(semesterID, majorID, narrowID);
+                }
+            }
             if (checkValid) {
                 request.setAttribute("LIST_SUCCESS", listSuccess);
                 request.setAttribute("LIST_ERROR", listError);

@@ -21,7 +21,7 @@ public class ValidationDAO {
     String GETMAJORID = "SELECT majorID FROM tblMajor WHERE majorID = ? ";
     String GETNARROWID = "SELECT narrowID FROM tblNarrow WHERE majorID = ? AND narrowID = ? ";
     String GETUSERID = "SELECT userID FROM tblStudent WHERE userID = ? ";
-    String GETUSERIDWITHEMAIL = "SELECT userID FROM tblStudent WHERE email = ? ";
+    String GETUSERIDWITHEMAIL = "SELECT userID FROM tblUser WHERE email = ? ";
 
     public boolean checkSemesterID(String semesterID) throws SQLException {
         boolean check = false;

@@ -40,6 +40,110 @@ public class CreatedFormDAO {
             + "FROM tblStudent ST INNER JOIN tblRegisterNarrowDetail RND "
             + "ON ST.userID = RND.userID "
             + "WHERE RND.registerID = ? AND RND.status = 'accepted'";
+    private String UPDATENARROWFORNAST = "UPDATE S SET S.narrowID = ? "
+            + "FROM tblStudent S "
+            + "FULL JOIN tblRegisterNarrowDetail RND "
+            + "ON S.userID = RND.userID "
+            + "WHERE RND.status is null "
+            + "AND S.narrowID = 'N/A' AND S.majorID = ? AND S.semesterID = ? ";
+    private String GETMAJORINFORM = "SELECT DISTINCT RN.majorID "
+            + "			FROM tblRegisterNarrow RN left JOIN tblRegisterNarrowDetail RND ON RN.registerID = RND.registerID "
+            + "			WHERE RN.semesterID = ? ";
+    private String GETMINIMUNVAILDNARROW = "SELECT TOP 1 RN.registerID, RN.majorID, RN.narrowID,\n"
+            + "COUNT(RND.registerID) AS total\n"
+            + "			FROM tblRegisterNarrow RN left JOIN tblRegisterNarrowDetail RND ON RN.registerID = RND.registerID\n"
+            + "			WHERE RN.semesterID = ? AND RN.majorID = ? \n"
+            + "			GROUP BY RN.registerID, RN.narrowID, RN.importDate, RN.usingDate, RN.majorID\n"
+            + "			HAVING COUNT(RND.registerID) >= 2\n"
+            + "			ORDER BY COUNT(RND.registerID) ";
+    public boolean updateNarrowForNAST(String semesterID, String majorID, String narrowID) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(UPDATENARROWFORNAST);
+                ptm.setString(1, narrowID);
+                ptm.setString(2, majorID);
+                ptm.setString(3, semesterID);
+                check = ptm.executeUpdate() > 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return check;
+    }
+    public String GetMinimunValidNarrow(String semesterID,String majorID) throws SQLException {
+        String narrowID = "";
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(GETMINIMUNVAILDNARROW);
+                ptm.setString(1, semesterID);
+                ptm.setString(2, majorID);
+                rs = ptm.executeQuery();
+                if (rs.next()) {
+                    narrowID = rs.getString("narrowID");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return narrowID;
+    }
+
+    public List<String> GetMajorInForm(String semesterID) throws SQLException {
+        List<String> list = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                ptm = conn.prepareStatement(GETMAJORINFORM);
+                ptm.setString(1, semesterID);
+                rs = ptm.executeQuery();
+                while (rs.next()) {
+                    String majorID = rs.getString("majorID");
+                    list.add(majorID);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (ptm != null) {
+                ptm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return list;
+    }
 
     public boolean updateValid(int registerID) throws SQLException {
         boolean check = false;

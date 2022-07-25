@@ -51,6 +51,10 @@ public class AddSupporterController extends HttpServlet {
                 error.setEmail("The email is ivalid!");
                 checkVaild = false;
             }
+            if (Validation.checkDuplicateEmail(email)){
+                error.setEmail("The email is duplicated!");
+                checkVaild = false;
+            }
             if (name.length() < 8 || name.length() > 50) {
                 error.setName("Length name is form 8 to 50!");
                 checkVaild = false;

@@ -8,6 +8,8 @@ package sample.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,6 +43,7 @@ public class ViewApplicationController extends HttpServlet {
             List<QADTO> listQuestion = dao.GetQuestionOfStudenet(student.getUserID());
             allList.addAll(listReply);
             allList.addAll(listQuestion);
+            Collections.sort(allList);
             if(allList.size() > 0){
                 request.setAttribute("LISTQUESTIONANDREPLY", allList);
                 url = SUCCESS;

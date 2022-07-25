@@ -22,7 +22,7 @@ public class StudentDAO {
     private static final String SEARCH = "SELECT us.userID, us.name, us.email, us.phoneNumber, us.address,"
             + " us.roleID, st.semesterID, st.majorID, st.narrowID"
             + " FROM tblUser us INNER JOIN tblStudent st ON us.userID = st.userID "
-            + " WHERE us.status = 'true' AND us.name like ? ";
+            + " WHERE us.status = 'true' AND us.name like ? AND us.roleID = 'ST' ";
     private static final String GETSTUDENT = " SELECT us.userID, us.name, us.email, us.phoneNumber, us.address,\n"
             + "  us.roleID, st.semesterID, st.majorID, st.narrowID\n"
             + "  FROM tblUser us INNER JOIN tblStudent st ON us.userID = st.userID \n"

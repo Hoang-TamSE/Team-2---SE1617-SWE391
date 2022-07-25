@@ -22,7 +22,7 @@ public class SupporterDAO {
     private static final String SEARCH = "SELECT us.userID, us.name, us.email, us.phoneNumber, us.address,"
             + " us.roleID, sp.majorID"
             + " FROM tblUser us INNER JOIN tblSupporter sp ON us.userID = sp.userID "
-            + "WHERE us.status = 'true' AND us.name like ? ";
+            + "WHERE us.status = 'true' AND us.name like ? AND us.roleID = 'SP' ";
     
     private static final String GETSUPPORTER = "SELECT us.userID, us.name, us.email, us.phoneNumber, us.address,"
             + " us.roleID, sp.majorID"

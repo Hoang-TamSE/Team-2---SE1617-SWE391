@@ -93,7 +93,7 @@ public class ReadExcelStudent {
                         case COLUMN_INDEX_EMAIL:
                             String email = (String) getCellValue(cell);
                             email = email + "@fpt.edu.vn";
-                            if (Validation.checkVaildEmail(email)) {
+                            if (Validation.checkVaildEmail(email) && !Validation.checkDuplicateEmail(email)) {
                                 student.setEmail(email);
                             } else {
                                 check = false;

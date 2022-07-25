@@ -6,12 +6,13 @@
 package sample.Mess;
 
 import java.sql.Timestamp;
+import sample.validation.Validation;
 
 /**
  *
  * @author Hoang Tam
  */
-public class QADTO {
+public class QADTO implements Comparable{
     private String messTitle;
     private String question;
     private Timestamp sendDate;
@@ -83,6 +84,12 @@ public class QADTO {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        int d = Validation.compareDate(this.getSendDate(), ((QADTO)o).getSendDate());
+        return d;
     }
     
 }
