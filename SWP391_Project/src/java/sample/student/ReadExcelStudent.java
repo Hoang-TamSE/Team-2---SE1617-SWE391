@@ -78,7 +78,7 @@ public class ReadExcelStudent {
                     switch (columnIndex) {
                         case COLUMN_INDEX_USERID:
                             String userID = (String) getCellValue(cell);
-                            if (!Validation.checkDuplicateUserID(userID)) {
+                            if (!Validation.checkDuplicateUserID(userID) && Validation.checkVaildUserID(userID)) {
                                 student.setUserID(userID);
                             } else {
                                 check = false;

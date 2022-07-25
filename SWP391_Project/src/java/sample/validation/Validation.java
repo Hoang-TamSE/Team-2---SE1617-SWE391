@@ -195,6 +195,16 @@ public class Validation {
         }
         return check;
     }
+    public static boolean checkVaildUserID(String userID) {
+        boolean check = false;
+        try {
+            check = userID.matches("[a-zA-Z]{2}[\\d]{6}");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return check;
+    }
 
     public static boolean checkMajorID(String majorID) {
         ValidationDAO dao = new ValidationDAO();

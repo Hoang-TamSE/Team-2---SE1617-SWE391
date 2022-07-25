@@ -47,6 +47,10 @@ public class AddSupporterController extends HttpServlet {
                 error.setUserID("The ID is duplicate!!!");
                 checkVaild = false;
             }
+            if (!Validation.checkVaildUserID(userID)){
+                error.setUserID("The ID is invalid!!! ex: SP000001");
+                checkVaild = false;
+            }
             if (!Validation.checkVaildEmail(email)) {
                 error.setEmail("The email is ivalid!");
                 checkVaild = false;
