@@ -130,6 +130,9 @@ public class MainController extends HttpServlet {
     private static final String CHANGEDATE="ChangeDate";
     private static final String CHANGEDATE_CONTROLLER="ChangeDateController";
     
+    private static final String GETINFORNARROW="GetInforNarrow";
+    private static final String GETINFORNARROW_CONTROLLER="GetInforNarrowController";
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -282,6 +285,9 @@ public class MainController extends HttpServlet {
             }
             else if(CHANGEDATE.equals(action)){
                     url= CHANGEDATE_CONTROLLER;
+            }
+            else if(GETINFORNARROW.equals(action)){
+                    url= GETINFORNARROW_CONTROLLER;
             }
         } catch (Exception e) {
             log("Error at MainController: "+ e.toString());

@@ -51,7 +51,7 @@
                                         <td><c:out value="${n.narrowID}"></c:out></td>
                                         <td><c:out value="${n.narrowName}"></c:out></td>
                                         <td><c:out value="${n.linkFLM}"></c:out></td>
-                                        <td><c:out value="${n.description}"></c:out></td>
+                                        <td><div style=" width: 700px; height: 400px; overflow-y: scroll;">${n.description}</div></td>
                                         <td><c:out value="${n.majorID}"></c:out></td>
                                             <td style="text-align: center">              
                                             <c:url  var="update" value="MainController">
@@ -99,6 +99,7 @@
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
 
 </body>
 </html>

@@ -142,6 +142,7 @@ public class AuthenFilter implements Filter {
         NON_AUTHEN_RESOURCES.add("HomePage_GD.jsp");
         NON_AUTHEN_RESOURCES.add("HomePage_TTDPT.jsp");
         NON_AUTHEN_RESOURCES.add("Footer.jsp");
+        NON_AUTHEN_RESOURCES.add("GetInforNarrow");
         NON_AUTHEN_RESOURCES.add("HeaderStudent");
         NON_AUTHEN_RESOURCES.add("login-google");
         NON_AUTHEN_RESOURCES.add("https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/SWP391_Project/login-google&response_type=code\n"
@@ -223,6 +224,7 @@ public class AuthenFilter implements Filter {
             HttpServletRequest req = (HttpServletRequest) request;
             HttpServletResponse res = (HttpServletResponse) response;
             String action = request.getParameter("action");
+            action = action != null ? action : "";
             String uri = req.getRequestURI();
             int index = uri.lastIndexOf("/");
             String requestResource = uri.substring(index + 1);
@@ -231,10 +233,11 @@ public class AuthenFilter implements Filter {
                 if (uri.endsWith(".jsp") && value.equals(".js")) {
                     continue;
                 }
-                if (uri.contains(value)) {
+                if (uri.contains(value) || value.contains(action)) {
                     chain.doFilter(request, response);
                     return;
                 }
+                
             }
             HttpSession session = req.getSession();
             //xac thu uer da dang nhap hay chua? chua --> quay ve login

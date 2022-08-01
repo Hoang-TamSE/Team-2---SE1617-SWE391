@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/admincss.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/9b6cd90630.js" crossorigin="anonymous"></script>
+        <script src="ckeditor/ckeditor.js"></script>
     </head>
     <body class="sb-nav-fixed jumbotron">
 
@@ -26,12 +27,12 @@
 
                 <div class="room container-fluid px-4">    
                     <div class="tab-content ">
-                        <form action="MainController" method="GET">
+                        <form action="MainController" method="POST">
                             <table class="table w-50 table-borderless">
                                 <tr>
                                     <td>ID</td>
                                     <td>
-                                        
+
                                         <input readonly="" class="form-control" value="${requestScope.NARROW.narrowID}" type="text">
                                     </td>
                                 </tr>
@@ -41,7 +42,7 @@
                                         <input class="form-control" value=" ${requestScope.NARROW.narrowName}" type="text" name="narrowName">
                                     </td>
                                     <td>
-                                        <p style="color: red; ">${requestScope.ERROR.majorName}</p>
+                                        <p style="color: red; ">${requestScope.ERROR.narrowName}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -56,16 +57,18 @@
                                 <tr>
                                     <td>Description</td>
                                     <td>
-                                        <input class="form-control" value=" ${requestScope.NARROW.description}" type="text" name="description">
+                                        <textarea style="width: 820px; height: 175px;" id="description"  type="text" name="description">${requestScope.NARROW.description}</textarea>
                                     </td>
                                     <td>
                                         <p style="color: red; ">${requestScope.ERROR.description}</p>
+
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>MajorID</td>
                                     <td>
-                                         ${requestScope.NARROW.majorID}
+                                        <input readonly="" class="form-control" value="${requestScope.NARROW.majorID}" type="text" name="majorID">
+
                                     </td>
                                 </tr>
 
@@ -90,7 +93,9 @@
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-
+    <script>
+        CKEDITOR.replace('description');
+    </script>
 </body>
 </html>
 

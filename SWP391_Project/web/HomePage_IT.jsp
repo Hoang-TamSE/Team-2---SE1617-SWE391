@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 
     Document   : HomePage_IT
     Created on : Jun 23, 2022, 1:41:13 PM
@@ -68,9 +69,9 @@
                 </div>
             </div>
         </div>
-        
+
         <div style="height: 15px; background-color: whitesmoke"></div>
-        
+
         <div class="why">
             <h3>VÌ SAO HƠN 50.000 SINH VIÊN LỰA CHỌN ĐH FPT?</h3>
             <div class="row d-flex justify-content-center">
@@ -150,9 +151,9 @@
                 </div>
             </div>
         </div>
-        
+
         <div style="height: 15px; background-color: whitesmoke"></div>
-        
+
         <div id="route" class="row d-flex justify-content-center">
             <div id="route-1" class="col-md-5">
                 <h3>LỘ TRÌNH ĐÀO TẠO</h3>
@@ -197,21 +198,23 @@
 
                 <h4>DANH SÁCH CHUYÊN NGÀNH HẸP</h4>
                 <ul class="nav nav-tabs p-3 ">
-                    <li class="nav-item">
-                        <a aria-selected="true" class="nav-link active font-weight-bold" href="#IT" role="tab" data-toggle="tab">Cross-platform với .NET</a>
-                    </li>                   
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#BA" role="tab" data-toggle="tab">Kỹ sư cầu nối Nhật</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#EL"role="tab" data-toggle="tab">Autonomous Car</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#JL" role="tab" data-toggle="tab">AI with Tensor Flow</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#KL" role="tab" data-toggle="tab">React/NodeJS</a>
-                    </li>
+                    <c:forEach var="narrow" items="${requestScope.LIST_NARROW}" varStatus="counter" >
+                        <c:choose>
+                            <c:when test="${counter.count eq 1}">
+                                <li class="nav-item">
+                                    <a aria-selected="true" class="nav-link active font-weight-bold" href="#${narrow.narrowID}" role="tab" data-toggle="tab">${narrow.narrowName}</a>
+                                </li>  
+                            </c:when>
+                            <c:otherwise>
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-bold" href="#${narrow.narrowID}" role="tab" data-toggle="tab">${narrow.narrowName}</a>
+                                </li>
+                            </c:otherwise>
+                        </c:choose>
+
+                    </c:forEach>                 
+
+
                 </ul>
 
             </div> <!-- col-left -->
@@ -220,272 +223,24 @@
                 <h4>THÔNG TIN CHUYÊN NGÀNH HẸP</h4>
                 <div class="table-wrapper-scroll-y my-custom-scrollbar-2">
                     <div class="tab-content">
-                        <div selected role="tabpanel" class="tab-pane fade active show selected" id="IT">
-                            <h5 class="font-weight-bold">Combo: Phát triển ứng dụng cross-platform với .NET</h5>
-                            <table class="table" >
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Mã học phần</th>
-                                        <th scope="col">Tên học phần</th>
-                                        <th scope="col">Tiết</th>
-                                        <th scope="col">Tín chỉ</th>
-                                        <th scope="col">Học phần tiên quyết</th>
-                                        <th scope="col">Thông tin</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">PRN211</th>
-                                        <td>
-                                            <ul>
-                                                <li>Lập trình ứng dụng cross-platform cơ bản với .NET</li>
-                                                <li>Basic Cross-Platform Application</li>
-                                                <li>Programming With .NET</li>
-                                            </ul>
-                                        </td>
-                                        <td>60</td>
-                                        <td>3</td>
-                                        <td>PRO192 & DBI202</td>
-                                        <td style="text-align: center">
-                                            <a target=”_blank” style="color: black;"href="https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylID=5821"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h5 class="font-weight-bold">TỔNG QUAN VỀ .NET</h5>
-                            <p>
-                                -.NET hay còn được biết đến là Dotnet là một nền tảng (framework) cho phép lập trình viên sử
-                                dụng để phát triển các ứng dụng, game, website. Nền tảng này được phát triển bởi Microsoft và 
-                                chạy trên hệ điều hành Window. Bản chất .NET không phải một ngôn ngữ lập trình mà là một nền 
-                                tảng. Nó cho phép các ngôn ngữ lập trình khác nhau (như C#, VB.Net) sử dụng để tạo ra các sản 
-                                phẩm ứng dụng mobile hoặc web.
-                            </p>
-                            <p>
-                                -Bản chất .NET không phải một ngôn ngữ lập trình mà là một nền tảng. Nó cho phép các ngôn ngữ lập trình khác nhau
-                                (như C#, VB.Net) sử dụng để tạo ra các sản phẩm ứng dụng mobile hoặc web.
-                            </p>
-                            <h5 class="font-weight-bold">ƯU ĐIỂM</h5>
-                            <ul>
-                                <li>Tiết kiệm thời gian & chi phí, tăng hiệu suất</li>
-                                <li>Tính bảo mật cao, giảm xung đột</li>
-                                <li>Đa ngôn ngữ, đa nền tảng</li>
-                                <li>Tận dụng các dịch vụ có sẵn</li>
-                            </ul>
-                        </div> <!-- IT -->
+                        <c:forEach var="narrow" items="${requestScope.LIST_NARROW}" varStatus="counter" >
+                            <c:choose>
+                                <c:when test="${counter.count eq 1}">
+                                    <div selected role="tabpanel" class="tab-pane fade active show selected" id="${narrow.narrowID}">
+                                        ${narrow.description}
+                                    </div>
+                                </c:when>
+                                <c:otherwise>
+                                    <div role="tabpanel" class="tab-pane fade show" id="${narrow.narrowID}">
+                                        ${narrow.description}
+                                    </div> 
+                                </c:otherwise>
+                            </c:choose>
 
-                        <div role="tabpanel" class="tab-pane fade show" id="BA">
-                            <h5 class="font-weight-bold">Combo: Định hướng kỹ sư cầu nối Nhật</h5>
-                            <h6>
-                                Lưu ý: Nếu sinh viên chọn chuyên ngành này thì cơ sở sẽ tổ chức cho sinh viên  đi OJT tại Nhật. Nếu sinh 
-                                viên không đồng ý với điều kiện này thì cơ sở không triển khai combo này. 
-                            </h6>
-                            <table class="table" >
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Mã học phần</th>
-                                        <th scope="col">Tên học phần</th>
-                                        <th scope="col">Tiết</th>
-                                        <th scope="col">Tín chỉ</th>
-                                        <th scope="col">Học phần tiên quyết</th>
-                                        <th scope="col">Thông tin</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">JPD133</th>
-                                        <td>
-                                            <ul>
-                                                <li>Tiếng Nhật sơ cấp 1-A1/A2</li>
-                                                <li>ElementaryJapanese  1-A1/A2</li>
-                                            </ul>
-                                        </td>
-                                        <td>60</td>
-                                        <td>3</td>
-                                        <td> JPD121 or JPD123</td>
-                                        <td style="text-align: center">
-                                            <a target=”_blank” style="color: black;"href="https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylID=2428"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h5 class="font-weight-bold">TỔNG QUAN VỀ KỸ SƯ CẦU NỐI NHẬT</h5>
-                            <p>
-                                -Kỹ sư cầu nối hay còn được biết đến với tên gọi BrSE viết tắt của từ Bridge System Engineer. Hiểu một cách đơn giản kỹ sư cầu nối là một kỹ sư IT đứng ở giữa làm công việc kết nối giữa
-                                khách hàng (customer) và đội phát triển (offshore) để truyền tải những yêu cầu của khách hàng đến đội ngũ phát triển, đảm bảo cho dự án đi đúng tiến độ và chất lượng.
-                            </p>
-                            <p>
-                                -Kỹ sư cầu nối có thể đảm nhiệm rất nhiều công việc khác nhau từ phân tích yêu cầu của khách hàng (Business Analyst), viết tài liệu thiết kế, phát triển, cho đến vận hành hệ thống,….
-                                Tuy nhiên không phải lúc nào BrSE cũng làm hết tất cả các việc trên. Tùy thuộc vào quy mô và tính chất của từng dự án mà công việc của BrSE sẽ khác nhau.
-                            </p>
-                            <h5 class="font-weight-bold">NHỮNG KỸ NĂNG CẦN CÓ</h5>
-                            <ul>
-                                <li>
-                                    Kiến thức chuyên môn về kỹ thuật IT
-                                </li>
-                                <li>
-                                    Khả năng ngoại ngữ
-                                </li>
-                                <li>
-                                    Kỹ năng giao tiếp tốt
-                                </li>
-                                <li>
-                                    Tinh thần trách nhiệm cao
-                                </li>
-                            </ul>
-                        </div> <!-- BA -->
+                        </c:forEach>  
 
-                        <div role="tabpanel" class="tab-pane fade show" id="EL">
-                            <h5 class="font-weight-bold">Combo: Autonomous Car</h5>
-                            <table class="table" >
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Mã học phần</th>
-                                        <th scope="col">Tên học phần</th>
-                                        <th scope="col">Tiết</th>
-                                        <th scope="col">Tín chỉ</th>
-                                        <th scope="col">Học phần tiên quyết</th>
-                                        <th scope="col">Thông tin</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">PRP201c</th>
-                                        <td>
-                                            <ul>
-                                                <li>Lập trình Python</li>
-                                                <li>Python Programing</li>
-                                            </ul>
-                                        </td>
-                                        <td>5</td>
-                                        <td>3</td>
-                                        <td>Không</td>
-                                        <td style="text-align: center">
-                                            <a target=”_blank” style="color: black;"href="https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylID=1181"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>    
-                            <h5 class="font-weight-bold">TỔNG QUAN VỀ AUTONOMOUS CAR</h5>
-                            <p>
-                                -Công nghệ xe tự lái trong nước đã có những tín hiệu phát triển tích cực và ngày càng phù hợp với ngành giao thông thế hệ mới. Các hãng xe nội địa đang tận dụng nền khoa học -
-                                kỹ thuật tiên tiến nhất để tạo ra đế chế xe tự lái “Made in Vietnam”. Doanh nghiệp Việt đang từng bước gia nhập thị trường xe tự lái để đón đầu cuộc cách mạng 4.0 và chinh phục “cơn lốc” phát triển công nghệ ô tô thế giới.
-                            </p>
-                            <p>
-                                -Có thể thấy, FPT là công ty đầu tiên ra mắt công nghệ xe tự hành tại Việt Nam vào năm 2017 và là một trong số ít các công ty tiên phong trong lĩnh vực xe tự hành tại khu vực Đông Nam Á. 
-                                FPT đã thử nghiệm thành công công nghệ xe tự hành trên xe ô tô thương mại 4 chỗ và dòng xe điện sân golf di chuyển trong khuôn viên khu công nghệ cao TP. HCM và khu campus FPT Complex tại Đà Nẵng.
-                            </p>
-                            
-                        </div> <!-- EL -->
 
-                        <div role="tabpanel" class="tab-pane fade show" id="JL">
-                            <h5 class="font-weight-bold">Combo: AI with Tensor Flow</h5>
-                            <table class="table" >
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Mã học phần</th>
-                                        <th scope="col">Tên học phần</th>
-                                        <th scope="col">Tiết</th>
-                                        <th scope="col">Tín chỉ</th>
-                                        <th scope="col">Học phần tiên quyết</th>
-                                        <th scope="col">Thông tin</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">PRP201c</th>
-                                        <td>
-                                            <ul>
-                                                <li>Lập trình Python</li>
-                                                <li>Python Programing</li>
-                                            </ul>
-                                        </td>
-                                        <td>5</td>
-                                        <td>3</td>
-                                        <td>Không</td>
-                                        <td style="text-align: center">
-                                            <a target=”_blank” style="color: black;"href="https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylID=1181"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table> 
-                            <h5 class="font-weight-bold">TỔNG QUAN VỀ AI WITH TENSORFLOW</h5>
-                            <p>
-                                -Với sự bùng nổ của lĩnh vực Trí Tuệ Nhân Tạo – A.I. trong thập kỷ vừa qua, machine learning và deep learning rõ ràng cũng phát triển theo cùng. Và ở thời điểm hiện tại, TensorFlow chính
-                                là thư viện mã nguồn mở cho machine learning nổi tiếng nhất thế giới, được phát triển bởi các nhà nghiên cứu từ Google. Việc hỗ trợ mạnh mẽ các phép toán học để tính toán trong machine learning và deep learning đã giúp việc tiếp cận các bài toán trở nên đơn giản, nhanh chóng và tiện lợi hơn nhiều. 
-                            </p>
-                            <p>
-                                -Được viết bằng C++ và thao tác interface bằng Python nên phần performance của TensorFlow cực kỳ tốt. Đối tượng sử dụng nó cũng đa dạng không kém: từ các nhà nghiên cứu, nhà khoa học dữ liệu và dĩ nhiên không thể thiếu các lập trình viên. 
-                            </p>
-                            <h5 class="font-weight-bold">ƯU ĐIỂM</h5>
-                            <ul>
-                                <li>
-                                    Thể hiện góc nhìn tổng quan
-                                </li>
-                                <li>
-                                    Dễ dàng chỉnh sửa định hướng
-                                </li>
-                                <li>
-                                    Dựa trên một nền tảng mạnh mẽ – Google
 
-                                </li>
-                            </ul>
-                        </div> <!-- JL -->
-
-                        <div role="tabpanel" class="tab-pane fade show" id="KL">
-                            <h5 class="font-weight-bold">Combo: React/NodeJS</h5>
-                            <table class="table" >
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Mã học phần</th>
-                                        <th scope="col">Tên học phần</th>
-                                        <th scope="col">Tiết</th>
-                                        <th scope="col">Tín chỉ</th>
-                                        <th scope="col">Học phần tiên quyết</th>
-                                        <th scope="col">Thông tin</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">FER201m</th>
-                                        <td>
-                                            <ul>
-                                                <li>Phát triển web Front-End với React</li>
-                                                <li>Front-End web development with React</li>
-                                            </ul>
-                                        </td>
-                                        <td>60</td>
-                                        <td>3</td>
-                                        <td>WED201c</td>
-                                        <td style="text-align: center">
-                                            <a target=”_blank” style="color: black;"href="https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylID=5445"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table> 
-                            <h5 class="font-weight-bold">TỔNG QUAN VỀ REACT/NODE JS</h5>
-                            <p>
-                                -React JS đang là một trong những thư viện phổ biến nhất giới frontend. Sử dụng React Js để build các ứng dụng front-end với hiệu năng cao và thời gian xây dựng nhanh nhất có thể.
-                            </p>
-                            <p>
-                                -Node.js là một hệ thống phần mềm được thiết kế để viết các ứng dụng internet có khả năng mở rộng, đặc biệt là máy chủ web. Chương trình được viết bằng JavaScript, sử dụng kỹ thuật điều khiển theo sự kiện, nhập/xuất không đồng bộ để tối thiểu tổng tài nguyên và tối đa khả năng mở rộng.
-                                Node.js bao gồm có V8 JavaScript engine của Google, libUV, và vài thư viện khác. 
-                            </p>
-                            <h5 class="font-weight-bold">ƯU ĐIỂM</h5>
-                            <ul>
-                                <li>
-                                    NodeJs viết bằng Javascript nên có cộng đồng hỗ trợ cực lớn, nên những vấn đề gặp phải sẽ nhận được sự support rộng rãi so với nhiều framework khác.
-                                </li>
-                                <li>
-                                    Hiệu năng cao + real time: NodeJs với cơ chế xử lý bất đồng bộ - non-blocking giúp NodeJs tiếp nhận và xử lý hàng ngàn request một lúc mà không gặp một khó khăn nào.
-                                </li>
-                                <li>
-                                    Dễ dàng mở rộng.
-                                </li>
-                                <li>
-                                    JSON API - Với javascript thì NodeJS + Nosql làm server là sự lựa chọn số 1 cho JSON API.
-                                </li>
-                            </ul>
-                        </div> <!-- KL -->
 
                     </div> <!-- Tab Content -->
 
@@ -494,7 +249,7 @@
 
 
         </div>
-        
+
         <div style="height: 15px; background-color: whitesmoke"></div>
 
         <div id="program" class="row d-flex justify-content-center">

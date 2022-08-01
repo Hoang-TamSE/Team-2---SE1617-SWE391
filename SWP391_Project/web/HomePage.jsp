@@ -31,7 +31,7 @@
                             Ngành đào tạo
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="HomePage_IT.jsp">Kỹ thuật phần mềm</a>
+                            <a class="dropdown-item" href="MainController?action=GetInforNarrow&majorID=SE">Kỹ thuật phần mềm</a>
                             <a class="dropdown-item" href="HomePage_GD.jsp">Thiết kế mỹ thuật số</a>
                             <a class="dropdown-item" href="HomePage_TTDPT.jsp">Truyền thông đa phương tiện</a>
                             <a class="dropdown-item" href="#">An toàn thông tin</a>
