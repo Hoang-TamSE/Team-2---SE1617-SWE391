@@ -226,7 +226,7 @@
                         <c:forEach var="narrow" items="${requestScope.LIST_NARROW}" varStatus="counter" >
                             <c:choose>
                                 <c:when test="${counter.count eq 1}">
-                                    <div selected role="tabpanel" class="tab-pane fade active show selected" id="${narrow.narrowID}">
+                                    <div selected role="tabpanel" class="tab-pane fade show active" id="${narrow.narrowID}">
                                         ${narrow.description}
                                     </div>
                                 </c:when>

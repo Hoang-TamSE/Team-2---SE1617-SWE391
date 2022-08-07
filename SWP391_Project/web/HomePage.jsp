@@ -95,7 +95,7 @@
                     <figure class="hover-menu">
                         <img class="img-responsive" src="images/major1.jpg" />
                         <div>
-                            <a href="HomePage_IT.jsp">Kỹ thuật phần mềm</a>
+                            <a href="MainController?action=GetInforNarrow&majorID=SE">Kỹ thuật phần mềm</a>
                             <a href="#">Trí tuệ nhân tạo</a>
                             <a href="#">An toàn thông tin</a>
                         </div>

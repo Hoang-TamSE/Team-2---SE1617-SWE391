@@ -48,7 +48,7 @@
                             </tr>
                             <c:forEach var="sp" items="${requestScope.LIST_Supporters}">
                                 <tr>
-                                    <td><c:out value="${sp.userID}"></c:out></td>
+                                 <td><c:out value="${sp.userID}"></c:out></td>
                                 <td><c:out value="${sp.name}"></c:out></td>
                                 <td><c:out value="${sp.email}"></c:out></td>
                                 <td><c:out value="${sp.question}"></c:out></td>
